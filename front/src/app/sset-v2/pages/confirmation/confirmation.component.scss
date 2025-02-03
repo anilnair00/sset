@@ -1,0 +1,44 @@
+@import 'variables';
+
+.c-confirmation {
+  .c-claims {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 48px;
+
+    .c-details {
+      flex: 1;
+
+      @media (max-width: $max-tablet) {
+        min-width: 343px;
+        width: 100%;
+      }
+    }
+  }
+
+  .c-description {
+    margin-bottom: 24px;
+
+    p {
+      margin-bottom: 16px;
+    }
+  }
+
+  .h-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+    letter-spacing: 0em;
+    margin-bottom: 24px;
+  }
+
+  .h-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0em;
+    line-height: 25px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+  }
+}

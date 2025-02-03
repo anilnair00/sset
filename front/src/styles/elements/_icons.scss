@@ -1,0 +1,36 @@
+.icn {
+  fill: currentColor;
+  outline: currentColor;
+}
+
+.icn-info {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+  vertical-align: top;
+}
+
+.icn-search {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.icn-ac {
+  height: 1.75rem;
+  width: 1.75rem;
+  margin-right: 0.5rem;
+}
+
+.icn-next {
+  border-bottom: currentColor 1px solid;
+  border-right: currentColor 1px solid;
+  display: inline-block;
+  height: 0.625rem;
+  width: 0.625rem;
+  transform: rotate(-45deg);
+}
+
+.icn-open-in-new-window {
+  height: 0.875rem;
+  width: 0.875rem;
+}

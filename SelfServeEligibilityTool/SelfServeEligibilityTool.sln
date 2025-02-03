@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34302.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E2ETests", "E2ETests\E2ETests.csproj", "{7A3C4F3E-A039-4DD3-A423-CD01A99813B4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{DF927C0F-FC7D-490E-BD25-84755AFCDA8C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Interfaces\Interfaces.csproj", "{E15BB4C8-2B06-4844-9C19-63AFF73199D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6DF7DFFB-62C2-4CAF-96AD-09E55D099A03}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		..\azure-pipelines.build.yml = ..\azure-pipelines.build.yml
+		..\azure-pipelines.release.yml = ..\azure-pipelines.release.yml
+		..\azure-pipelines.yml = ..\azure-pipelines.yml
+		azuredeploy.json = azuredeploy.json
+		azuredeploy.parameters.prd.json = azuredeploy.parameters.prd.json
+		azuredeploy.parameters.sit.json = azuredeploy.parameters.sit.json
+		azuredeploy.parameters.uat.json = azuredeploy.parameters.uat.json
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Tests", "Core.Tests\Core.Tests.csproj", "{C75E15E6-1F6D-4145-94B9-881A2523AAFD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Functions", "Functions\Functions.csproj", "{608CCFC6-E63A-401B-9B4A-FB72B7ED0A42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A3C4F3E-A039-4DD3-A423-CD01A99813B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A3C4F3E-A039-4DD3-A423-CD01A99813B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A3C4F3E-A039-4DD3-A423-CD01A99813B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A3C4F3E-A039-4DD3-A423-CD01A99813B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF927C0F-FC7D-490E-BD25-84755AFCDA8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF927C0F-FC7D-490E-BD25-84755AFCDA8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF927C0F-FC7D-490E-BD25-84755AFCDA8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF927C0F-FC7D-490E-BD25-84755AFCDA8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E15BB4C8-2B06-4844-9C19-63AFF73199D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E15BB4C8-2B06-4844-9C19-63AFF73199D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E15BB4C8-2B06-4844-9C19-63AFF73199D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E15BB4C8-2B06-4844-9C19-63AFF73199D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C75E15E6-1F6D-4145-94B9-881A2523AAFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C75E15E6-1F6D-4145-94B9-881A2523AAFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C75E15E6-1F6D-4145-94B9-881A2523AAFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C75E15E6-1F6D-4145-94B9-881A2523AAFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{608CCFC6-E63A-401B-9B4A-FB72B7ED0A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{608CCFC6-E63A-401B-9B4A-FB72B7ED0A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{608CCFC6-E63A-401B-9B4A-FB72B7ED0A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{608CCFC6-E63A-401B-9B4A-FB72B7ED0A42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {803AEA61-FBE5-4DA7-83A0-081928219D92}
+	EndGlobalSection
+EndGlobal

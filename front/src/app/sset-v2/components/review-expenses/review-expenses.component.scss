@@ -1,0 +1,84 @@
+@import 'variables';
+
+.acknowledgement {
+  font-weight: bold;
+}
+
+.acknowledgement-checkbox {
+  margin-bottom: 0;
+  margin-top: 16px;
+  margin-left: 30px;
+}
+
+.review-expenses {
+  margin: 32px 0 5px 0;
+
+  .c-expenses-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    .c-details {
+      flex: 1;
+
+      .c-eligible {
+        background-color: $ac-blue-100;
+        flex: 1;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        padding: 24px;
+      }
+
+      .text-bold {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .label-info {
+    color: $brand-gray-900;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.c-summary {
+  margin-top: 0px !important;
+}
+
+.display-acknowledgement {
+  padding-bottom: 40px;
+}
+
+.display-content {
+  display: flex;
+}
+
+.display-content div {
+  flex-basis: 100%;
+}
+
+.display-expense-summary {
+  padding-left: 20px;
+}
+
+.div-separator {
+  margin-top: 0px;
+}
+
+.divider {
+  border: 1px solid $brand-gray-190;
+  margin-bottom: 41px;
+  margin-top: 25px;
+}
+
+.margin-bottom-40 {
+  margin-bottom: 40px !important;
+}
+
+.permissions-checkbox {
+  border: none;
+  margin-left: 30px;
+  margin-top: 30px;
+}

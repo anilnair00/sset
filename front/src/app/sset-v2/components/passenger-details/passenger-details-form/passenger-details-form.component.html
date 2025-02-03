@@ -1,0 +1,832 @@
+<form [formGroup]="form" *ngIf="passengerDetails">
+  <div class="row">
+    <div class="col">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="form-label-group passenger-details-dropdown">
+            <app-select
+              formCntrlName="title"
+              [formGroup]="form"
+              [label]="
+                'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.TITLE' | translate
+              "
+              [options]="titleOptions"
+              (onChange)="onChangeTitle($event)"
+            />
+            <div
+              *ngIf="
+                form.controls.title.errors &&
+                form.controls.title.dirty &&
+                form.controls.title.touched
+              "
+              class="help-block error"
+            >
+              <div *ngIf="form.controls.title.errors['required']">
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.TITLE_REQUIRED'
+                    | translate
+                }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="form-label-group">
+            <input
+              appTrim
+              class="form-control"
+              formControlName="firstName"
+              [id]="'first-name' + passengerDetails.order"
+              placeholder=" "
+              type="text"
+            />
+            <label [for]="'first-name' + passengerDetails.order">
+              {{
+                'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.FIRST_NAME'
+                  | translate
+              }}
+            </label>
+
+            <ng-template #firstNameHelp>
+              <div class="help-block black">
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.INPUT_HELPER_1'
+                    | translate
+                }}
+              </div>
+            </ng-template>
+            <div
+              *ngIf="
+                form.controls.firstName.errors &&
+                  form.controls.firstName.dirty &&
+                  form.controls.firstName.touched;
+                else firstNameHelp
+              "
+              class="help-block error"
+            >
+              <div *ngIf="form.controls.firstName.errors['required']">
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.FIRSTNAME_REQUIRED'
+                    | translate
+                }}
+              </div>
+              <div *ngIf="form.controls.firstName.errors['pattern']">
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.FIRSTNAME_PATTERN'
+                    | translate
+                }}
+              </div>
+              <div *ngIf="form.controls.firstName.errors['maxlength']">
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.FIRSTNAME_MAXLENGTH'
+                    | translate
+                }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="form-label-group">
+            <input
+              appTrim
+              class="form-control"
+              formControlName="lastName"
+              [id]="'last-name' + passengerDetails.order"
+              placeholder=" "
+              type="text"
+            />
+            <label [for]="'last-name' + passengerDetails.order">
+              {{
+                'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.LAST_NAME'
+                  | translate
+              }}
+            </label>
+            <ng-template #lastNameHelp>
+              <div class="help-block black">
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.INPUT_HELPER_1'
+                    | translate
+                }}
+              </div>
+            </ng-template>
+            <div
+              *ngIf="
+                form.controls.lastName.errors &&
+                  form.controls.lastName.dirty &&
+                  form.controls.lastName.touched;
+                else lastNameHelp
+              "
+              class="help-block error"
+            >
+              <div *ngIf="form.controls.lastName.errors['required']">
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.LASTNAME_REQUIRED'
+                    | translate
+                }}
+              </div>
+              <div *ngIf="form.controls.lastName.errors['pattern']">
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.LASTNAME_PATTERN'
+                    | translate
+                }}
+              </div>
+              <div *ngIf="form.controls.lastName.errors['maxlength']">
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.LASTNAME_MAXLENGTH'
+                    | translate
+                }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!form.controls.isPrimaryApplicant.value">
+    <div *ngIf="isManualFlow" class="row">
+      <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="form-label-group">
+          <input
+            appTrim
+            class="form-control"
+            formControlName="ticket"
+            id="ticket-number"
+            oninput="this.value = this.value.toUpperCase()"
+            placeholder="&nbsp;"
+            type="text"
+          />
+          <label
+            for="ticket-number"
+            [innerHTML]="'SSET_V2.SEARCH.TICKET_LABEL' | translate"
+          ></label>
+          <ng-template #ticketHelp>
+            <div class="help-block black">
+              {{ 'SSET_V2.SEARCH.TICKET_HELP' | translate }}
+            </div>
+          </ng-template>
+          <div
+            *ngIf="
+              form.controls.ticket.errors &&
+                form.controls.ticket.dirty &&
+                form.controls.ticket.touched;
+              else ticketHelp
+            "
+            class="help-block error"
+          >
+            <div
+              *ngIf="form.controls.ticket.errors && form.controls.ticket.dirty"
+            >
+              {{ 'SSET_V2.SEARCH.ERRORS.TICKET_VALIDATION' | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="custom-checkbox">
+      <input
+        class="custom-control-input"
+        (click)="onClickSameAddress()"
+        [id]="'isSameAddressContact' + passengerDetails.order"
+        formControlName="isSameAddressContact"
+        type="checkbox"
+        value=""
+      />
+      <label
+        class="custom-control-label"
+        [for]="'isSameAddressContact' + passengerDetails.order"
+      >
+        {{
+          'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.USE_THE_SAME_ADDRESS_CONTACT'
+            | translate
+        }}
+        <span
+          [tooltip]="
+            'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.USE_THE_SAME_ADDRESS_CONTACT_TOOLTIP'
+              | translate
+          "
+          [containerClass]="'same-address-contract-tooltip'"
+        >
+          <svg role="presentation" class="icn icn-info" aria-labelledby="title">
+            <title>Info</title>
+            <use xlink:href="/assets/icons.svg#icn-info"></use>
+          </svg>
+        </span>
+      </label>
+    </div>
+  </div>
+  <ng-container *ngIf="!form.controls.isSameAddressContact.value">
+    <div class="passenger-details-address">
+      {{ 'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ADDRESS' | translate }}
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="form-label-group passenger-details-dropdown">
+              <app-select
+                formCntrlName="country"
+                [formGroup]="form"
+                [label]="
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.COUNTRY'
+                    | translate
+                "
+                [options]="countryOptions"
+                (onChange)="onChangeCountry($event)"
+              />
+              <div
+                *ngIf="
+                  form.controls.country.errors &&
+                  form.controls.country.dirty &&
+                  form.controls.country.touched
+                "
+                class="help-block error"
+              >
+                <div *ngIf="form.controls.country.errors['required']">
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.COUNTRY_REQUIRED'
+                      | translate
+                  }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="form-label-group">
+              <input
+                appTrim
+                class="form-control"
+                formControlName="permanentMailingAddress"
+                [id]="'permanent-mailing-address' + passengerDetails.order"
+                placeholder=" "
+                type="text"
+              />
+              <label
+                [for]="'permanent-mailing-address' + passengerDetails.order"
+              >
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.PERMANENT_MAILING_ADDRESS'
+                    | translate
+                }}
+              </label>
+              <ng-template #permanentMailingAddressHelp>
+                <div class="help-block black">
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.MAILING_ADDRESS_HELPER'
+                      | translate
+                  }}
+                </div>
+              </ng-template>
+              <div
+                *ngIf="
+                  form.controls.permanentMailingAddress.invalid &&
+                    form.controls.permanentMailingAddress.errors &&
+                    form.controls.permanentMailingAddress.dirty &&
+                    form.controls.permanentMailingAddress.touched;
+                  else permanentMailingAddressHelp
+                "
+                class="help-block error"
+              >
+                <div
+                  *ngIf="
+                    form.controls.permanentMailingAddress.errors['required']
+                  "
+                >
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.PERMANENT_MAILING_ADDRESS_REQUIRED'
+                      | translate
+                  }}
+                </div>
+                <div
+                  *ngIf="
+                    form.controls.permanentMailingAddress.errors['maxlength']
+                  "
+                >
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.PERMANENT_MAILING_ADDRESS_MAXLENGTH'
+                      | translate
+                  }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="form-label-group">
+              <input
+                appTrim
+                class="form-control"
+                formControlName="city"
+                [id]="'city' + passengerDetails.order"
+                placeholder=" "
+                type="text"
+              />
+              <label [for]="'city' + passengerDetails.order">
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.CITY' | translate
+                }}
+              </label>
+              <div
+                *ngIf="
+                  form.controls.city.invalid &&
+                  form.controls.city.errors &&
+                  form.controls.city.dirty &&
+                  form.controls.city.touched
+                "
+                class="help-block error"
+              >
+                <div *ngIf="form.controls.city.errors['required']">
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.CITY_REQUIRED'
+                      | translate
+                  }}
+                </div>
+                <div *ngIf="form.controls.city.errors['maxlength']">
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.CITY_MAXLENGTH'
+                      | translate
+                  }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="form-label-group">
+              <input
+                appTrim
+                (change)="onChangePostalCode()"
+                class="form-control"
+                formControlName="postalCode"
+                [id]="'postal-code' + passengerDetails.order"
+                placeholder=" "
+                type="text"
+              />
+              <label [for]="'postal-code' + passengerDetails.order">
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.POSTAL_CODE'
+                    | translate
+                }}
+              </label>
+              <div
+                *ngIf="
+                  form.controls.postalCode.errors &&
+                  form.controls.postalCode.dirty &&
+                  form.controls.postalCode.touched
+                "
+                class="help-block error"
+              >
+                <div *ngIf="form.controls.postalCode.errors['required_ca']">
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.POSTALCODE_REQUIRED'
+                      | translate
+                  }}
+                </div>
+                <div *ngIf="form.controls.postalCode.errors['required_us']">
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.ZIPCODE_REQUIRED'
+                      | translate
+                  }}
+                </div>
+                <div *ngIf="form.controls.postalCode.errors['pattern_ca']">
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.POSTALCODE_PATTERN'
+                      | translate
+                  }}
+                </div>
+                <div *ngIf="form.controls.postalCode.errors['pattern_us']">
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.ZIPCODE_PATTERN'
+                      | translate
+                  }}
+                </div>
+                <div *ngIf="form.controls.postalCode.errors['maxlength']">
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.POSTALCODE_MAXLENGTH'
+                      | translate
+                  }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="form-label-group passenger-details-dropdown">
+              <ng-container *ngIf="provinceOptions?.length; else provinceInput">
+                <app-select
+                  [formGroup]="form"
+                  [label]="
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.PROVINCE'
+                      | translate
+                  "
+                  [options]="provinceOptions"
+                  formCntrlName="province"
+                  (onChange)="onChangeProvince($event)"
+                />
+              </ng-container>
+              <ng-template #provinceInput>
+                <div
+                  class="form-label-group"
+                  [ngStyle]="{
+                    'margin-bottom': provinceOptions?.length ? '1.5rem' : '0'
+                  }"
+                >
+                  <input
+                    [id]="'province' + passengerDetails.order"
+                    appTrim
+                    class="form-control"
+                    formControlName="province"
+                    placeholder=" "
+                    type="text"
+                  />
+                  <label [for]="'province' + passengerDetails.order">
+                    {{
+                      'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.PROVINCE'
+                        | translate
+                    }}
+                  </label>
+                </div>
+              </ng-template>
+              <div
+                *ngIf="
+                  form.controls.province.errors &&
+                  form.controls.province.dirty &&
+                  form.controls.province.touched
+                "
+                class="help-block error"
+              >
+                <div *ngIf="form.controls.province.errors['required']">
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.PROVINCE_REQUIRED'
+                      | translate
+                  }}
+                </div>
+                <div *ngIf="form.controls.province.errors['maxlength']">
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.PROVINCE_MAXLENGTH'
+                      | translate
+                  }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="passenger-details-address passenger-details-contact">
+      {{ 'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.CONTACT_INFO' | translate }}
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="form-label-group">
+              <input
+                [id]="'email-address' + passengerDetails.order"
+                appTrim
+                class="form-control"
+                formControlName="emailAddress"
+                placeholder=" "
+                type="text"
+              />
+              <label [for]="'email-address' + passengerDetails.order">
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.EMAIL_ADDRESS'
+                    | translate
+                }}
+              </label>
+              <div
+                *ngIf="
+                  form.controls.emailAddress.errors &&
+                  form.controls.emailAddress.dirty &&
+                  form.controls.emailAddress.touched
+                "
+                class="help-block error"
+              >
+                <div *ngIf="form.controls.emailAddress.errors['required']">
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.EMAILADDRESS_REQUIRED'
+                      | translate
+                  }}
+                </div>
+                <div *ngIf="form.controls.emailAddress.errors['email']">
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.EMAILADDRESS_PATTERN'
+                      | translate
+                  }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="form-label-group">
+              <input
+                [id]="'confirm-email-address' + passengerDetails.order"
+                appTrim
+                class="form-control"
+                formControlName="confirmEmailAddress"
+                placeholder=" "
+                type="text"
+              />
+              <label [for]="'confirm-email-address' + passengerDetails.order">
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.CONFIRM_EMAIL_ADDRESS'
+                    | translate
+                }}
+              </label>
+              <div
+                *ngIf="
+                  form.controls.confirmEmailAddress.errors &&
+                  form.controls.confirmEmailAddress.dirty &&
+                  form.controls.confirmEmailAddress.touched
+                "
+                class="help-block error"
+              >
+                <div
+                  *ngIf="form.controls.confirmEmailAddress.errors['required']"
+                >
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.CONFIRMEMAILADDRESS_REQUIRED'
+                      | translate
+                  }}
+                </div>
+                <div *ngIf="form.controls.confirmEmailAddress.errors['email']">
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.EMAILADDRESS_PATTERN'
+                      | translate
+                  }}
+                </div>
+                <div
+                  *ngIf="
+                    form.controls.confirmEmailAddress.errors[
+                      'confirmedValidator'
+                    ]
+                  "
+                >
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.EMAIL_MATCH'
+                      | translate
+                  }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="row">
+          <div
+            class="col-sm-6 col-md-6 col-lg-4"
+            [ngClass]="
+              CAN_USA_COUNTIRES.includes(form.controls.country.value)
+                ? 'col-6'
+                : 'col-12'
+            "
+          >
+            <div class="form-label-group">
+              <input
+                [id]="'primary-phone-number' + passengerDetails.order"
+                [maxlength]="
+                  CAN_USA_COUNTIRES.includes(form.controls.country.value)
+                    ? 14
+                    : 50
+                "
+                appTrim
+                class="form-control"
+                formControlName="primaryPhoneNumber"
+                placeholder=" "
+                type="text"
+                (blur)="onBlurPhoneNumber($event, 'primaryPhoneNumber')"
+              />
+              <label [for]="'primary-phone-number' + passengerDetails.order">
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.PRIMARY_PHONE_NUMBER'
+                    | translate
+                }}
+              </label>
+              <div
+                *ngIf="
+                  form.controls.primaryPhoneNumber.errors &&
+                  form.controls.primaryPhoneNumber.dirty &&
+                  form.controls.primaryPhoneNumber.touched
+                "
+                class="help-block error"
+              >
+                <div
+                  *ngIf="form.controls.primaryPhoneNumber.errors['required']"
+                >
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.PRIMARY_PHONE_NUMBER_REQUIRED'
+                      | translate
+                  }}
+                </div>
+                <div
+                  *ngIf="!form.controls.primaryPhoneNumber.errors['required']"
+                >
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.PRIMARY_PHONE_NUMBER'
+                      | translate
+                  }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-6 col-sm-6 col-md-6 col-lg-4"
+            *ngIf="CAN_USA_COUNTIRES.includes(form.controls.country.value)"
+          >
+            <div class="form-label-group">
+              <input
+                appTrim
+                class="form-control"
+                formControlName="primaryPhoneNumberExt"
+                maxlength="37"
+                placeholder=" "
+                type="text"
+                [id]="'primary-phone-number-ext' + passengerDetails.order"
+              />
+              <label
+                [for]="'primary-phone-number-ext' + passengerDetails.order"
+                >{{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.EXT' | translate
+                }}</label
+              >
+              <div
+                class="help-block error"
+                *ngIf="
+                  form.controls.primaryPhoneNumberExt.errors &&
+                  form.controls.primaryPhoneNumberExt.dirty
+                "
+              >
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.PRIMARY_PHONE_NUMBER_EXT'
+                    | translate
+                }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="row">
+          <div
+            class="col-sm-6 col-md-6 col-lg-4"
+            [ngClass]="
+              CAN_USA_COUNTIRES.includes(form.controls.country.value)
+                ? 'col-6'
+                : 'col-12'
+            "
+          >
+            <div class="form-label-group">
+              <input
+                [id]="'alt-phone-number' + passengerDetails.order"
+                [maxlength]="
+                  CAN_USA_COUNTIRES.includes(form.controls.country.value)
+                    ? 14
+                    : 50
+                "
+                appTrim
+                class="form-control"
+                formControlName="altPhoneNumber"
+                placeholder=" "
+                type="text"
+                (blur)="onBlurPhoneNumber($event, 'altPhoneNumber')"
+              />
+              <label [for]="'alt-phone-number' + passengerDetails.order">
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ALT_PHONE_NO'
+                    | translate
+                }}
+              </label>
+              <div
+                class="help-block error"
+                *ngIf="
+                  form.controls.altPhoneNumber.errors &&
+                  form.controls.altPhoneNumber.dirty
+                "
+              >
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.PRIMARY_PHONE_NUMBER'
+                    | translate
+                }}
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-6 col-sm-6 col-md-6 col-lg-4"
+            *ngIf="CAN_USA_COUNTIRES.includes(form.controls.country.value)"
+          >
+            <div class="form-label-group">
+              <input
+                [id]="'alt-phone-number-ext' + passengerDetails.order"
+                appTrim
+                class="form-control"
+                formControlName="altPhoneNumberExt"
+                maxlength="37"
+                placeholder=" "
+                type="text"
+              />
+              <label [for]="'alt-phone-number-ext' + passengerDetails.order">{{
+                'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.EXT' | translate
+              }}</label>
+              <div
+                class="help-block error"
+                *ngIf="
+                  form.controls.altPhoneNumberExt.errors &&
+                  form.controls.altPhoneNumberExt.dirty
+                "
+              >
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.PRIMARY_PHONE_NUMBER_EXT'
+                    | translate
+                }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row"
+      *ngIf="!passengerDetails.isPrimaryApplicant || isManualFlow"
+    >
+      <div class="col">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="form-label-group remove-mb remove-mb--fq">
+              <input
+                [id]="'freq-flyer-number' + passengerDetails.order"
+                appTrim
+                class="form-control"
+                formControlName="freqFlyerNumber"
+                placeholder=" "
+                type="text"
+                (change)="changeAeroplanStatusState()"
+              />
+              <label [for]="'freq-flyer-number' + passengerDetails.order">
+                {{
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.FREQ_FLYER_NO'
+                    | translate
+                }}
+              </label>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="form-label-group passenger-details-dropdown remove-mb">
+              <app-select
+                [label]="
+                  'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.AEROPLAN_STATUS'
+                    | translate
+                "
+                [options]="aeroplanStatusOptions"
+                formCntrlName="aeroplanStatus"
+                [formGroup]="form"
+                (onChange)="onChangeAeroplan($event)"
+              />
+              <div
+                *ngIf="
+                  form.controls.aeroplanStatus.errors &&
+                  form.controls.aeroplanStatus.dirty &&
+                  form.controls.aeroplanStatus.touched
+                "
+                class="help-block error"
+              >
+                <div
+                  *ngIf="
+                    form.controls.aeroplanStatus.errors[
+                      'validateOtherControlValueValidator'
+                    ]
+                  "
+                >
+                  {{
+                    'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.AEROPLANSTATUS_REQUIRED'
+                      | translate
+                  }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</form>

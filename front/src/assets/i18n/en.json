@@ -1,0 +1,785 @@
+{
+  "FOOTER": {
+    "ABOUT": "About Air Canada",
+    "ABOUT_LINK": "https://www.aircanada.com/ca/en/aco/home/about.html",
+    "AC_STAR_LINK": "https://www.aircanada.com/ca/en/aco/home/book/routes-and-partners/star-alliance-and-other-airline-partners/star-alliance.html",
+    "AGENTS": "Travel Agents",
+    "AGENTS_LINK": "https://www.aircanada.com/ca/en/ado/home.html",
+    "BAGGAGE_CHANGES": "Baggage Fee Changes",
+    "BAGGAGE_CHANGES_LINK": "https://www.aircanada.com/ca/en/aco/home/book/travel-news-and-updates/2019/baggage-fee-changes.html",
+    "BAGGAGE": "Baggage Fees and Optional Services",
+    "BAGGAGE_LINK": "https://www.aircanada.com/ca/en/aco/home/legal/products-and-services.html",
+    "CAREERS": "Careers",
+    "CAREERS_LINK": "https://www.aircanada.com/ca/en/aco/home/about/careers.html",
+    "CARGO": "Air Canada Cargo",
+    "CARGO_LINK": "http://www.aircanada.com/cargo/en/",
+    "CONTACT": "Contact Information",
+    "CONTACT_LINK": "https://www.aircanada.com/ca/en/aco/home/fly/customer-support/contact-us.html",
+    "CUSTOMER_SERVICE": "Customer Service Plan",
+    "CUSTOMER_SERVICE_LINK": "https://www.aircanada.com/ca/en/aco/home/legal/air-canada-customer-service-plan.html",
+    "CUSTOMER_SUPPORT": "Customer Support",
+    "DEALS": "Flight Deals",
+    "DEALS_LINK": "https://www.aircanada.com/en-ca/",
+    "DESTINATIONS": "Destinations",
+    "EMAIL": "Email Offers",
+    "EMAIL_PREFS": "Modify Preferences",
+    "EMAIL_PREFS_LINK": "https://www.aircanada.com/ca/en/aco/home/email-pref-center.html",
+    "FOUNDATION": "Air Canada Foundation",
+    "FOUNDATION_LINK": "http://www.aircanada.com/en/about/community/foundation/index.html",
+    "GENERAL_CONDITIONS": "General Conditions of Carriage & Tariffs",
+    "GENERAL_CONDITIONS_LINK": "https://www.aircanada.com/ca/en/aco/home/legal/conditions-carriage-tariffs.html",
+    "INVESTOR": "Investor Relations",
+    "INVESTOR_LINK": "https://www.aircanada.com/ca/en/aco/home/about/investor-relations.html",
+    "MEDIA": "Media Centre",
+    "MEDIA_LINK": "https://www.aircanada.com/ca/en/aco/home/about/media.html",
+    "OUR_COMPANY": "Our Company",
+    "PRIVACY_POLICY": "Privacy Policy",
+    "PRIVACY_POLICY_LINK": "https://www.aircanada.com/ca/en/aco/home/legal/privacy-policy.html",
+    "SITEMAP": "Site Map",
+    "SITEMAP_LINK": "https://www.aircanada.com/ca/en/aco/home/sitemap.html",
+    "SUBSCRIBE": "Subscribe",
+    "SUBSCRIBE_LINK": "https://www.aircanada.com/ca/en/aco/home/email-pref-center.html",
+    "TERMS_USE": "Terms of use",
+    "TERMS_USE_LINK": "https://www.aircanada.com/ca/en/aco/home/legal/terms-of-use.html",
+    "TO_CA": "Flights to Canada",
+    "TO_CA_LINK": "https://www.aircanada.com/en-ca/flights-to-canada",
+    "TO_DEST1": "Canada to U.S.",
+    "TO_DEST1_LINK": "https://www.aircanada.com/en-ca/flights-from-canada-to-united-states",
+    "TO_DEST2": "Canada to U.K.",
+    "TO_DEST2_LINK": "https://www.aircanada.com/en-ca/flights-from-canada-to-united-kingdom",
+    "TO_DEST3": "Canada to Japan",
+    "TO_DEST3_LINK": "https://www.aircanada.com/en-ca/flights-from-canada-to-japan",
+    "TO_DEST4": "Canada to Australia",
+    "TO_DEST4_LINK": "https://www.aircanada.com/en-ca/flights-from-canada-to-australia",
+    "WHY_BOOK": "Why Book With Us",
+    "WHY_BOOK_LINK": "https://www.aircanada.com/ca/en/aco/home/book/why-book-with-us.html"
+  },
+  "HEADER": {
+    "CONTACT_US": "Customer support",
+    "CONTACT_US_LINK": "https://www.aircanada.com/ca/en/aco/home/fly/customer-support/contact-us.html",
+    "HOME_LINK": "https://www.aircanada.com/ca/en",
+    "LANGUAGES": "Languages",
+    "LET_US_KNOW": "Let us know",
+    "LET_US_KNOW_LINK": "https://accc-prod.microsoftcrmportals.com/en-CA/air-canada-contact-us/"
+  },
+  "ICON_TITLE": {
+    "CHATBOX": "Chat icon",
+    "CHECKMARK": "Checkmark icon",
+    "CLOSE": "Close",
+    "INFO": "Info icon",
+    "NEXT": "Next icon",
+    "WARNING": "Warning icon",
+    "X": "X icon"
+  },
+  "IMAGE_ALT_TEXT": {
+    "AC_LOGO": "Air Canada Official Website, opens in a new tab",
+    "STAR_ALLIANCE": "A Star Alliance Member"
+  },
+  "SSET": {
+    "TAB_TITLE": "Self-Serve Eligibility Tool",
+    "TITLE": "Flight disruption compensation and expense eligibility",
+    "SEARCH": {
+      "TIPS_TITLE": "Tips for filling out this form",
+      "PNR_LABEL": "Booking Number",
+      "ERRORS": {
+        "PNR_REQUIRED": "A booking number is required.",
+        "PNR_PATTERN": "The booking number must contain only numbers and unaccented letters.",
+        "PNR_MIN": "The booking number must contain 6 characters.",
+        "LASTNAME_REQUIRED": "The last name is required.",
+        "FIRSTNAME_REQUIRED": "The first name is required.",
+        "PNR_TICKET_REQUIRED": "A booking number or ticket number is required.",
+        "PNR_TICKET_PATTERN": "The booking number must contain only numbers and unaccented letters, The ticket number must contain only numbers.",
+        "PNR_TICKET_MIN": "The booking number must contain 6 characters. The ticket number must contain 13 characters.",
+        "LASTNAME_PATTERN": "The last name contains invalid characters.",
+        "LASTNAME_MAXLENGTH": "The last name cannot contain more than 50 characters.",
+        "FIRSTNAME_PATTERN": "The first name contains invalid characters.",
+        "FIRSTNAME_MAXLENGTH": "The first name cannot contain more than 50 characters."
+      },
+      "DATE_LABEL": "Departure Date",
+      "BTN_SEARCH": "Check My Eligibility",
+      "LASTNAME_LABEL": "Passenger's Last Name",
+      "FIRSTNAME_LABEL": "Passenger's First Name",
+      "PNR_TICKET_LABEL": "Booking or Ticket Number",
+      "PNR_TICKET_HELP": "Example: CBA321 or 0141234567890",
+      "FIRSTNAME_HELP": "As displayed on original reservation",
+      "LASTNAME_HELP": "As displayed on original reservation",
+      "DATE_HELP": "Example: {{ format }}",
+      "TICKET_LABEL": "Ticket Number",
+      "TICKET_HELP": "Example: 123456789123"
+    },
+    "PASSENGER_ELIGIBILITY": {
+      "TITLE": "Passenger Eligibility",
+      "PENDING": {
+        "TITLE": "Pending",
+        "TEXT": "Our team is still investigating your itinerary and eligibility. Please wait a minimum {{ days }} days after your arrival to submit a claim."
+      },
+      "ELIGIBLE": {
+        "TITLE": "May be Eligible",
+        "TEXT": "Thanks for filling out your booking details. Our self-assessment tool indicates that you may be entitled to compensation. Please submit your compensation claim below.<br/><br/> <a class=\"btn btn-link btn-blue\" href=\"http://www.aircanada.com/flightdisruptions\" target=\"_blank\">Learn more about your rights when there is a flight disruption</a>."
+      },
+      "NOTELIGIBLE": {
+        "TITLE": "Not Eligible",
+        "TEXT": "Thanks for filling out your booking details. Unfortunately, our self-assessment tool has determined that you may not be entitled to compensation.<br/><br/>You can still submit a claim by completing the <a class=\"btn btn-link btn-blue\" href=\"https://accc-prod.microsoftcrmportals.com/en-CA/flight-delay-or-cancellation/\" target=\"_blank\">Flight Delay and Cancellation Claim Request Form</a>.<br/><br/>Please note that situations surrounding flight disruptions can be complex and have multiple causes. The reasons provided for a flight disruption may change as the situation evolves, new issues arise, or new information is received. <a class=\"btn btn-link btn-blue\" href=\"http://www.aircanada.com/flightdisruptions\" target=\"_blank\">Learn more about your rights when there is a flight disruption</a>.",
+        "TEXT2": "Find out more about |Flight Disruptions eligibility|."
+      },
+      "NODISRUPTION": {
+        "TITLE": "No Disruption",
+        "TEXT": "There was no disruption on the booking you indicated. Please make sure that the information above has been entered correctly."
+      },
+      "NOMATCH": {
+        "TITLE": "No Match",
+        "TEXT": "We can’t find your booking. Please make sure that the information above has been entered correctly.",
+        "SUBSEQUENT": "If the problem persists, please fill out a |Compensation Claim Form|. An Air Canada representative will review it and get back to you."
+      },
+      "OVER365": {
+        "TITLE": "Not Eligible",
+        "TEXT": "Unfortunately, you are not eligible for compensation. Claims must be filed within 365 days of the departure flight.",
+        "TEXT2": "Find out more about |Flight Disruptions eligibility|."
+      },
+      "OUTSIDEPERIOD": {
+        "TITLE": "Not Eligible",
+        "TEXT": "Unfortunately, you are not eligible for compensation. The disruption took place before the protection period. We apologize for any inconvenience this disruption may have caused in your travel plans.",
+        "TEXT2": "Find out more about |Flight Disruptions eligibility|."
+      },
+      "OTHERAIRLINES": {
+        "TITLE": "Other Airlines",
+        "TEXT": "Your itinerary contains flights on other airlines, we cannot make a determination at this time and would need more information.",
+        "TEXT2": "Please fill out a |Compensation Claim Form|. An Air Canada representative will review it and get back to you."
+      },
+      "OUTSIDEAPPR": {
+        "TITLE": "May be Eligible",
+        "TEXT": "Unfortunately, you are not eligible for compensation under Canadian regulations. Flight interruption occurred outside Canadian regulations but may be subject to other regulations.",
+        "TEXT2": "Please fill out a |Compensation Claim Form|. An Air Canada representative will review it and get back to you."
+      },
+      "DUPLICATEREQUEST": {
+        "TITLE": "Duplicate Claim",
+        "TEXT": "It looks like you’ve already made a claim for your flight disruption (Claim number: <b class=\"red\">{{ caseNum }}</b>). <br/><br/> Our system can’t accept another claim once you’ve made a submission for the same flight segment(s) and passenger(s). <br/><br/> If you’d like to share any additional information, please reply to the email you received when you submitted your original claim.",
+        "TEXT2": "Find out more about |Flight Disruptions eligibility|."
+      },
+      "UNABLEDETERMINATION": {
+        "TITLE": "Unable to Make a Determination",
+        "TEXT": "Thanks for filling out your booking details. Unfortunately, our self-assessment tool can’t determine if you’re entitled to compensation. <br/><br/> You can still submit a claim by completing the <a class=\"btn btn-link btn-blue\" href=\"https://accc-prod.microsoftcrmportals.com/en-CA/flight-delay-or-cancellation/\" target=\"_blank\">Flight Delay and Cancellation Claim Request Form</a>. <br/><br/> Please note that situations surrounding flight disruptions can be complex and have multiple causes. The reasons provided for a flight disruption may change as the situation evolves, new issues arise, or new information is received. <a class=\"btn btn-link btn-blue\" href=\"http://www.aircanada.com/flightdisruptions\" target=\"_blank\">Learn more about your rights when there is a flight disruption</a>.",
+        "TEXT2": "Find out more about |Flight Disruptions eligibility|."
+      }
+    },
+    "ACTIONS": {
+      "SUBMIT": "Submit Compensation Claim",
+      "RETRY": "Try again",
+      "SUBMIT_LINK": "https://accc-uatmaster.microsoftcrmportals.com/en-CA/flight-delay-or-cancellation/"
+    },
+    "ALERT": {
+      "COVID19": "Special regulations in place since March 13, 2020 due to COVID-19.&nbsp;|Click here"
+    },
+    "DISRUPTION_REASONS": {
+      "0": "This flight is delayed and we're working to determine the cause for this delay.",
+      "1": "This flight is delayed due to bad weather conditions from an earlier flight which is causing the late arrival of the aircraft that is scheduled to operate your flight.<br/><br/>An example of bad weather could include thunderstorms, snow, fog, low clouds, or wind gusts.",
+      "2": "This flight is delayed due to a regulatory issue from an earlier flight which is causing the late arrival of the aircraft that is scheduled to operate your flight.<br/><br/>An example of a security issue could include additional time needed to screen a customer or baggage at security or assist with a medical issue on board the aircraft.",
+      "3": "This flight is delayed due to a technical issue from an earlier flight which is causing the aircraft that is scheduled to operate your flight to arrive late.<br/><br/>An example of a technical issue could include maintenance affecting key aircraft systems such as flight controls, navigation systems, or hydraulics.",
+      "4": "This flight is delayed due to airport constraints from an earlier flight which is causing the aircraft that is scheduled to operate your flight to arrive late.<br/><br/>An example of an airport limitation could include airport gate availability, night curfew restrictions or an unscheduled runway closure.",
+      "5": "This flight is delayed due to an operational issue from an earlier flight which is causing the aircraft that is scheduled to operate your flight to arrive late.<br/><br/>An example of an operational issue could include scheduling conflicts, operational decisions or a connection delay.",
+      "6": "This flight is delayed due to additional time needed to manage airport constraints.<br/><br/>This could be the result of one or more factors, including congestion at security screening, catering delays, airport gate availability, loading the aircraft or more time needed to board customers.",
+      "9": "This flight is delayed due to additional flight preparation time needed for the aircraft that is scheduled to operate your flight.",
+      "11": "This flight is delayed due to additional time needed to accommodate late customer check-ins.",
+      "13": "This flight is delayed due to additional time needed to load oversized items or those that require special handling on to the aircraft.",
+      "14": "This flight is delayed due to additional time needed to board all of the customers and complete the check-in processes at the airport gate.",
+      "15": "This flight is delayed due to additional time needed to board customers with a late connection or arrival and complete the check-in processes at the airport gate.",
+      "17": "This flight is delayed due to additional time needed to resolve a catering issue.<br/><br/>An example of a catering issue could include having the incorrect quantity of meals needed for the number of customers on the aircraft.",
+      "18": "This flight is delayed due to additional time needed to load late-arriving customer baggage on to the aircraft.",
+      "19": "This flight is delayed due to additional boarding time needed to support customers requiring special assistance.",
+      "25": "This flight is delayed due to late planning or processing of cargo.",
+      "29": "This flight is delayed to accommodate late arriving customers.",
+      "31": "Your flight is delayed due to additional flight preparation time needed to complete the aircraft documentation required for the flight to depart.",
+      "32": "This flight is delayed due to ground handling activities which are taking longer than anticipated.<br/><br/>Examples of ground handling activities could include lavatory/water servicing, loading/unloading the aircraft, or arranging for equipment to service your aircraft.",
+      "35": "This flight is delayed due to additional time needed to clean the aircraft.",
+      "36": "This flight is delayed due to additional time needed to refuel the aircraft.",
+      "37": "This flight is delayed due to a catering issue that is taking longer than anticipated to resolve.<br/><br/>An example of a catering issue could include the late arrival of catering to the aircraft, an incorrect order, or a missing food item.",
+      "41": "This flight is delayed due to a maintenance issue with the aircraft that needs to be resolved.<br/><br/>An example of a maintenance issue could include the need to complete a minor aircraft repair or last-minute maintenance inspection.",
+      "42": "This flight is delayed due to a scheduled maintenance issue with the aircraft that is taking longer than anticipated.",
+      "43": "This flight is delayed due to an unscheduled maintenance issue within the aircraft that needs to be resolved.<br/><br/>An example of a maintenance issue could include repairing a broken seat, the in-flight entertainment system console or other components within the aircraft.",
+      "44": "This flight is delayed due to an unforeseen technical issue with the maintenance equipment needed to service the aircraft.",
+      "45": "This flight is delayed due to the late arrival of maintenance parts or equipment needed to service the aircraft.",
+      "46": "This flight is delayed due to additional time needed to substitute the aircraft.<br/><br/>Due to an unforeseen maintenance issue, the aircraft for your flight may have had to be changed, and the arrival of the replacement aircraft took longer than expected.",
+      "47": "This flight is delayed due to aircraft availability.<br/><br/>Due to an unforeseen maintenance issue, the aircraft assigned for your flight may not have been able to fly to the specific destination, and the arrival of the replacement aircraft took longer than expected.",
+      "48": "This flight is delayed due to a new cabin configuration requiring some customers to be assigned new seats.",
+      "51": "This flight is delayed due to additional time needed to complete an unforeseen repair in the cabin or on the exterior of the aircraft.",
+      "52": "This flight is delayed due to additional time needed to complete an unforeseen repair in the cargo compartment of the aircraft.",
+      "56": "This flight is delayed due to an issue with the cargo documentation needed for the flight.",
+      "58": "This flight is delayed due to an unforeseen technology issue impacting one of our suppliers, which is impacting our operations.<br/><br/>An example of a technology issue could include an internet outage impacting airport terminal computers.",
+      "61": "This flight is delayed due to additional flight preparation time needed by air traffic control to review the flight plan.",
+      "62": "This flight is delayed due to additional time needed to prepare the operational flight plan, which may mean the aircraft requires more fuel or that cargo needs to be removed.",
+      "63": "This flight is delayed due to additional flight preparation time needed by the pilots.",
+      "64": "This flight is delayed due to additional time needed to address pilot scheduling issues.",
+      "65": "This flight is delayed due to additional time needed to address a request by the pilots.<br/><br/>An example of a pilot request could include a maintenance check of the aircraft, additional items for the cabin crew, or extra fuel.",
+      "66": "This flight is delayed due to additional time needed for the cabin crew to finalize the boarding procedures and prepare the aircraft for departure.",
+      "67": "This flight is delayed due to additional flight preparation time needed by the cabin crew.",
+      "68": "This flight is delayed due to additional time needed for the cabin crew to finalize the boarding procedures and prepare the aircraft for departure.<br/><br/>An example of an issue could be additional checks needed to assure all catering items are onboard the aircraft, or because the cabin crew needs time to investigate a cabin defect.",
+      "69": "This flight is delayed due to additional time needed to complete a security check on board the aircraft.",
+      "71": "This flight is delayed due to bad weather at the departure airport.<br/><br/>An example of bad weather could include thunderstorms, snow, fog, low clouds, or wind gusts.",
+      "72": "This flight is delayed due to bad weather at the destination airport.<br/><br/>An example of bad weather could include thunderstorms, snow, fog, low clouds, or wind gusts.",
+      "73": "This flight is delayed due to bad weather which has impacted the flight path for your journey.<br/><br/>An example of bad weather could include thunderstorms, snow, fog, low clouds, or wind gusts.",
+      "75": "This flight is delayed due to de-icing requirements.<br/><br/>De-icing is a standard procedure that safely removes snow or frost from the aircraft exterior.",
+      "76": "This flight is delayed due to bad weather affecting airport operations.<br/><br/>An example of bad weather could include the removal of snow, ice, water or sand from the runway or anywhere else on the airport grounds.",
+      "77": "This flight is delayed due to bad weather affecting airport ground handling operations.<br/><br/>An example of bad weather could include thunderstorms, snow, fog, low clouds, or wind gusts.",
+      "81": "This flight is delayed due to bad weather on the flight path of your journey, which is contributing to air traffic constraints and slower processing times.<br/><br/>An example of bad weather could include thunderstorms, snow, fog, low clouds, or wind gusts.",
+      "82": "This flight is delayed due to air traffic control constraints, which are resulting in slower processing times.<br/><br/>An example of air traffic control restraint could include staff limitations or equipment issues.",
+      "83": "This flight is delayed due to air traffic control constraints at the destination airport, which are resulting in slower processing times.<br/><br/>An example of air traffic control restraint could include staff limitations or equipment issues.",
+      "84": "This flight is delayed due to bad weather conditions at the destination airport.<br/><br/>An example of bad weather could include thunderstorms, snow, fog, low clouds, or wind gusts.",
+      "85": "Your flight is delayed as security processes are taking longer than expected.<br/><br/>ecurity process delays can happen if passengers arrive late, bags need to be removed for missed connections, or if there are long lines at airport screening areas.",
+      "86": "This flight is delayed due to additional time needed to accommodate government or regulatory restrictions.<br/><br/>Examples includes a country imposing airspace restrictions leading to longer flight times, government entry requirements that increase customs processing time, or local political developments that impact our operations.",
+      "87": "This flight is delayed due to airport limitations.<br/><br/>An example of an airport limitation could include a technical issue with the jet bridge, baggage system or parking stand.",
+      "88": "This flight is delayed due to airport restrictions at the destination airport.<br/><br/>An example of an airport restriction could include airport staff limitations, an airport curfew, or noise reduction constraints.",
+      "89": "This flight is delayed due to airport restrictions at the departure airport.<br/><br/>An example of an airport restriction could include airport staff limitations, an airport curfew or noise reduction constraints.",
+      "93": "This flight is delayed due to an unforeseen operational constraints at the airport from an earlier flight which is causing the late arrival of the aircraft that is scheduled to operate.<br/><br/>An example of an operational constraints at the airport could include ramp congestion, gate availability or a technical issue at the parking stand.",
+      "96": "This flight is delayed due to aircraft availability.<br/><br/>An example of an aircraft availability issue could include the re-routing of an aircraft or the need to utilize a larger aircraft which requires longer preparation time.",
+      "97": "This flight is delayed due to a labour dispute which is slowing down our operations.",
+      "98": "This flight is delayed due to an external labour dispute affecting one of our suppliers which is slowing down our operations.",
+      "99": "This flight is delayed due to additional time needed to tow the aircraft to the gate.",
+      "FDA": "We're sorry, this flight is cancelled due to air traffic control constraints.",
+      "ANH": "We're sorry, this flight is cancelled due to arrival airport limitations.",
+      "SKD": "We're sorry, this flight is cancelled due to aircraft availability.",
+      "SOP": "We're sorry, this flight is cancelled due to aircraft availability.",
+      "SOM": "We're sorry, this flight is cancelled due to aircraft availability.",
+      "EQI": "We're sorry, this flight is cancelled due to equipment availability.",
+      "ANF": "We're sorry, this flight is cancelled due to a fuel shortage.",
+      "ACS": "We're sorry, this flight is cancelled due to a security check of the inbound aircraft.",
+      "ANA": "We're sorry, this flight is cancelled due to aircraft maintenance.",
+      "MTC": "We're sorry, this flight is cancelled due to aircraft maintenance.",
+      "DMT": "We're sorry, this flight is cancelled due to a labour dispute.",
+      "SEC": "We're sorry, this flight is cancelled due to political instability.",
+      "SOT": "We're sorry, this flight is cancelled due to a labour dispute.",
+      "WXX": "We're sorry, this flight is cancelled due to weather.",
+      "FOC": "We're sorry, this flight is cancelled due to crew constraints.",
+      "HOLI": "We're sorry but this flight is cancelled due to a public holiday in the country you were departing from or arriving to.",
+      "AIRS": "We're sorry but this flight is cancelled due to air traffic control constraints.<br/><br/>Examples include a high volume of aircraft in the same airspace, staffing issues requiring a reduction in traffic, or an IT issue which has affected the air traffic control systems.",
+      "ARPT": "We're very sorry, this flight is cancelled due to destination airport limitations.<br/><br/>Examples include airport constraints within the grounds such as the building, gate, taxi-ways or due to an event which is causing a disruption at the airport.",
+      "COMM": "We're sorry but this flight is cancelled due to unexpected business or operational constraints on our planned flight schedule.",
+      "CREW": "We're sorry but this flight is cancelled due to crew constraints. <br/><br/>An example of a crew constraint could include crew members reaching the maximum number of hours that they are legally permitted to work per day.",
+      "DAMA": "We're sorry but this flight is cancelled due to unforeseen aircraft maintenance.",
+      "EQUI": "We're sorry but this flight is cancelled due to equipment availability.",
+      "FUEL": "We're sorry but this flight is cancelled due to a fuel shortage.<br/><br/>Examples include a fuel shortage, including supply chain disruptions or the possibility of contaminated fuel.",
+      "HDLG": "We're sorry but this flight is cancelled due to ground handling constraints.<br/><br/>An example of a ground handling constraints could include the lack of ground handling equipment to dispatch this flight.",
+      "INDU": "We're sorry but this flight is cancelled due to unforeseen external partner constraints.<br/><br/>Examples include an IT issue, or an external labour dispute which is preventing us from managing the flight appropriately.",
+      "OPER": "We're sorry but this flight is cancelled due to the aircraft scheduled for this flight not being available.",
+      "PERF": "We're sorry but this flight is cancelled due to an unforeseen aircraft maintenance issue.<br/><br/>An example of an unforeseen maintenance issue could include recently detected maintenance affecting key aircraft systems such as flight controls, navigation systems, or hydraulics.",
+      "POLI": "We're sorry but this flight is cancelled due to government or regulatory restrictions beyond our control.<br/><br/>Examples include government travel restrictions, security, health or customs-related issues or local political developments impacting our operations.",
+      "POSI": "We're sorry but this flight is cancelled due to the aircraft scheduled for this flight not being available.",
+      "REPO": "We're sorry but this flight is cancelled due to the aircraft scheduled for this flight not being available.",
+      "ROTA": "We're very sorry but this flight is cancelled due to the aircraft scheduled for this flight not being available.",
+      "RTNS": "We're very sorry but this flight is cancelled due to the aircraft scheduled for this flight not being available.",
+      "RUNW": "We're very sorry but this flight is cancelled due to airport runway restrictions that are limiting the number of flights that can take-off or land.<br/><br/>Examples include maintenance, repaving, or debris from weather.",
+      "TECH": "We're sorry but this flight is cancelled due to technical issues from an earlier flight which is causing the aircraft that is scheduled to operate this flight to not be available.<br/><br/>Examples include maintenance affecting key aircraft systems such as flight controls, navigation systems, or hydraulics.",
+      "WEAT": "We're very sorry but this flight is cancelled due to bad weather which has impacted the departure/destination airport or flight path for your journey.<br/><br/>Examples include thunderstorms, snow, fog, low clouds, or wind gusts.",
+      "TITLE": "Official Disruption Reason(s):"
+    },
+    "INTRO": "Please complete and submit the form below to find out if your flight disruption entitles you to compensation and expense reimbursement (e.g., if you arrived at your final destination three or more hours from your scheduled time of arrival). |More about flight disruption regulations|.",
+    "POLICY": "Flight Disruption Policy",
+    "POLICY_LINK": "https://www.aircanada.com/ca/en/aco/home/fly/flight-information/flight-disruptions.html",
+    "INSTRUCTIONS": {
+      "BOOKING_NUMBER": "Enter the |booking number| from the original reservation (example: CBA312)<br>or enter the |ticket number| from the original reservation or your boarding pass (example: 0141234567890)",
+      "NAME": "Enter the <strong>name</strong> exactly as displayed on the original reservation (example: Jennifer Smith, not Jen Smith)",
+      "DEPT_DATE": "Indicate the original <strong>departure date</strong> of the flight affected by the delay or cancellation",
+      "ENTER_TICKET_NUMBER": "Please enter the |ticket number| from the original reservation or your boarding pass (example: 0141234567890)."
+    },
+    "FIND_BOOKING": {
+      "TITLE": "What is Booking Reference?",
+      "BODY": "Your Booking Reference (or Record Locator) is a sequence comprised of six letters and/or numbers used to uniquely identify your booking. It can be found on the Itinerary/Receipt you received after completing your booking.",
+      "CAPTION": "Booking Information"
+    },
+    "FIND_TICKET": {
+      "TITLE": "What is a Ticket Number?",
+      "BODY": "Your Ticket Number (or e-ticket) is a sequence of numbers used to uniquely identify your booking number. It can be found on the boarding pass you received after completing your check-in.",
+      "CAPTION": "Ticket number information"
+    },
+    "ERROR": {
+      "GENERAL": {
+        "TITLE": "An Internal Server Error has occurred",
+        "TEXT": "An error has occurred while processing your request. The <a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/en/aco/home.html\" target=\"_blank\">aircanada.com</a> support team has been notified of the problem.<br>If you believe you have additional information that may be of help, please contact <a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/en/aco/home/fly/customer-support/contact-us.html\" target=\"_blank\">Customer Support</a>."
+      },
+      "CONNECTIVITY": {
+        "TITLE": "A Connection Error has occurred",
+        "TEXT": "An error was encountered while trying to connect to the server. The <a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/en/aco/home.html\" target=\"_blank\">aircanada.com</a> support team has been notified of the problem.<br>If you believe you have additional information that may be of help, please contact <a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/en/aco/home/fly/customer-support/contact-us.html\" target=\"_blank\">Customer Support</a>."
+      },
+      "HOMEPAGE": "Homepage",
+      "RETRY": "Retry"
+    }
+  },
+  "SSET_V2": {
+    "ASSESSMENT": {
+      "BACK_TO_CLAIM": "Back to claim",
+      "BACK_TO_EXPENSES": "Back to expenses",
+      "BACK_TO_EXPENSES_FOR_JOURNEY": "Back to Expenses for Journey",
+      "BACK_TO_FLIGHT_DETAILS": "Back to flight details",
+      "BACK_TO_HOME": "Restart form",
+      "BACK_TO_PASSENGER_DETAILS": "Back to passenger details",
+      "BACK_TO_REVIEW_EXPENSES": "Back to review expenses",
+      "CANCEL": "Cancel",
+      "CONTINUE_TO_EXPENSES": "Continue to expenses",
+      "CONTINUE_TO_FLIGHT_DETAILS": "Continue to flight details",
+      "CONTINUE_TO_PASSENGER_DETAILS": "Continue to passenger details",
+      "CONTINUE_TO_JOURNEY": "Continue to Journey",
+      "EXPENSES": "Expenses",
+      "EXPENSES_ONLY": "EXPENSES ONLY",
+      "EXPENSE_DETAILS": {
+        "ADD_EXPENSE": "Add expense",
+        "ADD_EXPENSE_MODAL": {
+          "ADD_THIS_EXPENSE": "Add this expense",
+          "AMOUNT_HELP": "Including all taxes.",
+          "AMOUNT": "Amount",
+          "CHECK_IN_DATE": "Check-in date",
+          "CHECK_OUT_DATE": "Check-out date",
+          "CURRENCY": "Currency",
+          "DATE_HELP": "Please enter date in this format: YYYY/MM/DD.",
+          "DELETE_EXPENSE": "Delete expense",
+          "DISCARD": "Discard",
+          "DISRUPTION_CITY": "Airport code where disruption occurred",
+          "DISRUPTION_CITY_HELP": "Please note the airport selected cannot be the destination airport for this journey.",
+          "ERRORS": {
+            "AMOUNT_MAX_VALIDATION": "The amount you entered is too high. Please try again.",
+            "AMOUNT_MIN_VALIDATION": "Please enter an amount of at least $0.01.",
+            "AMOUNT_REQUIRED": "Please enter an amount.",
+            "AMOUNT_VALIDATION": "Your amount needs to be entered in this format: 0.00.",
+            "CURRENCY_REQUIRED": "Please select the currency for this amount.",
+            "DISRUPTION_CITY_REQUIRED": "Please indicate the airport where the disruption occurred.",
+            "DISRUPTION_CITY_VALID": "Please enter a valid airport name, or make a selection from the drop down.",
+            "EXPENSE_TYPE_REQUIRED": "Please select a type of expense.",
+            "MEAL_TYPE_REQUIRED": "Please select a meal type.",
+            "RECEIPT_INVALID": "Please make sure your file is in one of these formats: .PNG, .JPG, .PDF (maximum size of 5MB).",
+            "RECEIPT_MAXLENGTH": "Please upload one receipt per expense.",
+            "RECEIPT_MAXSIZE": "File size should not exceed 5MB.",
+            "RECEIPT_NOT_UPLOADED": "Your file could not be uploaded. Please try again.",
+            "RECEIPT_REQUIRED": "Please attach a receipt for this expense.",
+            "TRANSPORTATION_TYPE_REQUIRED": "Please select a type of transportation."
+          },
+          "REPLACE": "Replace",
+          "RECEIPT_HELPER": "Please make sure to attach receipts for any expenses claimed so that we may accurately consider your request. Supported file types: .PNG, .JPG, .PDF (maximum size of 5MB).",
+          "RECEIPT_DRAG_DROP": "Drag and drop a receipt here or",
+          "RECEIPT_BROWSE": "browse files.",
+          "SAVE_CHANGES": "Save changes",
+          "TITLE": "Please add any expenses you would like to claim for the disruption.",
+          "TRANSACTION_DATE_REQUIRED": "Please select a transaction date.",
+          "TRANSACTION_DATE": "Transaction date",
+          "TYPE_OF_EXPENSE": "Type of expense",
+          "TYPE_OF_MEAL": "Type of meal",
+          "TYPE_OF_TRANSPORTATION": "Type of transportation",
+          "YYYY/MM/DD": "YYYY/MM/DD"
+        },
+        "CONFIRMATION_DIALOG": {
+          "TITLE": "Continue without adding a flight?",
+          "TEXT": "You have not added any flight disruption compensation cases to your claim. Are you sure you want to continue?"
+        },
+        "CONFIRMATION_TEXT": "You have not added any flight disruption compensation cases to your claim. Are you sure you want to continue?",
+        "DUPLICATE_EXPENSE": {
+          "TEXT": "It looks like you’ve already made a claim for your expense reimbursement (Claim number: <b class=\"red\">{{ caseNum }}</b>). <br/><br/> Our system can’t accept another claim once you’ve made a submission for the same flight segment(s) and passenger(s). <br/><br/> If you’d like to share any additional information, please reply to the email you received when you submitted your original claim.",
+          "TITLE": "Claim already submitted"
+        },
+        "ELIGIBLE": {
+          "TEXT": "Please note that considerations for expenses will only be taken for claims at the city where the disruption occurred.",
+          "TITLE": "May be eligible for expense reimbursement."
+        },
+        "ELIGIBLE_EXPENSE": {
+          "TEXT": "Though <b>not eligible</b> for flight compensation, you may still submit expenses for us to review.",
+          "TITLE": "May be eligible for expense reimbursement."
+        },
+        "NOT_ELIGIBLE_EXPENSE": {
+          "TEXT": "Unfortunately, our self-assessment tool has determined that you are <b>not eligible</b> for expense reimbursement.",
+          "TITLE": "Not eligible for expense reimbursement."
+        },
+        "INFO": "The following Flight Disruption claims may be eligible for expense reimbursement for food and drink, access to means of communication and overnight accommodation at the disruption airport.",
+        "NIGHT": "night",
+        "NIGHTS": "nights",
+        "NO_EXPENSES": "No expenses have been added.",
+        "SUMMARY_OF_EXPENSES": "Summary of Expense(s)",
+        "SUMMARY_OF_EXPENSES_FOR_JOURNEY": "Summary of Expenses for Journey"
+      },
+      "FLIGHT_ADDED": {
+        "BOOKING_REFERENCE": "Booking Reference:",
+        "TICKET_NUMBER": "Ticket Number:"
+      },
+      "FLIGHT_DETAILS": "Flight details",
+      "FLIGHT_DETAILS_FORM": {
+        "ARRIVAL_AIRPORT": "Arrival Airport",
+        "ARRIVAL_AIRPORT_HELP": "Select a valid arrival airport.",
+        "ARRIVAL_AIRPORT_REQUIRED": "The arrival airport is required.",
+        "BOOKING_REFERENCE": "Booking Reference",
+        "BOOKING_REFERENCE_ERROR": "A valid booking reference contains letters and numbers only.",
+        "BOOKING_REFERENCE_HELP": "Example: CBA321",
+        "BOOKING_REFERENCE_OPTIONAL": "Booking Reference (optional)",
+        "BTN_ADD": "Add Flight to Claim",
+        "DEPARTURE_AIRPORT": "Departure Airport",
+        "DEPARTURE_AIRPORT_HELP": "Select a valid departure airport.",
+        "DEPARTURE_AIRPORT_REQUIRED": "The departure airport is required.",
+        "FLIGHT_DEPARTURE_DATE": "Flight Departure Date",
+        "FLIGHT_DEPARTURE_DATE_HELP": "This should be a valid date (yyyy/mm/dd).",
+        "FLIGHT_DEPARTURE_DATE_REQUIRED": "The flight departure date is required.",
+        "FLIGHT_DISRUPTION": "Find out more about Flight Disruptions eligibility.",
+        "FLIGHT_NUMBER": "Flight Number",
+        "FLIGHT_NUMBER_ERROR": "This should be a valid flight number (e.g. 55 or 0055).",
+        "FLIGHT_NUMBER_HELP": "Example: 55 or 0055",
+        "FLIGHT_NUMBER_REQUIRED": "The flight number is required.",
+        "TICKET_NUMBER": "Ticket Number",
+        "TICKET_NUMBER_INSTRUCTION": "What is a Ticket Number?",
+        "YYYY/MM/DD": "YYYY/MM/DD"
+      },
+      "FLIGHT_DETAILS_INFO": {
+        "DUPLICATE_CLAIM_1": "It appears you have already submitted claims for the journeys below. Your claims may still be under review.",
+        "DUPLICATE_CLAIM_2": "Reference Numbers:",
+        "DUPLICATE_CLAIM_3": "Note that these reference numbers are for this passenger only. Other passengers that have a claim for this journey will have their own reference numbers.",
+        "NODATA": "Please enter the details of the disrupted flight. This form can only be submitted if you arrived at your final destination 3 hours or more after the scheduled arrival time."
+      },
+      "FLIGHT_DISRUPTION": "FLIGHT DISRUPTION ONLY",
+      "FLIGHT_DISRUPTION_EXPENSES": "FLIGHT DISRUPTION & EXPENSES",
+      "ITINERARY": {
+        "ADD_TO_CLAIM": "Claim Flight Disruption Compensation",
+        "ADDED_TO_CLAIM": "Added to claim",
+        "REMOVE_FROM_CLAIM": "Remove from claim"
+      },
+      "ITINERARY_INFO": "Please see below the details of your <b>original</b> booking, as well as your eligibility status. The flight details displayed may differ from your travelled itinerary.",
+      "PASSENGER_DETAILS": "Passenger details",
+      "PASSENGER_DETAILS_FORM": {
+        "ACKNOWLEDGEMENT": "Acknowledgement",
+        "ADD_PASSENGER": "Add a Passenger",
+        "ACKNOWLEDGEMENT_CONFIRM": "I understand that each passenger added to this claim will be compensated separately for flight disruption claims.",
+        "ADDITIONAL_PASSENGERS": "Additional Passengers",
+        "ADDITIONAL_PASSENGERS_DESC": "Our records indicate that the following additional passengers travelled on this journey and may be entitled to compensation if added to this claim.",
+        "ADDITIONAL_PASSENGERS_DESC_ADD": "Additional passengers who travelled on this journey may be entitled to compensation if added to this claim. You may add up to 4 additional passengers.",
+        "ADDRESS": "Address",
+        "AEROPLAN_STATUS": "Aeroplan or Star Alliance Status",
+        "ALT_PHONE_NO": "Alternate Phone No. (optional)",
+        "CITY": "City",
+        "CONFIRM_EMAIL_ADDRESS": "Confirm Email Address",
+        "CONTACT_INFO": "Contact Information",
+        "COUNTRY": "Country/Region",
+        "EMAIL_ADDRESS": "Email Address",
+        "ENTER_DETAILS_FOR_PASSENGER": "Enter the details for passenger <b>{{firstName}} {{lastName}}</b>",
+        "ERRORS": {
+          "ACKNOWLEDGEMENT_REQUIRED": "Please acknowledge this statement to continue.",
+          "AEROPLANSTATUS_REQUIRED": "An Aeroplan or Star Alliance Status is required when a frequent flyer number has been provided.",
+          "CITY_MAXLENGTH": "A city cannot contain more than 50 characters.",
+          "CITY_REQUIRED": "A city is required.",
+          "CONFIRMEMAILADDRESS_REQUIRED": "Please confirm your email address.",
+          "COUNTRY_REQUIRED": "A country is required.",
+          "EMAIL_MATCH": "Make sure the email addresses match.",
+          "EMAILADDRESS_PATTERN": "Must be a valid email address.",
+          "EMAILADDRESS_REQUIRED": "An email address is required",
+          "FIRSTNAME_MAXLENGTH": "First name cannot contain more than 50 characters.",
+          "FIRSTNAME_PATTERN": "First name can only contain valid characters.",
+          "FIRSTNAME_REQUIRED": "A first name is required.",
+          "LASTNAME_MAXLENGTH": "Last name cannot contain more than 50 characters.",
+          "LASTNAME_PATTERN": "Last name can only contain valid characters.",
+          "LASTNAME_REQUIRED": "A last name is required.",
+          "PERMANENT_MAILING_ADDRESS_MAXLENGTH": "Mailing address cannot contain more than 100 characters.",
+          "PERMANENT_MAILING_ADDRESS_REQUIRED": "A permanent mailing address is required.",
+          "POSTALCODE_MAXLENGTH": "Postal code cannot contain more than 50 characters.",
+          "POSTALCODE_PATTERN": "Must be a valid postal code (e.g. A1B2C3)",
+          "POSTALCODE_REQUIRED": "A postal code is required.",
+          "PRIMARY_PHONE_NUMBER": "Must be a valid phone number.",
+          "PRIMARY_PHONE_NUMBER_EXT": "This should be a valid extension number.",
+          "PRIMARY_PHONE_NUMBER_PATTERN": "Must be a valid phone number.",
+          "PRIMARY_PHONE_NUMBER_REQUIRED": "A primary phone number is required.",
+          "PROVINCE_MAXLENGTH": "A province cannot contain more than 50 characters.",
+          "PROVINCE_REQUIRED": "A province is required.",
+          "TITLE_REQUIRED": "A title is required.",
+          "ZIPCODE_MAXLENGTH": "Zip code cannot contain more than 50 characters.",
+          "ZIPCODE_PATTERN": "Must be a valid zip code (e.g. 12345)",
+          "ZIPCODE_REQUIRED": "A zip code is required."
+        },
+        "EXT": "Ext (Optional)",
+        "FIRST_NAME": "First Name",
+        "FIRST_NAME_REQUIRED": "A first name is required.",
+        "FREQ_FLYER_NO": "Frequent Flyer Number (optional)",
+        "INFO": "Please enter the details for the passenger making this claim.",
+        "INPUT_HELPER_1": "As shown on original reservation",
+        "LAST_NAME": "Last Name",
+        "MAILING_ADDRESS_HELPER": "Including Street and Apt or PO Box",
+        "PERMANENT_MAILING_ADDRESS": "Permanent Mailing Address",
+        "PERMISSIONS_CONFIRM": "I have permission from all the selected passengers on this claim to act on their behalf.",
+        "POSTAL_CODE": "Postal/Zip Code",
+        "PRIMARY_PHONE_NUMBER": "Primary Phone No.",
+        "PROVINCE": "Province/State",
+        "REMOVE_PASSENGER": "Remove this passenger",
+        "TITLE": "Title",
+        "USE_THE_SAME_ADDRESS_CONTACT": "Use the same address and contact information of the passenger making this claim.",
+        "USE_THE_SAME_ADDRESS_CONTACT_TOOLTIP": "The address and contact information of the passenger making the claim will be used for follow-up communication and payment."
+      },
+      "REVIEW_CLAIM": "Review claim",
+      "REVIEW_CLAIM_PAGE": {
+        "AGREEMENT": "By submitting this form, I hereby certify that the information provided is complete, true and accurate, to the best of my knowledge. I hereby confirm that I am making this claim on my behalf only, or that of a person who does not have the capacity or the ability to submit their claim personally. I understand that the information provided may be subject to review and investigation and that Air Canada may disallow any claim which contains insufficient information, misrepresentation or false statements. I hereby give Air Canada the authority to request any documents or statements in relation to this claim to any relevant third parties such as insurance companies or retailers.",
+        "BOOKING_REF": "Booking Reference:",
+        "EXPENSES_FOR_JOURNEY": "Expenses for Journey",
+        "FREQ_FLYER_INFO": "Frequent Flyer Number and Status",
+        "JOURNEY": "Journey",
+        "PASS_DETAILS": "Passenger Details",
+        "REVIEW_TITLE": "Review your claim(s)",
+        "TICKET": "Ticket Number:"
+      },
+      "REVIEW_EXPENSES": "Review expenses",
+      "REVIEW_EXPENSES_PAGE": {
+        "REVIEW_PAGE_TITLE": "Review your expense(s)",
+        "ACKNOWLEDGEMENT": "Acknowledgement",
+        "ACKNOWLEDGEMENT_UNDERSTANDING": "I understand that I am claiming expenses on behalf of all the selected passengers on this claim.",
+        "ACKNOWLEDGEMENT_PERMISSION": "I have permission from all the selected passengers on this claim to receive reimbursement of the expenses submitted on their behalf."
+      },
+      "SKIP_EXPENSES": "Skip Expenses",
+      "SKIP_EXPENSES_FOR_JOURNEY": "Skip expenses for Journey",
+      "SUBMIT_CLAIM": "Submit Claim",
+      "TITLE": "Disruption Compensation Self-Assessment"
+    },
+    "CONFIRMATION": {
+      "CASE_NUMBER_DESC": "We will also be sending the case numbers for the claims listed below to the email address of the passenger who submitted the claim.",
+      "CLAIMS": "Claim details",
+      "OTHER_PASSENGER": {
+        "START_BUTTON": "Start a new disruption compensation claim form",
+        "TEXT": "Did you have other passengers on this booking? | Each passenger must fill out a claim form individually."
+      },
+      "THANK_YOU_DESC": "Thank you for submitting your claim. Our team will review the information provided and will be in touch with you as soon as possible with a decision.",
+      "TITLE": "Claim submitted"
+    },
+    "DISRUPTION_REASONS": {
+      "0": "This flight is delayed and we're working to determine the cause for this delay.",
+      "1": "This flight is delayed due to bad weather conditions from an earlier flight which is causing the late arrival of the aircraft that is scheduled to operate your flight.<br/><br/>An example of bad weather could include thunderstorms, snow, fog, low clouds, or wind gusts.",
+      "2": "This flight is delayed due to a regulatory issue from an earlier flight which is causing the late arrival of the aircraft that is scheduled to operate your flight.<br/><br/>An example of a security issue could include additional time needed to screen a customer or baggage at security or assist with a medical issue on board the aircraft.",
+      "3": "This flight is delayed due to a technical issue from an earlier flight which is causing the aircraft that is scheduled to operate your flight to arrive late.<br/><br/>An example of a technical issue could include maintenance affecting key aircraft systems such as flight controls, navigation systems, or hydraulics.",
+      "4": "This flight is delayed due to airport constraints from an earlier flight which is causing the aircraft that is scheduled to operate your flight to arrive late.<br/><br/>An example of an airport limitation could include airport gate availability, night curfew restrictions or an unscheduled runway closure.",
+      "5": "This flight is delayed due to an operational issue from an earlier flight which is causing the aircraft that is scheduled to operate your flight to arrive late.<br/><br/>An example of an operational issue could include scheduling conflicts, operational decisions or a connection delay.",
+      "6": "This flight is delayed due to additional time needed to manage airport constraints.<br/><br/>This could be the result of one or more factors, including congestion at security screening, catering delays, airport gate availability, loading the aircraft or more time needed to board customers.",
+      "9": "This flight is delayed due to additional flight preparation time needed for the aircraft that is scheduled to operate your flight.",
+      "11": "This flight is delayed due to additional time needed to accommodate late customer check-ins.",
+      "13": "This flight is delayed due to additional time needed to load oversized items or those that require special handling on to the aircraft.",
+      "14": "This flight is delayed due to additional time needed to board all of the customers and complete the check-in processes at the airport gate.",
+      "15": "This flight is delayed due to additional time needed to board customers with a late connection or arrival and complete the check-in processes at the airport gate.",
+      "17": "This flight is delayed due to additional time needed to resolve a catering issue.<br/><br/>An example of a catering issue could include having the incorrect quantity of meals needed for the number of customers on the aircraft.",
+      "18": "This flight is delayed due to additional time needed to load late-arriving customer baggage on to the aircraft.",
+      "19": "This flight is delayed due to additional boarding time needed to support customers requiring special assistance.",
+      "25": "This flight is delayed due to late planning or processing of cargo.",
+      "29": "This flight is delayed to accommodate late arriving customers.",
+      "31": "Your flight is delayed due to additional flight preparation time needed to complete the aircraft documentation required for the flight to depart.",
+      "32": "This flight is delayed due to ground handling activities which are taking longer than anticipated.<br/><br/>Examples of ground handling activities could include lavatory/water servicing, loading/unloading the aircraft, or arranging for equipment to service your aircraft.",
+      "35": "This flight is delayed due to additional time needed to clean the aircraft.",
+      "36": "This flight is delayed due to additional time needed to refuel the aircraft.",
+      "37": "This flight is delayed due to a catering issue that is taking longer than anticipated to resolve.<br/><br/>An example of a catering issue could include the late arrival of catering to the aircraft, an incorrect order, or a missing food item.",
+      "41": "This flight is delayed due to a maintenance issue with the aircraft that needs to be resolved.<br/><br/>An example of a maintenance issue could include the need to complete a minor aircraft repair or last-minute maintenance inspection.",
+      "42": "This flight is delayed due to a scheduled maintenance issue with the aircraft that is taking longer than anticipated.",
+      "43": "This flight is delayed due to an unscheduled maintenance issue within the aircraft that needs to be resolved.<br/><br/>An example of a maintenance issue could include repairing a broken seat, the in-flight entertainment system console or other components within the aircraft.",
+      "44": "This flight is delayed due to an unforeseen technical issue with the maintenance equipment needed to service the aircraft.",
+      "45": "This flight is delayed due to the late arrival of maintenance parts or equipment needed to service the aircraft.",
+      "46": "This flight is delayed due to additional time needed to substitute the aircraft.<br/><br/>Due to an unforeseen maintenance issue, the aircraft for your flight may have had to be changed, and the arrival of the replacement aircraft took longer than expected.",
+      "47": "This flight is delayed due to aircraft availability.<br/><br/>Due to an unforeseen maintenance issue, the aircraft assigned for your flight may not have been able to fly to the specific destination, and the arrival of the replacement aircraft took longer than expected.",
+      "48": "This flight is delayed due to a new cabin configuration requiring some customers to be assigned new seats.",
+      "51": "This flight is delayed due to additional time needed to complete an unforeseen repair in the cabin or on the exterior of the aircraft.",
+      "52": "This flight is delayed due to additional time needed to complete an unforeseen repair in the cargo compartment of the aircraft.",
+      "56": "This flight is delayed due to an issue with the cargo documentation needed for the flight.",
+      "58": "This flight is delayed due to an unforeseen technology issue impacting one of our suppliers, which is impacting our operations.<br/><br/>An example of a technology issue could include an internet outage impacting airport terminal computers.",
+      "61": "This flight is delayed due to additional flight preparation time needed by air traffic control to review the flight plan.",
+      "62": "This flight is delayed due to additional time needed to prepare the operational flight plan, which may mean the aircraft requires more fuel or that cargo needs to be removed.",
+      "63": "This flight is delayed due to additional flight preparation time needed by the pilots.",
+      "64": "This flight is delayed due to additional time needed to address pilot scheduling issues.",
+      "65": "This flight is delayed due to additional time needed to address a request by the pilots.<br/><br/>An example of a pilot request could include a maintenance check of the aircraft, additional items for the cabin crew, or extra fuel.",
+      "66": "This flight is delayed due to additional time needed for the cabin crew to finalize the boarding procedures and prepare the aircraft for departure.",
+      "67": "This flight is delayed due to additional flight preparation time needed by the cabin crew.",
+      "68": "This flight is delayed due to additional time needed for the cabin crew to finalize the boarding procedures and prepare the aircraft for departure.<br/><br/>An example of an issue could be additional checks needed to assure all catering items are onboard the aircraft, or because the cabin crew needs time to investigate a cabin defect.",
+      "69": "This flight is delayed due to additional time needed to complete a security check on board the aircraft.",
+      "71": "This flight is delayed due to bad weather at the departure airport.<br/><br/>An example of bad weather could include thunderstorms, snow, fog, low clouds, or wind gusts.",
+      "72": "This flight is delayed due to bad weather at the destination airport.<br/><br/>An example of bad weather could include thunderstorms, snow, fog, low clouds, or wind gusts.",
+      "73": "This flight is delayed due to bad weather which has impacted the flight path for your journey.<br/><br/>An example of bad weather could include thunderstorms, snow, fog, low clouds, or wind gusts.",
+      "75": "This flight is delayed due to de-icing requirements.<br/><br/>De-icing is a standard procedure that safely removes snow or frost from the aircraft exterior.",
+      "76": "This flight is delayed due to bad weather affecting airport operations.<br/><br/>An example of bad weather could include the removal of snow, ice, water or sand from the runway or anywhere else on the airport grounds.",
+      "77": "This flight is delayed due to bad weather affecting airport ground handling operations.<br/><br/>An example of bad weather could include thunderstorms, snow, fog, low clouds, or wind gusts.",
+      "81": "This flight is delayed due to bad weather on the flight path of your journey, which is contributing to air traffic constraints and slower processing times.<br/><br/>An example of bad weather could include thunderstorms, snow, fog, low clouds, or wind gusts.",
+      "82": "This flight is delayed due to air traffic control constraints, which are resulting in slower processing times.<br/><br/>An example of air traffic control restraint could include staff limitations or equipment issues.",
+      "83": "This flight is delayed due to air traffic control constraints at the destination airport, which are resulting in slower processing times.<br/><br/>An example of air traffic control restraint could include staff limitations or equipment issues.",
+      "84": "This flight is delayed due to bad weather conditions at the destination airport.<br/><br/>An example of bad weather could include thunderstorms, snow, fog, low clouds, or wind gusts.",
+      "85": "Your flight is delayed as security processes are taking longer than expected.<br/><br/>ecurity process delays can happen if passengers arrive late, bags need to be removed for missed connections, or if there are long lines at airport screening areas.",
+      "86": "This flight is delayed due to additional time needed to accommodate government or regulatory restrictions.<br/><br/>Examples includes a country imposing airspace restrictions leading to longer flight times, government entry requirements that increase customs processing time, or local political developments that impact our operations.",
+      "87": "This flight is delayed due to airport limitations.<br/><br/>An example of an airport limitation could include a technical issue with the jet bridge, baggage system or parking stand.",
+      "88": "This flight is delayed due to airport restrictions at the destination airport.<br/><br/>An example of an airport restriction could include airport staff limitations, an airport curfew, or noise reduction constraints.",
+      "89": "This flight is delayed due to airport restrictions at the departure airport.<br/><br/>An example of an airport restriction could include airport staff limitations, an airport curfew or noise reduction constraints.",
+      "93": "This flight is delayed due to an unforeseen operational constraints at the airport from an earlier flight which is causing the late arrival of the aircraft that is scheduled to operate.<br/><br/>An example of an operational constraints at the airport could include ramp congestion, gate availability or a technical issue at the parking stand.",
+      "96": "This flight is delayed due to aircraft availability.<br/><br/>An example of an aircraft availability issue could include the re-routing of an aircraft or the need to utilize a larger aircraft which requires longer preparation time.",
+      "97": "This flight is delayed because labour disruption is impacting our operations.<br/><br/>Labour disruptions may affect flight schedules before, during, and after periods of work stoppage or slowdown.",
+      "98": "This flight is delayed because labour disruption is impacting our operations.<br/><br/>Labour disruptions are outside our control and may affect flight schedules before, during, and after periods of work stoppage or slowdown.",
+      "99": "This flight is delayed due to additional time needed to tow the aircraft to the gate.",
+      "ACS": "We're sorry, this flight is cancelled due to a security check of the inbound aircraft.",
+      "AIRS": "We're sorry but this flight is cancelled due to air traffic control constraints.<br/><br/>Examples include a high volume of aircraft in the same airspace, staffing issues requiring a reduction in traffic, or an IT issue which has affected the air traffic control systems.",
+      "ANA": "We're sorry, this flight is cancelled due to aircraft maintenance.",
+      "ANF": "We're sorry, this flight is cancelled due to a fuel shortage.",
+      "ANH": "We're sorry, this flight is cancelled due to arrival airport limitations.",
+      "ARPT": "We're very sorry, this flight is cancelled due to destination airport limitations.<br/><br/>Examples include airport constraints within the grounds such as the building, gate, taxi-ways or due to an event which is causing a disruption at the airport.",
+      "COMM": "We're sorry but this flight is cancelled due to unexpected business or operational constraints on our planned flight schedule.",
+      "CREW": "We're sorry but this flight is cancelled due to crew constraints. <br/><br/>An example of a crew constraint could include crew members reaching the maximum number of hours that they are legally permitted to work per day.",
+      "DAMA": "We're sorry but this flight is cancelled due to unforeseen aircraft maintenance.",
+      "DMT": "We're sorry, this flight is cancelled due to a labour dispute.",
+      "EQI": "We're sorry, this flight is cancelled due to equipment availability.",
+      "EQUI": "We're sorry but this flight is cancelled due to equipment availability.",
+      "FDA": "We're sorry, this flight is cancelled due to air traffic control constraints.",
+      "FOC": "We're sorry, this flight is cancelled due to crew constraints.",
+      "FUEL": "We're sorry but this flight is cancelled due to a fuel shortage.<br/><br/>Examples include a fuel shortage, including supply chain disruptions or the possibility of contaminated fuel.",
+      "HDLG": "We're sorry but this flight is cancelled due to ground handling constraints.<br/><br/>An example of a ground handling constraints could include the lack of ground handling equipment to dispatch this flight.",
+      "HOLI": "We're sorry but this flight is cancelled due to a public holiday in the country you were departing from or arriving to.",
+      "INDU": "We're very sorry, this flight is cancelled because labour disruption is impacting our operations.<br/><br/>Labour disruptions are outside our control and may affect flight schedules before, during, and after periods of work stoppage or slowdown.",
+      "MTC": "We're sorry, this flight is cancelled due to aircraft maintenance.",
+      "OPER": "We're sorry but this flight is cancelled due to the aircraft scheduled for this flight not being available.",
+      "PERF": "We're sorry but this flight is cancelled due to an unforeseen aircraft maintenance issue.<br/><br/>An example of an unforeseen maintenance issue could include recently detected maintenance affecting key aircraft systems such as flight controls, navigation systems, or hydraulics.",
+      "POLI": "We're sorry but this flight is cancelled due to government or regulatory restrictions beyond our control.<br/><br/>Examples include government travel restrictions, security, health or customs-related issues or local political developments impacting our operations.",
+      "POSI": "We're sorry but this flight is cancelled due to the aircraft scheduled for this flight not being available.",
+      "REPO": "We're sorry but this flight is cancelled due to the aircraft scheduled for this flight not being available.",
+      "ROTA": "We're very sorry but this flight is cancelled due to the aircraft scheduled for this flight not being available.",
+      "RTNS": "We're very sorry, this flight is cancelled because labour disruption is impacting our operations.<br/><br/>Labour disruptions may affect flight schedules before, during, and after periods of work stoppage or slowdown.",
+      "RUNW": "We're very sorry but this flight is cancelled due to airport runway restrictions that are limiting the number of flights that can take-off or land.<br/><br/>Examples include maintenance, repaving, or debris from weather.",
+      "SEC": "We're sorry, this flight is cancelled due to political instability.",
+      "SKD": "We're sorry, this flight is cancelled due to aircraft availability.",
+      "SOM": "We're sorry, this flight is cancelled due to aircraft availability.",
+      "SOP": "We're sorry, this flight is cancelled due to aircraft availability.",
+      "SOT": "We're sorry, this flight is cancelled due to a labour dispute.",
+      "TECH": "We're sorry but this flight is cancelled due to technical issues from an earlier flight which is causing the aircraft that is scheduled to operate this flight to not be available.<br/><br/>Examples include maintenance affecting key aircraft systems such as flight controls, navigation systems, or hydraulics.",
+      "TITLE": "Official Disruption Reason(s):",
+      "WEAT": "We're very sorry but this flight is cancelled due to bad weather which has impacted the departure/destination airport or flight path for your journey.<br/><br/>Examples include thunderstorms, snow, fog, low clouds, or wind gusts.",
+      "WXX": "We're sorry, this flight is cancelled due to weather."
+    },
+    "ERROR": {
+      "CONNECTIVITY": {
+        "TITLE": "A Connection Error has occurred",
+        "TEXT": "An error was encountered while trying to connect to the server. The <a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/en/aco/home.html\" target=\"_blank\">aircanada.com</a> support team has been notified of the problem.<br>If you believe you have additional information that may be of help, please contact <a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/en/aco/home/fly/customer-support/contact-us.html\" target=\"_blank\">Customer Support</a>."
+      },
+      "GENERAL": {
+        "TEXT": "An error has occurred while processing your request. The <a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/en/aco/home.html\" target=\"_blank\">aircanada.com</a> support team has been notified of the problem.<br>If you believe you have additional information that may be of help, please contact <a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/en/aco/home/fly/customer-support/contact-us.html\" target=\"_blank\">Customer Support</a>.",
+        "TITLE": "An Internal Server Error has occurred"
+      },
+      "HOMEPAGE": "Homepage",
+      "RETRY": "Retry"
+    },
+    "FIND_TICKET": {
+      "BODY": "Your Ticket Number (or e-ticket) is a sequence of numbers used to uniquely identify your booking number. It can be found on the boarding pass you received after completing your check-in.",
+      "CAPTION": "Sample image showing ticket number",
+      "TITLE": "What is a Ticket Number?"
+    },
+    "INCOMPLETE": {
+      "APOLOGIZE": "We apologize for the inconvenience caused by this issue.",
+      "CLAIMS_CREATED": "Claim created successfully",
+      "CLAIMS_TO_RESUBMIT": "Claims to resubmit",
+      "NOT_CREATED": "Due to this issue, some claims have not been created.",
+      "RESUBMIT_CLAIM": "Resubmit claim(s)",
+      "SORRY_DESC": "We’re sorry, something went wrong.",
+      "SUGGEST": "If the same issue occurs, we suggest trying to submit a new claims form at a later time.",
+      "TITLE": "Incomplete claim"
+    },
+    "INSTRUCTION": "Please enter the |ticket number| from the original reservation or your boarding pass (example: 0141234567890).",
+    "INTRO": "Please complete and submit the form below to find out if your flight disruption entitles you to compensation and expense reimbursement (e.g., if you arrived at your final destination three or more hours from your scheduled time of arrival). |More about flight disruption regulations|.",
+    "INTRO_DISCLAIMER_IMPORTANT": "<b>IMPORTANT<b>",
+    "INTRO_DISCLAIMER": " - If your flight has been cancelled as a result of a labour disruption, these situations are considered outside carrier’s control under the Air Passenger Protection Regulations, and there is no eligibility to compensation, meals, hotels or other incidental expenses. If you have not been rebooked following your flight’s disruption and would still like to travel, |please contact us| to discuss possible travel options.",
+    "INTRO_DISCLAIMER_LINK": "https://www.aircanada.com/ca/en/aco/home/fly/customer-support.html#/",
+    "ON": "on",
+    "PASSENGER_ELIGIBILITY": {
+      "DUPLICATEDISRUPTION": {
+        "TEXT": "It looks like you’ve already made a claim for your flight disruption (Claim number: <b class=\"red\">{{ caseNum }}</b>). <br/><br/> Our system can’t accept another claim once you’ve made a submission for the same flight segment(s) and passenger(s). <br/><br/> If you’d like to share any additional information, please reply to the email you received when you submitted your original claim.",
+        "TITLE": "Claim already submitted"
+      },
+      "DUPLICATEDISRUPTIONANDEXPENSE": {
+        "TEXT": "It appears that you’ve already made claims for your flight disruption and expense reimbursement. (Claim number: <b class=\"red\">{{ caseNum }}</b>). <br/><br/> Our system can’t accept another claim once you’ve made a submission for the same flight segment(s) and passenger(s). <br/><br/> If you’d like to share any additional information, please reply to the email you received when you submitted your original claim.",
+        "TITLE": "Claims already submitted"
+      },
+      "DUPLICATEREQUEST": {
+        "TEXT": "It looks like you’ve already made a claim for your flight disruption (Claim number: <b class=\"red\">{{ caseNum }}</b>). <br/><br/> Our system can’t accept another claim once you’ve made a submission for the same flight segment(s) and passenger(s). <br/><br/> If you’d like to share any additional information, please reply to the email you received when you submitted your original claim.",
+        "TITLE": "Duplicate claim"
+      },
+      "ELIGIBLE": {
+        "TEXT": "Our self-assessment tool indicates that you may be eligible for compensation.<br/><br/>You may still submit your claim for review if you wish to continue, and an Air Canada representative will get back to you.",
+        "TITLE": "May be Eligible"
+      },
+      "FIND_OUT_MORE": "Find out more about <a class=\"btn btn-link btn-blue\" href=\"https://www.aircanada.com/co/en/aco/home/fly/flight-information/flight-disruptions.html#/\" target=\"_blank\">Flight Disruptions eligibility</a>.",
+      "INCIDENTELIGIBLE": {
+        "TEXT": "Thanks for filling out your booking details. Our self-assessment tool indicates that you may be entitled to compensation. Please submit your compensation claim below.<br/><br/> <a class=\"btn btn-link btn-blue\" href=\"http://www.aircanada.com/flightdisruptions\" target=\"_blank\">Learn more about your rights when there is a flight disruption</a>.",
+        "TITLE": "May be Eligible"
+      },
+      "INCIDENTNOTELIGIBLE": {
+        "TEXT": "Unfortunately, our self-assessment tool has determined that you may not be eligible for compensation.<br/><br/>Please note that situations surrounding flight disruptions can be complex and have multiple causes. The reasons provided for a flight disruption may change as the situation evolves, new issues arise, or new information is received.<br/><br/>Please be advised this does not constitute a claim. If you still want to file a claim, click “Claim Flight Disruption Compensation” to submit your claim.<br/><br/>If you require a response for insurance purposes, please <a class=\"btn btn-link btn-blue\" href=\"https://accc-prod.microsoftcrmportals.com/en-CA/air-canada-contact-us/?stepid=1f056d12-bbfe-e611-80f3-e0071b66cfa1\" target=\"_blank\">click here</a>.",
+        "TEXT_EXPENSE": "Unfortunately, our self-assessment tool has determined that you may not be eligible for compensation.<br/><br/>Although it appears you are not eligible for flight disruption compensation, you may still submit expenses for further review.<br/><br/>Please note that situations surrounding flight disruptions can be complex and have multiple causes. The reasons provided for a flight disruption may change as the situation evolves, new issues arise, or new information is received.<br/><br/>Please be advised this does not constitute a claim. If you still want to file a claim, click “Claim Flight Disruption Compensation” to submit your claim.",
+        "TITLE": "May not be eligible"
+      },
+      "INCIDENTPENDING": {
+        "TEXT": "Unfortunately, our self-assessment tool can’t determine if you’re entitled to compensation. <br/><br/>Please note that situations surrounding flight disruptions can be complex and have multiple causes. The reasons provided for a flight disruption may change as the situation evolves, new issues arise, or new information is received. <br/><br/>You may still submit your claim for review if you wish to continue, and an Air Canada representative will get back to you.",
+        "TITLE": "Unable to Make a Determination"
+      },
+      "NODISRUPTION": {
+        "TEXT": "Unfortunately, our self-assessment tool has determined that you are not entitled to compensation for this particular journey.<br/><br/>This may be because no disruption was recorded on this journey, or the length of your delay does not lead to compensation under the applicable regulatory regime.",
+        "TITLE": "Not eligible for compensation"
+      },
+      "NOMATCH": {
+        "TEXT": "We can’t find your booking. Please make sure that the information above has been entered correctly.",
+        "TEXT2": "If we are still unable to locate your booking, please continue to the disruption compensation claim form and an Air Canada representative will review it and get back to you as soon as possible.",
+        "TITLE": "No Match"
+      },
+      "NOTELIGIBLE": {
+        "TEXT": "Unfortunately, our self-assessment tool has determined that you may not be eligible for compensation.<br/><br/>Please note that situations surrounding flight disruptions can be complex and have multiple causes. The reasons provided for a flight disruption may change as the situation evolves, new issues arise, or new information is received.<br/><br/>Please be advised this does not constitute a claim. If you still want to file a claim, click “Claim Flight Disruption Compensation” to submit your claim.<br/><br/>If you require a response for insurance purposes, please <a class=\"btn btn-link btn-blue\" href=\"https://accc-prod.microsoftcrmportals.com/en-CA/air-canada-contact-us/?stepid=1f056d12-bbfe-e611-80f3-e0071b66cfa1\" target=\"_blank\">click here</a>.",
+        "TEXT_EXPENSE": "Unfortunately, our self-assessment tool has determined that you may not be eligible for compensation.<br/><br/>Although it appears you are not eligible for flight disruption compensation, you may still submit expenses for further review.<br/><br/>Please note that situations surrounding flight disruptions can be complex and have multiple causes. The reasons provided for a flight disruption may change as the situation evolves, new issues arise, or new information is received.<br/><br/>Please be advised this does not constitute a claim. If you still want to file a claim, click “Claim Flight Disruption Compensation” to submit your claim.",
+        "TITLE": "Not Eligible"
+      },
+      "OTHERAIRLINES": {
+        "TEXT": "As your itinerary includes other airlines or air to other methods of transportation, we cannot make a determination at this time and would need more information.<br/><br/>Please click “Claim Flight Disruption Compensation” to submit your claim and an Air Canada representative will get back to you as soon as possible.",
+        "TITLE": "More information needed"
+      },
+      "OUTSIDEAPPR": {
+        "TEXT": "Unfortunately, you are not eligible for compensation under Canadian regulations. Flight interruption occurred outside Canadian regulations but may be subject to other regulations.",
+        "TITLE": "May be Eligible"
+      },
+      "OUTSIDEPERIOD": {
+        "TEXT": "Unfortunately, you are not eligible for compensation as we notified you of the disruption more than 14 days in advance of your flight. We apologize for any inconvenience this disruption may have caused in your travel plans.",
+        "TITLE": "Not eligible"
+      },
+      "OVER365": {
+        "TEXT": "Unfortunately, you are not eligible for compensation for this journey.<br/><br/>A request for compensation must be filed before the first anniversary of the day on which the flight delay or flight cancellation occurred.",
+        "TITLE": "Not eligible"
+      },
+      "PENDING": {
+        "TEXT": "Our team is still reviewing your itinerary and its eligibility.<br/><br/>Please wait a minimum of 3 days after your trip has completed to check your eligibility or submit a claim.",
+        "TITLE": "Under review"
+      },
+      "PENDING_FUTURE": {
+        "TEXT": "This is a future journey. Please wait a minimum of 3 days after the scheduled arrival day to submit a claim.",
+        "TITLE": "Under review"
+      },
+      "SUBMIT": "Start Compensation Claim",
+      "UNABLEDETERMINATION": {
+        "TEXT": "Unfortunately, our self-assessment tool can’t determine if you’re entitled to compensation. <br/><br/>Please note that situations surrounding flight disruptions can be complex and have multiple causes. The reasons provided for a flight disruption may change as the situation evolves, new issues arise, or new information is received. <br/><br/>You may still submit your claim for review if you wish to continue, and an Air Canada representative will get back to you.",
+        "TITLE": "Unable to Make a Determination"
+      }
+    },
+    "POLICY_LINK": "https://www.aircanada.com/ca/en/aco/home/fly/flight-information/flight-disruptions.html",
+    "SEARCH": {
+      "BTN_SEARCH": "Check My Eligibility",
+      "ERRORS": {
+        "LASTNAME_MAXLENGTH": "The last name cannot contain more than 50 characters.",
+        "LASTNAME_PATTERN": "The last name should only contain valid characters.",
+        "LASTNAME_REQUIRED": "The passenger's last name is required.",
+        "TICKET_REQUIRED": "A ticket number is required.",
+        "TICKET_VALIDATION": "A valid ticket number contains 13 numbers."
+      },
+      "LASTNAME_HELP": "As displayed on original reservation",
+      "LASTNAME_LABEL": "Passenger's Last Name",
+      "TICKET_HELP": "Example: 0141234567890",
+      "TICKET_LABEL": "Ticket Number"
+    },
+    "TAB_TITLE": "Self-Serve Eligibility Tool",
+    "TITLE": "Flight disruption compensation and expense eligibility"
+  },
+  "SHARED": {
+    "DATEPICKER": {
+      "EXPECTED_FORMAT": "Expected date format: {{ format }}",
+      "INVALID": "The date format is invalid. Please use <span class=\"text-nowrap\">{{ format }}</span>.",
+      "MAX_DATE": "The date must be set before <span class=\"text-nowrap\">{{ maxDate }}</span>.",
+      "MIN_DATE": "The date must be set after <span class=\"text-nowrap\">{{ minDate }}</span>.",
+      "REQUIRED": "A date is required.",
+      "YYYY-MM-DD": "YYYY-MM-DD"
+    },
+    "LANGUAGE": {
+      "EN": "English",
+      "FR": "Français",
+      "ES": "Español",
+      "ZH": "中文"
+    },
+    "LOADING": "Loading"
+  },
+  "UNAVAILABLE": {
+    "TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "TITLE": "Our site is currently down. Please check back again in 24 hours."
+  }
+}

@@ -1,0 +1,49 @@
+@import 'variables';
+
+.flight-leg {
+  color: $brand-gray-900;
+  margin-bottom: 16px;
+
+  .c-booking-info {
+    color: $brand-gray-900;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 16px;
+  }
+
+  .c-dep-arr {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    margin-right: 10px;
+  }
+
+  .header {
+    display: flex;
+  }
+
+  .separator {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .type {
+    background: $brand-gray-150;
+    border-radius: 1000px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: auto;
+    padding: 4px 12px;
+  }
+}

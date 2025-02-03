@@ -1,0 +1,42 @@
+<button
+  type="button"
+  class="close pull-right"
+  aria-label="Close"
+  (click)="dismissAction()"
+>
+  <svg role="presentation" class="icn icn-close" aria-labelledby="header">
+    <title>Close</title>
+    <use xlink:href="/assets/icons.svg#icn-close"></use>
+  </svg>
+</button>
+
+<div class="modal-body text-center">
+  <svg role="presentation" aria-labelledby="title" class="icn icn-expand">
+    <title>Error icon</title>
+    <use [attr.xlink:href]="iconPath"></use>
+  </svg>
+
+  <h1>{{ title | translate }}</h1>
+
+  <hr class="spacer-xs" />
+
+  <p *ngIf="text" [innerHTML]="text | translate"></p>
+
+  <span *ngIf="text2">
+    <hr class="spacer-xxs" />
+    <p [innerHTML]="text2 | translate"></p>
+    <hr class="spacer-md" />
+  </span>
+
+  <button
+    type="button"
+    class="btn"
+    aria-label="Close"
+    (click)="dismissAction(b)"
+    *ngFor="let b of buttons; index as index"
+    [class.btn-outline-secondary]="buttons.length - index > 1"
+    [class.btn-secondary]="buttons.length - index <= 1"
+  >
+    {{ 'ERRORS.' + (b | uppercase) | translate }}
+  </button>
+</div>

@@ -1,0 +1,47 @@
+@import 'variables';
+
+.loader-container {
+  background: rgba(255, 255, 255, 0.5);
+  cursor: progress;
+  left: 0;
+  min-height: 50vh;
+  position: relative;
+  top: 0;
+  z-index: 22;
+}
+
+.modal-header {
+  align-items: center;
+  background-color: #2a2a2a;
+  border-bottom: 1px solid rgb(45, 45, 46);
+  color: $white;
+  display: flex;
+  font-size: 1.3125rem;
+  height: 55px;
+  line-height: 55px;
+  padding-left: 15px;
+  width: auto;
+
+  .close {
+    height: auto;
+    width: auto;
+
+    .icn-close {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+      border: none;
+      color: $white;
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+    }
+  }
+}
+
+.spinner-border {
+  border-width: 0.3em;
+  height: 5rem;
+  width: 5rem;
+}

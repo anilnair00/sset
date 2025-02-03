@@ -1,0 +1,23 @@
+.mat-dialog-title .mat-icon {
+  top: 5px;
+  position: relative;
+  cursor: grab;
+}
+
+.dialog-layout {
+  margin: 21px 11px 21px 12px;
+  width: 667px;
+}
+
+.dialog-title {
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+.dialog-message {
+  padding: 10px 15px 10px 15px;
+}
+
+.dialog-buttons {
+  display: flex;
+}

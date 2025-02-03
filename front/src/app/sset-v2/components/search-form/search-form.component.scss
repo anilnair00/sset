@@ -1,0 +1,71 @@
+@import 'variables';
+
+.s-search-form {
+  @include media-breakpoint-up(lg) {
+    .col-lg-4-7 {
+      flex: 0 0 40%;
+      max-width: 40%;
+      width: 40%;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .col-xl-small {
+      flex: 0 0 22%;
+      max-width: 22%;
+      width: 22%;
+    }
+
+    .col-xl-wide {
+      flex: 0 0 26%;
+      max-width: 26%;
+      width: 26%;
+    }
+  }
+
+  .btn-search {
+    margin-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+  }
+
+  .p-intro {
+    font-size: 1.125rem;
+    margin: 2rem auto;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1.3125rem;
+    }
+  }
+}
+
+.modal-header {
+  align-items: center;
+  background-color: #2a2a2a;
+  border-bottom: 1px solid rgb(45, 45, 46);
+  color: $white;
+  display: flex;
+  font-size: 1.3125rem;
+  height: 55px;
+  line-height: 55px;
+  padding-left: 15px;
+  width: auto;
+
+  .close {
+    height: auto;
+    width: auto;
+
+    .icn-close {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+      border: none;
+      color: $white;
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+    }
+  }
+}

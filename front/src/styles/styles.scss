@@ -1,0 +1,45 @@
+@import 'variables/variables';
+
+//
+//Bootstrap import
+//Optional. Will resolve to node_modules even if file does not exist in the current structure.
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+// import base
+@import 'base/fonts';
+@import 'base/global';
+@import 'base/text';
+
+// import elements
+@import 'elements/alert';
+@import 'elements/buttons';
+@import 'elements/icons';
+@import 'elements/list';
+@import 'elements/loading-spinner';
+@import 'elements/modal';
+@import 'elements/sections';
+@import 'elements/selectable';
+@import 'elements/spacers';
+@import 'elements/table';
+@import 'elements/_tabs';
+@import 'elements/pagination';
+@import 'elements/_popover';
+
+// import form components
+@import 'form-components/checkbox';
+@import 'form-components/errors';
+@import 'form-components/form-label-group';
+@import 'form-components/radio';
+@import 'node_modules/@ng-select/ng-select/scss/default.theme';
+@import 'form-components/custom-select';
+@import 'form-components/ng-select';
+@import 'form-components/textarea';
+@import 'form-components/datepicker';
+
+// import modules
+@import 'modules/title-icn';
+@import 'modules/button-loading-spinner';
+@import 'modules/nav-bottom';
+
+// import print css
+@import 'print';

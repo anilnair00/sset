@@ -1,0 +1,101 @@
+@import 'variables';
+
+[readonly] {
+  pointer-events: none;
+}
+
+input[type='date'] {
+  vertical-align: bottom;
+  padding-top: 1.25rem !important; // Fix alignment issue on iOS
+
+  &::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    -webkit-appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent;
+  }
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &::-webkit-clear-button {
+    display: none;
+  }
+
+  &::ms-clear {
+    display: none;
+  }
+  color: transparent !important;
+
+  &.label-up {
+    color: $black !important;
+  }
+}
+
+label {
+  padding-right: 32px !important;
+}
+
+svg {
+  position: absolute;
+  right: 0.6rem;
+  top: 12.5px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  &:hover,
+  &:focus,
+  &:active,
+  &.dp-open {
+    color: $black;
+  }
+
+  pointer-events: none;
+}
+
+::ng-deep {
+  .bs-datepicker-body,
+  .bs-datepicker-head,
+  .bs-datepicker-body table td span,
+  .bs-datepicker-head button.next,
+  .bs-datepicker-head button.previous,
+  .bs-datepicker-head button.current,
+  .bs-datepicker-body table.months td span {
+    border-radius: 0;
+  }
+
+  .bs-datepicker-container {
+    padding: 0;
+    .bs-datepicker-head {
+      .previous,
+      .next {
+        span {
+          top: -2px;
+        }
+      }
+    }
+  }
+
+  .theme-red {
+    .bs-datepicker-head,
+    .bs-datepicker-body table td span.selected,
+    .bs-datepicker-body table td.selected span,
+    .bs-datepicker-body table td span[class*='select-']:after,
+    .bs-datepicker-body table td[class*='select-'] span:after {
+      background-color: $secondary;
+    }
+  }
+
+  span.date-today {
+    border: 1px solid rgba(154, 174, 193, 0.75);
+  }
+}

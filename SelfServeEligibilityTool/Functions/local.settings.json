@@ -1,0 +1,14 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    //"CIP:BaseAddress": "https://localhost:7001",
+    "CIP:BaseAddress": "https://acode-pcat-sit.azurewebsites.net",
+    "IDP:BaseAddress": "https://fs-int.aircanada.ca",
+    "IDP:ClientId": "AirCanada.Services.SSET",
+    "IDP:ClientSecret": "wYAbmlkVyamnQ7LpgemsAiOBmYLmKX9TQ709y2zu0sRz5a1Y5adIMiXvB2fk9hpK",
+    "AzureAppConfiguration": "Endpoint=https://ac-ode-odh-dev-canadacentral.azconfig.io;Id=a8qR-ll-s0:v7Sf0gFmHfuk6IVBXaqA;Secret=9NppxWUNKSGfbszZfqAS8DSQ79GFexbLh7DmRZRUbK4=",
+    "Recaptcha:Threshold": 0.1
+  }
+}

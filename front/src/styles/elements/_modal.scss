@@ -1,0 +1,35 @@
+.modal-xl {
+  max-width: 930px;
+  margin: 100px auto 0;
+  min-width: 928px;
+}
+
+.modal-dialog {
+  transition: opacity 400ms ease !important;
+  position: absolute !important;
+  top: 54% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 95%;
+  margin: 15px auto 30px;
+
+  @media (max-width: $min-mobile) {
+    top: 60% !important;
+  }
+
+  @media screen and (max-height: 400px) {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 15px auto;
+  }
+
+  .close {
+    opacity: 1;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

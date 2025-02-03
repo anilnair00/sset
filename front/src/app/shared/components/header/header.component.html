@@ -1,0 +1,199 @@
+<header class="header">
+  <div class="container align-items-center">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <button
+        id="nav-toggler"
+        class="navbar-toggler"
+        type="button"
+        (click)="isCollapsed = !isCollapsed"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Navigational menu"
+        (keydown.tab)="isCollapsed ? '' : focusCloseBtn('close-btn', $event)"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="ac-logo ml-auto mr-auto">
+        <a
+          tabindex="{{ isMobile ? '' : '1' }}"
+          [href]="'HEADER.HOME_LINK' | translate"
+          target="_blank"
+          [attr.aria-label]="'IMAGE_ALT_TEXT.AC_LOGO' | translate"
+        >
+          <img
+            [src]="'../..' + logoPath"
+            alt="{{ 'IMAGE_ALT_TEXT.AC_LOGO' | translate }}"
+          />
+        </a>
+      </div>
+      <div
+        #collapse
+        id="navbarNav"
+        class="collapse navbar-collapse"
+        [collapse]="isMobile ? isCollapsed : false"
+      >
+        <ul class="navbar-nav ml-auto">
+          <li class="menu-mobile-close d-lg-none">
+            <button
+              id="close-btn"
+              class="btn close"
+              tabindex="{{ isMobile ? '' : '' }}"
+              (click)="isCollapsed = true; onCloseMobileMenu()"
+            >
+              <svg
+                role="presentation"
+                class="icn icn-close"
+                type="button"
+                aria-controls="dropdown-split"
+              >
+                <title>{{ 'ICON_TITLE.CLOSE' | translate }}</title>
+                <use xlink:href="/assets/icons.svg#icn-close"></use>
+              </svg>
+            </button>
+          </li>
+          <li
+            *ngIf="showLangMenu"
+            #dropdown="bs-dropdown"
+            class="nav-item menu-langs"
+            dropdown
+          >
+            <button
+              id="lang-dropdown-btn"
+              class="nav-link menu-lang-btn"
+              dropdownToggle
+              aria-label="Language menu"
+              aria-controls="langs-dropdown"
+              tabindex="{{ isMobile ? '' : '5' }}"
+              (keydown.arrowDown)="isMobile ? '' : $event.preventDefault()"
+              (keyup.arrowdown)="
+                isMobile
+                  ? ''
+                  : dropdown.isOpen
+                  ? onStepIntoLangMenu()
+                  : dropdown.show()
+              "
+              (keydown.tab)="
+                isMobile ? '' : dropdown.isOpen ? $event.preventDefault() : ''
+              "
+              (keyup.tab)="
+                isMobile ? '' : dropdown.isOpen ? dropdown.hide() : ''
+              "
+              data-analytics-track="sset"
+              data-analytics-val="header>language dropdown"
+            >
+              <span class="d-none d-lg-inline-block">{{
+                getLanguage(translate.currentLang) | slice : 0 : 2 | uppercase
+              }}</span>
+              <span class="d-lg-none">{{
+                getLanguage(translate.currentLang)
+              }}</span>
+            </button>
+            <span class="langs-mobile">
+              <ul
+                id="langs-dropdown"
+                *dropdownMenu
+                class="dropdown-menu"
+                role="menu"
+              >
+                <li class="dropdown-menu-arrow"></li>
+                <li class="menu-mobile-close">
+                  {{ 'HEADER.LANGUAGES' | translate }}
+                  <button id="close-sub-btn" class="btn close">
+                    <svg
+                      role="presentation"
+                      class="icn icn-close"
+                      type="button"
+                      aria-controls="dropdown-split"
+                    >
+                      <title>{{ 'ICON_TITLE.CLOSE' | translate }}</title>
+                      <use xlink:href="/assets/icons.svg#icn-close"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li
+                  class="nav-item"
+                  [hidden]="lang === translate.currentLang"
+                  *ngFor="let lang of langs; index as i"
+                >
+                  <button
+                    id="lang-{{ lang }}"
+                    class="nav-link {{
+                      lang === translate.currentLang ? '' : 'lang-dropdown-item'
+                    }}"
+                    lang="{{ lang }}"
+                    (keydown.arrowUp)="$event.preventDefault()"
+                    (keydown.arrowDown)="$event.preventDefault()"
+                    (keyup.arrowup)="onNavigateLangOptions($event)"
+                    (keyup.arrowdown)="onNavigateLangOptions($event)"
+                    (keyup.esc)="dropdown.hide()"
+                    (keydown.tab)="
+                      isMobile
+                        ? i === langs.length - 1 &&
+                          lang !== translate.currentLang
+                          ? focusCloseBtn('close-sub-btn', $event)
+                          : ''
+                        : $event.preventDefault()
+                    "
+                    (keyup.tab)="
+                      isMobile ? '' : dropdown.hide();
+                      isMobile ? '' : onNavigateLangOptions($event)
+                    "
+                    (click)="translate.use(lang); isCollapsed = true"
+                  >
+                    {{ getLanguage(lang) }}
+                  </button>
+                </li>
+              </ul>
+            </span>
+          </li>
+          <li class="nav-item active let-us-know">
+            <a
+              tabindex="{{ isMobile ? '' : '2' }}"
+              class="nav-link"
+              target="_blank"
+              href="/"
+              [href]="'HEADER.LET_US_KNOW_LINK' | translate"
+              data-analytics-track="sset"
+              data-analytics-val="header>let us know"
+            >
+              {{ 'HEADER.LET_US_KNOW' | translate }}
+            </a>
+          </li>
+          <li class="nav-item privacy">
+            <a
+              tabindex="{{ isMobile ? '' : '3' }}"
+              class="nav-link"
+              target="_blank"
+              [href]="'FOOTER.PRIVACY_POLICY_LINK' | translate"
+              data-analytics-track="sset"
+              data-analytics-val="header>privacy policy"
+            >
+              <span>{{ 'FOOTER.PRIVACY_POLICY' | translate }}</span></a
+            >
+          </li>
+          <li class="nav-item contact-us">
+            <a
+              tabindex="{{ isMobile ? '' : '4' }}"
+              class="nav-link"
+              target="_blank"
+              [href]="'HEADER.CONTACT_US_LINK' | translate"
+              (keydown.tab)="isMobile ? focusCloseBtn('close-btn', $event) : ''"
+              data-analytics-track="sset"
+              data-analytics-val="header>customer support"
+            >
+              <svg
+                role="presentation"
+                class="icn icn-chatbox"
+                [attr.aria-label]="'ICON_TITLE.CHATBOX' | translate"
+              >
+                <title>{{ 'ICON_TITLE.CHATBOX' | translate }}</title>
+                <use xlink:href="/assets/icons.svg#icn-chatbox"></use>
+              </svg>
+              <span>{{ 'HEADER.CONTACT_US' | translate }}</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

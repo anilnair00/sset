@@ -1,0 +1,115 @@
+<div class="c-expenses-summary">
+  <p class="p-title">
+    {{
+      claims.length == 1
+        ? ('SSET_V2.ASSESSMENT.EXPENSE_DETAILS.SUMMARY_OF_EXPENSES' | translate)
+        : ('SSET_V2.ASSESSMENT.EXPENSE_DETAILS.SUMMARY_OF_EXPENSES_FOR_JOURNEY'
+          | translate)
+    }}
+    <span *ngIf="!isExpenseReview && claims.length > 1">{{ index + 1 }}</span>
+    <span *ngIf="isExpenseReview && claims.length > 1">{{
+      expenseReviewIndex + 1
+    }}</span>
+  </p>
+  <p *ngIf="!expenses?.length" class="p-no-expenses">
+    {{ 'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.NO_EXPENSES' | translate }}
+  </p>
+  <div
+    *ngFor="let expense of expenses; let i = index"
+    class="c-expense"
+    [ngClass]="{ 'mb-3': i !== expenses.length - 1 }"
+  >
+    <div class="c-expense-type">
+      {{ expense.expenseType }}
+      <span class="icon-receipt">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M20 21.9004V2H4V22L8.14815 20.0375L12 22L15.8519 20.0375L20 21.9004Z"
+            stroke="#E6E6E6"
+            stroke-width="1.5"
+          />
+          <path
+            d="M7.19922 7.74219L13.5992 7.74219"
+            stroke="#E6E6E6"
+            stroke-width="1.5"
+          />
+          <path
+            d="M7.19922 10.6133L16.7992 10.6133"
+            stroke="#E6E6E6"
+            stroke-width="1.5"
+          />
+          <path
+            d="M7.19922 13.4883L15.1992 13.4883"
+            stroke="#E6E6E6"
+            stroke-width="1.5"
+          />
+        </svg>
+      </span>
+      <div
+        *ngIf="!isExpenseReview"
+        class="btn-edit-expense"
+        (click)="onClickEdit(i)"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          viewBox="0 0 22 22"
+          fill="none"
+        >
+          <path
+            d="M1 17.0714V21H4.92857L17.0714 8.85714L13.1429 4.92857L1 17.0714Z"
+            fill="#2A2A2A"
+          />
+          <path
+            d="M17.0714 1L14.5714 3.5L18.5 7.42857L21 4.92857L17.0714 1Z"
+            fill="#2A2A2A"
+          />
+          <path
+            d="M1 17.0714V21H4.92857L17.0714 8.85714L13.1429 4.92857L1 17.0714Z"
+            stroke="#2A2A2A"
+          />
+          <path
+            d="M17.0714 1L14.5714 3.5L18.5 7.42857L21 4.92857L17.0714 1Z"
+            stroke="#2A2A2A"
+          />
+        </svg>
+      </div>
+    </div>
+    <ng-container *ngIf="[1, 4].includes(expense.expenseTypeId)">
+      <p>
+        {{
+          countAccommodationNights(expense.checkInDate, expense.checkOutDate)
+        }}
+      </p>
+      <div class="c-date-amount">
+        <p>{{ expense.checkInDate }} - {{ expense.checkOutDate }}</p>
+        <p class="p-amount">
+          {{ expense.amount }}
+          <span class="label-currency">{{ expense.currencyCode }}</span>
+        </p>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="![1, 4].includes(expense.expenseTypeId)">
+      <p *ngIf="[2, 5].includes(expense.expenseTypeId)">
+        {{ expense.mealType }}
+      </p>
+      <p *ngIf="[3, 6].includes(expense.expenseTypeId)">
+        {{ expense.transportationType }}
+      </p>
+      <div class="c-date-amount">
+        <p>{{ expense.transactionDate }}</p>
+        <p class="p-amount">
+          {{ expense.amount }}
+          <span class="label-currency">{{ expense.currencyCode }}</span>
+        </p>
+      </div>
+    </ng-container>
+  </div>
+</div>

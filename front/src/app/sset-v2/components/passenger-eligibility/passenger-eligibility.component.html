@@ -1,0 +1,54 @@
+<section class="boxed" *ngIf="status">
+  <div #response class="c-pax-eligibility" tabindex="0">
+    <div class="row align-items-center no-gutters">
+      <div class="col-auto">
+        <svg
+          [attr.aria-label]="'ICON_TITLE.' + icon.title | translate"
+          [class]="status"
+          *ngIf="icon.path"
+          class="icon-status"
+          role="presentation"
+        >
+          <title>{{ 'ICON_TITLE.' + icon.title | translate }}</title>
+          <use [attr.xlink:href]="'/assets/icons.svg#' + icon.path" />
+        </svg>
+      </div>
+      <div class="col">
+        <h2>
+          {{
+            'SSET_V2.PASSENGER_ELIGIBILITY.' + (status | uppercase) + '.TITLE'
+              | translate
+          }}
+        </h2>
+      </div>
+    </div>
+    <p
+      class="my-4"
+      [innerHtml]="
+        'SSET_V2.PASSENGER_ELIGIBILITY.' + (status | uppercase) + '.TEXT'
+          | translate
+      "
+    ></p>
+    <div *ngIf="status === eligibilityStatus.NoMatch && failures > 1">
+      <p
+        [innerHtml]="
+          'SSET_V2.PASSENGER_ELIGIBILITY.' + (status | uppercase) + '.TEXT2'
+            | translate
+        "
+      ></p>
+      <hr class="spacer-lg" />
+      <button
+        (click)="onSubmit()"
+        class="btn btn-secondary btn-action"
+        data-analytics-track="sset"
+        data-analytics-val="results>submit compensation claim"
+        onclick="this.blur()"
+        tabindex="0"
+      >
+        {{ 'SSET_V2.PASSENGER_ELIGIBILITY.SUBMIT' | translate }}
+      </button>
+    </div>
+  </div>
+</section>
+
+<hr class="spacer-xl" />

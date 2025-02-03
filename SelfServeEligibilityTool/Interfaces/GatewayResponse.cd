@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="ODE.SSET.Interfaces.IGatewayResponse">
+    <Position X="1.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAIAIAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>IGatewayResponse.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GatewayRequest" />
+      <Property Name="PassengerProtectionResponse" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="ODE.SSET.Interfaces.IGatewayRequest">
+    <Position X="5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>IGatewayRequest.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GatewayRequestContext" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="ODE.SSET.Interfaces.IGatewayRequestContext">
+    <Position X="9" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>IGatewayRequestContext.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ODE.SSET.Interfaces.IPassengerProtectionResponse">
+    <Position X="5" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAABAAAAIAAA=</HashCode>
+      <FileName>IPassengerProtectionResponse.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PassengerProtectionRequest" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="ODE.SSET.Interfaces.IPassengerProtectionRequest">
+    <Position X="9.25" Y="2.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPassengerProtectionRequest.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

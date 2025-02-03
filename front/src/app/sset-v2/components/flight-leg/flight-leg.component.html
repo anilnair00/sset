@@ -1,0 +1,36 @@
+<div class="flight-leg">
+  <div class="header">
+    <p class="title">
+      {{ flightNumber }} {{ airlineName }} {{ 'SSET_V2.ON' | translate }}
+      {{ date }}
+    </p>
+  </div>
+  <div class="c-dep-arr">
+    <span
+      >{{ departureTime }} {{ departureCity }} ({{
+        departureAirportCode
+      }})</span
+    >
+    <span class="material-icons mr-1 ml-1">arrow_right_alt</span>
+    <span>{{ arrivalTime }} {{ arrivalCity }} ({{ arrivalAirportCode }})</span>
+  </div>
+  <ng-template [ngIf]="isManualFlow">
+    <div class="c-booking-info">
+      <span class="mr-1">
+        {{ 'SSET_V2.ASSESSMENT.REVIEW_CLAIM_PAGE.TICKET' | translate }}
+      </span>
+      <span class="mr-1">
+        {{ flightLeg?.ticketNumber }}
+      </span>
+      <ng-template [ngIf]="flightLeg?.bookingReference">
+        <span class="mr-1">
+          {{ 'SSET_V2.ASSESSMENT.REVIEW_CLAIM_PAGE.BOOKING_REF' | translate }}
+        </span>
+        <span>
+          {{ flightLeg?.bookingReference }}
+        </span>
+      </ng-template>
+    </div>
+  </ng-template>
+  <hr *ngIf="!lastChild || showSeperatorAlways" class="separator" />
+</div>

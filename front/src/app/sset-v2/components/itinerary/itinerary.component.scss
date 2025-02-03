@@ -1,0 +1,104 @@
+@import 'variables';
+
+.c-itinerary {
+  background: $ac-white;
+  border: 1px solid $brand-gray-200;
+  padding: 24px;
+  margin-bottom: 24px;
+
+  .c-itinerary-details-info {
+    display: flex;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+
+    @media (max-width: $max-tablet) {
+      display: block;
+    }
+
+    .c-itinerary-details {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .c-itinerary-message {
+      background-color: $ac-blue-100;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      padding: 24px;
+      flex: 1;
+
+      @media (max-width: $max-tablet) {
+        margin-top: 16px;
+      }
+
+      .text-bold {
+        font-weight: 700;
+      }
+
+      .text-bold-small {
+        font-weight: 600;
+      }
+
+      ::ng-deep p.with-link > a {
+        color: $red;
+        &:hover,
+        &:focus {
+          color: darken($secondary, 8.5%);
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .c-itinerary-message--not-eligible {
+      background-color: $brand-gray-150;
+    }
+  }
+
+  .c-itinerary-btns {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+
+    .remove-claim {
+      color: $brand-red;
+      cursor: pointer;
+      margin-right: 24px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: underline;
+
+      @media (max-width: $min-mobile) {
+        margin-top: 16px;
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    .btn-add-claim {
+      align-items: center;
+      display: flex;
+      padding: 0.8rem 1rem !important;
+      width: 280px;
+
+      .btn-text {
+        margin: 0 auto;
+      }
+
+      @media (max-width: $min-mobile) {
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.title {
+  color: $brand-gray-900;
+  font-size: 15px;
+  font-weight: 600;
+}

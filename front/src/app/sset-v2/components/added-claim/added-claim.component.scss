@@ -1,0 +1,30 @@
+@import 'variables';
+
+.added-claim {
+  background: $ac-white;
+  border: 1px solid $brand-gray-200;
+  padding: 24px;
+  margin-bottom: 16px;
+
+  @media (max-width: $max-tablet) {
+    padding: 16px;
+  }
+
+  .header {
+    display: flex;
+    font-weight: 600;
+
+    .title {
+      color: $brand-gray-900;
+      font-size: 16px;
+    }
+
+    .type {
+      background: $brand-gray-150;
+      border-radius: 1000px;
+      font-size: 12px;
+      margin-left: auto;
+      padding: 4px 12px;
+    }
+  }
+}

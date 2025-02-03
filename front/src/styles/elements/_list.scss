@@ -1,0 +1,28 @@
+ul.bullets {
+  list-style-type: none;
+  padding: 0 0 0 0.75rem;
+  li {
+    padding: 0.125rem 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    &:first-of-type {
+      padding-top: 0;
+    }
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+    &:before {
+      background-color: currentColor;
+      border-radius: 45%;
+      content: '';
+      display: inline-block;
+      left: -0.75rem;
+      position: absolute;
+      width: 0.25rem;
+      height: 0.25rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

@@ -1,0 +1,98 @@
+<div
+  *ngIf="
+    !formCntrl?.value || formCntrl?.errors || (formCntrl?.value && loading)
+  "
+  class="fileUploadWrapper"
+>
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngIf="loading" class="file-container file-container--loading">
+        <img class="img-file" src="/assets/img/file-new.png" />
+        {{ fileName }}
+        <mat-progress-bar class="progress-bar" mode="indeterminate" />
+      </div>
+      <div
+        *ngIf="!loading"
+        class="file-container file-container--upload"
+        (click)="file.click()"
+      >
+        <span class="drag-drop-info">
+          {{
+            'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.RECEIPT_DRAG_DROP'
+              | translate
+          }}
+          <a href="javascript:void(0)">
+            {{
+              'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.RECEIPT_BROWSE'
+                | translate
+            }}
+          </a>
+        </span>
+        <input
+          #file
+          style="display: none"
+          type="file"
+          (change)="onFileChange($event)"
+        />
+      </div>
+    </div>
+    <div *ngIf="helperText" class="file-upload-helpertext">
+      <span>{{ helperText }}</span>
+    </div>
+    <div
+      *ngIf="formCntrl?.errors && formCntrl?.dirty && formCntrl?.touched"
+      class="help-block error"
+    >
+      <div *ngIf="formCntrl.errors['required'] && requiredText">
+        {{ requiredText }}
+      </div>
+      <div *ngIf="formCntrl.errors['maxlength'] && maxLengthText">
+        {{ maxLengthText }}
+      </div>
+      <div *ngIf="formCntrl.errors['invalid'] && invalidText">
+        {{ invalidText }}
+      </div>
+      <div *ngIf="formCntrl.errors['maxsize'] && maxSizeText">
+        {{ maxSizeText }}
+      </div>
+      <div *ngIf="formCntrl.errors['notuploaded'] && notUploadedText">
+        {{ notUploadedText }}
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  *ngIf="formCntrl?.value && !formCntrl.errors && !loading"
+  class="row justify-content-between"
+>
+  <div class="file-uploaded">
+    <img class="img-attachment" src="/assets/img/attachment.png" />
+    <div class="file-name">
+      <p>{{ formCntrl.value[0].name }}</p>
+    </div>
+    <div>
+      <img
+        class="img-close"
+        src="/assets/img/close.png"
+        (click)="onClickRemove()"
+      />
+    </div>
+  </div>
+  <div class="c-btn text-right">
+    <button
+      class="btn btn-outline-secondary btn-replace"
+      (click)="fileReplace.click()"
+    >
+      {{
+        'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.REPLACE'
+          | translate
+      }}
+    </button>
+    <input
+      #fileReplace
+      style="display: none"
+      type="file"
+      (change)="onFileChange($event)"
+    />
+  </div>
+</div>

@@ -1,0 +1,97 @@
+@import 'variables';
+
+.table {
+  .select {
+    width: 100px;
+  }
+
+  .ellipsis {
+    height: auto;
+    max-height: 75px;
+  }
+
+  .tooltip-info {
+    margin-top: 0.09375rem;
+    position: relative;
+    width: 100%;
+    &,
+    & * {
+      cursor: help;
+    }
+
+    > svg {
+      max-height: 1.25rem;
+      position: absolute;
+      right: 0;
+      display: inline-block;
+      cursor: help;
+      transition: color 400ms ease;
+    }
+
+    > div {
+      display: inline-block;
+      transition: color 400ms ease;
+      width: calc(100% - 24px);
+
+      & * {
+        @include media-breakpoint-down(lg) {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          word-break: normal;
+        }
+      }
+    }
+
+    &:hover {
+      svg,
+      div {
+        color: red;
+      }
+    }
+  }
+
+  td {
+    vertical-align: top;
+  }
+}
+
+::ng-deep svg.icn-passenger {
+  height: 1.625rem;
+  margin-right: 1rem;
+  width: 1.25rem;
+}
+
+::ng-deep .no-break {
+  white-space: nowrap;
+}
+
+::ng-deep tr.row-highlighted,
+::ng-deep tr.row-disabled {
+  td {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      background: #fde894;
+      border-radius: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -1rem;
+      right: -1rem;
+      width: auto;
+      height: calc(100% - 1.125rem);
+      display: block;
+      z-index: 0;
+    }
+
+    > * {
+      z-index: 1;
+      position: relative;
+    }
+  }
+}
+
+::ng-deep tr.row-disabled td:before {
+  background: $gray-200;
+}

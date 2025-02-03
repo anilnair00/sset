@@ -1,0 +1,88 @@
+@import 'variables';
+
+.c-passenger-details {
+  margin: 32px 0 40px 0;
+
+  .btn-add {
+    margin-top: 8px;
+  }
+
+  .p-info {
+    color: $brand-gray-900;
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .passenger-details-dropdown {
+    .error {
+      margin-top: -15px;
+    }
+  }
+
+  .divider {
+    border: 1px solid $brand-gray-190;
+    margin: 40px 0 40px 0;
+  }
+
+  .p-title {
+    font-size: 16px;
+    color: $brand-gray-900;
+    margin-bottom: 16px;
+    font-weight: bold;
+  }
+
+  .p-desc {
+    font-size: 16px;
+    color: $brand-gray-900;
+    // margin-bottom: 24px;
+  }
+
+  .link-action {
+    color: $red;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 44px;
+    margin-top: 32px;
+    text-decoration: underline;
+  }
+
+  .custom-checkbox {
+    padding: 16px;
+    border: 1px solid $brand-gray-190;
+    margin-bottom: 24px;
+
+    .custom-control-label {
+      padding-left: 2rem;
+
+      &:before {
+        left: 0;
+      }
+
+      &:after {
+        left: 0;
+      }
+    }
+  }
+
+  .acknowledgement {
+    font-weight: bold;
+  }
+
+  .acknowledgement-checkbox.custom-checkbox,
+  .permissions-checkbox.custom-checkbox {
+    border: none;
+    padding: 16px 0;
+  }
+
+  .acknowledgement-checkbox.custom-checkbox {
+    margin-bottom: 0;
+    margin-top: 16px;
+  }
+
+  .enter-passenger-details {
+    font-size: 16px;
+    color: $brand-gray-900;
+    margin-top: 54px;
+  }
+}

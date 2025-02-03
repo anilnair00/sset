@@ -1,0 +1,21 @@
+﻿namespace ODE.SSET.Core.Domain.Dynamics
+{
+  using ODE.SSET.Interfaces.Dynamics;
+  using System;
+  using System.Collections.Generic;
+
+  public class SsetExpenseResponse: ISsetExpenseResponse
+  {
+    public long ExpenseTypeDynamicsId { get; set; }
+
+    public decimal Amount { get; set; }
+
+    public string CurrencyCode { get; set; }
+
+    public Guid? DynamcisExpenseWebRequestId { get; set; }
+
+    public bool IsSuccessful { get; set; }
+
+    public IEnumerable<ISsetExpenseReceiptResponse> ReceiptResponses { get; set; }
+  }
+}

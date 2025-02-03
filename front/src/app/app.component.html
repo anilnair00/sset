@@ -1,0 +1,15 @@
+<app-header [nav]="true" />
+
+<main class="content">
+  <router-outlet *ngIf="!loading" />
+  <div
+    *ngIf="loading && !maintenanceMode"
+    class="align-items-center container-fluid d-flex loader-container text-center"
+  >
+    <div class="ml-auto mr-auto spinner-border text-secondary" role="status">
+      <span class="sr-only">{{ 'SHARED.LOADING' | translate }}</span>
+    </div>
+  </div>
+</main>
+
+<app-footer class="footer" />

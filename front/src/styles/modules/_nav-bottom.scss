@@ -1,0 +1,24 @@
+.nav-bottom {
+  margin-bottom: 55px;
+  .btn {
+    min-width: 258px;
+
+    &.short {
+      min-width: 150px;
+    }
+
+    svg {
+      margin-left: 5px;
+      width: auto;
+      max-width: 18px;
+      height: 16px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}

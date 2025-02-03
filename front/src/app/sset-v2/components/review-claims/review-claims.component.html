@@ -1,0 +1,32 @@
+<div class="c-review-claims">
+  <p class="p-info">
+    {{ 'SSET_V2.ASSESSMENT.REVIEW_CLAIM_PAGE.REVIEW_TITLE' | translate }}
+  </p>
+  <div class="c-claims-details">
+    <div class="c-details">
+      <div *ngFor="let claim of getFilteredClaims(); index as i">
+        <app-added-claim [claim]="claim" [index]="i" />
+        <app-expenses-review
+          *ngIf="claim?.expenses?.length"
+          [expenses]="claim?.expenses"
+          [index]="i"
+        />
+      </div>
+      <p class="btn-link" (click)="onClickNavigateToPage(Pages.FlightDetails)">
+        {{ 'SSET_V2.ASSESSMENT.BACK_TO_FLIGHT_DETAILS' | translate }}
+      </p>
+      <p class="btn-link" (click)="onClickNavigateToPage(Pages.Expenses)">
+        {{ 'SSET_V2.ASSESSMENT.BACK_TO_EXPENSES' | translate }}
+      </p>
+    </div>
+    <div class="c-details">
+      <app-passenger-details-review />
+      <p
+        class="btn-link"
+        (click)="onClickNavigateToPage(Pages.PassengerDetails)"
+      >
+        {{ 'SSET_V2.ASSESSMENT.BACK_TO_PASSENGER_DETAILS' | translate }}
+      </p>
+    </div>
+  </div>
+</div>

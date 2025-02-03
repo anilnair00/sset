@@ -1,0 +1,545 @@
+<div class="c-expenses">
+  <p class="label-info">
+    {{ 'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.INFO' | translate }}
+  </p>
+  <div class="c-expenses-details">
+    <div class="c-details">
+      <app-added-claim [claim]="claim" [index]="index" />
+      <div
+        *ngIf="!isManualFlow"
+        [ngClass]="
+          !claim?.isExpenseButtonEnabled ||
+          (claim?.isExpenseButtonEnabled && !claim.addClaimButtonEnabled)
+            ? 'c-eligible bg-gray'
+            : 'c-eligible'
+        "
+      >
+        <p class="text-bold">
+          {{
+            claim?.expenseEligibility === duplicateExpenseEligibility
+              ? ('SSET_V2.ASSESSMENT.EXPENSE_DETAILS.DUPLICATE_EXPENSE.TITLE'
+                | translate)
+              : claim?.isExpenseButtonEnabled
+              ? claim.addClaimButtonEnabled
+                ? ('SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ELIGIBLE.TITLE'
+                  | translate)
+                : ('SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ELIGIBLE_EXPENSE.TITLE'
+                  | translate)
+              : ('SSET_V2.ASSESSMENT.EXPENSE_DETAILS.NOT_ELIGIBLE_EXPENSE.TITLE'
+                | translate)
+          }}
+        </p>
+        <p
+          [innerHTML]="
+            claim?.expenseEligibility === duplicateExpenseEligibility
+              ? ('SSET_V2.ASSESSMENT.EXPENSE_DETAILS.DUPLICATE_EXPENSE.TEXT'
+                | translate : { caseNum: claim?.originalDynamicCaseNumber })
+              : claim?.isExpenseButtonEnabled
+              ? claim.addClaimButtonEnabled
+                ? ('SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ELIGIBLE.TEXT'
+                  | translate)
+                : ('SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ELIGIBLE_EXPENSE.TEXT'
+                  | translate)
+              : ('SSET_V2.ASSESSMENT.EXPENSE_DETAILS.NOT_ELIGIBLE_EXPENSE.TEXT'
+                | translate)
+          "
+        ></p>
+        <p
+          *ngIf="claim?.expenseEligibility === duplicateExpenseEligibility"
+          [innerHtml]="
+            'SSET_V2.PASSENGER_ELIGIBILITY.FIND_OUT_MORE' | translate
+          "
+        ></p>
+      </div>
+    </div>
+    <div class="c-details">
+      <button
+        *ngIf="claim?.isExpenseButtonEnabled"
+        class="btn btn-secondary btn-add-expense"
+        (click)="showAddForm(expenseForm)"
+      >
+        {{ 'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE' | translate }}
+      </button>
+      <hr
+        [ngClass]="
+          claim?.isExpenseButtonEnabled
+            ? 'hr-separator'
+            : 'hr-separator mt-0 mb-0'
+        "
+      />
+      <app-expenses-summary
+        (onEditClicked)="showEditForm($event, expenseForm)"
+      />
+    </div>
+  </div>
+</div>
+
+<ng-template #expenseForm>
+  <form
+    class="expense-form"
+    [formGroup]="form"
+    (keydown.enter)="$event.preventDefault()"
+  >
+    <div class="row">
+      <div class="col">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="modal-title pull-left">
+              {{
+                'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.TITLE'
+                  | translate
+              }}
+            </h4>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="form-label-group form-dropdown">
+              <app-select
+                formCntrlName="expenseType"
+                [formGroup]="form"
+                [label]="
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.TYPE_OF_EXPENSE'
+                    | translate
+                "
+                [options]="expenseTypeOptions"
+                (onChange)="onChangeExpenseType($event)"
+              />
+              <div
+                *ngIf="
+                  form.controls.expenseType.errors?.required &&
+                  form.controls.expenseType.dirty &&
+                  form.controls.expenseType.touched
+                "
+                class="help-block error"
+              >
+                {{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.ERRORS.EXPENSE_TYPE_REQUIRED'
+                    | translate
+                }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="row"
+          *ngIf="
+            expenseDetails.expenseTypeId === 1 ||
+            expenseDetails.expenseTypeId === 4
+          "
+        >
+          <div class="col-12">
+            <div class="form-label-group form-dropdown">
+              <app-autocomplete
+                formCntrlName="disruptionCity"
+                label="{{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.DISRUPTION_CITY'
+                    | translate
+                }}"
+                [error]="
+                  form.controls.disruptionCity.errors &&
+                  form.controls.disruptionCity.dirty &&
+                  form.controls.disruptionCity.touched
+                "
+                [formCntrl]="this.form.controls.disruptionCity"
+                [formGroup]="form"
+                [options]="airportOptions"
+              />
+              <ng-template #flightDisruptionHelp>
+                <div class="help-block black">
+                  {{
+                    'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.DISRUPTION_CITY_HELP'
+                      | translate
+                  }}
+                </div>
+              </ng-template>
+              <div
+                *ngIf="
+                  form.controls.disruptionCity.errors &&
+                    form.controls.disruptionCity.dirty &&
+                    form.controls.disruptionCity.touched;
+                  else form.controls.disruptionCity.value &&
+                    flightDisruptionHelp
+                "
+                class="help-block error"
+              >
+                <div *ngIf="form.controls.disruptionCity.errors['required']">
+                  {{
+                    'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.ERRORS.DISRUPTION_CITY_REQUIRED'
+                      | translate
+                  }}
+                </div>
+                <div
+                  *ngIf="
+                    !form.controls.disruptionCity.errors['required'] &&
+                    form.controls.disruptionCity.errors[
+                      'invalidAutocompleteString'
+                    ]
+                  "
+                >
+                  {{
+                    'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.ERRORS.DISRUPTION_CITY_VALID'
+                      | translate
+                  }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="row"
+          *ngIf="
+            expenseDetails.expenseTypeId === 2 ||
+            expenseDetails.expenseTypeId === 5
+          "
+        >
+          <div class="col-12">
+            <div class="form-label-group form-dropdown">
+              <app-select
+                formCntrlName="mealType"
+                [formGroup]="form"
+                [label]="
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.TYPE_OF_MEAL'
+                    | translate
+                "
+                [options]="mealTypeOptions"
+                (onChange)="onChangeMealType($event)"
+              />
+              <div
+                *ngIf="
+                  form.controls.mealType.errors?.required &&
+                  form.controls.mealType.dirty &&
+                  form.controls.mealType.touched
+                "
+                class="help-block error"
+              >
+                {{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.ERRORS.MEAL_TYPE_REQUIRED'
+                    | translate
+                }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="row"
+          *ngIf="
+            expenseDetails.expenseTypeId === 3 ||
+            expenseDetails.expenseTypeId === 6
+          "
+        >
+          <div class="col-12">
+            <div class="form-label-group form-dropdown">
+              <app-select
+                formCntrlName="transportationType"
+                [formGroup]="form"
+                [label]="
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.TYPE_OF_TRANSPORTATION'
+                    | translate
+                "
+                [options]="transportationTypeOptions"
+                (onChange)="onChangeTransportationType($event)"
+              />
+              <div
+                *ngIf="
+                  form.controls.transportationType.errors?.required &&
+                  form.controls.transportationType.dirty &&
+                  form.controls.transportationType.touched
+                "
+                class="help-block error"
+              >
+                {{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.ERRORS.TRANSPORTATION_TYPE_REQUIRED'
+                    | translate
+                }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ng-container
+          *ngIf="
+            expenseDetails.expenseTypeId === 1 ||
+            expenseDetails.expenseTypeId === 4
+          "
+        >
+          <div class="row">
+            <div class="col-12">
+              <app-datepicker
+                helperText="{{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.YYYY/MM/DD'
+                    | translate
+                }}"
+                inputId="check-in-date"
+                invalidCustomText="{{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.DATE_HELP'
+                    | translate
+                }}"
+                label="{{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.CHECK_IN_DATE'
+                    | translate
+                }}"
+                name="checkInDate"
+                requiredText="{{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.DATE_HELP'
+                    | translate
+                }}"
+                [formGroup]="form"
+                [inputFormat]="dateFormat"
+                [maxDate]="maxDate"
+                [minDate]="minDate"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <app-datepicker
+                helperText="{{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.YYYY/MM/DD'
+                    | translate
+                }}"
+                inputId="check-out-date"
+                invalidCustomText="{{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.DATE_HELP'
+                    | translate
+                }}"
+                label="{{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.CHECK_OUT_DATE'
+                    | translate
+                }}"
+                name="checkOutDate"
+                requiredText="{{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.DATE_HELP'
+                    | translate
+                }}"
+                [formGroup]="form"
+                [inputFormat]="dateFormat"
+                [maxDate]="maxDate"
+                [minDate]="minDate"
+              />
+            </div>
+          </div>
+        </ng-container>
+
+        <ng-container
+          *ngIf="[2, 3, 5, 6].includes(expenseDetails.expenseTypeId)"
+        >
+          <div class="row">
+            <div class="col-12">
+              <app-datepicker
+                helperText="{{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.YYYY/MM/DD'
+                    | translate
+                }}"
+                inputId="transaction-date"
+                invalidCustomText="{{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.DATE_HELP'
+                    | translate
+                }}"
+                label="{{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.TRANSACTION_DATE'
+                    | translate
+                }}"
+                name="transactionDate"
+                requiredText="{{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.TRANSACTION_DATE_REQUIRED'
+                    | translate
+                }}"
+                [formGroup]="form"
+                [inputFormat]="dateFormat"
+                [maxDate]="maxDate"
+                [minDate]="minDate"
+              />
+            </div>
+          </div>
+        </ng-container>
+
+        <ng-container
+          *ngIf="[1, 2, 3, 4, 5, 6].includes(expenseDetails.expenseTypeId)"
+        >
+          <div class="row">
+            <div class="col-4">
+              <div class="form-label-group form-dropdown">
+                <app-select
+                  formCntrlName="currency"
+                  [formGroup]="form"
+                  [label]="
+                    'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.CURRENCY'
+                      | translate
+                  "
+                  [options]="currencyOptions"
+                  (onChange)="onChangeCurrency($event)"
+                />
+                <div
+                  *ngIf="
+                    form.controls.currency.errors?.required &&
+                    form.controls.currency.dirty &&
+                    form.controls.currency.touched
+                  "
+                  class="help-block error"
+                >
+                  {{
+                    'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.ERRORS.CURRENCY_REQUIRED'
+                      | translate
+                  }}
+                </div>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="form-label-group">
+                <input
+                  appTrim
+                  class="form-control"
+                  formControlName="amount"
+                  id="amount"
+                  placeholder=" "
+                  type="text"
+                  (blur)="onBlurAmount($event)"
+                  (focus)="onFocusAmount($event)"
+                />
+                <label for="amount">{{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.AMOUNT'
+                    | translate
+                }}</label>
+                <ng-template #amountHelp>
+                  <div class="help-block black">
+                    {{
+                      'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.AMOUNT_HELP'
+                        | translate
+                    }}
+                  </div>
+                </ng-template>
+                <div
+                  *ngIf="
+                    form.controls.amount.errors &&
+                      form.controls.amount.dirty &&
+                      form.controls.amount.touched;
+                    else amountHelp
+                  "
+                  class="help-block error"
+                >
+                  <div *ngIf="form.controls.amount.errors['required']">
+                    {{
+                      'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.ERRORS.AMOUNT_REQUIRED'
+                        | translate
+                    }}
+                  </div>
+                  <div
+                    *ngIf="
+                      !form.controls.amount.errors['required'] &&
+                      form.controls.amount.errors['notZero']
+                    "
+                  >
+                    {{
+                      'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.ERRORS.AMOUNT_MIN_VALIDATION'
+                        | translate
+                    }}
+                  </div>
+                  <div *ngIf="form.controls.amount.errors['maxAmount']">
+                    {{
+                      'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.ERRORS.AMOUNT_MAX_VALIDATION'
+                        | translate
+                    }}
+                  </div>
+                  <div *ngIf="form.controls.amount.errors['pattern']">
+                    {{
+                      'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.ERRORS.AMOUNT_VALIDATION'
+                        | translate
+                    }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <app-file-upload
+                formCntrlName="receipt"
+                [formCntrl]="form.controls.receipt"
+                [formGroup]="form"
+                [helperText]="
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.RECEIPT_HELPER'
+                    | translate
+                "
+                [invalidText]="
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.ERRORS.RECEIPT_INVALID'
+                    | translate
+                "
+                [maxLengthText]="
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.ERRORS.RECEIPT_MAXLENGTH'
+                    | translate
+                "
+                [maxSizeText]="
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.ERRORS.RECEIPT_MAXSIZE'
+                    | translate
+                "
+                [notUploadedText]="
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.ERRORS.RECEIPT_NOT_UPLOADED'
+                    | translate
+                "
+                [requiredText]="
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.ERRORS.RECEIPT_REQUIRED'
+                    | translate
+                "
+                [loading]="receiptScanLoading"
+                (onChange)="onChangeReceipt($event)"
+              />
+            </div>
+          </div>
+        </ng-container>
+
+        <div *ngIf="editingIndex === -1" class="row modal-buttons">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-medium">
+            <button
+              class="btn btn-outline-secondary"
+              (click)="onClickDiscard()"
+            >
+              {{
+                'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.DISCARD'
+                  | translate
+              }}
+            </button>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-medium text-right">
+            <button
+              class="btn btn-secondary"
+              (click)="onClickAddExpense()"
+              [disabled]="receiptScanLoading"
+            >
+              {{
+                'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.ADD_THIS_EXPENSE'
+                  | translate
+              }}
+            </button>
+          </div>
+        </div>
+
+        <div *ngIf="editingIndex > -1" class="row modal-buttons">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-medium">
+            <button
+              class="btn btn-outline-secondary"
+              (click)="onClickDeleteExpense()"
+            >
+              {{
+                'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.DELETE_EXPENSE'
+                  | translate
+              }}
+            </button>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-medium text-right">
+            <button class="btn btn-secondary" (click)="onClickUpdateExpense()">
+              {{
+                'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ADD_EXPENSE_MODAL.SAVE_CHANGES'
+                  | translate
+              }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</ng-template>

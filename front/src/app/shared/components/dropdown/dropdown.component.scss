@@ -1,0 +1,24 @@
+svg {
+  position: absolute;
+  width: auto;
+  max-width: 25px;
+  height: 25px;
+  display: block;
+  right: 10px;
+  top: 13px;
+}
+.dropdownContainer {
+}
+
+input[type='text']:disabled {
+  background: #fff;
+  border: 1px solid gray;
+}
+.dropdownMenuList {
+  position: absolute;
+  z-index: 100;
+  background-color: white;
+  width: 230px;
+  display: block;
+  top: 0;
+}

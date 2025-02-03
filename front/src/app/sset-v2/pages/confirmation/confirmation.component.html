@@ -1,0 +1,33 @@
+<ng-container *ngIf="!error">
+  <div class="c-confirmation container">
+    <hr class="spacer-md" />
+    <h1 class="h-title">{{ 'SSET_V2.CONFIRMATION.TITLE' | translate }}</h1>
+    <div class="c-description">
+      <p>{{ 'SSET_V2.CONFIRMATION.THANK_YOU_DESC' | translate }}</p>
+      <p>{{ 'SSET_V2.CONFIRMATION.CASE_NUMBER_DESC' | translate }}</p>
+    </div>
+    <h2 class="h-subtitle">{{ 'SSET_V2.CONFIRMATION.CLAIMS' | translate }}</h2>
+    <div class="c-claims">
+      <div class="c-details">
+        <div *ngFor="let claim of addedClaims; index as i">
+          <app-added-claim [claim]="claim" [index]="i" />
+          <app-expenses-review
+            *ngIf="claim?.expenses?.length"
+            [expenses]="claim?.expenses"
+            [index]="i"
+          />
+        </div>
+      </div>
+      <div class="c-details">
+        <app-passenger-details-review />
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<div #errorScrollTarget *ngIf="error">
+  <div class="container">
+    <hr class="spacer-lg" />
+    <app-error [error]="error" />
+  </div>
+</div>

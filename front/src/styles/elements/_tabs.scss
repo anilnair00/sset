@@ -1,0 +1,53 @@
+.tabs-container .nav.nav-pills {
+  margin-left: calc(($grid-gutter-width * -1) / 2);
+  margin-right: calc(($grid-gutter-width * -1) / 2);
+}
+
+.tab.nav-item {
+  .nav-link {
+    text-decoration: none;
+    background: none;
+    color: $dark;
+    font-weight: 500;
+    text-align: left;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: calc($grid-gutter-width / 2);
+      right: calc($grid-gutter-width / 2);
+      height: 5px;
+      background-color: $gray-400;
+    }
+
+    &.active {
+      background: none;
+      color: $dark;
+      font-weight: 800;
+
+      &:after {
+        background-color: $brand-red;
+      }
+    }
+  }
+
+  /*&:first-child .nav-link{
+    left: 0;
+    padding-left: 0;
+
+    &:after {
+      left: 0;
+    }
+  }
+
+  &:last-child .nav-link{
+    right: 0;
+    padding-right: 0;
+    &:after {
+      right: 0;
+    }
+  }*/
+}

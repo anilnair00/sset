@@ -1,0 +1,21 @@
+.btn.has-loading-spinner {
+  position: relative;
+
+  .loading-spinner {
+    opacity: 1;
+    line-height: 1;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 400ms ease;
+  }
+
+  body.modal-open &,
+  body.user-abandon & {
+    // hide spinner immediately if error modal has been triggered, or if user clicked abandon
+    .loading-spinner {
+      opacity: 0;
+    }
+  }
+}

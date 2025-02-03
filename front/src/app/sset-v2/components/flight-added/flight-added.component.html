@@ -1,0 +1,42 @@
+<div class="c-flight-added">
+  <div class="c-inner">
+    <div class="c-flight">
+      <p class="label-flight-info">
+        AC {{ flightLeg.flightNumber }} {{ 'SSET_V2.ON' | translate }}
+        {{ date }}
+      </p>
+      <div class="c-dep-arr">
+        <span>{{ flightLeg.scheduledDepartureAirport }}</span>
+        <span class="material-icons icon-arrow">arrow_right_alt</span>
+        <span>{{ flightLeg.scheduledArrivalAirport }}</span>
+      </div>
+      <div class="c-booking-info">
+        <span class="label-booking-info">
+          {{ 'SSET_V2.ASSESSMENT.REVIEW_CLAIM_PAGE.TICKET' | translate }}
+        </span>
+        <span class="label-booking-info">
+          {{ flightLeg?.ticketNumber }}
+        </span>
+        <ng-template [ngIf]="flightLeg?.bookingReference">
+          <span class="label-booking-info">
+            {{ 'SSET_V2.ASSESSMENT.REVIEW_CLAIM_PAGE.BOOKING_REF' | translate }}
+          </span>
+          <span class="label-booking-info">
+            {{ flightLeg.bookingReference }}
+          </span>
+        </ng-template>
+      </div>
+    </div>
+    <div class="c-btns">
+      <button class="btn btn-outline-secondary btn-add-claim" disabled="true">
+        <span class="label-add-claim">
+          {{ 'SSET_V2.ASSESSMENT.ITINERARY.ADDED_TO_CLAIM' | translate }}
+        </span>
+        <span class="material-icons">done</span>
+      </button>
+      <div class="c-remove-claim" (click)="removeClaim()">
+        {{ 'SSET_V2.ASSESSMENT.ITINERARY.REMOVE_FROM_CLAIM' | translate }}
+      </div>
+    </div>
+  </div>
+</div>

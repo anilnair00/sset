@@ -1,0 +1,123 @@
+.form-label-group {
+  color: $gray-700;
+  position: relative;
+  margin-bottom: 1.5rem;
+  width: 100%;
+
+  > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0; // Override default `<label>` margin
+    line-height: 1.5;
+    pointer-events: none;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    cursor: text; // Match the input under the label
+    transition: all 0.1s ease-in-out;
+    -moz-user-select: none; // Firefox
+    user-select: none;
+
+    color: $gray-700;
+    padding: 0.1875rem 25px 1.65rem 0.6625rem;
+    font-size: 0.75rem;
+  }
+
+  > .loading-spinner {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  //removing default placeholders
+  > input {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.8125rem 0.6rem;
+    padding: 1rem 0.6rem 0.25rem 0.6rem;
+    height: calc(
+      (1.5 * 1em) + #{$input-padding-y * 2} + #{$input-height-border}
+    ); //(1.5 * 1em) = button text height:  (1rem(input font size) * 1.5 (input line-height)) * 1em -- overrides bootstrap values in variables/_bootstrap-variables.scss
+
+    &::-webkit-input-placeholder {
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+    &:-moz-placeholder {
+      color: transparent;
+    }
+    &::-moz-placeholder {
+      color: transparent;
+    }
+    &:-ms-input-placeholder {
+      color: transparent;
+    }
+
+    &::-ms-clear {
+      display: none;
+    }
+
+    &::-webkit-input-placeholder:hover {
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+    &:-moz-placeholder:hover {
+      color: transparent;
+    }
+    &::-moz-placeholder:hover {
+      color: transparent;
+    }
+    &:-ms-input-placeholder:hover {
+      color: transparent;
+    }
+
+    &:placeholder-shown:not(:focus) {
+      color: $black;
+
+      padding: 0.8125rem 0.6rem;
+
+      ~ label {
+        color: $gray-700;
+        padding: 0.8125rem 25px 0.8125rem 0.6625rem;
+        font-size: 1rem;
+      }
+    }
+
+    // Must keep -webkit-autofill because Firefox would ignore the styles otherwise
+    &:-webkit-autofill {
+      color: $black;
+      padding-top: 1rem;
+      padding-bottom: 0.25rem;
+
+      ~ label {
+        color: $gray-700;
+        padding-top: 0.1875rem;
+        padding-bottom: 1.65rem; //needed to align alert icon properly when error
+        font-size: 0.75rem;
+        -moz-user-select: none; // Firefox
+        user-select: none;
+      }
+    }
+
+    &.ng-invalid.ng-touched.ng-dirty,
+    &.api-invalid {
+      ~ label {
+        color: $danger;
+      }
+    }
+  }
+}
+
+.form-control[readonly]:not(.fake-readonly),
+.form-control:disabled {
+  border: $input-disabled-bg; //removes border for disabled / readonly fields.
+  box-shadow: none;
+  cursor: default;
+}
+
+input[type='text'].form-control:not(:focus) {
+  border-color: #949494;
+}

@@ -1,0 +1,379 @@
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="footer-nav-group col-lg-4 col-xl-4 col-md-4 col-sm-4">
+          <div class="footer-nav-title" role="heading" aria-level="2">
+            {{ 'FOOTER.OUR_COMPANY' | translate }}
+          </div>
+          <ul class="footer-nav-list list-unstyled">
+            <li>
+              <a
+                id="skipPageFooterAnchor"
+                target="_blank"
+                rel="nofollow"
+                [href]="'FOOTER.ABOUT_LINK' | translate"
+              >
+                <span>{{ 'FOOTER.ABOUT' | translate }}</span>
+              </a>
+            </li>
+
+            <li *ngIf="lang !== 'es' && lang !== 'zh'">
+              <a
+                target="_blank"
+                rel="nofollow"
+                [href]="'FOOTER.MEDIA_LINK' | translate"
+              >
+                <span>{{ 'FOOTER.MEDIA' | translate }}</span>
+              </a>
+            </li>
+
+            <li *ngIf="lang !== 'es' && lang !== 'zh'">
+              <a
+                target="_blank"
+                rel="nofollow"
+                [href]="'FOOTER.INVESTOR_LINK' | translate"
+              >
+                <span>{{ 'FOOTER.INVESTOR' | translate }}</span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                rel="nofollow"
+                target="_blank"
+                [href]="'FOOTER.BAGGAGE_LINK' | translate"
+              >
+                <span>{{ 'FOOTER.BAGGAGE' | translate }}</span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                rel="nofollow"
+                target="_blank"
+                [href]="'FOOTER.BAGGAGE_CHANGES_LINK' | translate"
+              >
+                <span>{{ 'FOOTER.BAGGAGE_CHANGES' | translate }}</span>
+              </a>
+            </li>
+
+            <li *ngIf="lang !== 'es'" class="d-none d-sm-block">
+              <a
+                target="_blank"
+                rel="nofollow"
+                [href]="'FOOTER.CARGO_LINK' | translate"
+              >
+                <span>{{ 'FOOTER.CARGO' | translate }}</span>
+              </a>
+            </li>
+
+            <li
+              *ngIf="lang !== 'zh' && lang !== 'es'"
+              class="d-none d-sm-block"
+            >
+              <a
+                target="_blank"
+                rel="nofollow"
+                [href]="'FOOTER.FOUNDATION_LINK' | translate"
+              >
+                <span>{{ 'FOOTER.FOUNDATION' | translate }}</span>
+              </a>
+            </li>
+
+            <li class="d-none d-sm-block">
+              <a rel="nofollow" [href]="'FOOTER.SITEMAP_LINK' | translate">
+                <span>{{ 'FOOTER.SITEMAP' | translate }}</span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                target="_blank"
+                rel="nofollow"
+                [href]="'FOOTER.CAREERS_LINK' | translate"
+              >
+                <span>{{ 'FOOTER.CAREERS' | translate }}</span>
+              </a>
+            </li>
+
+            <li *ngIf="lang !== 'zh'" class="d-none d-sm-block">
+              <a rel="nofollow" [href]="'FOOTER.AGENTS_LINK' | translate">
+                <span>{{ 'FOOTER.AGENTS' | translate }}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-nav-group col-lg-4 col-xl-4 col-md-4 col-sm-4">
+          <div class="footer-nav-title" role="heading" aria-level="2">
+            {{ 'FOOTER.DESTINATIONS' | translate }}
+          </div>
+          <ul class="footer-nav-list list-unstyled">
+            <li>
+              <a
+                rel="nofollow"
+                target="_blank"
+                [href]="'FOOTER.WHY_BOOK_LINK' | translate"
+              >
+                <span>{{ 'FOOTER.WHY_BOOK' | translate }}</span>
+              </a>
+            </li>
+
+            <li *ngIf="lang !== 'zh'">
+              <a
+                rel="nofollow"
+                target="_blank"
+                [href]="'FOOTER.DEALS_LINK' | translate"
+              >
+                <span>{{ 'FOOTER.DEALS' | translate }}</span>
+              </a>
+            </li>
+
+            <li class="d-none d-sm-block" *ngIf="lang !== 'zh'">
+              <a
+                rel="nofollow"
+                target="_blank"
+                [href]="'FOOTER.TO_CA_LINK' | translate"
+              >
+                <span>{{ 'FOOTER.TO_CA' | translate }}</span>
+              </a>
+            </li>
+
+            <li class="d-none d-sm-block" *ngIf="lang !== 'zh'">
+              <a
+                rel="nofollow"
+                target="_blank"
+                [href]="'FOOTER.TO_DEST1_LINK' | translate"
+              >
+                <span>{{ 'FOOTER.TO_DEST1' | translate }}</span>
+              </a>
+            </li>
+
+            <li class="d-none d-sm-block" *ngIf="lang !== 'zh'">
+              <a
+                rel="nofollow"
+                target="_blank"
+                [href]="'FOOTER.TO_DEST2_LINK' | translate"
+              >
+                <span>{{ 'FOOTER.TO_DEST2' | translate }}</span>
+              </a>
+            </li>
+
+            <li class="d-none d-sm-block" *ngIf="lang !== 'zh'">
+              <a
+                rel="nofollow"
+                target="_blank"
+                [href]="'FOOTER.TO_DEST3_LINK' | translate"
+              >
+                <span>{{ 'FOOTER.TO_DEST3' | translate }}</span>
+              </a>
+            </li>
+
+            <li class="d-none d-sm-block" *ngIf="lang !== 'zh'">
+              <a
+                rel="nofollow"
+                target="_blank"
+                [href]="'FOOTER.TO_DEST4_LINK' | translate"
+              >
+                <span>{{ 'FOOTER.TO_DEST4' | translate }}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-nav-group col-lg-4 col-xl-4 col-md-4 col-sm-4">
+          <div class="footer-nav-title" role="heading" aria-level="2">
+            {{ 'FOOTER.CUSTOMER_SUPPORT' | translate }}
+          </div>
+          <ul class="footer-nav-list list-unstyled">
+            <li>
+              <a
+                rel="nofollow"
+                target="_blank"
+                [href]="'FOOTER.CONTACT_LINK' | translate"
+              >
+                <span>{{ 'FOOTER.CONTACT' | translate }}</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul
+            class="footer-nav-list list-unstyled"
+            *ngIf="lang !== 'es' && lang !== 'zh'"
+          >
+            <li>
+              <div class="footer-nav-title" role="heading" aria-level="2">
+                {{ 'FOOTER.EMAIL' | translate }}
+              </div>
+            </li>
+
+            <li>
+              <a
+                rel="nofollow"
+                target="_blank"
+                [href]="'FOOTER.SUBSCRIBE_LINK' | translate"
+              >
+                <span>{{ 'FOOTER.SUBSCRIBE' | translate }}</span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                rel="nofollow"
+                target="_blank"
+                [href]="'FOOTER.EMAIL_PREFS_LINK' | translate"
+              >
+                <span>{{ 'FOOTER.EMAIL_PREFS' | translate }}</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="social-links-section">
+            <a
+              target="_blank"
+              id="fblink"
+              rel="nofollow"
+              tabindex="0"
+              aria-label="Facebook"
+              href="http://www.facebook.com/aircanada?src=footer"
+            >
+              <svg
+                role="presentation"
+                class="icn icn-social icn-social-facebook"
+                focusable="false"
+                tabindex="-1"
+              >
+                <title>Facebook</title>
+                <use xlink:href="/assets/icons.svg#icn-social-facebook"></use>
+              </svg>
+            </a>
+
+            <a
+              target="_blank"
+              id="twitterlink"
+              rel="nofollow"
+              tabindex="0"
+              aria-label="Twitter"
+              href="http://www.twitter.com/aircanada?src=footer"
+            >
+              <svg
+                role="presentation"
+                class="icn icn-social icn-social-twitter"
+                focusable="false"
+                tabindex="-1"
+              >
+                <title>Twitter</title>
+                <use xlink:href="/assets/icons.svg#icn-social-twitter"></use>
+              </svg>
+            </a>
+
+            <a
+              target="_blank"
+              id="youtubelink"
+              rel="nofollow"
+              tabindex="0"
+              aria-label="YouTube"
+              href="https://www.youtube.com/user/aircanada?src=footer"
+            >
+              <svg
+                role="presentation"
+                class="icn icn-social icn-social-youtube"
+                focusable="false"
+                tabindex="-1"
+              >
+                <title>Youtube</title>
+                <use xlink:href="/assets/icons.svg#icn-social-youtube"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div
+          class="page-links col-lg-4 col-xs-12 col-md-4 col-sm-4 footer-classic"
+          id="footerBrandLogo"
+        >
+          <img alt="Skytrax" width="80" [src]="skytraxImgPath" />
+        </div>
+        <div
+          class="page-links col-lg-4 col-xs-12 col-md-4 col-sm-4 footer-classic"
+          id="footerCopyRights"
+        >
+          <span class="copy-rights-text"
+            >© {{ now | date : 'yyyy' }} Air Canada
+          </span>
+
+          <div>
+            <div class="copy-rights-text">
+              <a
+                rel="nofollow"
+                target="_blank"
+                [href]="'FOOTER.GENERAL_CONDITIONS_LINK' | translate"
+                >{{ 'FOOTER.GENERAL_CONDITIONS' | translate }}</a
+              >
+            </div>
+
+            <div class="copy-rights-text">
+              <a
+                rel="nofollow"
+                target="_blank"
+                [href]="'FOOTER.CUSTOMER_SERVICE_LINK' | translate"
+                >{{ 'FOOTER.CUSTOMER_SERVICE' | translate }}</a
+              >
+            </div>
+
+            <div class="copy-rights-text" *ngIf="lang === 'es'">
+              <a
+                rel="nofollow"
+                target="_blank"
+                [href]="'FOOTER.TARMAC_DELAYS_LINK' | translate"
+                >{{ 'FOOTER.TARMAC_DELAYS' | translate }}</a
+              >
+            </div>
+
+            <div class="copy-rights-text">
+              <a
+                rel="nofollow"
+                target="_blank"
+                [href]="'FOOTER.PRIVACY_POLICY_LINK' | translate"
+                >{{ 'FOOTER.PRIVACY_POLICY' | translate }}</a
+              >
+            </div>
+
+            <div class="copy-rights-text">
+              <a
+                rel="nofollow"
+                target="_blank"
+                [href]="'FOOTER.TERMS_USE_LINK' | translate"
+                >{{ 'FOOTER.TERMS_USE' | translate }}</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="page-links col-lg-4 col-xl-4 col-md-4 col-sm-4 col-xs-12 footer-classic"
+        >
+          <div class="copy-rights-text">
+            <div class="star-alliance-member-icon">
+              <a
+                id="star-alliance-member-text"
+                target="_blank"
+                [href]="'FOOTER.AC_STAR_LINK' | translate"
+                rel="nofollow"
+              >
+                <img
+                  alt="{{ 'IMAGE_ALT_TEXT.STAR_ALLIANCE' | translate }}"
+                  [src]="acStarImgPath"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

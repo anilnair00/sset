@@ -1,0 +1,53 @@
+@import 'variables';
+
+section.error {
+  border: solid 1px $gray-600;
+  margin: 10px auto 5px;
+  padding: 40px 15px 25px;
+  text-align: center;
+
+  @include media-breakpoint-up(sm) {
+    margin: 50px auto;
+    padding: 50px 40px 30px;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin: 60px auto;
+    padding: 60px 50px 40px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    margin-bottom: 30px;
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .btn {
+    margin-bottom: 20px;
+    min-width: 195px;
+    width: 100%;
+  }
+}
+
+svg {
+  margin-bottom: 40px;
+  max-width: 70px;
+
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 50px;
+    max-width: 80px;
+  }
+  @include media-breakpoint-up(md) {
+    max-width: 90px;
+  }
+}

@@ -1,0 +1,119 @@
+.btn {
+  color: $red;
+  &.short {
+    min-width: 150px;
+    padding: 0.75rem 1.5rem;
+  }
+  &:disabled {
+    cursor: default;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 1rem;
+  }
+}
+
+.btn.btn-link {
+  font-size: inherit;
+  line-height: inherit;
+  min-width: 0;
+  padding: 0;
+  display: inline;
+  vertical-align: baseline;
+
+  &:hover,
+  &:focus {
+    color: darken($secondary, 8.5%);
+    text-decoration: underline;
+  }
+}
+
+.btn-secondary {
+  color: $white;
+  &:hover {
+    background-color: darken($secondary, 8.5%);
+    border-color: darken($secondary, 8.5%);
+  }
+  &:disabled,
+  &.disabled {
+    background: $gray-900;
+    border-color: $gray-900;
+    pointer-events: none;
+  }
+}
+
+.btn-outline-secondary {
+  background-color: $white;
+  &:hover {
+    background-color: darken($secondary, 8.5%);
+    border-color: darken($secondary, 8.5%);
+  }
+  &:focus,
+  &:active {
+    box-shadow: none !important;
+  }
+  &:disabled,
+  &.disabled {
+    background-color: transparent;
+    border-color: $gray-900;
+    color: $gray-900;
+    pointer-events: none;
+  }
+  &:not(:disabled):not(.disabled):active {
+    background: $gray-900;
+    border-color: $gray-900;
+  }
+}
+
+.btn-icon {
+  padding-left: 0px;
+  padding-right: 0px;
+
+  &.btn-icon-primary {
+    color: $primary;
+    svg {
+      fill: $primary;
+    }
+  }
+
+  &.btn-icon-secondary {
+    color: $secondary;
+    svg {
+      fill: $secondary;
+    }
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+
+    + svg {
+      vertical-align: middle;
+    }
+  }
+}
+
+.btn-arrow,
+.btn-nav {
+  svg {
+    margin-left: 5px;
+    width: auto;
+    max-width: 18px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.btn-nav {
+  min-width: 258px;
+
+  &.short {
+    min-width: 150px;
+  }
+}

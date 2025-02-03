@@ -1,0 +1,21 @@
+// import variables
+@import 'colors';
+@import 'fonts';
+@import '../base/mixins';
+
+//// Boostrap Required import. Will resolve to node_modules even if file does not exist in the current structure.
+@import 'node_modules/bootstrap/scss/functions';
+
+@import 'bootstrap-variables'; //will override default values in node_modules/bootstrap/scss/variables
+
+@import 'node_modules/bootstrap/scss/mixins';
+
+@import 'bootstrap-removemaps'; // bugfix : to remove a key from a map with map-remove in bootstrap it must be between required BS imports and optional BS imports
+
+@import 'ng-select-variables';
+
+// Screen Sizes
+$min-mobile: 576px;
+$max-mobile: 767px;
+$min-tablet: 768px;
+$max-tablet: 991px;

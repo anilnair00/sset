@@ -1,0 +1,344 @@
+<section class="pb-5">
+  <ol class="form-instructions mb-6">
+    <li>
+      <span
+        [innerHTML]="
+          'SSET.INSTRUCTIONS.BOOKING_NUMBER' | translate | translateCut : 0
+        "
+      ></span>
+      <button
+        class="btn btn-link"
+        tabindex="0"
+        (click)="openModal(findBooking)"
+        [innerHTML]="
+          'SSET.INSTRUCTIONS.BOOKING_NUMBER' | translate | translateCut : 1
+        "
+        data-analytics-val="faq>booking number"
+        data-analytics-track="sset"
+      ></button>
+      <span
+        [innerHTML]="
+          'SSET.INSTRUCTIONS.BOOKING_NUMBER' | translate | translateCut : 2
+        "
+      ></span>
+
+      <button
+        class="btn btn-link"
+        tabindex="0"
+        (click)="openModal(findTicket)"
+        [innerHTML]="
+          'SSET.INSTRUCTIONS.BOOKING_NUMBER' | translate | translateCut : 3
+        "
+        data-analytics-val="faq>ticket number"
+        data-analytics-track="sset"
+      ></button>
+      <span
+        [innerHTML]="
+          'SSET.INSTRUCTIONS.BOOKING_NUMBER' | translate | translateCut : 4
+        "
+      ></span>
+    </li>
+    <li [innerHTML]="'SSET.INSTRUCTIONS.DEPT_DATE' | translate"></li>
+    <li [innerHTML]="'SSET.INSTRUCTIONS.NAME' | translate"></li>
+  </ol>
+
+  <form (ngSubmit)="onSearch($event)" autocomplete="off" [formGroup]="form">
+    <div class="row">
+      <div class="col">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-medium">
+            <div class="form-label-group">
+              <input
+                type="text"
+                id="PNR-number"
+                class="form-control"
+                formControlName="pnrTicket"
+                placeholder="&nbsp;"
+                oninput="this.value = this.value.toUpperCase()"
+                appTrim
+              />
+              <label
+                for="PNR-number"
+                [innerHTML]="'SSET.SEARCH.PNR_TICKET_LABEL' | translate"
+              ></label>
+
+              <ng-template #pnrTicketHelp>
+                <div class="help-block black">
+                  {{ 'SSET.SEARCH.PNR_TICKET_HELP' | translate }}
+                </div>
+              </ng-template>
+
+              <div
+                *ngIf="
+                  form.controls.pnrTicket.errors &&
+                    form.controls.pnrTicket.dirty &&
+                    form.controls.pnrTicket.touched;
+                  else pnrTicketHelp
+                "
+                class="help-block error"
+              >
+                <div
+                  *ngIf="
+                    form.controls.pnrTicket.errors['required'] ||
+                    form.controls.pnrTicket.hasError('1090005')
+                  "
+                >
+                  {{ 'SSET.SEARCH.ERRORS.PNR_TICKET_REQUIRED' | translate }}
+                </div>
+                <div
+                  *ngIf="
+                    (!(
+                      form.controls.pnrTicket.errors['invalidInputLength'] ||
+                      form.controls.pnrTicket.hasError('1010005') ||
+                      form.controls.pnrTicket.hasError('1010010') ||
+                      form.controls.pnrTicket.hasError('1020005') ||
+                      form.controls.pnrTicket.hasError('1020010')
+                    ) &&
+                      form.controls.pnrTicket.errors['pattern']) ||
+                    form.controls.pnrTicket.hasError('1010015') ||
+                    form.controls.pnrTicket.hasError('1020015')
+                  "
+                >
+                  {{ 'SSET.SEARCH.ERRORS.PNR_TICKET_PATTERN' | translate }}
+                </div>
+                <div
+                  *ngIf="
+                    form.controls.pnrTicket.errors['invalidInputLength'] ||
+                    form.controls.pnrTicket.hasError('1010050') ||
+                    form.controls.pnrTicket.hasError('1010010') ||
+                    form.controls.pnrTicket.hasError('1020005') ||
+                    form.controls.pnrTicket.hasError('1020010')
+                  "
+                >
+                  {{ 'SSET.SEARCH.ERRORS.PNR_TICKET_MIN' | translate }}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-6 col-lg-medium">
+            <app-datepicker
+              *ngIf="!reset"
+              inputId="search-date"
+              label="{{ 'SSET.SEARCH.DATE_LABEL' | translate }}"
+              [readonly]="false"
+              [required]="true"
+              [inputFormat]="dateFormat"
+              [formGroup]="form"
+              name="date"
+              [minDate]="minDate"
+              [maxDate]="maxDate"
+              requiredText="{{ 'SHARED.DATEPICKER.REQUIRED' | translate }}"
+              invalidFormatText="{{ 'SHARED.DATEPICKER.YYYY-MM-DD' }}"
+              helperText="{{
+                'SSET.SEARCH.DATE_HELP'
+                  | translate
+                    : { format: 'SHARED.DATEPICKER.' + dateFormat | translate }
+              }}"
+            ></app-datepicker>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-6 col-lg-medium">
+            <div class="form-label-group">
+              <input
+                type="text"
+                id="first-name"
+                class="form-control"
+                formControlName="firstName"
+                placeholder=" "
+                appTrim
+              />
+              <label for="first-name">{{
+                'SSET.SEARCH.FIRSTNAME_LABEL' | translate
+              }}</label>
+
+              <ng-template #firstnameHelp>
+                <div class="help-block black">
+                  {{ 'SSET.SEARCH.FIRSTNAME_HELP' | translate }}
+                </div>
+              </ng-template>
+
+              <div
+                *ngIf="
+                  form.controls.firstName.errors &&
+                    form.controls.firstName.dirty &&
+                    form.controls.firstName.touched;
+                  else firstnameHelp
+                "
+                class="help-block error"
+              >
+                <div
+                  *ngIf="
+                    form.controls.firstName.errors['required'] ||
+                    form.controls.firstName.hasError('1040010')
+                  "
+                >
+                  {{ 'SSET.SEARCH.ERRORS.FIRSTNAME_REQUIRED' | translate }}
+                </div>
+                <div
+                  *ngIf="
+                    form.controls.firstName.errors['pattern'] ||
+                    form.controls.firstName.hasError('1040015')
+                  "
+                >
+                  {{ 'SSET.SEARCH.ERRORS.FIRSTNAME_PATTERN' | translate }}
+                </div>
+                <div
+                  *ngIf="
+                    form.controls.firstName.errors['maxlength'] ||
+                    form.controls.firstName.hasError('1040005')
+                  "
+                >
+                  {{ 'SSET.SEARCH.ERRORS.FIRSTNAME_MAXLENGTH' | translate }}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-6 col-lg-medium">
+            <div class="form-label-group">
+              <input
+                type="text"
+                id="last-name"
+                class="form-control"
+                formControlName="lastName"
+                placeholder=" "
+                appTrim
+              />
+              <label for="last-name">{{
+                'SSET.SEARCH.LASTNAME_LABEL' | translate
+              }}</label>
+
+              <ng-template #lastnameHelp>
+                <div class="help-block black">
+                  {{ 'SSET.SEARCH.LASTNAME_HELP' | translate }}
+                </div>
+              </ng-template>
+
+              <div
+                *ngIf="
+                  form.controls.lastName.errors &&
+                    form.controls.lastName.dirty &&
+                    form.controls.lastName.touched;
+                  else lastnameHelp
+                "
+                class="help-block error"
+              >
+                <div
+                  *ngIf="
+                    form.controls.lastName.errors['required'] ||
+                    form.controls.lastName.hasError('1050010')
+                  "
+                >
+                  {{ 'SSET.SEARCH.ERRORS.LASTNAME_REQUIRED' | translate }}
+                </div>
+                <div
+                  *ngIf="
+                    form.controls.lastName.errors['pattern'] ||
+                    form.controls.lastName.hasError('1050015')
+                  "
+                >
+                  {{ 'SSET.SEARCH.ERRORS.LASTNAME_PATTERN' | translate }}
+                </div>
+                <div
+                  *ngIf="
+                    form.controls.lastName.errors['maxlength'] ||
+                    form.controls.lastName.hasError('1050005')
+                  "
+                >
+                  {{ 'SSET.SEARCH.ERRORS.LASTNAME_MAXLENGTH' | translate }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100"></div>
+
+      <div class="col-sm-6 col-md-6 col-lg-btn-wide ml-auto mr-auto">
+        <button
+          class="btn btn-secondary has-loading-spinner btn-search"
+          type="submit"
+          [class.disabled]="disableBtn"
+          [attr.aria-disabled]="disableBtn"
+          onclick="this.blur()"
+          data-analytics-val="find booking or ticket"
+          data-analytics-track="sset"
+        >
+          {{ 'SSET.SEARCH.BTN_SEARCH' | translate }}
+          <span *ngIf="store.loading$ | async" class="loading-spinner">
+            <span
+              class="spinner-border spinner-border-sm"
+              role="status"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">{{ 'SHARED.LOADING' | translate }}</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </form>
+</section>
+
+<ng-template #findBooking>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">
+      {{ 'SSET.FIND_BOOKING.TITLE' | translate }}
+    </h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modalRef.hide()"
+    >
+      <svg role="presentation" class="icn icn-close" type="button">
+        <title>{{ 'ICON_TITLE.CLOSE' | translate }}</title>
+        <use xlink:href="/assets/icons.svg#icn-close"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>
+      {{ 'SSET.FIND_BOOKING.BODY' | translate }}
+    </p>
+
+    <img
+      src="/assets/img/booking_ref_{{
+        translate.currentLang === 'en' || translate.currentLang === 'fr'
+          ? translate.currentLang
+          : 'en'
+      }}.gif"
+      [alt]="'SSET.FIND_BOOKING.CAPTION' | translate"
+    />
+  </div>
+</ng-template>
+
+<ng-template #findTicket>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">
+      {{ 'SSET.FIND_TICKET.TITLE' | translate }}
+    </h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modalRef.hide()"
+    >
+      <svg role="presentation" class="icn icn-close" type="button">
+        <title>{{ 'ICON_TITLE.CLOSE' | translate }}</title>
+        <use xlink:href="/assets/icons.svg#icn-close"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>
+      {{ 'SSET.FIND_TICKET.BODY' | translate }}
+    </p>
+
+    <img
+      src="/assets/img/ticket_number.jpg"
+      [alt]="'SSET.FIND_TICKET.CAPTION' | translate"
+    />
+  </div>
+</ng-template>

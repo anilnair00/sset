@@ -1,0 +1,80 @@
+.form-select-group {
+  margin-bottom: 1.25rem;
+
+  .arrow-btn {
+    align-items: center;
+    background: $gray-200;
+    bottom: 1px;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 2.5rem;
+
+    &:after {
+      border: 1px solid $gray-700;
+      border-left: none;
+      border-top: none;
+      content: '';
+      display: inline-block;
+      height: 0.75rem;
+      margin-top: -0.25rem;
+      transform: rotate(45deg);
+      width: 0.75rem;
+    }
+  }
+}
+
+.custom-select-group {
+  position: relative;
+}
+
+.custom-select {
+  background-color: $white;
+  cursor: pointer;
+  padding: 0.75rem 2.75rem 0.75rem 0.3rem;
+
+  &.default {
+    color: $gray-700;
+    font-weight: 400;
+    ~ label {
+      display: none;
+    }
+
+    &.ng-invalid.ng-touched.ng-dirty {
+      color: $danger;
+    }
+  }
+
+  &:not(.default) {
+    font-weight: 600;
+    padding-top: 1rem;
+    padding-bottom: 0.25rem;
+
+    ~ label {
+      color: $gray-700;
+      pointer-events: none;
+      display: block;
+      font-size: 0.75rem;
+      left: 0;
+      line-height: 1.5;
+      margin-bottom: 0; /* Override default `<label>` margin */
+      padding: 0.25rem 0.6rem 1.65rem; //1.65rem needed to align alert icon properly when error
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  option {
+    color: $black;
+    font-weight: 600;
+    &:first-of-type {
+      color: $gray-700;
+      font-weight: 400;
+    }
+  }
+}

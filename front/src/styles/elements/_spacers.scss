@@ -1,0 +1,48 @@
+hr[class^='spacer'] {
+  border: 0;
+  margin: 0;
+}
+
+.spacer-xxs {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.spacer-xs {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.spacer-sm {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.spacer-md {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.spacer-lg {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+
+  @include media-breakpoint-up(sm) {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+.spacer-xl {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.spacer-xxl {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.spacer-line {
+  border-bottom: 1px solid $gray-600;
+}

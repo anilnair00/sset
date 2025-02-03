@@ -1,0 +1,414 @@
+<ng-container *ngIf="!error">
+  <div class="c-assessment container" id="assessmentPageContainer">
+    <hr class="spacer-md" />
+    <h1>{{ 'SSET_V2.ASSESSMENT.TITLE' | translate }}</h1>
+    <hr />
+
+    <ng-template [ngIf]="assessmentPage !== Pages.ReviewClaim">
+      <div class="c-options">
+        <div class="c-option">
+          <div
+            class="c-number"
+            [ngClass]="{
+              'c-number--selected': assessmentPage === Pages.FlightDetails
+            }"
+          >
+            1
+          </div>
+          <span class="label-name">{{
+            'SSET_V2.ASSESSMENT.FLIGHT_DETAILS' | translate
+          }}</span>
+        </div>
+        <div class="c-option">
+          <div
+            class="c-number"
+            [ngClass]="{
+              'c-number--selected': assessmentPage === Pages.PassengerDetails
+            }"
+          >
+            2
+          </div>
+          <span class="label-name">{{
+            'SSET_V2.ASSESSMENT.PASSENGER_DETAILS' | translate
+          }}</span>
+        </div>
+        <div class="c-option">
+          <div
+            class="c-number"
+            [ngClass]="{
+              'c-number--selected':
+                assessmentPage === Pages.Expenses ||
+                assessmentPage === Pages.ReviewExpenses
+            }"
+          >
+            3
+          </div>
+          <span class="label-name">{{
+            'SSET_V2.ASSESSMENT.EXPENSES' | translate
+          }}</span>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template [ngIf]="assessmentPage === Pages.PassengerDetails">
+      <app-passenger-details />
+    </ng-template>
+
+    <ng-template [ngIf]="assessmentPage === Pages.FlightDetails">
+      <app-flight-details />
+    </ng-template>
+
+    <ng-template [ngIf]="assessmentPage === Pages.Expenses">
+      <app-expenses />
+    </ng-template>
+
+    <ng-template [ngIf]="assessmentPage === Pages.ReviewExpenses">
+      <app-review-expenses [addedClaims]="addedClaims" />
+    </ng-template>
+
+    <div class="divider"></div>
+
+    <ng-template [ngIf]="assessmentPage === Pages.ReviewClaim">
+      <app-review-claims />
+      <p class="p-review-agreement">
+        {{ 'SSET_V2.ASSESSMENT.REVIEW_CLAIM_PAGE.AGREEMENT' | translate }}
+      </p>
+    </ng-template>
+
+    <ng-template [ngIf]="validationError">
+      <div class="c-error">
+        <span class="material-icons error-icon">error_outline</span>
+        <div class="error-info">{{ validationError }}</div>
+      </div>
+    </ng-template>
+
+    <div class="c-btn">
+      <ng-template [ngIf]="assessmentPage === Pages.FlightDetails">
+        <button
+          class="btn btn-outline-secondary btn-back"
+          (click)="onClickHomePage()"
+        >
+          {{ 'SSET_V2.ASSESSMENT.BACK_TO_HOME' | translate }}
+        </button>
+        <button
+          class="btn btn-secondary btn-continue"
+          [disabled]="!canClaimExpense && !claimAdded"
+          (click)="
+            onClickNavigatePage(Pages.PassengerDetails, Pages.FlightDetails)
+          "
+        >
+          {{ 'SSET_V2.ASSESSMENT.CONTINUE_TO_PASSENGER_DETAILS' | translate }}
+        </button>
+      </ng-template>
+
+      <ng-template [ngIf]="assessmentPage === Pages.PassengerDetails">
+        <button
+          class="btn btn-outline-secondary btn-back"
+          (click)="onClickNavigatePage(Pages.FlightDetails)"
+        >
+          {{ 'SSET_V2.ASSESSMENT.BACK_TO_FLIGHT_DETAILS' | translate }}
+        </button>
+        <button
+          class="btn btn-secondary btn-continue"
+          (click)="onClickNavigatePage(Pages.Expenses, Pages.PassengerDetails)"
+        >
+          {{ 'SSET_V2.ASSESSMENT.CONTINUE_TO_EXPENSES' | translate }}
+        </button>
+      </ng-template>
+
+      <ng-container *ngIf="assessmentPage === Pages.Expenses">
+        <!-- if there is 1 claim -->
+        <ng-template [ngIf]="addedClaims.length === 1">
+          <button
+            class="btn btn-outline-secondary btn-back"
+            (click)="onClickNavigatePage(Pages.PassengerDetails)"
+          >
+            {{ 'SSET_V2.ASSESSMENT.BACK_TO_PASSENGER_DETAILS' | translate }}
+          </button>
+
+          <button
+            *ngIf="claimingExpense()"
+            class="btn btn-secondary btn-continue"
+            (click)="onClickNavigatePage(Pages.ReviewExpenses)"
+          >
+            {{ 'SSET_V2.ASSESSMENT.REVIEW_EXPENSES' | translate }}
+          </button>
+
+          <button
+            *ngIf="!claimingExpense()"
+            class="btn btn-secondary btn-continue"
+            [disabled]="!claimingExpense() && !claimingCompensation()"
+            (click)="onClickNavigatePage(Pages.ReviewClaim)"
+          >
+            {{
+              (!addedClaims[claimIndex].isExpenseButtonEnabled ||
+              claimHasExpense(claimIndex)
+                ? 'SSET_V2.ASSESSMENT.REVIEW_CLAIM'
+                : 'SSET_V2.ASSESSMENT.SKIP_EXPENSES'
+              ) | translate
+            }}
+          </button>
+        </ng-template>
+
+        <!-- if there are 2 claims -->
+        <ng-template [ngIf]="addedClaims.length === 2">
+          <!-- if user is on the first claim -->
+          <ng-template [ngIf]="claimIndex === 0">
+            <button
+              class="btn btn-outline-secondary btn-back"
+              (click)="onClickNavigatePage(Pages.PassengerDetails)"
+            >
+              {{ 'SSET_V2.ASSESSMENT.BACK_TO_PASSENGER_DETAILS' | translate }}
+            </button>
+
+            <button
+              class="btn btn-secondary btn-continue"
+              (click)="onClickNavigateExpenseClaim(claimIndex + 1)"
+            >
+              {{
+                (!addedClaims[claimIndex].isExpenseButtonEnabled ||
+                claimHasExpense(claimIndex)
+                  ? 'SSET_V2.ASSESSMENT.CONTINUE_TO_JOURNEY'
+                  : 'SSET_V2.ASSESSMENT.SKIP_EXPENSES_FOR_JOURNEY'
+                ) | translate
+              }}
+              {{
+                !addedClaims[claimIndex].isExpenseButtonEnabled ||
+                claimHasExpense(claimIndex)
+                  ? claimIndex + 2
+                  : claimIndex + 1
+              }}
+            </button>
+          </ng-template>
+
+          <!-- if user is on the second claim -->
+          <ng-template [ngIf]="claimIndex === 1">
+            <button
+              class="btn btn-outline-secondary btn-back"
+              (click)="onClickNavigateExpenseClaim(claimIndex - 1)"
+            >
+              {{
+                'SSET_V2.ASSESSMENT.BACK_TO_EXPENSES_FOR_JOURNEY' | translate
+              }}
+              {{ claimIndex }}
+            </button>
+
+            <button
+              *ngIf="claimingExpense()"
+              class="btn btn-secondary btn-continue"
+              (click)="onClickNavigatePage(Pages.ReviewExpenses)"
+            >
+              {{ 'SSET_V2.ASSESSMENT.REVIEW_EXPENSES' | translate }}
+            </button>
+
+            <button
+              *ngIf="!claimingExpense()"
+              class="btn btn-secondary btn-continue"
+              [disabled]="!claimingExpense() && !claimingCompensation()"
+              (click)="onClickNavigatePage(Pages.ReviewClaim)"
+            >
+              {{
+                (!addedClaims[claimIndex].isExpenseButtonEnabled ||
+                claimHasExpense(claimIndex)
+                  ? 'SSET_V2.ASSESSMENT.REVIEW_CLAIM'
+                  : 'SSET_V2.ASSESSMENT.SKIP_EXPENSES'
+                ) | translate
+              }}
+            </button>
+          </ng-template>
+        </ng-template>
+
+        <!-- if there are 3 or more claims -->
+        <ng-template [ngIf]="addedClaims.length > 2">
+          <!-- if user is on the first claim -->
+          <ng-template [ngIf]="claimIndex === 0">
+            <button
+              class="btn btn-outline-secondary btn-back"
+              (click)="onClickNavigatePage(Pages.PassengerDetails)"
+            >
+              {{ 'SSET_V2.ASSESSMENT.BACK_TO_PASSENGER_DETAILS' | translate }}
+            </button>
+
+            <button
+              class="btn btn-secondary btn-continue"
+              (click)="onClickNavigateExpenseClaim(claimIndex + 1)"
+            >
+              {{
+                (!addedClaims[claimIndex].isExpenseButtonEnabled ||
+                claimHasExpense(claimIndex)
+                  ? 'SSET_V2.ASSESSMENT.CONTINUE_TO_JOURNEY'
+                  : 'SSET_V2.ASSESSMENT.SKIP_EXPENSES_FOR_JOURNEY'
+                ) | translate
+              }}
+              {{
+                !addedClaims[claimIndex].isExpenseButtonEnabled ||
+                claimHasExpense(claimIndex)
+                  ? claimIndex + 2
+                  : claimIndex + 1
+              }}
+            </button>
+          </ng-template>
+
+          <!-- if user is on a middle claim -->
+          <ng-template
+            [ngIf]="claimIndex !== 0 && claimIndex !== addedClaims.length - 1"
+          >
+            <button
+              class="btn btn-outline-secondary btn-back"
+              (click)="onClickNavigateExpenseClaim(claimIndex - 1)"
+            >
+              {{
+                'SSET_V2.ASSESSMENT.BACK_TO_EXPENSES_FOR_JOURNEY' | translate
+              }}
+              {{ claimIndex }}
+            </button>
+
+            <button
+              class="btn btn-secondary btn-continue"
+              (click)="onClickNavigateExpenseClaim(claimIndex + 1)"
+            >
+              {{
+                (!addedClaims[claimIndex].isExpenseButtonEnabled ||
+                claimHasExpense(claimIndex)
+                  ? 'SSET_V2.ASSESSMENT.CONTINUE_TO_JOURNEY'
+                  : 'SSET_V2.ASSESSMENT.SKIP_EXPENSES_FOR_JOURNEY'
+                ) | translate
+              }}
+              {{
+                !addedClaims[claimIndex].isExpenseButtonEnabled ||
+                claimHasExpense(claimIndex)
+                  ? claimIndex + 2
+                  : claimIndex + 1
+              }}
+            </button>
+          </ng-template>
+
+          <!-- if user is on the last claim -->
+          <ng-template [ngIf]="claimIndex === addedClaims.length - 1">
+            <button
+              class="btn btn-outline-secondary btn-back"
+              (click)="onClickNavigateExpenseClaim(claimIndex - 1)"
+            >
+              {{
+                'SSET_V2.ASSESSMENT.BACK_TO_EXPENSES_FOR_JOURNEY' | translate
+              }}
+              {{ claimIndex }}
+            </button>
+
+            <button
+              *ngIf="claimingExpense()"
+              class="btn btn-secondary btn-continue"
+              (click)="onClickNavigatePage(Pages.ReviewExpenses)"
+            >
+              {{ 'SSET_V2.ASSESSMENT.REVIEW_EXPENSES' | translate }}
+            </button>
+
+            <button
+              *ngIf="!claimingExpense()"
+              class="btn btn-secondary btn-continue"
+              [disabled]="!claimingExpense() && !claimingCompensation()"
+              (click)="onClickNavigatePage(Pages.ReviewClaim)"
+            >
+              {{
+                (!addedClaims[claimIndex].isExpenseButtonEnabled ||
+                claimHasExpense(claimIndex)
+                  ? 'SSET_V2.ASSESSMENT.REVIEW_CLAIM'
+                  : 'SSET_V2.ASSESSMENT.SKIP_EXPENSES'
+                ) | translate
+              }}
+            </button>
+          </ng-template>
+        </ng-template>
+      </ng-container>
+
+      <ng-container *ngIf="assessmentPage === Pages.ReviewExpenses">
+        <ng-template [ngIf]="addedClaims.length === 1">
+          <button
+            class="btn btn-outline-secondary btn-back"
+            (click)="onClickNavigatePage(Pages.Expenses)"
+          >
+            {{ 'SSET_V2.ASSESSMENT.BACK_TO_EXPENSES' | translate }}
+          </button>
+          <button
+            class="btn btn-secondary btn-continue"
+            (click)="
+              onClickNavigatePage(Pages.ReviewClaim, Pages.ReviewExpenses)
+            "
+          >
+            {{ 'SSET_V2.ASSESSMENT.REVIEW_CLAIM' | translate }}
+          </button>
+        </ng-template>
+
+        <ng-template [ngIf]="addedClaims.length > 1">
+          <button
+            class="btn btn-outline-secondary btn-back"
+            (click)="onClickNavigateExpenseClaim(claimIndex, true)"
+          >
+            {{ 'SSET_V2.ASSESSMENT.BACK_TO_EXPENSES_FOR_JOURNEY' | translate }}
+            {{ claimIndex + 1 }}
+          </button>
+          <button
+            class="btn btn-secondary btn-continue"
+            (click)="
+              onClickNavigatePage(Pages.ReviewClaim, Pages.ReviewExpenses)
+            "
+          >
+            {{ 'SSET_V2.ASSESSMENT.REVIEW_CLAIM' | translate }}
+          </button>
+        </ng-template>
+      </ng-container>
+
+      <ng-container *ngIf="assessmentPage === Pages.ReviewClaim">
+        <ng-template [ngIf]="!claimingExpense()">
+          <button
+            *ngIf="addedClaims.length === 1"
+            class="btn btn-outline-secondary btn-back"
+            (click)="onClickNavigatePage(Pages.Expenses)"
+          >
+            {{ 'SSET_V2.ASSESSMENT.BACK_TO_EXPENSES' | translate }}
+          </button>
+          <button
+            *ngIf="addedClaims.length > 1"
+            class="btn btn-outline-secondary btn-back"
+            (click)="onClickNavigateExpenseClaim(claimIndex, true)"
+          >
+            {{ 'SSET_V2.ASSESSMENT.BACK_TO_EXPENSES_FOR_JOURNEY' | translate }}
+            {{ claimIndex + 1 }}
+          </button>
+          <button
+            class="btn btn-secondary btn-continue"
+            (click)="onClickSubmitClaim()"
+          >
+            {{ 'SSET_V2.ASSESSMENT.SUBMIT_CLAIM' | translate }}
+          </button>
+        </ng-template>
+
+        <ng-template [ngIf]="claimingExpense()">
+          <button
+            class="btn btn-outline-secondary btn-back"
+            (click)="onClickNavigatePage(Pages.ReviewExpenses)"
+          >
+            {{ 'SSET_V2.ASSESSMENT.BACK_TO_REVIEW_EXPENSES' | translate }}
+          </button>
+          <button
+            class="btn btn-secondary btn-continue"
+            (click)="onClickSubmitClaim()"
+          >
+            {{ 'SSET_V2.ASSESSMENT.SUBMIT_CLAIM' | translate }}
+          </button>
+        </ng-template>
+      </ng-container>
+    </div>
+  </div>
+</ng-container>
+
+<div #errorScrollTarget *ngIf="error">
+  <div class="container">
+    <hr class="spacer-lg" />
+    <app-error [error]="error" />
+  </div>
+</div>
+
+<ng-template [ngIf]="loading">
+  <app-loader />
+</ng-template>

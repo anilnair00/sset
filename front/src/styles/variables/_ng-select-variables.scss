@@ -1,0 +1,13 @@
+$ng-select-highlight: lighten($component-active-bg, 25%);
+$ng-select-primary-text: $input-color;
+//$ng-select-disabled-text: #f9f9f9;
+$ng-select-border: $input-border-color;
+$ng-select-border-radius: 0;
+$ng-select-bg: $input-bg;
+$ng-select-selected: lighten($ng-select-highlight, 25%);
+$ng-select-marked: lighten($ng-select-highlight, 40%);
+$ng-select-box-shadow: $input-btn-focus-box-shadow;
+$ng-select-placeholder: $gray-700;
+$ng-select-height: 3.125rem;
+$ng-select-value-padding-left: 0.6rem;
+$ng-select-value-font-size: $input-font-size;

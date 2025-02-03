@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>ODE.SSET.Interfaces</AssemblyName>
+    <RootNamespace>ODE.SSET.Interfaces</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="BRE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.1.32" />
+  </ItemGroup>
+</Project>

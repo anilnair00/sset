@@ -1,0 +1,26 @@
+<div class="dialog-layout">
+  <h1 class="dialog-title">
+    {{ title }}
+  </h1>
+
+  <div mat-dialog-content class="dialog-message">
+    <p>{{ message }}</p>
+  </div>
+
+  <div mat-dialog-actions class="dialog-buttons">
+    <div class="col-12 col-sm-6 col-md-6 col-lg-medium">
+      <button
+        mat-button
+        class="btn btn-outline-secondary"
+        (click)="onDiscard()"
+      >
+        {{ 'SSET_V2.ASSESSMENT.CANCEL' | translate }}
+      </button>
+    </div>
+    <div class="col-12 col-sm-6 col-md-6 col-lg-medium text-right">
+      <button mat-raised-button class="btn btn-secondary" (click)="onConfirm()">
+        {{ 'SSET_V2.ASSESSMENT.CONTINUE_TO_EXPENSES' | translate }}
+      </button>
+    </div>
+  </div>
+</div>

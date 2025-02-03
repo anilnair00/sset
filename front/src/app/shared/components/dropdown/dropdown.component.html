@@ -1,0 +1,74 @@
+<div class="form-label-group dropdownContainer" dropdown tabindex="0">
+  <input
+    disabled
+    type="text"
+    [id]="inputId"
+    class="form-control"
+    name="name"
+    [ngModel]="getSelectedValue"
+    [placeholder]="getSelectedValue ? label : selectedDisplayText"
+    #inputElement
+    [required]="required"
+  />
+  <label [for]="inputId">{{
+    inputElement.value.length === 0 ? selectedDisplayText : label
+  }}</label>
+
+  <svg
+    role="presentation"
+    class="icn icn-calendar"
+    id="button-split"
+    type="button"
+    dropdownToggle
+    aria-controls="dropdown-split"
+    (click)="toggleSelectDropdown()"
+  >
+    <title>Dropdown icon</title>
+    <use xlink:href="/assets/icons.svg#icn-calendar"></use>
+  </svg>
+
+  <div *dropdownMenu class="dropdown-menu" role="menu">
+    <div
+      class="dropdownMenuList shadow p-3 mb-5 bg-white rounded"
+      [style.maxHeight]="config.height"
+    >
+      <div class="selected-items">
+        <div
+          class="checkbox"
+          role="menuitem"
+          tabindex="-1"
+          *ngFor="let selected of selectedItems; let i = index"
+          (click)="deselectItem(selected, i)"
+        >
+          <div class="row">
+            <div class="col-10">
+              <label>{{ selected[config.displayKey] || selected }} </label>
+            </div>
+            <div class="col-2">
+              <input *ngIf="multiple" type="checkbox" value="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr *ngIf="selectedItems.length > 0 && availableItems.length > 0" />
+      <div class="selected-items">
+        <div
+          role="menuitem"
+          #availableOption
+          *ngFor="let item of availableItems; let i = index"
+          tabindex="-1"
+          (click)="selectItem(item, i)"
+        >
+          <div class="row">
+            <div class="col-10">
+              <label>{{ item[config.displayKey] || item }} </label>
+            </div>
+            <div class="col-2">
+              <input *ngIf="multiple" type="checkbox" value="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

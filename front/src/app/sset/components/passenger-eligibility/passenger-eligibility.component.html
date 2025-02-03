@@ -1,0 +1,198 @@
+<section class="boxed" *ngIf="status">
+  <div class="response-content" tabindex="0" #response>
+    <div class="row no-gutters align-items-center">
+      <div class="col-auto">
+        <svg
+          class="status-icon"
+          *ngIf="icon.path"
+          [class]="status"
+          role="presentation"
+          [attr.aria-label]="'ICON_TITLE.' + icon.title | translate"
+        >
+          <title>{{ 'ICON_TITLE.' + icon.title | translate }}</title>
+          <use [attr.xlink:href]="'/assets/icons.svg#' + icon.path" />
+        </svg>
+      </div>
+      <div class="col">
+        <h2>
+          {{
+            'SSET.PASSENGER_ELIGIBILITY.' + (status | uppercase) + '.TITLE'
+              | translate
+          }}
+        </h2>
+      </div>
+    </div>
+
+    <p
+      class="status-text my-4"
+      [innerHtml]="
+        'SSET.PASSENGER_ELIGIBILITY.' + (status | uppercase) + '.TEXT'
+          | translate
+            : { reason: reason, days: pendingPeriod, caseNum: caseNumber }
+      "
+    ></p>
+
+    <div
+      class="review-steps"
+      *ngIf="status === eligibilityStatus.NOMATCH && failures > 1"
+    >
+      <p class="with-link">
+        <span
+          [innerHtml]="
+            'SSET.PASSENGER_ELIGIBILITY.NOMATCH.SUBSEQUENT'
+              | translate
+              | translateCut : 0
+          "
+        ></span>
+        <button
+          class="btn btn-link"
+          tabindex="0"
+          (click)="onAction('SUBMIT')"
+          [innerHTML]="
+            'SSET.PASSENGER_ELIGIBILITY.NOMATCH.SUBSEQUENT'
+              | translate
+              | translateCut : 1
+          "
+          data-analytics-val="results>submit compensation claim"
+          data-analytics-track="sset"
+        ></button>
+        <span
+          [innerHtml]="
+            'SSET.PASSENGER_ELIGIBILITY.NOMATCH.SUBSEQUENT'
+              | translate
+              | translateCut : 2
+          "
+        ></span>
+      </p>
+      <hr class="spacer-lg" />
+      <div class="text-center">
+        <button
+          class="btn btn-secondary btn-action"
+          tabindex="0"
+          (click)="onAction('SUBMIT')"
+          onclick="this.blur()"
+          data-analytics-val="results>submit compensation claim"
+          data-analytics-track="sset"
+        >
+          {{ 'SSET.ACTIONS.SUBMIT' | translate }}
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="review-steps"
+      *ngIf="
+        status === eligibilityStatus.OAL ||
+        status === eligibilityStatus.OUTSIDEAPPR
+      "
+    >
+      <p class="with-link">
+        <span
+          [innerHtml]="
+            'SSET.PASSENGER_ELIGIBILITY.' + (status | uppercase) + '.TEXT2'
+              | translate
+              | translateCut : 0
+          "
+        ></span>
+        <button
+          class="btn btn-link"
+          tabindex="0"
+          (click)="onAction('SUBMIT')"
+          [innerHTML]="
+            'SSET.PASSENGER_ELIGIBILITY.' + (status | uppercase) + '.TEXT2'
+              | translate
+              | translateCut : 1
+          "
+          data-analytics-val="results>submit compensation claim"
+          data-analytics-track="sset"
+        ></button>
+        <span
+          [innerHtml]="
+            'SSET.PASSENGER_ELIGIBILITY.' + (status | uppercase) + '.TEXT2'
+              | translate
+              | translateCut : 2
+          "
+        ></span>
+      </p>
+      <hr class="spacer-lg" />
+      <div class="text-center">
+        <button
+          class="btn btn-secondary btn-action"
+          tabindex="0"
+          (click)="onAction('SUBMIT')"
+          onclick="this.blur()"
+          data-analytics-val="results>submit compensation claim"
+          data-analytics-track="sset"
+        >
+          {{ 'SSET.ACTIONS.SUBMIT' | translate }}
+        </button>
+      </div>
+    </div>
+
+    <ng-container *ngIf="reason && status !== eligibilityStatus.PENDING">
+      <hr class="spacer-sm" aria-hidden="true" />
+      <h3>{{ 'SSET.DISRUPTION_REASONS.TITLE' | translate }}</h3>
+      <p
+        class="disruption-text"
+        [innerHtml]="'SSET.DISRUPTION_REASONS.' + reason | translate"
+      ></p>
+    </ng-container>
+
+    <ng-container
+      *ngIf="
+        status === eligibilityStatus.OUTSIDEPERIOD ||
+        status === eligibilityStatus.OVER365 ||
+        status === eligibilityStatus.NOTELIGIBLE ||
+        status === eligibilityStatus.DUPLICATEREQUEST ||
+        status === eligibilityStatus.UNABLEDETERMINATION
+      "
+    >
+      <hr class="spacer-sm" aria-hidden="true" />
+      <p class="with-link">
+        <span
+          [innerHtml]="
+            'SSET.PASSENGER_ELIGIBILITY.' + (status | uppercase) + '.TEXT2'
+              | translate
+              | translateCut : 0
+          "
+        ></span>
+        <a
+          [innerHtml]="
+            'SSET.PASSENGER_ELIGIBILITY.' + (status | uppercase) + '.TEXT2'
+              | translate
+              | translateCut : 1
+          "
+          [href]="'SSET.POLICY_LINK' | translate"
+          target="_blank"
+          data-analytics-val="results>flight interruption policy"
+          data-analytics-track="sset"
+        ></a>
+        <span
+          [innerHtml]="
+            'SSET.PASSENGER_ELIGIBILITY.' + (status | uppercase) + '.TEXT2'
+              | translate
+              | translateCut : 2
+          "
+        ></span>
+      </p>
+    </ng-container>
+  </div>
+
+  <ng-container *ngIf="action">
+    <hr class="spacer-lg" />
+    <div class="text-center">
+      <button
+        class="btn btn-secondary btn-action"
+        *ngIf="action"
+        (click)="onAction()"
+        onclick="this.blur()"
+        data-analytics-val="results>submit compensation claim"
+        data-analytics-track="sset"
+      >
+        {{ 'SSET.ACTIONS.' + action | translate }}
+      </button>
+    </div>
+  </ng-container>
+</section>
+
+<hr class="spacer-xl" />

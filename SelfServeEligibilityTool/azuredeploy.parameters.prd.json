@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "azureEnvironmentInfix": { "value": "prd" },
+    "environmentVariableName": { "value": "PRD" },
+    "functionAppName": { "value": "acodesset-prd" },
+    "webSubDomain": { "value": "acodesset" },
+    "keyVaultWriterObjectId": { "value": "bdee60bb-613f-445f-becc-9950672946a0" },
+    "devOpsPrincipalObjectId": { "value": "84ae6eea-8cce-42c7-a967-187073adbb16" },
+    "cipBaseAddress": { "value": "https://acode-pcat-prd.azurewebsites.net" },
+    "idpBaseAddress": { "value": "https://fs.aircanada.ca" },
+    "claimsProcessingAdminGroup": { "value": "claimsprocessingadmingroupprod" },
+    "azureAppConfiguration": { "value": "Endpoint=https://ac-ode-odh-dev-canadacentral.azconfig.io;Id=a8qR-ll-s0:v7Sf0gFmHfuk6IVBXaqA;Secret=9NppxWUNKSGfbszZfqAS8DSQ79GFexbLh7DmRZRUbK4=" },
+    "customDomain": { "value": "sset.aircanada.com" }
+  }
+}

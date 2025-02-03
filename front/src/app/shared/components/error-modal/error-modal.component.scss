@@ -1,0 +1,50 @@
+@import 'variables';
+::ng-deep .error-modal {
+  .modal-body {
+    padding: 40px 40px 45px 45px;
+  }
+
+  .icn-expand {
+    margin: 0px auto 25px;
+    width: 90px;
+    height: 90px;
+  }
+
+  a,
+  a:link {
+    color: gray;
+    text-decoration: underline;
+  }
+
+  .btn {
+    min-width: 256px;
+    display: inline-block;
+    margin: 0 15px;
+  }
+
+  pre {
+    background-color: $gray-200;
+    padding: 15px;
+  }
+
+  .close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    margin: -1rem -1rem -1rem auto;
+    padding: 1rem;
+    width: auto;
+    z-index: 2;
+    .icn-close {
+      height: 24px;
+      width: 24px;
+      color: black;
+    }
+  }
+
+  &.modal-red-icon {
+    .icn-expand {
+      color: $secondary;
+    }
+  }
+}

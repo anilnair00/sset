@@ -1,0 +1,42 @@
+<ng-container *ngIf="!error">
+  <div class="hero-banner"></div>
+
+  <div class="container">
+    <hr class="spacer-md" />
+    <h1>{{ 'SSET.TITLE' | translate }}</h1>
+    <p class="intro">
+      <span [innerHTML]="'SSET.INTRO' | translate | translateCut : 0"></span>
+      <a
+        class="btn btn-link"
+        target="_blank"
+        [href]="'SSET.POLICY_LINK' | translate"
+        data-analytics-val="flight interruption policy"
+        data-analytics-track="sset"
+        >{{ 'SSET.INTRO' | translate | translateCut : 1 }}</a
+      >
+      <span [innerHTML]="'SSET.INTRO' | translate | translateCut : 2"></span>
+    </p>
+
+    <hr />
+
+    <h2>{{ 'SSET.SEARCH.TIPS_TITLE' | translate }}</h2>
+
+    <div #formScrollTarget>
+      <app-search-form></app-search-form>
+    </div>
+
+    <div #scrollTarget>
+      <hr class="spacer-lg" />
+      <app-passenger-eligibility
+        (tryAgain)="onTryAgainClick()"
+      ></app-passenger-eligibility>
+    </div>
+  </div>
+</ng-container>
+
+<div #errorScrollTarget *ngIf="error">
+  <div class="container">
+    <hr class="spacer-lg" />
+    <app-error [error]="error"></app-error>
+  </div>
+</div>

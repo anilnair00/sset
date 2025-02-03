@@ -1,0 +1,17 @@
+.custom-checkbox {
+  .custom-control-label {
+    cursor: pointer;
+
+    &:before {
+      border: 2px solid $gray-400;
+    }
+  }
+
+  .custom-control-input:disabled + .custom-control-label {
+    cursor: default;
+    &:before {
+      border: 2px solid $gray-200;
+      background: $gray-200;
+    }
+  }
+}

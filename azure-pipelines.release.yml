@@ -1,0 +1,78 @@
+stages:
+- stage: SIT
+  displayName: SIT
+  dependsOn: 'Build'
+  condition: and(succeeded('Build'), in(variables['Build.SourceBranch'], 'refs/heads/develop', 'refs/heads/release', 'refs/heads/master'))
+  variables:
+    ${{ if and(ne(variables['Build.SourceBranch'], 'refs/heads/release'), ne(variables['Build.SourceBranch'], 'refs/heads/master')) }}:
+      environment: SIT
+      serviceConnection: ODE SSET DEV
+      websiteUrl: https://stodessetsitacit.z9.web.core.windows.net/
+      functionsAppName: acodesset-sit
+      storageName: stodessetsitacit
+      websiteStorageSasToken: $(websiteStorageSasTokenSit)
+    ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/release') }}:
+      environment: UAT
+      serviceConnection: ODE SSET UAT
+      websiteUrl: https://stodessetuatacit.z9.web.core.windows.net/
+      functionsAppName: acodesset-uat
+      storageName: stodessetuatacit
+      websiteStorageSasToken: $(websiteStorageSasTokenUat)
+    ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/master') }}:
+      environment: PRD
+      serviceConnection: ODE SSET PROD
+      websiteUrl: https://stodessetprdacit.z9.web.core.windows.net/
+      functionsAppName: acodesset-prd
+      storageName: stodessetprdacit
+      websiteStorageSasToken: $(websiteStorageSasTokenPrd)
+  jobs:
+  - deployment: Deploy
+    pool:
+      vmImage: 'windows-2019'
+    environment: ${{ variables.environment }}
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureAppServiceManage@0
+            displayName: 'Stop Functions'
+            inputs:
+              azureSubscription: ${{variables.serviceConnection}}
+              action: 'Stop Azure App Service'
+              webAppName: ${{variables.functionsAppName}}
+
+          - task: AzureFunctionApp@1
+            displayName: 'Deploy Functions'
+            inputs:
+              azureSubscription: ${{variables.serviceConnection}}
+              appType: functionApp
+              appName: ${{variables.functionsAppName}}
+              package: '$(Pipeline.Workspace)/SSET/Functions/Functions.zip'
+              deploymentMethod: runFromPackage
+
+          - task: AzureAppServiceManage@0
+            displayName: 'Start Functions'
+            inputs:
+              azureSubscription: ${{variables.serviceConnection}}
+              action: 'Start Azure App Service'
+              webAppName: ${{variables.functionsAppName}}
+
+          - task: PowerShell@2
+            displayName: 'Deploy Front End'
+            inputs:
+              targetType: inline
+              script: |
+                choco install azcopy10
+                azcopy copy $(Pipeline.Workspace)\SSET\Front\*.js 'https://$(storageName).blob.core.windows.net/$web$(websiteStorageSasToken)' --content-type="application/javascript; charset=utf8"
+                azcopy sync $(Pipeline.Workspace)\SSET\Front 'https://$(storageName).blob.core.windows.net/$web$(websiteStorageSasToken)' --delete-destination=true
+
+          - task: PowerShell@2
+            displayName: 'Check Front End'
+            continueOnError: true
+            inputs:
+              targetType: inline
+              script: |
+                $response = Invoke-WebRequest -Uri $(websiteUrl)index.html -Method Head
+                if ($response.StatusCode -ne 200) {
+                  throw
+                }

@@ -1,0 +1,328 @@
+<form class="flight-details-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="form-label-group">
+            <span
+              class="label-ac"
+              [style.display]="showFlightNumberACText ? 'block' : 'none'"
+              >AC</span
+            >
+            <input
+              appTrim
+              class="form-control pl-5"
+              formControlName="flightNumber"
+              id="flight-number"
+              placeholder=" "
+              type="text"
+              (blur)="onBlurFlightNumber($event)"
+              (focus)="onFocusFlightNumber()"
+            />
+            <label for="flight-number">{{
+              'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.FLIGHT_NUMBER' | translate
+            }}</label>
+            <ng-template #flightNumberHelp>
+              <div class="help-block black">
+                {{
+                  'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.FLIGHT_NUMBER_HELP'
+                    | translate
+                }}
+              </div>
+            </ng-template>
+            <div
+              *ngIf="
+                form.controls.flightNumber.errors &&
+                  form.controls.flightNumber.dirty &&
+                  form.controls.flightNumber.touched;
+                else flightNumberHelp
+              "
+              class="help-block error"
+            >
+              <div *ngIf="form.controls.flightNumber.errors['required']">
+                {{
+                  'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.FLIGHT_NUMBER_REQUIRED'
+                    | translate
+                }}
+              </div>
+              <div
+                *ngIf="
+                  !form.controls.flightNumber.errors['required'] &&
+                  (form.controls.flightNumber.errors['invalidInputLength'] ||
+                    form.controls.flightNumber.errors['pattern'])
+                "
+              >
+                {{
+                  'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.FLIGHT_NUMBER_ERROR'
+                    | translate
+                }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+          <app-datepicker
+            helperText="{{
+              'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.YYYY/MM/DD' | translate
+            }}"
+            inputId="flight-departure-date"
+            invalidCustomText="{{
+              'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.FLIGHT_DEPARTURE_DATE_HELP'
+                | translate
+            }}"
+            label="{{
+              'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.FLIGHT_DEPARTURE_DATE'
+                | translate
+            }}"
+            name="flightDepartureDate"
+            requiredText="{{
+              'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.FLIGHT_DEPARTURE_DATE_REQUIRED'
+                | translate
+            }}"
+            [formGroup]="form"
+            [inputFormat]="dateFormat"
+            [maxDate]="maxDate"
+            [minDate]="minDate"
+          />
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="form-label-group">
+            <app-autocomplete
+              formCntrlName="departureAirport"
+              label="{{
+                'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.DEPARTURE_AIRPORT'
+                  | translate
+              }}"
+              [error]="
+                form.controls.departureAirport.errors &&
+                form.controls.departureAirport.dirty &&
+                form.controls.departureAirport.touched
+              "
+              [formCntrl]="this.form.controls.departureAirport"
+              [formGroup]="form"
+              [options]="airportOptions"
+            />
+            <div
+              *ngIf="
+                form.controls.departureAirport.errors &&
+                form.controls.departureAirport.dirty &&
+                form.controls.departureAirport.touched
+              "
+              class="help-block error"
+            >
+              <div *ngIf="form.controls.departureAirport.errors['required']">
+                {{
+                  'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.DEPARTURE_AIRPORT_REQUIRED'
+                    | translate
+                }}
+              </div>
+              <div
+                *ngIf="
+                  !form.controls.departureAirport.errors['required'] &&
+                  form.controls.departureAirport.errors[
+                    'invalidAutocompleteString'
+                  ]
+                "
+              >
+                {{
+                  'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.DEPARTURE_AIRPORT_HELP'
+                    | translate
+                }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="form-label-group">
+            <app-autocomplete
+              formCntrlName="arrivalAirport"
+              label="{{
+                'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.ARRIVAL_AIRPORT'
+                  | translate
+              }}"
+              [error]="
+                form.controls.arrivalAirport.errors &&
+                form.controls.arrivalAirport.dirty &&
+                form.controls.arrivalAirport.touched
+              "
+              [formCntrl]="this.form.controls.arrivalAirport"
+              [formGroup]="form"
+              [options]="airportOptions"
+            />
+            <div
+              *ngIf="
+                form.controls.arrivalAirport.errors &&
+                form.controls.arrivalAirport.dirty &&
+                form.controls.arrivalAirport.touched
+              "
+              class="help-block error"
+            >
+              <div *ngIf="form.controls.arrivalAirport.errors['required']">
+                {{
+                  'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.ARRIVAL_AIRPORT_REQUIRED'
+                    | translate
+                }}
+              </div>
+              <div
+                *ngIf="
+                  !form.controls.arrivalAirport.errors['required'] &&
+                  form.controls.arrivalAirport.errors[
+                    'invalidAutocompleteString'
+                  ]
+                "
+              >
+                {{
+                  'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.ARRIVAL_AIRPORT_HELP'
+                    | translate
+                }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="form-label-group">
+            <input
+              appTrim
+              class="form-control"
+              formControlName="ticketNumber"
+              id="ticket-number"
+              placeholder=" "
+              type="text"
+            />
+            <label for="ticket-number">{{
+              'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.TICKET_NUMBER' | translate
+            }}</label>
+            <ng-template #ticketNumberHelp>
+              <div class="help-block black">
+                {{ 'SSET_V2.SEARCH.TICKET_HELP' | translate }}
+              </div>
+            </ng-template>
+            <div
+              *ngIf="
+                form.controls.ticketNumber.errors &&
+                  form.controls.ticketNumber.dirty &&
+                  form.controls.ticketNumber.touched;
+                else ticketNumberHelp
+              "
+              class="help-block error"
+            >
+              <div *ngIf="form.controls.ticketNumber.errors['required']">
+                {{ 'SSET_V2.SEARCH.ERRORS.TICKET_REQUIRED' | translate }}
+              </div>
+              <div
+                *ngIf="
+                  !form.controls.ticketNumber.errors['required'] &&
+                  (form.controls.ticketNumber.errors['invalidInputLength'] ||
+                    form.controls.ticketNumber.errors['pattern'])
+                "
+              >
+                {{ 'SSET_V2.SEARCH.ERRORS.TICKET_VALIDATION' | translate }}
+              </div>
+            </div>
+          </div>
+          <p
+            class="btn btn-link btn-ticket-number"
+            tabindex="0"
+            [innerHTML]="
+              'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.TICKET_NUMBER_INSTRUCTION'
+                | translate
+            "
+            (click)="openModal(ticketNumberModal)"
+          ></p>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="form-label-group">
+            <input
+              appTrim
+              class="form-control booking-reference"
+              formControlName="bookingReference"
+              id="booking-reference"
+              placeholder=" "
+              type="text"
+            />
+            <label for="booking-reference">{{
+              'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.BOOKING_REFERENCE_OPTIONAL'
+                | translate
+            }}</label>
+            <ng-template #bookingReferenceHelp>
+              <div class="help-block black">
+                {{
+                  'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.BOOKING_REFERENCE_HELP'
+                    | translate
+                }}
+              </div>
+            </ng-template>
+            <div
+              *ngIf="
+                form.controls.bookingReference.errors &&
+                  form.controls.bookingReference.dirty &&
+                  form.controls.bookingReference.touched;
+                else bookingReferenceHelp
+              "
+              class="help-block error"
+            >
+              <div
+                *ngIf="
+                  form.controls.bookingReference.errors['invalidInputLength'] ||
+                  form.controls.bookingReference.errors['pattern']
+                "
+              >
+                {{
+                  'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.BOOKING_REFERENCE_ERROR'
+                    | translate
+                }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 ml-auto">
+          <button
+            class="btn btn-outline-secondary btn-add-flight"
+            onclick="this.blur()"
+            type="submit"
+          >
+            {{ 'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.BTN_ADD' | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<ng-template #ticketNumberModal>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">
+      {{ 'SSET_V2.FIND_TICKET.TITLE' | translate }}
+    </h4>
+    <button
+      aria-label="Close"
+      class="close"
+      type="button"
+      (click)="modalRef.hide()"
+    >
+      <svg class="icn icn-close" role="presentation" type="button">
+        <title>{{ 'ICON_TITLE.CLOSE' | translate }}</title>
+        <use xlink:href="/assets/icons.svg#icn-close"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>{{ 'SSET_V2.FIND_TICKET.BODY' | translate }}</p>
+    <img
+      src="/assets/img/ticket_number.jpg"
+      [alt]="'SSET_V2.FIND_TICKET.CAPTION' | translate"
+    />
+  </div>
+</ng-template>

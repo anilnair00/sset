@@ -1,0 +1,22 @@
+<div class="c-flight-details-info">
+  <ng-template [ngIf]="assessmentCode === null">
+    <span [innerHTML]="'SSET_V2.ASSESSMENT.ITINERARY_INFO' | translate"></span>
+  </ng-template>
+  <ng-template [ngIf]="assessmentCode === 30">
+    <div class="c-no-data">
+      <div class="mb-3">
+        {{ 'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_INFO.NODATA' | translate }}
+      </div>
+      <a
+        class="btn btn-link"
+        [href]="'SSET_V2.POLICY_LINK' | translate"
+        target="_blank"
+      >
+        {{
+          'SSET_V2.ASSESSMENT.FLIGHT_DETAILS_FORM.FLIGHT_DISRUPTION' | translate
+        }}
+      </a>
+    </div>
+  </ng-template>
+  <ng-template [ngIf]="assessmentCode === 30003"></ng-template>
+</div>

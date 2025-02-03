@@ -1,0 +1,31 @@
+@import 'variables';
+
+.c-banner {
+  background-image: url(/assets/img/banner.jpg);
+  background-position: center;
+  background-size: cover;
+  display: none;
+  position: relative;
+  width: 100%;
+
+  &:before {
+    content: '';
+    display: block;
+    height: auto;
+    padding-top: 16.67%;
+    width: 100%;
+  }
+
+  @include media-breakpoint-up(sm) {
+    display: block;
+  }
+}
+
+.p-intro {
+  font-size: 1.125rem;
+  margin: 2rem auto;
+
+  @include media-breakpoint-up(md) {
+    font-size: 1.3125rem;
+  }
+}

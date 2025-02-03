@@ -1,0 +1,41 @@
+.custom-radio {
+  + .custom-radio {
+    margin-top: 0.75rem;
+  }
+
+  .custom-control-label {
+    cursor: pointer;
+    font-weight: 600;
+
+    &:before {
+      border: 2px solid $gray-400;
+      height: 1.375rem;
+      width: 1.375rem;
+    }
+  }
+
+  .custom-control-input {
+    &:checked ~ .custom-control-label {
+      &:before {
+        background: $white;
+        border: 2px solid $gray-400;
+      }
+
+      &:after {
+        background: $primary;
+        border-radius: 50%;
+        left: -1.6875rem; //padding left = 2rem, so left pos = -2rem // calc = - padding-left + (half of before width - half of after width)
+        top: 0.4375rem; //calc = default top pos (0.125rem) + (half of before height - half of after height)
+        width: 0.75rem;
+        height: 0.75rem;
+      }
+    }
+  }
+
+  .custom-control-input:disabled + .custom-control-label {
+    cursor: default;
+    &:before {
+      background-color: $gray-300;
+    }
+  }
+}

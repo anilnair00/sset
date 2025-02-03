@@ -1,0 +1,28 @@
+<section class="error">
+  <svg role="presentation" aria-labelledby="title" class="icn icn-expand">
+    <title>Error icon</title>
+    <use [attr.xlink:href]="'/assets/icons.svg#icn-error-warning'"></use>
+  </svg>
+  <h2>{{ 'SSET_V2.ERROR.' + (error | uppercase) + '.TITLE' | translate }}</h2>
+  <p
+    [innerHTML]="'SSET_V2.ERROR.' + (error | uppercase) + '.TEXT' | translate"
+  ></p>
+
+  <div class="row">
+    <div class="col-12 col-md-auto mr-md-0 ml-md-auto">
+      <a
+        href="https://www.aircanada.com"
+        class="btn btn-outline-secondary"
+        rel="nofollow"
+        >{{ 'SSET_V2.ERROR.HOMEPAGE' | translate }}</a
+      >
+    </div>
+    <div class="col-12 col-md-auto ml-md-0 mr-md-auto">
+      <button class="btn btn-secondary" (click)="retry()">
+        {{ 'SSET_V2.ERROR.RETRY' | translate }}
+      </button>
+    </div>
+  </div>
+</section>
+
+<hr class="spacer-xl" />

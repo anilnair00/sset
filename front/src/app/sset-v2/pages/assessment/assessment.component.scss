@@ -1,0 +1,128 @@
+@import 'variables';
+
+.c-assessment {
+  .c-btn {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+
+    @media (max-width: $min-tablet) {
+      gap: 32px;
+      flex-direction: column-reverse;
+    }
+
+    .btn-back {
+      @media (max-width: $min-tablet) {
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+
+    .btn-continue {
+      margin-left: auto;
+
+      @media (max-width: $min-tablet) {
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+  }
+
+  .c-error {
+    align-items: center;
+    background-color: $brand-gray-160;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 16px;
+    padding: 24px;
+
+    .error-icon {
+      color: $brand-red;
+    }
+
+    .error-info {
+      color: $brand-red;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: justify;
+    }
+  }
+
+  .c-options {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin: 32px 0 32px 0;
+
+    @media (max-width: 475px) {
+    }
+
+    @media (max-width: $min-tablet) {
+      gap: 0;
+      justify-content: space-between;
+    }
+
+    .c-option {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      justify-content: center;
+
+      @media (max-width: $min-tablet) {
+        display: block;
+      }
+
+      .c-number {
+        align-items: center;
+        background-color: $brand-gray-100;
+        border-radius: 50%;
+        color: $brand-gray-900;
+        display: flex;
+        font-size: 16px;
+        font-weight: 700;
+        height: 40px;
+        justify-content: center;
+        width: 40px;
+
+        @media (max-width: $min-mobile) {
+          font-size: 14px;
+          height: 32px;
+          width: 32px;
+        }
+
+        @media (max-width: $min-tablet) {
+          margin: auto;
+        }
+      }
+
+      .c-number--selected {
+        background-color: $ac-blue;
+        color: $ac-white;
+      }
+
+      .label-name {
+        color: $brand-gray-900;
+        font-size: 16px;
+        font-weight: 700;
+
+        @media (max-width: $min-mobile) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .divider {
+    border: 1px solid $brand-gray-190;
+    margin-bottom: 41px;
+  }
+
+  .p-review-agreement {
+    color: $brand-gray-900;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 40px 0;
+    text-align: justify;
+  }
+}

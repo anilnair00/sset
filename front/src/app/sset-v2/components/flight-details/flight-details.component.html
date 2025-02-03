@@ -1,0 +1,16 @@
+<div class="c-flight-details">
+  <app-flight-details-info />
+  <ng-container *ngIf="itineraries.length; else flightDetailsForm">
+    <app-itinerary
+      *ngFor="let itinerary of itineraries; let i = index"
+      [itinerary]="itinerary"
+      [index]="i"
+    />
+  </ng-container>
+  <ng-template #flightDetailsForm>
+    <ng-container *ngIf="claims.length">
+      <app-flight-added *ngFor="let claim of claims" [claim]="claim" />
+    </ng-container>
+    <app-flight-details-form *ngIf="!claims.length" />
+  </ng-template>
+</div>

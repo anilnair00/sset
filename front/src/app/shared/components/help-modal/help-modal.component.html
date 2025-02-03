@@ -1,0 +1,28 @@
+<button
+  type="button"
+  class="close pull-right"
+  aria-label="Close"
+  (click)="dismissAction()"
+>
+  <svg role="presentation" class="icn icn-close" aria-labelledby="title">
+    <title>Close</title>
+    <use xlink:href="/assets/icons.svg#icn-close"></use>
+  </svg>
+</button>
+<div class="modal-body text-center">
+  <svg class="icn-question">
+    <use xlink:href="/assets/icons.svg#icn-question"></use>
+  </svg>
+  <h1>{{ 'PCAT.HELP_MODAL.TITLE' | translate }}</h1>
+  <hr class="spacer-xs" />
+  <p [innerHTML]="'PCAT.HELP_MODAL.CR_SUPPORT' | translate"></p>
+  <hr class="spacer-md" />
+  <button
+    type="button"
+    class="btn btn-secondary"
+    aria-label="Close"
+    (click)="dismissAction()"
+  >
+    {{ 'PCAT.HELP_MODAL.CLOSE' | translate }}
+  </button>
+</div>

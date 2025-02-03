@@ -1,0 +1,163 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th class="select" *ngIf="selectable"></th>
+      <th
+        *ngFor="let colKey of columnKeys; let i = index"
+        [innerHTML]="columns[colKey]"
+        [ngClass]="'col-' + colKey"
+      ></th>
+      <th class="row-link" *ngIf="hasLinkCol"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let dt of dataView; let i = index"
+      (click)="
+        onSelectRow(i, !multiple || (multiple && !isRowSelected(i.toString())))
+      "
+      [class.selectable]="selectable"
+      [class.row-highlighted]="dt['isHighlighted']"
+      [class.row-disabled]="dt['isDisabled']"
+      [class.row-link]="dt['rowLink']"
+    >
+      <td class="select" *ngIf="selectable">
+        <div
+          class="custom-control"
+          [ngClass]="{
+            'custom-checkbox': multiple,
+            'custom-radio': multiple === false
+          }"
+        >
+          <input
+            [type]="multiple ? 'checkbox' : 'radio'"
+            [id]="formSection + grouping + '-' + i"
+            name="{{ formSection }}"
+            (click)="preventDuplicateSelect($event)"
+            [checked]="isRowSelected(grouping + '-' + i.toString())"
+            [disabled]="disabledSelectionRows.includes(i.toString())"
+            class="custom-control-input"
+            value="{{ true }}"
+          />
+          <label
+            class="custom-control-label"
+            [for]="formSection + grouping + '-' + i"
+          ></label>
+        </div>
+      </td>
+      <td *ngFor="let colKey of columnKeys" [ngClass]="'col-' + colKey">
+        <ng-template #popTemplate
+          ><div [innerHTML]="getTooltipContent(i, colKey) | safeHtml"></div
+        ></ng-template>
+
+        <div
+          [class.tooltip-info]="getTooltipContent(i, colKey)"
+          [popover]="getTooltipContent(i, colKey) ? popTemplate : null"
+          [placement]="getTooltipContent(i, colKey) ? 'top' : null"
+          [container]="getTooltipContent(i, colKey) ? 'body' : null"
+          [outsideClick]="true"
+        >
+          <svg
+            *ngIf="getTooltipContent(i, colKey)"
+            role="presentation"
+            class="icn icn-info"
+            aria-labelledby="title"
+          >
+            <title>Info</title>
+            <use xlink:href="/assets/icons.svg#icn-info"></use>
+          </svg>
+
+          <div
+            *ngIf="hasEllipsis(i, colKey) || getTooltipContent(i, colKey)"
+            [class.ellipsis]="hasEllipsis(i, colKey)"
+            ellipsis
+            [ellipsis-resize-detection]="
+              hasEllipsis(i, colKey) ? 'element-resize-detector' : 'manual'
+            "
+            [innerHTML]="
+              (dt[colKey]?.length ? dt[colKey] : undefinedDisplay) | safeHtml
+            "
+          ></div>
+          <div
+            *ngIf="!hasEllipsis(i, colKey) && !getTooltipContent(i, colKey)"
+            [innerHTML]="
+              (dt[colKey]?.length ? dt[colKey] : undefinedDisplay) | safeHtml
+            "
+          ></div>
+        </div>
+      </td>
+      <td *ngIf="hasLinkCol" align="right" class="action">
+        <span class="icn-next" *ngIf="dt['rowLink']"></span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr class="spacer-xs" />
+
+<div class="row align-items-center">
+  <div class="col-auto ml-auto" *ngIf="paginate && lastPage > 1">
+    <button
+      class="btn pagination-previous"
+      (click)="currentPage = currentPage - 1"
+      [disabled]="currentPage === 1"
+    >
+      <svg
+        role="presentation"
+        class="icn icn-angle-previous"
+        aria-labelledby="title"
+      >
+        <title>Previous icon</title>
+        <use xlink:href="/assets/icons.svg#icn-angle-previous"></use>
+      </svg>
+      <svg
+        role="presentation"
+        class="icn icn-angle-previous"
+        aria-labelledby="title"
+      >
+        <title>Previous icon</title>
+        <use xlink:href="/assets/icons.svg#icn-angle-previous"></use>
+      </svg>
+    </button>
+    <pagination
+      [totalItems]="totalItems"
+      [(ngModel)]="currentPage"
+      previousText="&lsaquo;"
+      nextText="&rsaquo;"
+      [rotate]="false"
+      [maxSize]="5"
+      [boundaryLinks]="true"
+      [itemsPerPage]="pageSize"
+      [firstText]="1"
+      [lastText]="lastPage.toString()"
+      [directionLinks]="false"
+      class="pagination-history"
+      [class.hide-first]="currentPage <= 5"
+      [class.hide-last]="currentPage > lastPage - 5"
+      [class.more-before]="currentPage > 5"
+      [class.more-after]="currentPage <= lastPage - 5"
+    ></pagination>
+    <button
+      class="btn pagination-next"
+      (click)="currentPage = currentPage + 1"
+      [disabled]="currentPage === lastPage"
+    >
+      <svg
+        role="presentation"
+        class="icn icn-angle-next"
+        aria-labelledby="title"
+      >
+        <title>Next icon</title>
+        <use xlink:href="/assets/icons.svg#icn-angle-next"></use>
+      </svg>
+      <svg
+        role="presentation"
+        class="icn icn-angle-next"
+        aria-labelledby="title"
+      >
+        <title>Next icon</title>
+        <use xlink:href="/assets/icons.svg#icn-angle-next"></use>
+      </svg>
+    </button>
+  </div>
+</div>

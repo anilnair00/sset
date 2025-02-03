@@ -1,0 +1,40 @@
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  padding: 0;
+  width: 100%;
+  overflow-x: initial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+
+  &.user-abandon {
+    pointer-events: none;
+    opacity: 0.1;
+  }
+}
+
+.app-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    flex: 1 0 auto;
+  }
+
+  .footer {
+    flex-shrink: 0;
+  }
+}
+
+.modal .modal-dialog-centered {
+  height: 100vh;
+  margin: 0 auto;
+}

@@ -1,0 +1,315 @@
+{
+  "FOOTER": {
+    "ABOUT": "关于加航",
+    "ABOUT_LINK": "https://www.aircanada.com/ca/en/aco/home/about.html",
+    "AC_STAR_LINK": "https://www.aircanada.com/ca/zh/aco/home/book/routes-and-partners/star-alliance-and-other-airline-partners/star-alliance.html",
+    "AGENTS": "旅行社",
+    "AGENTS_LINK": "https://www.aircanada.com/ca/en/ado/home.html",
+    "BAGGAGE": "产品和服务",
+    "BAGGAGE_CHANGES": "行李费变更",
+    "BAGGAGE_CHANGES_LINK": "https://www.aircanada.com/ca/zh/aco/home/book/travel-news-and-updates/2019/baggage-fee-changes.html",
+    "BAGGAGE_LINK": "https://www.aircanada.com/ca/zh/aco/home/legal/products-and-services.html",
+    "CAREERS": "就业机会",
+    "CAREERS_LINK": "https://www.aircanada.com/ca/en/aco/home/about/careers.html",
+    "CARGO": "加航货运",
+    "CARGO_LINK": "http://www.aircanada.com/cargo/en/",
+    "CONTACT": "联系信息",
+    "CONTACT_LINK": "https://www.aircanada.com/ca/zh/aco/home/fly/customer-support/contact-us.html",
+    "CUSTOMER_SERVICE": "客户服务计划",
+    "CUSTOMER_SERVICE_LINK": "https://www.aircanada.com/ca/zh/aco/home/legal/air-canada-customer-service-plan.html",
+    "CUSTOMER_SUPPORT": "客户支持",
+    "DEALS": "机票优惠",
+    "DEALS_LINK": "https://www.aircanada.com/en-ca/",
+    "DESTINATIONS": "目的地",
+    "EMAIL": "电子邮件优惠",
+    "EMAIL_PREFS": "修改首选项",
+    "EMAIL_PREFS_LINK": "https://www.aircanada.com/ca/en/aco/home/email-pref-center.html",
+    "FOUNDATION": "加拿大航空基金会",
+    "FOUNDATION_LINK": "http://www.aircanada.com/en/about/community/foundation/index.html",
+    "GENERAL_CONDITIONS": "一般运输条款和运费表",
+    "GENERAL_CONDITIONS_LINK": "https://www.aircanada.com/ca/zh/aco/home/legal/conditions-carriage-tariffs.html",
+    "INVESTOR": "投资者关系",
+    "INVESTOR_LINK": "https://www.aircanada.com/ca/en/aco/home/about/investor-relations.html",
+    "MEDIA": "媒体中心",
+    "MEDIA_LINK": "https://www.aircanada.com/ca/en/aco/home/about/media.html",
+    "OUR_COMPANY": "我们的公司",
+    "PRIVACY_POLICY": "隐私政策",
+    "PRIVACY_POLICY_LINK": "https://www.aircanada.com/ca/zh/aco/home/legal/privacy-policy.html",
+    "SITEMAP": "网页指南",
+    "SITEMAP_LINK": "https://www.aircanada.com/ca/zh/aco/home/sitemap.html",
+    "SUBSCRIBE": "订阅",
+    "SUBSCRIBE_LINK": "https://www.aircanada.com/ca/en/aco/home/email-pref-center.html",
+    "TERMS_USE": "使用条款",
+    "TERMS_USE_LINK": "https://www.aircanada.com/ca/zh/aco/home/legal/terms-of-use.html",
+    "TO_CA": "飞往加拿大的航班",
+    "TO_CA_LINK": "https://www.aircanada.com/en-ca/flights-to-canada",
+    "TO_DEST1": "加拿大飞往美国",
+    "TO_DEST1_LINK": "https://www.aircanada.com/en-ca/flights-from-canada-to-united-states",
+    "TO_DEST2": "加拿大到英国",
+    "TO_DEST2_LINK": "https://www.aircanada.com/en-ca/flights-from-canada-to-united-kingdom",
+    "TO_DEST3": "加拿大飞往日本",
+    "TO_DEST3_LINK": "https://www.aircanada.com/en-ca/flights-from-canada-to-japan",
+    "TO_DEST4": "加拿大飞往澳大利亚",
+    "TO_DEST4_LINK": "https://www.aircanada.com/en-ca/flights-from-canada-to-australia",
+    "WHY_BOOK": "为何预订我们的机票",
+    "WHY_BOOK_LINK": "https://www.aircanada.com/ca/zh/aco/home/book/why-book-with-us.html"
+  },
+  "HEADER": {
+    "LET_US_KNOW": "让我们知道",
+    "LET_US_KNOW_LINK": "https://accc-prod.microsoftcrmportals.com/en-CA/air-canada-contact-us/",
+    "CONTACT_US": "客户支持",
+    "CONTACT_US_LINK": "https://www.aircanada.com/ca/zh/aco/home/fly/customer-support.html",
+    "LANGUAGES": "语言"
+  },
+  "SHARED": {
+    "DATEPICKER": {
+      "INVALID": "日期格式无效。\n请使用<span class=\"text-nowrap\">{{format}}</span>。",
+      "MAX_DATE": "日期必须设置在<span class=\"text-nowrap\">{{maxDate}}</span>之前。",
+      "MIN_DATE": "日期必须在<span class=\"text-nowrap\">{{minDate}}</span>之后设置。",
+      "REQUIRED": "必须输入日期。",
+      "EXPECTED_FORMAT": "预计日期格式：{{ format }}",
+      "YYYY-MM-DD": "YYYY 年 MM 月 DD 日"
+    },
+    "LOADING": "载入中"
+  },
+  "SSET": {
+    "ACTIONS": {
+      "RETRY": "再试一次",
+      "SUBMIT": "提交補償申請",
+      "SUBMIT_LINK": "https://accc-uatmaster.microsoftcrmportals.com/en-CA/flight-delay-or-cancellation/"
+    },
+    "ALERT": {
+      "COVID19": "由于COVID-19，自2020年3月13日起制定了特殊法规。|点击这里"
+    },
+    "DISRUPTION_REASONS": {
+      "0": "导致此次航班延误的原因仍在调查中。",
+      "1": "由于天气影响飞机返航，此次航班出现延误。",
+      "2": "由于返航飞机需要接受安全检查，此次航班出现延误。",
+      "3": "由于返航飞机遇到了技术问题，此次航班出现延误。",
+      "4": "由于之前机场的设施限制影响了飞机返航，此次航班出现延误。",
+      "5": "由于返航飞机晚点到达，此次航班出现延误。",
+      "6": "由于出发机场限制，此次航班出现延误。",
+      "9": "由于飞行准备时间延长，此次航班出现延误。",
+      "11": "由于旅客办理登机手续较迟，此次航班出现延误。",
+      "13": "由于旅客办理登机手续较迟，此次航班出现延误。",
+      "14": "由于旅客登机较迟，此次航班出现延误。",
+      "15": "由于要搭载迟到旅客，此次航班出现延误。",
+      "17": "由于餐饮供应问题，此次航班出现延误。",
+      "18": "由于处理旅客行李的时间延长，此次航班出现延误。",
+      "19": "由于配合需要帮助的旅客登机，此次航班出现延误。",
+      "25": "由于货物处理时间过长，此次航班出现延误。",
+      "29": "由于要搭载迟到旅客，此次航班出现延误。",
+      "31": "由于飞行准备时间延长，此次航班出现延误。",
+      "32": "由于飞机维修限制，此次航班出现延误。",
+      "35": "由于机舱清洁时间延长，此次航班出现延误。",
+      "36": "由于燃料补充时间延长，此次航班出现延误。",
+      "37": "由于餐饮供应问题，此次航班出现延误。",
+      "41": "由于需对飞机进行小规模修理，此次航班出现延误。",
+      "42": "由于维修时间超出预期，此次航班出现延误。",
+      "43": "由于飞机系统方面的技术问题，此次航班出现延误。",
+      "44": "由于飞机维修设备可用性原因，此次航班出现延误。",
+      "45": "由于飞机维修设备可用性原因，此次航班出现延误。",
+      "46": "由于飞机维护要求，此次航班出现延误。",
+      "47": "由于飞机可用性原因，此次航班出现延误。",
+      "48": "由于机舱配置更新，部分旅客需要被安排到新座位，此次航班出现延误。",
+      "51": "由于需对飞机进行小规模修理，此次航班出现延误。",
+      "52": "由于需对飞机进行小规模修理，此次航班出现延误。",
+      "56": "由于货物处理问题，此次航班出现延误。",
+      "58": "由于 IT 问题，此次航班出现延误。",
+      "61": "由于飞行准备时间延长，此次航班出现延误。",
+      "62": "由于飞行准备时间延长，此次航班出现延误。",
+      "63": "由于飞行员人手不足，此次航班出现延误。",
+      "64": "由于机组人员不足，此次航班出现延误。",
+      "65": "由于飞行准备时间延长，此次航班出现延误。",
+      "66": "由于机舱人员不足，此次航班出现延误。",
+      "67": "由于机舱人员不足，此次航班出现延误。",
+      "69": "由于安全检查，此次航班出现延误。",
+      "71": "由于出发机场的天气原因，此次航班出现延误。",
+      "72": "由于到达机场的天气原因，此次航班出现延误。",
+      "73": "由于天气影响航线，此次航班出现延误。",
+      "75": "由于需要对飞机进行除冰，此次航班出现延误。",
+      "76": "由于天气影响机场运作，此次航班出现延误。",
+      "77": "由于天气影响机场地勤工作，此次航班出现延误。",
+      "81": "由于空中交通管制，此次航班出现延误。",
+      "82": "由于空中交通管制，此次航班出现延误。",
+      "83": "由于到达机场限制，此次航班出现延误。",
+      "84": "由于到达机场的天气原因，此次航班出现延误。",
+      "85": "由于安全检查，此次航班出现延误。",
+      "86": "由于旅客入境通关时间延长，此次航班出现延误。",
+      "87": "由于机场设施限制，此次航班出现延误。",
+      "88": "由于到达机场的设施限制，此次航班出现延误。",
+      "89": "由于出发机场设施限制，此次航班出现延误。",
+      "93": "由于返航飞机晚点到达，此次航班出现延误。",
+      "96": "由于飞机可用性原因，此次航班出现延误。",
+      "97": "由于劳资纠纷，此次航班出现延误。",
+      "98": "由于劳资纠纷，此次航班出现延误。",
+      "99": "由于需对飞机进行牵引，此次航班出现延误。",
+      "FDA": "很抱歉，由于空中交通管制，此次航班已被取消。",
+      "ANH": "很抱歉，由于到达机场限制，此次航班已被取消。",
+      "SKD": "很抱歉，由于飞机可用性原因，此次航班已被取消。",
+      "SOP": "很抱歉，由于飞机可用性原因，此次航班已被取消。",
+      "SOM": "很抱歉，由于飞机可用性原因，此次航班已被取消。",
+      "EQI": "很抱歉，由于设备可用性原因，此次航班已被取消。",
+      "ANF": "很抱歉，由于燃料短缺，此次航班已被取消。",
+      "ACS": "很抱歉，由于返航飞机要接受安全检查，此次航班已被取消。",
+      "ANA": "很抱歉，由于飞机维护，此次航班已被取消。",
+      "MTC": "很抱歉，由于飞机维护，此次航班已被取消。",
+      "DMT": "很抱歉，由于返航飞机遇到了技术问题，此次航班已被取消。",
+      "SEC": "很抱歉，由于政局动荡，此次航班已被取消。",
+      "SOT": "很抱歉，由于劳资纠纷，此次航班已被取消。",
+      "WXX": "很抱歉，由于天气原因，此次航班已被取消。",
+      "FOC": "很抱歉，由于机组限制，此次航班已被取消。",
+      "HOLI": "很抱歉，受公共假期影响，此次航班已被取消。",
+      "AIRS": "很抱歉，由于空中交通管制，此次航班已被取消。",
+      "ARPT": "很抱歉，由于到达机场限制，此次航班已被取消。",
+      "COMM": "很抱歉，由于飞机可用性原因，此次航班已被取消。",
+      "CREW": "很抱歉，由于机组限制，此次航班已被取消。",
+      "DAMA": "很抱歉，由于飞机维护，此次航班已被取消。",
+      "EQUI": "很抱歉，由于设备可用性原因，此次航班已被取消。",
+      "FUEL": "很抱歉，由于燃料短缺，此次航班已被取消。",
+      "HDLG": "很抱歉，由于返航飞机要接受安全检查，此次航班已被取消。",
+      "INDU": "很抱歉，由于劳资纠纷，此次航班已被取消。",
+      "OPER": "很抱歉，由于飞机可用性原因，此次航班已被取消。",
+      "PERF": "很抱歉，由于飞机维护，此次航班已被取消。",
+      "POLI": "很抱歉，因受 COVID-19 影响，出于政府旅行建议和/或健康安全考虑，本次航班已取消。",
+      "POSI": "很抱歉，由于飞机可用性原因，此次航班已被取消。",
+      "REPO": "很抱歉，由于飞机可用性原因，此次航班已被取消。",
+      "ROTA": "很抱歉，由于飞机可用性原因，此次航班已被取消。",
+      "RTNS": "很抱歉，由于飞机可用性原因，此次航班已被取消。",
+      "RUNW": "很抱歉，由于机场跑道的限制，此次航班已被取消。",
+      "TECH": "很抱歉，由于返航飞机遇到了技术问题，此次航班已被取消。",
+      "WEAT": "很抱歉，由于天气原因，此次航班已被取消。",
+      "TITLE": "官方中断原因:"
+    },
+    "INSTRUCTIONS": {
+      "BOOKING_NUMBER": "请输入原预订信息中的|预订参考号|（例如：CBA312）<br>，或输入原预订信息中或您登机牌上的机|票编号|（例如：0141234567890)",
+      "DEPT_DATE": "指出受延误或取消影响的航班的原定<strong>出发日期</strong>",
+      "NAME": "请准确输入原预订信息中显示的<strong>名称</strong>（例如：Jennifer Smith，而不是 Jen Smith)"
+    },
+    "INTRO": "填写下方表格，了解自己是否符合航班中断补偿资格。航班可能发生重大延误或取消。 您可以在我们的页面上找到有关|航班中断|的更多规定。",
+    "FIND_BOOKING": {
+      "TITLE": "什么是预订参考号？",
+      "BODY": "您的预订参考号（或记录编号）是一个包含 6 个字母和（或）数字的序列号，用于单独识别出您的预订。在您完成预订后，您可以在收到的行程单/收据上找到它。",
+      "CAPTION": "订房资讯"
+    },
+    "FIND_TICKET": {
+      "TITLE": "什么是机票编号？",
+      "BODY": "您的机票编号（或电子机票）是一个序列号，用于单独识别出您的预订参考号。在您办理完登机手续后，您可以在拿到的登机牌上找到它。",
+      "CAPTION": "机票号码信息"
+    },
+    "ERROR": {
+      "GENERAL": {
+        "TITLE": "发生内部服务器错误",
+        "TEXT": "处理您的请求时出现错误。已将此问题反馈给 <a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/zh/aco/home.html\" target=\"_blank\">aircanada.com</a> 支持团队。<br>如果您认为自己还能提供有助于解决问题的其他信息，请联系 <a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/en/aco/home/fly/customer-support/contact-us.html\" target=\"_blank\">客户支持</a>."
+      },
+      "CONNECTIVITY": {
+        "TITLE": "发生连接错误",
+        "TEXT": "尝试连接至服务器时发生错误。已将此问题反馈给 <a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/zh/aco/home.html\" target=\"_blank\">aircanada.com</a> 支持团队。<br>如果您认为自己还能提供有助于解决问题的其他信息，请联系 <a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/en/aco/home/fly/customer-support/contact-us.html\" target=\"_blank\">客户支持</a>."
+      },
+      "HOMEPAGE": "主页",
+      "RETRY": "重试"
+    },
+    "PASSENGER_ELIGIBILITY": {
+      "ELIGIBLE": {
+        "TEXT": "感谢您填写您的预订信息。我们的自助评估工具显示您可能有权获得赔偿。请在下方提交您的索赔申请。<br/><br/> <a class=\"btn btn-link btn-blue\" href=\"http://www.aircanada.com/flightdisruptions\" target=\"_blank\">详细了解 发生航班中断时您拥有的相关权利</a>。",
+        "TITLE": "可能符合资格"
+      },
+      "NODISRUPTION": {
+        "TEXT": "您所指出的预订航班没有中断。请确保您在上方输入的信息准确无误。",
+        "TITLE": "没有中断"
+      },
+      "NOMATCH": {
+        "TEXT": "我们无法找到您的预订信息。请确保您在上方输入的信息准确无误。",
+        "TITLE": "无匹配信息",
+        "SUBSEQUENT": "如果持续出现该问题，请填写《|补偿索赔表|》。加拿大航空公司的代表会对其进行审核并回复您。"
+      },
+      "NOTELIGIBLE": {
+        "TEXT": "感谢您提供您的预订信息。很抱歉，我们的自助评估工具显示您可能无权获得赔偿。<br/><br/>您仍可以通过填写<a class=\"btn btn-link btn-blue\" href=\"https://accc-prod.microsoftcrmportals.com/en-CA/flight-delay-or-cancellation/\" target=\"_blank\">航班延误与取消索赔申请表</a>来提交索赔申请。<br/><br/>请注意，航班中断问题很复杂，可能由多种原因导致。当情况有变、出现新的问题或收到新的消息，航空公司提供的航班中断原因均可能会变化。<a class=\"btn btn-link btn-blue\" href=\"http://www.aircanada.com/flightdisruptions\" target=\"_blank\">详细了解 发生航班中断时您拥有的相关权利</a>。",
+        "TITLE": "不符合资格",
+        "TEXT2": "了解有关|航班中断|资格的更多信息"
+      },
+      "OUTSIDEPERIOD": {
+        "TEXT": "很遗憾，您不符合补偿资格。航班中断发生在保护期之前。我们对本次航班中断可能对您的行程计划带来的不便深表歉意。",
+        "TITLE": "不符合资格",
+        "TEXT2": "了解有关|航班中断|资格的更多信息"
+      },
+      "OVER365": {
+        "TEXT": "很遗憾，您不符合补偿资格。必须在航班延误或取消发生之日起的 365 天内提出索赔。",
+        "TITLE": "不符合资格",
+        "TEXT2": "了解有关|航班中断|资格的更多信息"
+      },
+      "PENDING": {
+        "TEXT": "我们的团队仍在核查您的行程和资格。请在抵达目的地至少 {{ days }} 天后再提交索赔。",
+        "TITLE": "待定"
+      },
+      "OUTSIDEAPPR": {
+        "TITLE": "可能符合资格",
+        "TEXT": "很遗憾，您没有资格获得加拿大法规的赔偿。航班中断发生在加拿大法规之外，但可能受其他法规约束。",
+        "TEXT2": "请填写|赔偿索赔表|。\n加拿大航空的代表将对其进行审核并与您联系。"
+      },
+      "TITLE": "旅客资格",
+      "OTHERAIRLINES": {
+        "TEXT": "您的行程包含其他航空公司的航班，我们目前无法确定，需要更多信息。",
+        "TEXT2": "请填写|赔偿索赔表|。\n加拿大航空的代表将对其进行审核并与您联系。",
+        "TITLE": "其他航空公司"
+      },
+      "DUPLICATEREQUEST": {
+        "TEXT": "您似乎已经针对航班中断提出了索赔（索赔编号：<b class=\"red\">{{ caseNum }}</b>)。<br/><br/> 我们的系统无法接受您就同一航段和旅客提交的重复索赔。<br/><br/> 如果您想分享其他信息，请回复您在提交原始索赔时所收到的电子邮件。",
+        "TITLE": "重复索赔",
+        "TEXT2": "了解有关|航班中断|资格的更多信息"
+      },
+      "UNABLEDETERMINATION": {
+        "TITLE": "无法做出判断",
+        "TEXT": "感谢您填写您的预订信息。很抱歉，我们的自助评估工具无法确认您是否有权获得赔偿。<br/><br/> 您仍可以通过填写<a class=\"btn btn-link btn-blue\" href=\"https://accc-prod.microsoftcrmportals.com/en-CA/flight-delay-or-cancellation/\" target=\"_blank\">航班延误与取消索赔申请表</a>来提交索赔申请。<br/><br/> 请注意，航班中断问题很复杂，可能由多种原因导致。当情况有变、出现新的问题或收到新的消息，航空公司提供的航班中断原因均可能会变化。<a class=\"btn btn-link btn-blue\" href=\"http://www.aircanada.com/flightdisruptions\" target=\"_blank\">详细了解 发生航班中断时您拥有的相关权利</a>。",
+        "TEXT2": "了解有关|航班中断|资格的更多信息"
+      }
+    },
+    "POLICY": "航班中断政策",
+    "POLICY_LINK": "https://www.aircanada.com/ca/zh/aco/home/fly/flight-information/flight-disruptions.html",
+    "SEARCH": {
+      "BTN_SEARCH": "檢查我的資格",
+      "DATE_LABEL": "部门日期",
+      "ERRORS": {
+        "FIRSTNAME_MAXLENGTH": "名字的字符数不能超过 50 个。",
+        "FIRSTNAME_PATTERN": "名字包含无效字符。",
+        "FIRSTNAME_REQUIRED": "必须填写名字。",
+        "LASTNAME_MAXLENGTH": "姓氏的字符数不能超过 50 个。",
+        "LASTNAME_PATTERN": "姓氏包含无效字符。",
+        "LASTNAME_REQUIRED": "必须填写姓氏。",
+        "PNR_MIN": "预订参考号必须包含 6 个字符。",
+        "PNR_PATTERN": "预订参考号必须仅包含数字和无重音字母。",
+        "PNR_REQUIRED": "需要提供预订参考号。",
+        "PNR_TICKET_MIN": "预订参考号必须包含 6 个字符。机票编号必须包含 13 个字符。",
+        "PNR_TICKET_PATTERN": "预订参考号必须仅包含数字和无重音字母，机票编号必须仅包含数字。",
+        "PNR_TICKET_REQUIRED": "需要提供预订参考号或机票编号。"
+      },
+      "FIRSTNAME_LABEL": "乘客的名字",
+      "LASTNAME_LABEL": "乘客的姓氏",
+      "PNR_LABEL": "订单号",
+      "PNR_TICKET_LABEL": "预订号或票号",
+      "PNR_TICKET_HELP": "例：CBA321 要么 0141234567890",
+      "FIRSTNAME_HELP": "與原預訂保持一致",
+      "LASTNAME_HELP": "與原預訂保持一致",
+      "DATE_HELP": "例：{{ format }}"
+    },
+    "TITLE": "航班中断补偿资格",
+    "TAB_TITLE": "自助资格工具"
+  },
+  "UNAVAILABLE": {
+    "TITLE": "网站目前已关闭",
+    "TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  "IMAGE_ALT_TEXT": {
+    "STAR_ALLIANCE": "星空联盟会员",
+    "AC_LOGO": "加拿大航空公司"
+  },
+  "ICON_TITLE": {
+    "NEXT": "下一个图标",
+    "INFO": "信息图标",
+    "CHECKMARK": "勾选图标",
+    "WARNING": "警告图标",
+    "X": "X 图标",
+    "CLOSE": "关闭",
+    "CHATBOX": "聊天图标"
+  }
+}

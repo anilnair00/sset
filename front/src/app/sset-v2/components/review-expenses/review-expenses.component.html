@@ -1,0 +1,102 @@
+<div
+  class="review-expenses"
+  [ngClass]="{ 'margin-bottom-40': !hasMultiplePassengers }"
+>
+  <p class="label-info">
+    {{
+      'SSET_V2.ASSESSMENT.REVIEW_EXPENSES_PAGE.REVIEW_PAGE_TITLE' | translate
+    }}
+  </p>
+  <div class="c-expenses-details">
+    <div class="c-details">
+      <div *ngFor="let claim of getExpenseClaims(); let i = index">
+        <div class="display-content">
+          <div>
+            <app-added-claim [claim]="claim" [index]="i" />
+            <hr
+              [ngClass]="
+                claim?.isExpenseButtonEnabled
+                  ? 'hr-separator'
+                  : 'hr-separator mt-0 mb-0'
+              "
+            />
+            <div *ngIf="!isManualFlow" class="c-eligible">
+              <p class="text-bold">
+                {{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ELIGIBLE.TITLE'
+                    | translate
+                }}
+              </p>
+              <p>
+                {{
+                  'SSET_V2.ASSESSMENT.EXPENSE_DETAILS.ELIGIBLE.TEXT' | translate
+                }}
+              </p>
+            </div>
+          </div>
+          <div class="display-expense-summary">
+            <hr class="div-separator" />
+            <app-expenses-summary
+              [expenseReviewIndex]="i"
+              [isExpenseReview]="isExpenseReview"
+            />
+          </div>
+        </div>
+        <div *ngIf="hasMultiplePassengers" class="divider"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="hasMultiplePassengers" class="display-acknowledgement">
+  <div class="acknowledgement">
+    {{ 'SSET_V2.ASSESSMENT.REVIEW_EXPENSES_PAGE.ACKNOWLEDGEMENT' | translate }}
+  </div>
+  <div class="custom-checkbox acknowledgement-checkbox">
+    <input
+      class="custom-control-input"
+      id="isAcknowledgementUnderstanding"
+      type="checkbox"
+      value=""
+      [checked]="isAcknowledgementAgreed"
+      (click)="onIsAcknowledgementAgreedClicked()"
+    />
+    <label class="custom-control-label" for="isAcknowledgementUnderstanding">
+      {{
+        'SSET_V2.ASSESSMENT.REVIEW_EXPENSES_PAGE.ACKNOWLEDGEMENT_UNDERSTANDING'
+          | translate
+      }}
+    </label>
+  </div>
+  <div *ngIf="!isAcknowledgementChecked" class="help-block error">
+    <div>
+      {{
+        'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.ACKNOWLEDGEMENT_REQUIRED'
+          | translate
+      }}
+    </div>
+  </div>
+  <div class="custom-checkbox permissions-checkbox">
+    <input
+      class="custom-control-input"
+      id="isAcknowledgementPermission"
+      type="checkbox"
+      value=""
+      [checked]="isPermissionsAgreed"
+      (click)="onIsPermissionsAgreedClicked()"
+    />
+    <label class="custom-control-label" for="isAcknowledgementPermission">
+      {{
+        'SSET_V2.ASSESSMENT.REVIEW_EXPENSES_PAGE.ACKNOWLEDGEMENT_PERMISSION'
+          | translate
+      }}
+    </label>
+  </div>
+  <div *ngIf="!isPermissionChecked" class="help-block error">
+    <div>
+      {{
+        'SSET_V2.ASSESSMENT.PASSENGER_DETAILS_FORM.ERRORS.ACKNOWLEDGEMENT_REQUIRED'
+          | translate
+      }}
+    </div>
+  </div>
+</div>

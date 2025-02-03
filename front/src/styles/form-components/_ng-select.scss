@@ -1,0 +1,101 @@
+.ng-select {
+  position: relative;
+  &.ng-invalid.ng-touched.ng-dirty {
+    .ng-placeholder {
+      color: $danger;
+    }
+  }
+
+  &.ng-select-single {
+    .ng-select-container {
+      .ng-value-container {
+        .ng-input {
+          top: 0.6875rem;
+
+          input {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  &.ng-select-filtered,
+  .ng-has-value {
+    .ng-placeholder {
+      display: block !important;
+      position: absolute;
+      font-size: 0.75rem;
+      padding-top: 0.125rem;
+      padding-bottom: 1.65rem; //needed to align alert icon properly when error
+      -moz-user-select: none; /* Firefox */
+      user-select: none;
+    }
+    .ng-value {
+      padding-top: 0.75rem;
+    }
+    .ng-input {
+      background-color: transparent;
+      padding-top: 0.4rem;
+    }
+  }
+
+  .ng-select-container {
+    color: $black !important;
+    cursor: pointer !important;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    .ng-value-container {
+      .ng-value {
+        //color: $black;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .ng-arrow-wrapper {
+    @extend .arrow-btn; // defined in form-component/_custom-select.scss
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    padding-right: 0;
+    pointer-events: auto !important;
+
+    .ng-arrow {
+      display: none !important;
+    }
+  }
+
+  &.ng-select-opened {
+    > .ng-select-container {
+      .ng-arrow-wrapper {
+        &:after {
+          // defined in form-component/_custom-select.scss : .form-select-group .arrow-btn
+          margin-top: 0.25rem;
+          transform: rotate(225deg);
+        }
+      }
+    }
+  }
+
+  .ng-clear-wrapper {
+    margin-right: 2.75rem;
+    width: 1.5rem;
+  }
+
+  &.country-select,
+  &.province-state-select {
+    .ng-dropdown-panel {
+      min-width: 450px !important;
+    }
+    &.ng-select-opened {
+      bs-tooltip-container {
+        display: none !important;
+      }
+    }
+  }
+}

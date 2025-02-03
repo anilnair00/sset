@@ -1,0 +1,17 @@
+@import 'variables';
+
+.error-icn {
+  margin: 0px auto;
+  width: 84px;
+  height: 84px;
+}
+
+.text-div {
+  padding: 1.5rem 0 3rem;
+  color: $gray-900;
+
+  h1 {
+    margin-bottom: 2rem;
+    font-weight: normal;
+  }
+}

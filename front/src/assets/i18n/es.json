@@ -1,0 +1,317 @@
+{
+  "SHARED": {
+    "DATEPICKER": {
+      "INVALID": "El formato de fecha no es válido.\nUtilice <span class=\"text-nowrap\">{{format}}</span>.",
+      "MAX_DATE": "La fecha debe establecerse antes de <span class=\"text-nowrap\">{{maxDate}}</span>.",
+      "MIN_DATE": "La fecha debe establecerse después de <span class=\"text-nowrap\">{{minDate}}</span>.",
+      "REQUIRED": "Se requiere una fecha.",
+      "EXPECTED_FORMAT": "Formato de fecha válido: {{ format }}",
+      "YYYY-MM-DD": "AAAA-MM-DD"
+    },
+    "LOADING": "Cargando"
+  },
+  "HEADER": {
+    "LET_US_KNOW": "Háganos saber",
+    "LET_US_KNOW_LINK": "https://accc-prod.microsoftcrmportals.com/es-ES/air-canada-contact-us/",
+    "CONTACT_US": "Atención al cliente",
+    "CONTACT_US_LINK": "https://www.aircanada.com/us/es/aco/home/fly/customer-support/contact-us.html",
+    "LANGUAGES": "Idiomas"
+  },
+  "FOOTER": {
+    "OUR_COMPANY": "Nuestra Empresa",
+    "ABOUT": "Acerca de Air Canada",
+    "ABOUT_LINK": "https://www.aircanada.com/ca/en/aco/home/about.html",
+    "BAGGAGE": "Tarifas de equipaje y servicios opcionales",
+    "BAGGAGE_LINK": "https://www.aircanada.com/us/es/aco/home/legal/products-and-services.html",
+    "BAGGAGE_CHANGES": "Actualización de tarifas aplicables al equipaje",
+    "BAGGAGE_CHANGES_LINK": "https://www.aircanada.com/us/es/aco/home/book/book/travel-news-and-updates/2018/baggage-fee-changes.html",
+    "SITEMAP": "Mapa del sitio",
+    "SITEMAP_LINK": "https://www.aircanada.com/us/es/aco/home/sitemap.html",
+    "CAREERS": "Carreras profesionales",
+    "CAREERS_LINK": "https://www.aircanada.com/ca/en/aco/home/about/careers.html",
+    "AGENTS": "Agentes de viajes",
+    "AGENTS_LINK": "https://www.aircanada.com/us/es/ado/home.html",
+    "DESTINATIONS": "Destinos",
+    "WHY_BOOK": "Por qué debe elegirnos",
+    "WHY_BOOK_LINK": "https://www.aircanada.com/us/es/aco/home/book/why-book-with-us.html",
+    "DEALS": "Ofertas de vuelos",
+    "DEALS_LINK": "https://www.aircanada.com/es-us/",
+    "TO_CA": "EE.UU. a Canadá",
+    "TO_CA_LINK": "https://www.aircanada.com/es-us/vuelos-desde-estados-unidos-a-canada",
+    "TO_DEST1": "EE.UU. a Reino Unido",
+    "TO_DEST1_LINK": "https://www.aircanada.com/es-us/vuelos-desde-estados-unidos-a-reino-unido",
+    "TO_DEST2": "EE.UU. a España",
+    "TO_DEST2_LINK": "https://www.aircanada.com/es-us/vuelos-desde-estados-unidos-a-espana",
+    "TO_DEST3": "EE.UU. a China",
+    "TO_DEST3_LINK": "https://www.aircanada.com/es-us/vuelos-desde-estados-unidos-a-china",
+    "TO_DEST4": "EE.UU. a Japón",
+    "TO_DEST4_LINK": "https://www.aircanada.com/es-us/vuelos-desde-estados-unidos-a-japon",
+    "CUSTOMER_SUPPORT": "ATENCIÓN AL CLIENTE",
+    "CONTACT": "Información de contacto",
+    "CONTACT_LINK": "https://www.aircanada.com/us/es/aco/home/fly/customer-support/contact-us.html",
+    "GENERAL_CONDITIONS": "Condiciones generales de transporte y Tarifas",
+    "GENERAL_CONDITIONS_LINK": "https://www.aircanada.com/us/es/aco/home/legal/conditions-carriage-tariffs.html",
+    "CUSTOMER_SERVICE": "Plan de servicio al cliente",
+    "CUSTOMER_SERVICE_LINK": "https://www.aircanada.com/us/es/aco/home/legal/air-canada-customer-service-plan.html",
+    "TARMAC_DELAYS": "Plan para retrasos en pista",
+    "TARMAC_DELAYS_LINK": "https://www.aircanada.com/us/es/aco/home/legal/contingency-plan-lengthy-tarmac-delays.html",
+    "PRIVACY_POLICY": "Política de privacidad",
+    "PRIVACY_POLICY_LINK": "https://www.aircanada.com/us/es/aco/home/legal/privacy-policy.html",
+    "TERMS_USE": "Condiciones de uso",
+    "TERMS_USE_LINK": "https://www.aircanada.com/us/es/aco/home/legal/terms-of-use.html",
+    "AC_STAR_LINK": "https://www.aircanada.com/ca/en/aco/home/book/routes-and-partners/star-alliance-and-other-airline-partners/star-alliance.html",
+    "CARGO": "Air Canada Cargo",
+    "CARGO_LINK": "http://www.aircanada.com/cargo/en/",
+    "EMAIL": "Ofertas por correo electrónico",
+    "EMAIL_PREFS": "Modificar preferencias",
+    "EMAIL_PREFS_LINK": "https://www.aircanada.com/ca/en/aco/home/email-pref-center.html",
+    "FOUNDATION": "Fundación Air Canada",
+    "FOUNDATION_LINK": "http://www.aircanada.com/en/about/community/foundation/index.html",
+    "INVESTOR": "Relaciones con inversionistas",
+    "INVESTOR_LINK": "https://www.aircanada.com/ca/en/aco/home/about/investor-relations.html",
+    "MEDIA": "Centro de Medios",
+    "MEDIA_LINK": "https://www.aircanada.com/ca/en/aco/home/about/media.html",
+    "SUBSCRIBE": "Suscribir",
+    "SUBSCRIBE_LINK": "https://www.aircanada.com/ca/en/aco/home/email-pref-center.html"
+  },
+  "SSET": {
+    "ACTIONS": {
+      "RETRY": "Inténtalo de nuevo",
+      "SUBMIT": "Enviar reclamo de compensación",
+      "SUBMIT_LINK": "https://accc-uatmaster.microsoftcrmportals.com/es-ES/flight-delay-or-cancellation/"
+    },
+    "ALERT": {
+      "COVID19": "Regulaciones especiales vigentes desde el 13 de marzo de 2020 debido a COVID-19.&nbsp;|Haga clic aquí"
+    },
+    "DISRUPTION_REASONS": {
+      "0": "La razón de este retraso en el vuelo está siendo investigada.",
+      "1": "Este vuelo se encuentra retrasado debido a condiciones meteorológicas que afectan a la aeronave entrante.",
+      "2": "Este vuelo se encuentra retrasado debido a una comprobación de seguridad de la aeronave entrante.",
+      "3": "Este vuelo se encuentra retrasado debido a un problema técnico que afecta la aeronave entrante.",
+      "4": "Este vuelo se encuentra retrasado debido a las limitaciones de las instalaciones del aeropuerto que afectan a la aeronave entrante en el aeropuerto anterior.",
+      "5": "Este vuelo se encuentra retrasado debido a la llegada tardía de la aeronave entrante.",
+      "6": "Este vuelo se encuentra retrasado debido a limitaciones en el aeropuerto de salida.",
+      "9": "Este vuelo se encuentra retrasado debido a un tiempo adicional en la preparación del vuelo.",
+      "11": "Este vuelo se encuentra retrasado para permitir el chequeo de pasajeros demorados.",
+      "13": "Este vuelo se encuentra retrasado para permitir el chequeo de pasajeros demorados.",
+      "14": "Este vuelo se encuentra retrasado debido a la demora en el embarque de pasajeros. ",
+      "15": "Este vuelo se encuentra retrasado para permitir la llegada de pasajeros demorados.",
+      "17": "Este vuelo se encuentra retrasado debido a un problema con el suministro de alimentos.",
+      "18": "Este vuelo se encuentra retrasado debido a tiempo adicional requerido para procesar el equipaje de los pasajeros.",
+      "19": "Este vuelo se encuentra retrasado para extender el tiempo de embarque a pasajeros que requieren asistencia.",
+      "25": "Este vuelo se encuentra retrasado debido a la demora en el procesamiento de la carga.",
+      "29": "Este vuelo se encuentra retrasado para permitir la llegada de pasajeros demorados.",
+      "31": "Este vuelo se encuentra retrasado debido a un tiempo adicional en la preparación del vuelo.",
+      "32": "Este vuelo se encuentra retrasado debido a restricciones en la prestación del servicio a la aeronave.",
+      "35": "Este vuelo se encuentra retrasado para dar un tiempo adicional a la limpieza de la cabina.",
+      "36": "Este vuelo se encuentra retrasado para dar un tiempo adicional al aprovisionamiento de combustible.",
+      "37": "Este vuelo se encuentra retrasado debido a un problema con el suministro de alimentos.",
+      "41": "Este vuelo se encuentra retrasado debido a reparaciones menores en la aeronave.",
+      "42": "Este vuelo se encuentra retrasado debido a que trabajos de mantenimiento que durarán más de lo previsto.",
+      "43": "Este vuelo se encuentra retrasado debido a un problema técnico con los sistemas de la aeronave.",
+      "44": "Este vuelo se encuentra retrasado debido a inconvenientes en la disponibilidad del equipo de mantenimiento de las aeronaves.",
+      "45": "Este vuelo se encuentra retrasado debido a inconvenientes en la disponibilidad del equipo de mantenimiento de las aeronaves.",
+      "46": "Este vuelo se encuentra retrasado debido a requerimientos de mantenimiento de la aeronave.",
+      "47": "Este vuelo se encuentra retrasado debido a una nueva configuración de la cabina que requiere que a algunos clientes se les asignen nuevos asientos.",
+      "48": "Este vuelo se encuentra retrasado debido a una nueva configuración de la cabina que requiere que a algunos clientes se les asignen nuevos asientos.",
+      "51": "Este vuelo se encuentra retrasado debido a reparaciones menores en la aeronave.",
+      "52": "Este vuelo se encuentra retrasado debido a reparaciones menores en la aeronave.",
+      "56": "Este vuelo se encuentra retrasado debido a problemas con el procesamiento de la carga.",
+      "58": "Este vuelo se encuentra retrasado debido a una falla informática.",
+      "61": "Este vuelo se encuentra retrasado debido a un tiempo adicional en la preparación del vuelo.",
+      "62": "Este vuelo se encuentra retrasado debido a un tiempo adicional en la preparación del vuelo.",
+      "63": "Este vuelo se encuentra retrasado debido a inconvenientes en la disponibilidad de los pilotos.",
+      "64": "Este vuelo se encuentra retrasado debido a inconvenientes en la disponibilidad de la tripulación.",
+      "65": "Este vuelo se encuentra retrasado debido a un tiempo adicional en la preparación del vuelo.",
+      "66": "Este vuelo se encuentra retrasado debido a inconvenientes en la disponibilidad de la tripulación de cabina.",
+      "67": "El vuelo se encuentra retrasado debido a inconvenientes en la disponibilidad de la tripulación de cabina.",
+      "69": "Este vuelo se encuentra retrasado debido a un control de seguridad.",
+      "71": "Este vuelo se encuentra retrasado debido a condiciones meteorológicas adversas en el aeropuerto de salida.",
+      "72": "Este vuelo se encuentra retrasado debido a condiciones meteorológicas adversas en el aeropuerto de llegada.",
+      "73": "Este vuelo se encuentra retrasado debido a condiciones meteorológicas que afectan la ruta del vuelo.",
+      "75": "Este vuelo se encuentra retrasado debido requerimientos de descongelamiento.",
+      "76": "Este vuelo se encuentra retrasado debido a condiciones meteorológicas adversas que afectan las operaciones del aeropuerto.",
+      "77": "Este vuelo se encuentra retrasado debido a condiciones meteorológicas adversas que afectan las operaciones en tierra en el aeropuerto.",
+      "81": "Este vuelo se encuentra retrasado debido a restricciones del tráfico aéreo.",
+      "82": "Este vuelo se encuentra retrasado debido a restricciones del tráfico aéreo.",
+      "83": "Este vuelo se encuentra retrasado debido a limitaciones en el aeropuerto de llegada.",
+      "84": "Este vuelo se encuentra retrasado debido a condiciones meteorológicas adversas en el aeropuerto de llegada.",
+      "85": "Este vuelo se encuentra retrasado debido a un control de seguridad.",
+      "86": "Este vuelo se encuentra retrasado debido al tiempo adicional requerido por los pasajeros para hacer aduana e inmigración.",
+      "87": "Este vuelo se encuentra retrasado debido a limitaciones en las instalaciones aeroportuarias.",
+      "88": "Este vuelo se encuentra retrasado debido a limitaciones en la instalación del aeropuerto de llegada.",
+      "89": "Este vuelo se encuentra retrasado debido a limitaciones en las instalaciones del aeropuerto de salida.",
+      "93": "Este vuelo se encuentra retrasado debido a la llegada tardía de la aeronave entrante.",
+      "96": "Este vuelo se encuentra retrasado debido a problemas con la disponibilidad de la aeronave.",
+      "97": "Este vuelo se encuentra retrasado debido a una disputa laboral.",
+      "98": "Este vuelo se encuentra retrasado debido a una disputa laboral.",
+      "99": "Este vuelo se encuentra retrasado debido al remolque de la aeronave.",
+      "FDA": "Lo sentimos, este vuelo se canceló debido a restricciones en el control de tráfico aéreo.",
+      "ANH": "Lo sentimos, este vuelo se canceló debido a limitaciones en el aeropuerto de llegada.",
+      "SKD": "Lo sentimos, este vuelo se canceló debido a la falta de disponibilidad de aeronaves.",
+      "SOP": "Lo sentimos, este vuelo se canceló debido a la falta de disponibilidad de aeronaves.",
+      "SOM": "Lo sentimos, este vuelo se canceló debido a la falta de disponibilidad de aeronaves.",
+      "EQI": "Lo sentimos, este vuelo se canceló debido a inconvenientes en la disponibilidad de equipos.",
+      "ANF": "Lo sentimos, este vuelo se canceló debido a una falta de combustible.",
+      "ACS": "Lo sentimos, este vuelo se canceló debido a una comprobación de seguridad de la aeronave entrante.",
+      "ANA": "Lo sentimos, este vuelo se canceló debido a mantenimiento de la aeronave.",
+      "MTC": "Lo sentimos, este vuelo se canceló debido a mantenimiento de la aeronave.",
+      "DMT": "Lo sentimos, este vuelo se canceló debido a un problema técnico que afecta la aeronave entrante.",
+      "SEC": "Lo sentimos, este vuelo se canceló debido a una inestabilidad política.",
+      "SOT": "Lo sentimos, este vuelo se canceló debido a una disputa laboral.",
+      "WXX": "Lo sentimos, este vuelo se canceló debido a condiciones meteorológicas adversas.",
+      "FOC": "Lo sentimos, este vuelo se canceló debido a restricciones de la tripulación.",
+      "HOLI": "Lo sentimos, este vuelo se canceló debido a un feriado público.",
+      "AIRS": "Lo sentimos, este vuelo se canceló debido a restricciones en el control de tráfico aéreo.",
+      "ARPT": "Lo sentimos, este vuelo se canceló debido a limitaciones en el aeropuerto de llegada.",
+      "COMM": "Lo sentimos, este vuelo se canceló debido a la falta de disponibilidad de aeronaves.",
+      "CREW": "Lo sentimos, este vuelo se canceló debido a restricciones de la tripulación.",
+      "DAMA": "Lo sentimos, este vuelo se canceló debido a mantenimiento de la aeronave.",
+      "EQUI": "Lo sentimos, este vuelo se canceló debido a inconvenientes en la disponibilidad de equipos.",
+      "FUEL": "Lo sentimos, este vuelo se canceló debido a una falta de combustible.",
+      "HDLG": "Lo sentimos, este vuelo se canceló debido a una comprobación de seguridad de la aeronave entrante.",
+      "INDU": "Lo sentimos, este vuelo se canceló debido a una disputa laboral.",
+      "OPER": "Lo sentimos, este vuelo se canceló debido a la falta de disponibilidad de aeronaves.",
+      "PERF": "Lo sentimos, este vuelo se canceló debido a mantenimiento de la aeronave.",
+      "POLI": "Le pedimos disculpas. Este vuelo está cancelado debido al impacto de la COVID-19, los avisos de seguridad para viajeros expedidos por el Gobierno o las preocupaciones de salud y seguridad.",
+      "POSI": "Lo sentimos, este vuelo se canceló debido a la falta de disponibilidad de aeronaves.",
+      "REPO": "Lo sentimos, este vuelo se canceló debido a la falta de disponibilidad de aeronaves.",
+      "ROTA": "Lo sentimos, este vuelo se canceló debido a la falta de disponibilidad de aeronaves.",
+      "RTNS": "Lo sentimos, este vuelo se canceló debido a la falta de disponibilidad de aeronaves.",
+      "RUNW": "Lo sentimos, este vuelo se canceló debido a restricciones en la pista del aeropuerto.",
+      "TECH": "Lo sentimos, este vuelo se canceló debido a un problema técnico que afecta la aeronave entrante.",
+      "WEAT": "Lo sentimos, este vuelo se canceló debido a condiciones meteorológicas adversas.",
+      "TITLE": "Motivos oficiales de la interrupción:"
+    },
+    "INSTRUCTIONS": {
+      "BOOKING_NUMBER": "Ingrese el |número de reserva| que se incluye en su reserva original (ejemplo: CBA312) <br>o el |número de boleto| que figura en su reserva original (ejemplo: 0141234567890)",
+      "DEPT_DATE": "Indique la <strong>fecha de salida</strong> original del vuelo afectado por demora o cancelación",
+      "NAME": "Ingrese el <strong>nombre</strong> tal y como aparece en la reserva original (ejemplo: Jennifer Smith, no Jen Smith)"
+    },
+    "FIND_BOOKING": {
+      "TITLE": "¿Qué es un código de reserva?",
+      "BODY": "Su código o número de reserva (o código localizador) es una secuencia compuesta por seis letras o números que se utilizan para identificar su reserva de forma exclusiva. Lo puede encontrar en el itinerario o en el recibo que obtuvo después de completar su reserva.",
+      "CAPTION": "Información del número de reserva"
+    },
+    "FIND_TICKET": {
+      "TITLE": "¿Qué es un número de boleto?",
+      "BODY": "Su número de boleto (o boleto electrónico) es una secuencia de números que se utiliza para identificar de forma exclusiva su número de reserva. Lo puede encontrar en la tarjeta de embarque que recibió después de completar el check-in.",
+      "CAPTION": "Información del número de boleto"
+    },
+    "ERROR": {
+      "GENERAL": {
+        "TITLE": "Se produjo un error en el servidor interno",
+        "TEXT": "Se produjo un error durante el procesamiento de su solicitud. Se ha notificado al equipo de soporte de <a class=\"btn btn-link\" href=\"https://www.aircanada.com/us/es/aco/home.html\" target=\"_blank\">aircanada.com</a> sobre el problema.<br>Si cree que tiene información adicional que podría ser de ayuda, póngase en contacto con el servicio de <a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/en/aco/home/fly/customer-support/contact-us.html\" target=\"_blank\">Atención al Cliente</a>."
+      },
+      "CONNECTIVITY": {
+        "TITLE": "Se produjo un error de conexión",
+        "TEXT": "Se produjo un error al tratar de conectarse al servidor. Se ha notificado al equipo de soporte de <a class=\"btn btn-link\" href=\"https://www.aircanada.com/us/es/aco/home.html\" target=\"_blank\">aircanada.com</a> sobre el problema.<br>Si cree que tiene información adicional que podría ser de ayuda, póngase en contacto con el servicio de <a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/en/aco/home/fly/customer-support/contact-us.html\" target=\"_blank\">Atención al Cliente</a>."
+      },
+      "HOMEPAGE": "Página de inicio",
+      "RETRY": "Inténtalo de nuevo"
+    },
+    "INTRO": "Complete el formulario que figura a continuación para saber si es elegible para obtener una compensación por la interrupción de su vuelo. La interrupción puede implicar una demora importante o la cancelación de este. Puede obtener más información sobre las regulaciones en nuestra página sobre |interrupciones de vuelos|.",
+    "PASSENGER_ELIGIBILITY": {
+      "ELIGIBLE": {
+        "TEXT": "Gracias por completar los detalles de su reserva. Nuestra herramienta de autoevaluación determinó que usted califica para recibir una compensación. Complete su reclamo de compensación a continuación.<br/><br/> <a class=\"btn btn-link btn-blue\" href=\"http://www.aircanada.com/flightdisruptions\" target=\"_blank\">Obtenga más información sobre cuáles son sus derechos cuando hay interrupciones en los vuelos</a>.",
+        "TITLE": "Puede ser elegible"
+      },
+      "NODISRUPTION": {
+        "TEXT": "El vuelo de la reserva que ingresó no sufrió ninguna interrupción. Controle que la información ingresada sea correcta.",
+        "TITLE": "No hubo interrupción"
+      },
+      "NOMATCH": {
+        "TEXT": "No encontramos su reserva. Controle que la información ingresada sea correcta.",
+        "TITLE": "No se encontró",
+        "SUBSEQUENT": "Si el problema continúa, complete un |formulario de reclamo de compensación|. Un representante de Air Canada lo revisará y se pondrá en contacto con usted."
+      },
+      "NOTELIGIBLE": {
+        "TEXT": "Gracias por darnos los detalles de su reserva. Lamentablemente, nuestra herramienta de autoevaluación determinó que usted no califica para recibir una compensación.<br/><br/>Pero aún puede hacer un reclamo completando el <a class=\"btn btn-link btn-blue\" href=\"https://accc-prod.microsoftcrmportals.com/es-ES/flight-delay-or-cancellation/\" target=\"_blank\">Formulario de reclamación por demora y cancelación de vuelo</a>.<br/><br/>Tenga en cuenta que cuando se interrumpe un vuelo, la situación es compleja y las causas pueden ser varias. Los motivos previstos para la alteración de un vuelo pueden diferir a medida que la situación cambia, surgen nuevos problemas o se recibe nueva información. <a class=\"btn btn-link btn-blue\" href=\"http://www.aircanada.com/flightdisruptions\" target=\"_blank\">Obtenga más información sobre cuáles son sus derechos cuando hay interrupciones en los vuelos</a>.",
+        "TITLE": "No elegible",
+        "TEXT2": "Obtenga más información sobre la elegibilidad por |interrupciones de vuelo|."
+      },
+      "OUTSIDEPERIOD": {
+        "TEXT": "Lamentablemente, no cumple con los requisitos para recibir una compensación. La interrupción ocurrió antes del período de protección. Lamentamos los inconvenientes que esta interrupción pueda haberle ocasionado en su plan de viaje.",
+        "TITLE": "No elegible",
+        "TEXT2": "Obtenga más información sobre la elegibilidad por |interrupciones de vuelo|."
+      },
+      "OVER365": {
+        "TEXT": "Lamentablemente, no cumple con los requisitos para recibir una compensación. Los reclamos deben presentarse dentro de los 365 días posteriores al vuelo de partida.",
+        "TITLE": "No elegible",
+        "TEXT2": "Obtenga más información sobre la elegibilidad por |interrupciones de vuelo|."
+      },
+      "PENDING": {
+        "TEXT": "Nuestro equipo sigue investigando su itinerario y elegibilidad. Debe esperar que pasen por lo menos {{ days }} días tras su llegada para presentar un reclamo.",
+        "TITLE": "Pendiente"
+      },
+      "OUTSIDEAPPR": {
+        "TITLE": "Puede ser elegible",
+        "TEXT": "Lamentablemente, no es elegible para recibir una compensación bajo las regulaciones canadienses. La interrupción del vuelo ocurrió fuera de las regulaciones canadienses, pero puede estar sujeta a otras regulaciones.",
+        "TEXT2": "Complete un |Formulario de reclamo de compensación|. \nUn representante de Air Canada lo revisará y se pondrá en contacto con usted."
+      },
+      "TITLE": "Elegibilidad del pasajero",
+      "OTHERAIRLINES": {
+        "TEXT": "Su itinerario contiene vuelos en otras aerolíneas, no podemos hacer una determinación en este momento y necesitaríamos más información.",
+        "TEXT2": "Complete un |Formulario de reclamo de compensación|. \nUn representante de Air Canada lo revisará y se pondrá en contacto con usted.",
+        "TITLE": "Otras aerolíneas"
+      },
+      "DUPLICATEREQUEST": {
+        "TEXT": "It looks like you’ve already made a claim for your flight disruption (Claim number: <b class=\"red\">{{ caseNum }}</b>). <br/><br/> Our system can’t accept another claim once you’ve made a submission for the same flight segment(s) and passenger(s). <br/><br/> If you’d like to share any additional information, please reply to the email you received when you submitted your original claim.",
+        "TITLE": "Duplicate Claim",
+        "TEXT2": "Obtenga más información sobre la elegibilidad por |interrupciones de vuelo|."
+      },
+      "UNABLEDETERMINATION": {
+        "TITLE": "Es imposible tomar una decisión",
+        "TEXT": "Gracias por completar los detalles de su reserva. Lamentablemente, nuestra herramienta de autoevaluación no puede determinar si usted califica para recibir una compensación. <br/><br/> Pero aún puede hacer un reclamo completando el <a class=\"btn btn-link btn-blue\" href=\"https://accc-prod.microsoftcrmportals.com/en-CA/flight-delay-or-cancellation/\" target=\"_blank\">Formulario de reclamación por demora y cancelación de vuelo</a>. <br/><br/> Tenga en cuenta que cuando se interrumpe un vuelo, la situación es compleja y las causas pueden ser varias. Los motivos previstos para la alteración de un vuelo pueden diferir a medida que la situación cambia, surgen nuevos problemas o se recibe nueva información. <a class=\"btn btn-link btn-blue\" href=\"http://www.aircanada.com/flightdisruptions\" target=\"_blank\"> Obtenga más información sobre cuáles son sus derechos cuando hay interrupciones en los vuelos</a>.",
+        "TEXT2": "Obtenga más información sobre la elegibilidad por |interrupciones de vuelo|."
+      }
+    },
+    "POLICY": "Política de interrupción de vuelos",
+    "POLICY_LINK": "https://www.aircanada.com/ca/en/aco/home/fly/flight-information/flight-disruptions.html",
+    "SEARCH": {
+      "BTN_SEARCH": "Verificar si reúno los requisitos",
+      "DATE_LABEL": "Fecha de salida",
+      "ERRORS": {
+        "FIRSTNAME_MAXLENGTH": "El nombre no puede tener más de 50 caracteres.",
+        "FIRSTNAME_PATTERN": "El nombre tiene caracteres no válidos.",
+        "FIRSTNAME_REQUIRED": "El nombre es obligatorio.",
+        "LASTNAME_MAXLENGTH": "El apellido no puede tener más de 50 caracteres.",
+        "LASTNAME_PATTERN": "El apellido tiene caracteres no válidos.",
+        "LASTNAME_REQUIRED": "El apellido es obligatorio.",
+        "PNR_MIN": "El número de reserva debe tener 6 caracteres.",
+        "PNR_PATTERN": "El número de reserva debe tener solo números y letras sin tildes.",
+        "PNR_REQUIRED": "El número de reserva es obligatorio.",
+        "PNR_TICKET_MIN": "El número de reserva debe tener 6 caracteres. El número de boleto debe tener 13 caracteres.",
+        "PNR_TICKET_PATTERN": "El número de reserva debe tener solo números y letras sin tildes. El número de boleto debe tener solo números.",
+        "PNR_TICKET_REQUIRED": "Debe ingresar un número de reserva o de boleto."
+      },
+      "FIRSTNAME_LABEL": "Nombre del pasajero",
+      "LASTNAME_LABEL": "Apellido del pasajero",
+      "PNR_LABEL": "Número de reserva",
+      "PNR_TICKET_LABEL": "N&#8203;úmero de reserva o de boleto",
+      "PNR_TICKET_HELP": "Ejemplo: CBA321 o 0141234567890",
+      "FIRSTNAME_HELP": "Como aparece en la reserva original",
+      "LASTNAME_HELP": "Como aparece en la reserva original",
+      "DATE_HELP": "Ejemplo: {{ format }}"
+    },
+    "TITLE": "Elegibilidad para obtener compensación por interrupción de vuelos",
+    "TAB_TITLE": "Herramienta para autoverificar la elegibilidad"
+  },
+  "UNAVAILABLE": {
+    "TITLE": "El sitio está caído actualmente",
+    "TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  "IMAGE_ALT_TEXT": {
+    "STAR_ALLIANCE": "Miembro de Star Alliance",
+    "AC_LOGO": "Air Canada"
+  },
+  "ICON_TITLE": {
+    "NEXT": "Ícono Siguiente",
+    "INFO": "Ícono Info",
+    "CHECKMARK": "Ícono Marca de verificación",
+    "WARNING": "Ícono Advertencia",
+    "X": "Ícono X",
+    "CLOSE": "Cerrar",
+    "CHATBOX": "Ícono Chat"
+  }
+}

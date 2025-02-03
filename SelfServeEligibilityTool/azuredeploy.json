@@ -1,0 +1,700 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "azureEnvironmentInfix": {
+      "type": "string",
+      "minLength": 1
+    },
+    "environmentVariableName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "functionAppName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "webSubDomain": {
+      "type": "string",
+      "minLength": 1
+    },
+    "keyVaultWriterObjectId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "devOpsPrincipalObjectId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cipBaseAddress": {
+      "type": "string",
+      "minLength": 1
+    },
+    "idpBaseAddress": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claimsProcessingAdminGroup": {
+      "type": "string",
+      "defaultValue": ""
+    },
+    "azureAppConfiguration": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recaptchaThreshold": {
+      "type": "string",
+      "defaultValue": "0.5"
+    },
+    "customDomain": {
+      "type": "string",
+      "defaultValue": ""
+    }
+  },
+  "variables": {
+    "elasticPoolName": "cip",
+    "servicePlanName": "[concat('asp-ode-sset-', parameters('azureEnvironmentInfix'), '-acit-', resourceGroup().location)]",
+    "appInsightsName": "[concat('ai.ode.sset.', parameters('azureEnvironmentInfix'), '.acit.', resourceGroup().location)]",
+    "keyVaultName": "[concat('kv-ode-sset-', parameters('azureEnvironmentInfix'), '-acit')]",
+    "storageName": "[concat('stodesset', parameters('azureEnvironmentInfix'), 'acit')]",
+    "storageAccountId": "[resourceId('Microsoft.Storage/storageAccounts', variables('storageName'))]",
+    "azureADTenantId": "491d83df-1091-40f8-bcf9-b112f9a35fcf",
+    "tags": {
+      "Business Group": "Operations Digital Enablement",
+      "application": "ODE SSET"
+    }
+  },
+  "resources": [
+    {
+      "type": "microsoft.insights/components",
+      "apiVersion": "2015-05-01",
+      "name": "[variables('appInsightsName')]",
+      "location": "[resourceGroup().location]",
+      "tags": "[variables('tags')]",
+      "kind": "web",
+      "properties": {
+        "Application_Type": "web"
+      }
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults",
+      "apiVersion": "2016-10-01",
+      "name": "[variables('keyVaultName')]",
+      "location": "[resourceGroup().location]",
+      "tags": "[variables('tags')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/sites', parameters('functionAppName'))]"
+      ],
+      "properties": {
+        "tenantId": "[variables('azureADTenantId')]",
+        "accessPolicies": [
+          {
+            "tenantId": "[variables('azureADTenantId')]",
+            "objectId": "[reference(concat('Microsoft.Web/sites/', parameters('functionAppName')), '2018-02-01', 'Full').identity.principalId]",
+            "permissions": {
+              "keys": [
+                "Get",
+                "List"
+              ],
+              "secrets": [
+                "Get",
+                "List"
+              ],
+              "certificates": [
+                "Get",
+                "List"
+              ]
+            }
+          },
+          {
+            "tenantId": "[variables('azureADTenantId')]",
+            "objectId": "13c000e1-d65b-492b-9c58-a657f1bd3cd3",
+            "permissions": {
+              "keys": [
+                "Get",
+                "List"
+              ],
+              "secrets": [
+                "Get",
+                "List"
+              ],
+              "certificates": [
+                "Get",
+                "List"
+              ]
+            }
+          },
+          {
+            "tenantId": "[variables('azureADTenantId')]",
+            "objectId": "[parameters('keyVaultWriterObjectId')]",
+            "permissions": {
+              "keys": [
+                "Get",
+                "List",
+                "Update",
+                "Create",
+                "Import",
+                "Delete",
+                "Recover",
+                "Backup",
+                "Restore"
+              ],
+              "secrets": [
+                "Get",
+                "List",
+                "Set",
+                "Delete",
+                "Recover",
+                "Backup",
+                "Restore"
+              ],
+              "certificates": [
+                "Get",
+                "List",
+                "Update",
+                "Create",
+                "Import",
+                "Delete",
+                "Recover",
+                "Backup",
+                "Restore",
+                "ManageContacts",
+                "ManageIssuers",
+                "GetIssuers",
+                "ListIssuers",
+                "SetIssuers",
+                "DeleteIssuers"
+              ]
+            }
+          }
+        ],
+        "sku": {
+          "name": "standard",
+          "family": "A"
+        },
+        "networkAcls": {
+          "value": {
+            "defaultAction": "Allow",
+            "bypass": "AzureServices",
+            "ipRules": [],
+            "virtualNetworkRules": []
+          }
+        },
+        "tags": {}
+      }
+    },
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2019-06-01",
+      "name": "[variables('storageName')]",
+      "location": "[resourceGroup().location]",
+      "tags": "[variables('tags')]",
+      "sku": {
+        "name": "Standard_RAGRS",
+        "tier": "Standard"
+      },
+      "kind": "StorageV2",
+      "properties": {
+        "networkAcls": {
+          "bypass": "AzureServices",
+          "virtualNetworkRules": [],
+          "ipRules": [],
+          "defaultAction": "Allow"
+        },
+        "supportsHttpsTrafficOnly": true,
+        "encryption": {
+          "services": {
+            "file": {
+              "keyType": "Account",
+              "enabled": true
+            },
+            "blob": {
+              "keyType": "Account",
+              "enabled": true
+            }
+          },
+          "keySource": "Microsoft.Storage"
+        },
+        "accessTier": "Hot"
+      }
+    },
+    {
+      "type": "Microsoft.Storage/storageAccounts/blobServices",
+      "apiVersion": "2019-06-01",
+      "name": "[concat(variables('storageName'), '/default')]",
+      "location": "[resourceGroup().location]",
+      "tags": "[variables('tags')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', variables('storageName'))]"
+      ],
+      "sku": {
+        "name": "Standard_RAGRS",
+        "tier": "Standard"
+      },
+      "properties": {
+        "cors": {
+          "corsRules": []
+        },
+        "deleteRetentionPolicy": {
+          "enabled": false
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Storage/storageAccounts/fileServices",
+      "apiVersion": "2019-06-01",
+      "name": "[concat(variables('storageName'), '/default')]",
+      "location": "[resourceGroup().location]",
+      "tags": "[variables('tags')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', variables('storageName'))]"
+      ],
+      "sku": {
+        "name": "Standard_RAGRS",
+        "tier": "Standard"
+      },
+      "properties": {
+        "cors": {
+          "corsRules": []
+        },
+        "deleteRetentionPolicy": {
+          "enabled": false
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Web/serverfarms",
+      "apiVersion": "2018-02-01",
+      "name": "[variables('servicePlanName')]",
+      "location": "[resourceGroup().location]",
+      "tags": "[variables('tags')]",
+      "sku": {
+        "name": "Y1",
+        "tier": "Dynamic",
+        "size": "Y1",
+        "family": "Y",
+        "capacity": 0
+      },
+      "kind": "functionapp",
+      "properties": {
+        "perSiteScaling": false,
+        "maximumElasticWorkerCount": 1,
+        "isSpot": false,
+        "reserved": false,
+        "isXenon": false,
+        "hyperV": false,
+        "targetWorkerCount": 0,
+        "targetWorkerSizeId": 0
+      }
+    },
+    {
+      "type": "Microsoft.Web/sites",
+      "apiVersion": "2018-11-01",
+      "name": "[parameters('functionAppName')]",
+      "location": "[resourceGroup().location]",
+      "tags": "[variables('tags')]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/serverfarms', variables('servicePlanName'))]",
+        "[resourceId('Microsoft.Storage/storageAccounts', variables('storageName'))]",
+        "[resourceId('Microsoft.Insights/components', variables('appInsightsName'))]"
+      ],
+      "kind": "functionapp",
+      "properties": {
+        "enabled": true,
+        "hostNameSslStates": [
+          {
+            "name": "[concat(parameters('functionAppName'), '.azurewebsites.net')]",
+            "sslState": "Disabled",
+            "hostType": "Standard"
+          },
+          {
+            "name": "[concat(parameters('functionAppName'), '.scm.azurewebsites.net')]",
+            "sslState": "Disabled",
+            "hostType": "Repository"
+          }
+        ],
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('servicePlanName'))]",
+        "reserved": false,
+        "isXenon": false,
+        "hyperV": false,
+        "scmSiteAlsoStopped": false,
+        "clientAffinityEnabled": true,
+        "clientCertEnabled": false,
+        "hostNamesDisabled": false,
+        "containerSize": 1536,
+        "dailyMemoryTimeQuota": 0,
+        "httpsOnly": false,
+        "redundancyMode": "None",
+        "siteConfig": {
+          "numberOfWorkers": -1,
+          "defaultDocuments": [
+            "Default.htm",
+            "Default.html",
+            "Default.asp",
+            "index.htm",
+            "index.html",
+            "iisstart.htm",
+            "default.aspx",
+            "index.php"
+          ],
+          "netFrameworkVersion": "v4.0",
+          "phpVersion": "5.6",
+          "requestTracingEnabled": false,
+          "remoteDebuggingEnabled": false,
+          "remoteDebuggingVersion": "VS2019",
+          "httpLoggingEnabled": false,
+          "logsDirectorySizeLimit": 35,
+          "detailedErrorLoggingEnabled": false,
+          "publishingUsername": "[concat('$', parameters('functionAppName'))]",
+          "appSettings": [
+            {
+              "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
+              "value": "[reference(resourceId('Microsoft.Insights/components', variables('appInsightsName')), '2014-04-01').InstrumentationKey]"
+            },
+            {
+              "name": "APPLICATIONINSIGHTS_CONNECTION_STRING",
+              "value": "[concat('InstrumentationKey=', reference(resourceId('Microsoft.Insights/components', variables('appInsightsName')), '2014-04-01').InstrumentationKey)]"
+            },
+            {
+              "name": "AzureWebJobsStorage",
+              "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageName'), ';AccountKey=', listKeys(variables('storageAccountId'), '2019-04-01').keys[0].value, ';EndpointSuffix=core.windows.net')]"
+            },
+            {
+              "name": "FUNCTIONS_EXTENSION_VERSION",
+              "value": "~3"
+            },
+            {
+              "name": "FUNCTIONS_WORKER_RUNTIME",
+              "value": "dotnet"
+            },
+            {
+              "name": "AZURE_FUNCTIONS_ENVIRONMENT",
+              "value": "[parameters('environmentVariableName')]"
+            },
+            {
+              "name": "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING",
+              "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageName'), ';AccountKey=', listKeys(variables('storageAccountId'), '2019-04-01').keys[0].value, ';EndpointSuffix=core.windows.net')]"
+            },
+            {
+              "name": "WEBSITE_CONTENTSHARE",
+              "value": "[concat(parameters('functionAppName'), 'b61b')]"
+            },
+            {
+              "name": "WEBSITE_ENABLE_SYNC_UPDATE_SITE",
+              "value": "true"
+            },
+            {
+              "name": "WEBSITE_RUN_FROM_PACKAGE",
+              "value": "1"
+            },
+            {
+              "name": "KeyVaultName",
+              "value": "[variables('keyVaultName')]"
+            },
+            {
+              "name": "Webapp:IsInMaintenance",
+              "value": "[concat('@Microsoft.KeyVault(SecretUri=https://', variables('keyVaultName'), '.vault.azure.net/secrets/IsInMaintenance/)')]"
+            },
+            {
+              "name": "Recaptcha:SecretKey",
+              "value": "[concat('@Microsoft.KeyVault(SecretUri=https://', variables('keyVaultName'), '.vault.azure.net/secrets/RecaptchaSecretKey/)')]"
+            },
+            {
+              "name": "Recaptcha:Threshold",
+              "value": "[parameters('recaptchaThreshold')]"
+            },
+            {
+              "name": "CIP:BaseAddress",
+              "value": "[parameters('cipBaseAddress')]"
+            },
+            {
+              "name": "IDP:BaseAddress",
+              "value": "[parameters('idpBaseAddress')]"
+            },
+            {
+              "name": "IDP:ClientId",
+              "value": "AirCanada.Services.SSET"
+            },
+            {
+              "name": "IDP:ClientSecret",
+              "value": "[concat('@Microsoft.KeyVault(SecretUri=https://', variables('keyVaultName'), '.vault.azure.net/secrets/PingSecret/)')]"
+            },
+            {
+              "name": "AzureAppConfiguration",
+              "value": "[parameters('azureAppConfiguration')]"
+            }
+          ],
+          "scmType": "VSTSRM",
+          "use32BitWorkerProcess": true,
+          "webSocketsEnabled": false,
+          "alwaysOn": false,
+          "managedPipelineMode": "Integrated",
+          "virtualApplications": [
+            {
+              "virtualPath": "/",
+              "physicalPath": "site\\wwwroot",
+              "preloadEnabled": false
+            }
+          ],
+          "loadBalancing": "LeastRequests",
+          "experiments": {
+            "rampUpRules": []
+          },
+          "autoHealEnabled": false,
+          "cors": {
+            "allowedOrigins": [
+              "https://functions.azure.com",
+              "https://functions-staging.azure.com",
+              "https://functions-next.azure.com",
+              "http://localhost:4200",
+              "https://localhost:4200",
+              "[concat('https://', variables('storageName'), '.z9.web.core.windows.net')]",
+              "[concat('https://', parameters('customDomain'))]"
+            ],
+            "supportCredentials": false
+          },
+          "localMySqlEnabled": false,
+          "ipSecurityRestrictions": [
+            {
+              "ipAddress": "Any",
+              "action": "Allow",
+              "priority": 1,
+              "name": "Allow all",
+              "description": "Allow all access"
+            }
+          ],
+          "scmIpSecurityRestrictions": [
+            {
+              "ipAddress": "Any",
+              "action": "Allow",
+              "priority": 1,
+              "name": "Allow all",
+              "description": "Allow all access"
+            }
+          ],
+          "scmIpSecurityRestrictionsUseMain": false,
+          "http20Enabled": false,
+          "minTlsVersion": "1.2",
+          "ftpsState": "AllAllowed",
+          "reservedInstanceCount": 0
+        }
+      },
+      "identity": {
+        "type": "SystemAssigned"
+      }
+    },
+    {
+      "type": "microsoft.insights/metricAlerts",
+      "apiVersion": "2018-03-01",
+      "name": "Average response time greater than average - medium threshold",
+      "condition": "[not(empty(parameters('claimsProcessingAdminGroup')))]",
+      "location": "global",
+      "properties": {
+        "severity": 3,
+        "enabled": true,
+        "scopes": [
+          "[concat(resourceGroup().id, '/providers/Microsoft.Web/sites/', parameters('functionAppName'))]"
+        ],
+        "evaluationFrequency": "PT5M",
+        "windowSize": "PT30M",
+        "criteria": {
+          "allOf": [
+            {
+              "alertSensitivity": "Medium",
+              "failingPeriods": {
+                "numberOfEvaluationPeriods": 4,
+                "minFailingPeriodsToAlert": 4
+              },
+              "name": "Metric1",
+              "metricNamespace": "Microsoft.Web/sites",
+              "metricName": "AverageResponseTime",
+              "dimensions": [
+                {
+                  "name": "Instance",
+                  "operator": "Include",
+                  "values": [
+                    "*"
+                  ]
+                }
+              ],
+              "operator": "GreaterThan",
+              "timeAggregation": "Average",
+              "criterionType": "DynamicThresholdCriterion"
+            }
+          ],
+          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
+        },
+        "autoMitigate": true,
+        "targetResourceType": "Microsoft.Web/sites",
+        "targetResourceRegion": "canadacentral",
+        "actions": [
+          {
+            "actionGroupId": "[concat(resourceGroup().id, '/providers/microsoft.insights/actiongroups/', parameters('claimsProcessingAdminGroup'))]",
+            "webHookProperties": {}
+          }
+        ],
+        "description": null
+      }
+    },
+    {
+      "type": "microsoft.insights/metricAlerts",
+      "apiVersion": "2018-03-01",
+      "name": "Connections greater than average - medium threshold",
+      "condition": "[not(empty(parameters('claimsProcessingAdminGroup')))]",
+      "location": "global",
+      "properties": {
+        "severity": 3,
+        "enabled": true,
+        "scopes": [
+          "[concat(resourceGroup().id, '/providers/Microsoft.Web/sites/', parameters('functionAppName'))]"
+        ],
+        "evaluationFrequency": "PT5M",
+        "windowSize": "PT30M",
+        "criteria": {
+          "allOf": [
+            {
+              "alertSensitivity": "Medium",
+              "failingPeriods": {
+                "numberOfEvaluationPeriods": 4,
+                "minFailingPeriodsToAlert": 4
+              },
+              "name": "Metric1",
+              "metricNamespace": "Microsoft.Web/sites",
+              "metricName": "AppConnections",
+              "dimensions": [
+                {
+                  "name": "Instance",
+                  "operator": "Include",
+                  "values": [
+                    "*"
+                  ]
+                }
+              ],
+              "operator": "GreaterThan",
+              "timeAggregation": "Average",
+              "criterionType": "DynamicThresholdCriterion"
+            }
+          ],
+          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
+        },
+        "autoMitigate": true,
+        "targetResourceType": "Microsoft.Web/sites",
+        "targetResourceRegion": "canadacentral",
+        "actions": [
+          {
+            "actionGroupId": "[concat(resourceGroup().id, '/providers/microsoft.insights/actiongroups/', parameters('claimsProcessingAdminGroup'))]",
+            "webHookProperties": {}
+          }
+        ],
+        "description": null
+      }
+    },
+    {
+      "type": "microsoft.insights/metricAlerts",
+      "apiVersion": "2018-03-01",
+      "name": "Handles greater than average - medium threshold",
+      "condition": "[not(empty(parameters('claimsProcessingAdminGroup')))]",
+      "location": "global",
+      "properties": {
+        "severity": 3,
+        "enabled": true,
+        "scopes": [
+          "[concat(resourceGroup().id, '/providers/Microsoft.Web/sites/', parameters('functionAppName'))]"
+        ],
+        "evaluationFrequency": "PT5M",
+        "windowSize": "PT30M",
+        "criteria": {
+          "allOf": [
+            {
+              "alertSensitivity": "Medium",
+              "failingPeriods": {
+                "numberOfEvaluationPeriods": 4,
+                "minFailingPeriodsToAlert": 4
+              },
+              "name": "Metric1",
+              "metricNamespace": "Microsoft.Web/sites",
+              "metricName": "Handles",
+              "dimensions": [
+                {
+                  "name": "Instance",
+                  "operator": "Include",
+                  "values": [
+                    "*"
+                  ]
+                }
+              ],
+              "operator": "GreaterThan",
+              "timeAggregation": "Average",
+              "criterionType": "DynamicThresholdCriterion"
+            }
+          ],
+          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
+        },
+        "autoMitigate": true,
+        "targetResourceType": "Microsoft.Web/sites",
+        "targetResourceRegion": "canadacentral",
+        "actions": [
+          {
+            "actionGroupId": "[concat(resourceGroup().id, '/providers/microsoft.insights/actiongroups/', parameters('claimsProcessingAdminGroup'))]",
+            "webHookProperties": {}
+          }
+        ],
+        "description": null
+      }
+    },
+    {
+      "type": "microsoft.insights/metricAlerts",
+      "apiVersion": "2018-03-01",
+      "name": "HTTP Server errors greater than average - medium threshold",
+      "condition": "[not(empty(parameters('claimsProcessingAdminGroup')))]",
+      "location": "global",
+      "properties": {
+        "severity": 3,
+        "enabled": true,
+        "scopes": [
+          "[concat(resourceGroup().id, '/providers/Microsoft.Web/sites/', parameters('functionAppName'))]"
+        ],
+        "evaluationFrequency": "PT5M",
+        "windowSize": "PT30M",
+        "criteria": {
+          "allOf": [
+            {
+              "alertSensitivity": "Medium",
+              "failingPeriods": {
+                "numberOfEvaluationPeriods": 4,
+                "minFailingPeriodsToAlert": 4
+              },
+              "name": "Metric1",
+              "metricNamespace": "Microsoft.Web/sites",
+              "metricName": "Http5xx",
+              "dimensions": [
+                {
+                  "name": "Instance",
+                  "operator": "Include",
+                  "values": [
+                    "*"
+                  ]
+                }
+              ],
+              "operator": "GreaterThan",
+              "timeAggregation": "Average",
+              "criterionType": "DynamicThresholdCriterion"
+            }
+          ],
+          "odata.type": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria"
+        },
+        "autoMitigate": true,
+        "targetResourceType": "Microsoft.Web/sites",
+        "targetResourceRegion": "canadacentral",
+        "actions": [
+          {
+            "actionGroupId": "[concat(resourceGroup().id, '/providers/microsoft.insights/actiongroups/', parameters('claimsProcessingAdminGroup'))]",
+            "webHookProperties": {}
+          }
+        ],
+        "description": null
+      }
+    }
+  ]
+}
+

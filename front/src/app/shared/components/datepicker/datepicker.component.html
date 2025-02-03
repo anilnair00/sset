@@ -1,0 +1,122 @@
+<div class="form-label-group" [formGroup]="formGroup">
+  <input
+    #dp="bsDatepicker"
+    bsDatepicker
+    class="form-control form-control-datepicker"
+    placeholder=" "
+    type="text"
+    [bsConfig]="bsConfig"
+    [bsValue]="dateValue"
+    [class.ng-dirty]="formGroup.controls[name].touched"
+    [class.ng-invalid]="invalid || formGroup.controls[name].errors?.required"
+    [class.ng-touched]="formGroup.controls[name].touched"
+    [datesDisabled]="disabledDates"
+    [id]="inputId"
+    [isDisabled]="readonly"
+    [maxDate]="maxDate"
+    [minDate]="minDate"
+    [readonly]="readonly"
+    [required]="required"
+    [triggers]="readonly ? null : 'click'"
+    (bsValueChange)="validateDate($event)"
+    (change)="setInputTouched($event)"
+    (keyup)="onKeyup($event)"
+  />
+
+  <label [for]="inputId" [innerHTML]="label"></label>
+  <svg
+    aria-label="Calendar icon"
+    class="icn icn-calendar"
+    focusable="false"
+    role="presentation"
+  >
+    <title>Calendar icon</title>
+    <use xlink:href="/assets/icons.svg#icn-calendar"></use>
+  </svg>
+
+  <ng-template #dateHelp>
+    <div class="help-block black">
+      {{ helperText }}
+    </div>
+  </ng-template>
+
+  <div
+    *ngIf="
+      formGroup.controls[name].touched && formGroup.controls[name].invalid;
+      else dateHelp
+    "
+    class="help-block error"
+  >
+    <span
+      *ngIf="
+        minDate &&
+        formGroup.controls[name].errors &&
+        formGroup.controls[name].errors.min
+      "
+      [innerHTML]="
+        inputFormat === 'YYYY-MM-DD'
+          ? ('SHARED.DATEPICKER.MIN_DATE'
+            | translate
+              : { minDate: minDate?.toISOString().split('T')[0] | translate })
+          : ('SHARED.DATEPICKER.MIN_DATE'
+            | translate
+              : {
+                  minDate:
+                    minDate?.toISOString().split('T')[0].replaceAll('-', '/')
+                    | translate
+                })
+      "
+    >
+    </span>
+
+    <span
+      *ngIf="
+        maxDate &&
+        ((formGroup.controls[name].errors &&
+          formGroup.controls[name].errors.max) ||
+          formGroup.controls[name].hasError('1030005'))
+      "
+      [innerHTML]="
+        inputFormat === 'YYYY-MM-DD'
+          ? ('SHARED.DATEPICKER.MAX_DATE'
+            | translate
+              : { maxDate: maxDate?.toISOString().split('T')[0] | translate })
+          : ('SHARED.DATEPICKER.MAX_DATE'
+            | translate
+              : {
+                  maxDate:
+                    maxDate?.toISOString().split('T')[0].replaceAll('-', '/')
+                    | translate
+                })
+      "
+    >
+    </span>
+
+    <span
+      *ngIf="
+        formGroup.controls[name].errors &&
+        !formGroup.controls[name].errors.max &&
+        !formGroup.controls[name].errors.min &&
+        !formGroup.controls[name].errors.required &&
+        (formGroup.controls[name].invalid ||
+          formGroup.controls[name].errors.invalidCheckOutDate)
+      "
+      [innerHTML]="
+        invalidCustomText
+          ? invalidCustomText
+          : ('SHARED.DATEPICKER.INVALID'
+            | translate : { format: invalidFormatText | translate })
+      "
+    >
+    </span>
+
+    <span
+      *ngIf="
+        formGroup.controls[name].errors &&
+        formGroup.controls[name].errors.required
+      "
+    >
+      {{ requiredText }}
+    </span>
+  </div>
+</div>

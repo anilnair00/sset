@@ -1,0 +1,784 @@
+{
+  "FOOTER": {
+    "ABOUT": "À propos d'Air Canada",
+    "ABOUT_LINK": "https://www.aircanada.com/ca/fr/aco/home/about.html",
+    "AC_STAR_LINK": "https://www.aircanada.com/ca/fr/aco/home/book/routes-and-partners/star-alliance-and-other-airline-partners/star-alliance.html",
+    "AGENTS": "Agents de voyage",
+    "AGENTS_LINK": "https://www.aircanada.com/ca/fr/ado/home.html",
+    "BAGGAGE_CHANGES": "Modifications des frais de bagages",
+    "BAGGAGE_CHANGES_LINK": "https://www.aircanada.com/ca/fr/aco/home/book/travel-news-and-updates/2019/baggage-fee-changes.html",
+    "BAGGAGE": "Frais liés aux bagages et services facultatifs",
+    "BAGGAGE_LINK": "https://www.aircanada.com/ca/fr/aco/home/legal/products-and-services.html",
+    "CAREERS": "Carrières",
+    "CAREERS_LINK": "https://www.aircanada.com/ca/fr/aco/home/about/careers.html",
+    "CARGO": "Air Canada Cargo",
+    "CARGO_LINK": "http://www.aircanada.com/cargo/fr/",
+    "CONTACT": "Coordonnées",
+    "CONTACT_LINK": "https://www.aircanada.com/ca/fr/aco/home/fly/customer-support/contact-us.html",
+    "CUSTOMER_SERVICE": "Plan de service clientèle",
+    "CUSTOMER_SERVICE_LINK": "https://www.aircanada.com/ca/fr/aco/home/legal/air-canada-customer-service-plan.html",
+    "CUSTOMER_SUPPORT": "Soutien au Client",
+    "DEALS": "Aubaines sur les vols",
+    "DEALS_LINK": "https://www.aircanada.com/fr-ca/",
+    "DESTINATIONS": "Destinations",
+    "EMAIL": "Offres Électroniques",
+    "EMAIL_PREFS": "Modifier les préférences",
+    "EMAIL_PREFS_LINK": "https://www.aircanada.com/fr/en/aco/home/email-pref-center.html",
+    "FOUNDATION": "Fondation Air Canada",
+    "FOUNDATION_LINK": "http://www.aircanada.com/fr/about/community/foundation/index.html",
+    "GENERAL_CONDITIONS": "Conditions générales de transport et tarifs",
+    "GENERAL_CONDITIONS_LINK": "https://www.aircanada.com/ca/fr/aco/home/legal/conditions-carriage-tariffs.html",
+    "INVESTOR": "Investisseurs",
+    "INVESTOR_LINK": "https://www.aircanada.com/ca/fr/aco/home/about/investor-relations.html",
+    "MEDIA": "Médias",
+    "MEDIA_LINK": "https://www.aircanada.com/ca/fr/aco/home/about/media.html",
+    "OUR_COMPANY": "Notre Société",
+    "PRIVACY_POLICY": "Confidentialité",
+    "PRIVACY_POLICY_LINK": "https://www.aircanada.com/ca/fr/aco/home/legal/privacy-policy.html",
+    "SITEMAP": "Plan du Site",
+    "SITEMAP_LINK": "https://www.aircanada.com/ca/fr/aco/home/sitemap.html",
+    "SUBSCRIBE": "S'abonner",
+    "SUBSCRIBE_LINK": "https://www.aircanada.com/ca/fr/aco/home/email-pref-center.html",
+    "TERMS_USE": "Conditions d'utilisation",
+    "TERMS_USE_LINK": "https://www.aircanada.com/ca/fr/aco/home/legal/terms-of-use.html",
+    "TO_CA": "Vols vers le Canada",
+    "TO_CA_LINK": "https://www.aircanada.com/fr-ca/flights-to-canada",
+    "TO_DEST1": "Canada vers les États-Unis",
+    "TO_DEST1_LINK": "https://www.aircanada.com/fr-ca/flights-from-canada-to-united-states",
+    "TO_DEST2": "Canada vers le Royaume-Uni",
+    "TO_DEST2_LINK": "https://www.aircanada.com/fr-ca/flights-from-canada-to-united-kingdom",
+    "TO_DEST3": "Canada vers le Japon",
+    "TO_DEST3_LINK": "https://www.aircanada.com/fr-ca/flights-from-canada-to-japan",
+    "TO_DEST4": "Canada vers l'Australie",
+    "TO_DEST4_LINK": "https://www.aircanada.com/fr-ca/flights-from-canada-to-australia",
+    "WHY_BOOK": "Pourquoi réserver avec nous",
+    "WHY_BOOK_LINK": "https://www.aircanada.com/ca/fr/aco/home/book/why-book-with-us.html"
+  },
+  "HEADER": {
+    "CONTACT_US": "Soutien au client",
+    "CONTACT_US_LINK": "https://www.aircanada.com/ca/fr/aco/home/fly/customer-support/contact-us.html",
+    "HOME_LINK": "https://www.aircanada.com/ca/fr",
+    "LANGUAGES": "Langues",
+    "LET_US_KNOW": "Faites-le nous savoir",
+    "LET_US_KNOW_LINK": "https://accc-prod.microsoftcrmportals.com/fr-CA/air-canada-contact-us/"
+  },
+  "ICON_TITLE": {
+    "CHATBOX": "Icône de clavardage",
+    "CHECKMARK": "Icône de crochet",
+    "CLOSE": "Fermer",
+    "INFO": "Icône d'information",
+    "NEXT": "Icône suivante",
+    "WARNING": "Icône d'avertissement",
+    "X": "Icône en X"
+  },
+  "IMAGE_ALT_TEXT": {
+    "AC_LOGO": "Site Web officiel d’Air Canada, s’ouvre dans un nouvel onglet",
+    "STAR_ALLIANCE": "Membre du réseau Star Alliance"
+  },
+  "SSET": {
+    "TAB_TITLE": "Outil d’admissibilité libre-service",
+    "TITLE": "Admissibilité à une indemnité pour perturbation d’exploitation",
+    "SEARCH": {
+      "TIPS_TITLE": "Tips for filling out this form",
+      "PNR_LABEL": "Numéro de réservation",
+      "ERRORS": {
+        "PNR_REQUIRED": "Un numéro de réservation est requis.",
+        "PNR_PATTERN": "Le numéro de réservation doit contenir uniquement des chiffres et des lettres sans accent.",
+        "PNR_MIN": "Le numéro de réservation doit contenir six caractères.",
+        "LASTNAME_REQUIRED": "Le nom de famille est requis.",
+        "FIRSTNAME_REQUIRED": "Le prénom est requis.",
+        "FIRSTNAME_MAXLENGTH": "Le prénom ne peut contenir plus de 50 caractères.",
+        "FIRSTNAME_PATTERN": "Le prénom contient des caractères non valides.",
+        "LASTNAME_MAXLENGTH": "Le nom de famille ne peut contenir plus de 50 caractères.",
+        "LASTNAME_PATTERN": "Le nom de famille contient des caractères non valides.",
+        "PNR_TICKET_MIN": "Le numéro de réservation doit contenir six caractères. \nLe numéro de billet doit contenir 13 caractères. ",
+        "PNR_TICKET_PATTERN": "Le numéro de réservation doit contenir uniquement des chiffres et des lettres sans accent. Le numéro de billet doit contenir uniquement des chiffres.",
+        "PNR_TICKET_REQUIRED": "Le numéro de réservation ou de billet est requis."
+      },
+      "DATE_LABEL": "Date de départ",
+      "BTN_SEARCH": "Vérifier mon admissibilité",
+      "LASTNAME_LABEL": "Nom du passager",
+      "FIRSTNAME_LABEL": "Prénom du passager",
+      "PNR_TICKET_LABEL": "Numéro de réservation ou de billet",
+      "PNR_TICKET_HELP": "Exemple: CBA321 ou 0141234567890",
+      "FIRSTNAME_HELP": "Tel qu’il figure sur la réservation initiale",
+      "LASTNAME_HELP": "Tel qu’il figure sur la réservation initiale",
+      "DATE_HELP": "Exemple: {{ format }}",
+      "TICKET_LABEL": "Numéro de billet",
+      "TICKET_HELP": "Exemple: 123456789123"
+    },
+    "PASSENGER_ELIGIBILITY": {
+      "TITLE": "Admissibilité des passagers",
+      "ELIGIBLE": {
+        "TEXT": "Nous vous remercions d’avoir fourni les renseignements concernant votre réservation. Notre outil d’autoévaluation indique que vous avez peut-être droit à une indemnité. Veuillez remplir la demande d’indemnité ci-dessous.<br/><br/> <a class=\"btn btn-link btn-blue\" href=\"https://www.aircanada.com/perturbationsexploitation\" target=\"_blank\">Renseignez-vous sur vos droits en cas de perturbation d’exploitation</a>.",
+        "TITLE": "Pourrait être admissible"
+      },
+      "NODISRUPTION": {
+        "TEXT": "La réservation que vous avez indiquée n’a fait l’objet d’aucune perturbation d’exploitation. Veuillez vous assurer que les renseignements ci-dessus ont été saisis correctement.",
+        "TITLE": "Aucune perturbation"
+      },
+      "NOMATCH": {
+        "TEXT": "Nous ne trouvons pas votre réservation. Veuillez vous assurer que les renseignements ci-dessus ont été saisis correctement.",
+        "TITLE": "Aucune correspondance",
+        "SUBSEQUENT": "Si le problème persiste, veuillez remplir un |formulaire de demande d’indemnité|. Un représentant d’Air Canada l’examinera et communiquera avec vous."
+      },
+      "NOTELIGIBLE": {
+        "TEXT": "Nous vous remercions d’avoir fourni les renseignements concernant votre réservation. Malheureusement, notre outil d’autoévaluation a déterminé que vous n’avez peut-être pas droit à une indemnité.<br/><br/>Vous pouvez toujours soumettre une demande en remplissant le <a class=\"btn btn-link btn-blue\" href=\"https://accc-prod.microsoftcrmportals.com/fr-CA/flight-delay-or-cancellation/\" target=\"_blank\">Formulaire de demande d’indemnité pour retard ou annulation de vol</a>.<br/><br/>Veuillez noter que les perturbations d’exploitation peuvent être complexes et avoir plusieurs causes. Les raisons fournies pour la perturbation peuvent changer à mesure que la situation évolue, que de nouveaux problèmes surgissent ou que de nouveaux renseignements sont reçus. <a class=\"btn btn-link btn-blue\" href=\"https://www.aircanada.com/perturbationsexploitation\" target=\"_blank\">Renseignez-vous sur vos droits en cas de perturbation d’exploitation</a>.",
+        "TITLE": "Non admissible",
+        "TEXT2": "En savoir plus sur l'éligibilité aux |perturbations de vol|."
+      },
+      "OUTSIDEPERIOD": {
+        "TEXT": "Malheureusement, vous n’êtes pas admissible à une indemnité. La perturbation d’exploitation a eu lieu avant la période de protection. Nous sommes désolés des désagréments que cette perturbation d’exploitation a pu entraîner dans vos plans de voyage.",
+        "TITLE": "Non admissible",
+        "TEXT2": "En savoir plus sur l'éligibilité aux |perturbations de vol|."
+      },
+      "OVER365": {
+        "TEXT": "Malheureusement, vous n’êtes pas admissible à une indemnité. Les demandes d’indemnité doivent être remplies dans les 365 jours suivant le vol de départ.",
+        "TITLE": "Non admissible",
+        "TEXT2": "En savoir plus sur l'éligibilité aux |perturbations de vol|."
+      },
+      "PENDING": {
+        "TEXT": "Notre équipe examine actuellement votre itinéraire et votre admissibilité. Veuillez attendre au moins {{ days }} jours après votre arrivée pour soumettre une demande.",
+        "TITLE": "En attente"
+      },
+      "OUTSIDEAPPR": {
+        "TITLE": "Pourrait être admissible",
+        "TEXT": "Malheureusement, vous n'êtes pas admissible à une indemnisation en vertu de la réglementation canadienne. L'interruption de vol s'est produite en dehors de la réglementation canadienne, mais peut être soumise à d'autres réglementations.",
+        "TEXT2": "Veuillez remplir un |Formulaire de demande d'indemnisation|. \nUn représentant d'Air Canada l'examinera et vous recontactera."
+      },
+      "OTHERAIRLINES": {
+        "TEXT": "Votre itinéraire contient des vols sur d'autres compagnies aériennes, nous ne pouvons pas prendre de décision pour le moment et aurions besoin de plus d'informations.",
+        "TEXT2": "Veuillez remplir un |Formulaire de demande d'indemnisation|. \nUn représentant d'Air Canada l'examinera et vous recontactera.",
+        "TITLE": "Autres compagnies aériennes"
+      },
+      "DUPLICATEREQUEST": {
+        "TEXT": "Il semble que vous ayez déjà présenté une réclamation en lien avec votre vol touché par une perturbation d’exploitation (numéro de réclamation: <b class=\"red\">{{ caseNum }}</b>). <br/><br/> Notre système ne peut accepter une deuxième réclamation pour les mêmes segments de vol et passagers. <br/><br/> Si vous souhaitez nous faire part de renseignements supplémentaires, veuillez répondre au courriel que vous avez reçu comme suite à votre réclamation initiale.",
+        "TITLE": "Demande de remboursement en double",
+        "TEXT2": "En savoir plus sur l'éligibilité aux |perturbations de vol|."
+      },
+      "UNABLEDETERMINATION": {
+        "TITLE": "Détermination impossible",
+        "TEXT": "Nous vous remercions d’avoir fourni les renseignements concernant votre réservation. Malheureusement, notre outil d’autoévaluation ne peut déterminer si vous avez droit à une indemnité. <br/><br/> Vous pouvez toujours soumettre une demande en remplissant le <a class=\"btn btn-link btn-blue\" href=\"https://accc-prod.microsoftcrmportals.com/fr-CA/flight-delay-or-cancellation/\" target=\"_blank\">Formulaire de demande d’indemnité pour retard ou annulation de vol</a>. <br/><br/> Veuillez noter que les perturbations d’exploitation peuvent être complexes et avoir plusieurs causes. Les raisons fournies pour la perturbation peuvent changer à mesure que la situation évolue, que de nouveaux problèmes surgissent ou que de nouveaux renseignements sont reçus. <a class=\"btn btn-link btn-blue\" href=\"http://www.aircanada.com/perturbationsexploitation\" target=\"_blank\">Renseignez-vous sur vos droits en cas de perturbation d’exploitation</a>.",
+        "TEXT2": "En savoir plus sur l'éligibilité aux |perturbations de vol|."
+      }
+    },
+    "ACTIONS": {
+      "RETRY": "Réessayer",
+      "SUBMIT": "Soumettre une demande d’indemnité",
+      "SUBMIT_LINK": "https://accc-uatmaster.microsoftcrmportals.com/fr-CA/flight-delay-or-cancellation/"
+    },
+    "ALERT": {
+      "COVID19": "Réglementation spéciale en vigueur depuis le 13 mars 2020 en raison de COVID-19.&nbsp;|Cliquez ici"
+    },
+    "DISRUPTION_REASONS": {
+      "0": "Le vol est retardé et nous nous efforçons de déterminer la cause de ce retard.",
+      "1": "Le vol est retardé en raison de mauvaises conditions météorologiques survenues lors d’un vol antérieur ayant causé l’arrivée tardive de l’appareil qui doit assurer votre vol.<br/><br/>Les mauvaises conditions météorologiques peuvent comprendre les orages, la neige, le brouillard, les nuages à faible altitude ou les rafales.",
+      "2": "Le vol est retardé en raison d’un problème de sécurité survenu lors d’un vol antérieur ayant causé l’arrivée tardive de l’appareil qui doit assurer votre vol.<br/><br/>Les problèmes de sécurité peuvent comprendre le délai nécessaire pour contrôler un client ou un bagage au contrôle de sécurité ou pour traiter un problème de santé à bord de l’appareil.",
+      "3": "Le vol est retardé en raison d’un problème technique survenu lors d’un vol antérieur ayant causé l’arrivée tardive de l’appareil qui doit assurer votre vol.<br/><br/>Les problèmes techniques peuvent comprendre la maintenance des principaux systèmes de l’appareil comme les commandes de vol, les systèmes de navigation ou les circuits hydrauliques.",
+      "4": "Le vol est retardé en raison de contraintes aéroportuaires lors d’un vol antérieur ayant causé l’arrivée tardive de l’appareil qui doit assurer votre vol.<br/><br/>Les contraintes aéroportuaires peuvent comprendre la disponibilité des postes de stationnement, les restrictions causées par un couvre-feu ou la fermeture non prévue d’une piste.",
+      "5": "Le vol est retardé en raison d’un problème d’exploitation survenu lors d’un vol antérieur ayant causé l’arrivée tardive de l’appareil qui doit assurer votre vol.<br/><br/>Les problèmes d’exploitation peuvent comprendre les conflits d’horaires, les décisions d’exploitation ou le décalage d’une correspondance.",
+      "6": "Le vol est retardé en raison du temps additionnel nécessaire pour procéder à l'entretien de l'appareil.<br/><br/>Ce retard peut être dû à un ou plusieurs facteurs, comme la congestion au contrôle de sécurité, les retards d’approvisionnement, la disponibilité des postes de stationnement, le chargement de l’appareil ou l’embarquement plus long que prévu des clients.",
+      "9": "Le vol est retardé en raison du temps additionnel nécessaire pour préparer l’appareil qui doit assurer votre vol.",
+      "11": "Le vol est retardé en raison du temps additionnel nécessaire pour permettre l’enregistrement tardif de clients.",
+      "13": "Le vol est retardé en raison du temps additionnel nécessaire pour le chargement d’articles très volumineux ou qui exigent une manutention spéciale.",
+      "14": "Le vol est retardé en raison du temps additionnel nécessaire pour accueillir à bord tous les clients et terminer le processus d’enregistrement à la porte d’embarquement.",
+      "15": "Le vol est retardé en raison du temps additionnel nécessaire pour accueillir à bord les clients dont la correspondance ou l’arrivée accuse un retard et terminer le processus d’enregistrement à la porte d’embarquement.",
+      "17": "Le vol est retardé en raison du temps additionnel nécessaire pour résoudre un problème de restauration.<br/><br/>Les problèmes de restauration peuvent comprendre la mauvaise quantité de repas par rapport au nombre de passagers à bord de l’avion.",
+      "18": "Le vol est retardé en raison du temps additionnel nécessaire pour permettre le chargement à bord des bagages de clients arrivés tardivement.",
+      "19": "Le vol est retardé en raison du temps additionnel nécessaire pour l’embarquement de clients qui ont des besoins spéciaux.",
+      "25": "Le vol est retardé en raison d’un retard de planification ou de traitement du fret.",
+      "29": "Ce vol est retardé en raison de l’arrivée tardive de passagers.",
+      "31": "Le vol est retardé en raison du temps additionnel nécessaire pour remplir les documents requis avant le départ.",
+      "32": "Le vol est retardé en raison des services au sol qui prennent plus de temps que prévu.<br/><br/>Les services au sol peuvent comprendre la vidange des toilettes, le ravitaillement en eau potable, le chargement et le déchargement de l’appareil ou les dispositions nécessaires à l’entretien courant de l’appareil.",
+      "35": "Le vol est retardé en raison du temps additionnel nécessaire pour nettoyer l’appareil.",
+      "36": "Le vol est retardé en raison du temps additionnel nécessaire pour faire le plein de carburant.",
+      "37": "Le vol est retardé en raison d’un problème de restauration qui prend plus de temps que prévu à résoudre.<br/><br/>Les problèmes de restauration peuvent comprendre l’arrivée tardive des repas à bord de l’appareil, une commande inexacte ou un article manquant.",
+      "41": "Le vol est retardé en raison d’un problème de maintenance de l’appareil qui doit être résolu.<br/><br/>Les problèmes de maintenance peuvent comprendre la nécessité d’effectuer des réparations mineures sur un avion ou une inspection de dernière minute.",
+      "42": "Le vol est retardé en raison d’un problème de maintenance programmée de l’appareil qui prend plus de temps que prévu à résoudre.",
+      "43": "Le vol est retardé en raison d’un problème de maintenance non programmée de l’appareil qui doit être résolu.<br/><br/>Les problèmes de maintenance non programmée peuvent comprendre la réparation d’un siège inutilisable, d’une console du système de divertissements ou d’un autre élément à bord de l’appareil.",
+      "44": "Le vol est retardé en raison d’un problème technique imprévu avec le matériel de maintenance requis à bord.",
+      "45": "Le vol est retardé en raison de l’arrivée tardive de pièces de maintenance ou du matériel requis à bord.",
+      "46": "Le vol est retardé en raison du temps additionnel nécessaire pour remplacer l’appareil.<br/><br/>En raison d’un problème de maintenance imprévu, il se peut que l’appareil assurant votre vol a dû être substitué et l’arrivée de l’appareil de remplacement a pris plus de temps que prévu.",
+      "47": "Le vol est retardé parce qu'il n'y a pas d’appareil disponible.<br/><br/>En raison d’un problème de maintenance imprévu, l’appareil qui assure votre vol n’a peut-être pas pu se rendre à la destination exacte et l’arrivée de l’appareil de remplacement a pris plus de temps que prévu.",
+      "48": "Ce vol est retardé en raison d’un changement de configuration de la cabine nous obligeant à assigner de nouvelles places à certains clients.",
+      "51": "Le vol est retardé en raison du temps additionnel nécessaire pour effectuer une réparation imprévue à la cabine ou à l’extérieur de l’appareil.",
+      "52": "Le vol est retardé en raison du temps additionnel nécessaire pour effectuer une réparation imprévue à bord de l’appareil.",
+      "56": "Le vol est retardé en raison d’un problème avec les documents du fret requis pour le vol.",
+      "58": "Le vol est retardé en raison d’un problème informatique imprévu de l’un de nos fournisseurs qui a une incidence sur nos activités.<br/><br/>Les problèmes informatiques peuvent comprendre une panne Internet touchant les ordinateurs de l’aérogare.",
+      "61": "Le vol est retardé en raison du temps additionnel dont a besoin le contrôle de la circulation aérienne pour revoir le plan de vol.",
+      "62": "Le vol est retardé en raison du temps additionnel nécessaire pour préparer le plan de vol exploitation, ce qui peut signifier que l’appareil a besoin de carburant ou que du fret doit être retiré.",
+      "63": "Le vol est retardé en raison du temps additionnel nécessaire pour la préparation des pilotes.",
+      "64": "Le vol est retardé en raison du temps additionnel nécessaire pour résoudre des problèmes de disponibilité des pilotes.",
+      "65": "Le vol est retardé en raison du temps additionnel nécessaire pour répondre à une demande des pilotes.<br/><br/>Les demandes de pilotes peuvent comprendre un contrôle de l’appareil par la Maintenance, des articles supplémentaires pour le personnel de cabine ou une réserve de carburant.",
+      "66": "Le vol est retardé en raison du temps additionnel nécessaire au personnel de cabine pour terminer les procédures d’embarquement et préparer l’appareil pour le décollage.",
+      "67": "Le vol est retardé en raison du temps additionnel dont a besoin le personnel de cabine.",
+      "68": "Le vol est retardé en raison du temps additionnel dont a besoin le personnel de cabine pour terminer la procédure d’embarquement et préparer l’appareil pour le décollage.<br/><br/>Les problèmes peuvent comprendre les vérifications additionnelles nécessaires pour s’assurer que tous les éléments de restauration sont à bord de l’appareil ou le temps additionnel dont a besoin le personnel de cabine pour résoudre une anomalie cabine.",
+      "69": "Le vol est retardé en raison du temps additionnel nécessaire pour effectuer un contrôle de sécurité à bord de l’appareil.",
+      "71": "Le vol est retardé en raison de mauvaises conditions météorologiques à l’aéroport de départ.<br/><br/>Les mauvaises conditions météorologiques peuvent comprendre les orages, la neige, le brouillard, les nuages à faible altitude ou les rafales.",
+      "72": "Le vol est retardé en raison de mauvaises conditions météorologiques à l’aéroport de destination.<br/><br/>Les mauvaises conditions météorologiques peuvent comprendre les orages, la neige, le brouillard, les nuages à faible altitude ou les rafales.",
+      "73": "Le vol est retardé en raison de mauvaises conditions météorologiques qui ont une incidence sur la trajectoire de vol.<br/><br/>Les mauvaises conditions météorologiques peuvent comprendre les orages, la neige, le brouillard, les nuages à faible altitude ou les rafales.",
+      "75": "Le vol est retardé en raison des exigences de dégivrage.<br/><br/>Le dégivrage est une procédure normalisée qui consiste à retirer la neige ou le givre à l’extérieur de l’appareil en toute sécurité.",
+      "76": "Le vol est retardé en raison de mauvaises conditions météorologiques qui ralentissent les activités de l’aéroport.<br/><br/>Les mauvaises conditions météorologiques peuvent comprendre la neige, la glace, l’eau ou le sable sur la piste ou ailleurs sur les terrains de l’aéroport.",
+      "77": "Le vol est retardé en raison de mauvaises conditions météorologiques qui ont une incidence sur les services au sol.<br/><br/>Les mauvaises conditions météorologiques peuvent comprendre les orages, la neige, le brouillard, les nuages à faible altitude ou les rafales.",
+      "81": "Le vol est retardé en raison de mauvaises conditions météorologiques en route qui contribuent aux contraintes entravant la circulation aérienne et au ralentissement du traitement.<br/><br/>Les mauvaises conditions météorologiques peuvent comprendre les orages, la neige, le brouillard, les nuages à faible altitude ou les rafales.",
+      "82": "Le vol est retardé en raison de contraintes liées au contrôle de la circulation aérienne qui entraînent un ralentissement de traitement.<br/><br/>Les contraintes liées au contrôle de la circulation aérienne peuvent comprendre les limitations ayant trait au personnel ou les problèmes avec le matériel.",
+      "83": "Le vol est retardé en raison de contraintes liées au contrôle de la circulation aérienne à l’aéroport de destination qui entraînent un ralentissement du traitement.<br/><br/>Les contraintes liées au contrôle de la circulation aérienne peuvent comprendre les limitations ayant trait au personnel ou les problèmes avec le matériel.",
+      "84": "Le vol est retardé en raison de mauvaises conditions météorologiques à l’aéroport de destination.<br/><br/>Les mauvaises conditions météorologiques peuvent comprendre les orages, la neige, le brouillard, les nuages à faible altitude ou les rafales.",
+      "85": "Votre vol est retardé puisque les processus de sécurité prennent plus de temps que prévu.<br/><br/>Cela peut se produire si des passagers arrivent en retard, si des bagages doivent être retirés de la soute en raison de correspondances manquées ou s’il y a de longues files d’attente dans les zones de contrôle de l’aéroport.",
+      "86": "Le vol est retardé en raison du temps additionnel nécessaire pour s’assurer du respect des restrictions gouvernementales ou réglementaires.<br/><br/>Ces restrictions peuvent comprendre la décision d’un pays de restreindre la circulation dans les voies aériennes, ce qui cause des temps de vol prolongés, des exigences d’entrée gouvernementales qui augmentent le délai de traitement à la douane ou des développements politiques à l'échelle locale qui ont des répercussions sur notre exploitation.",
+      "87": "Le vol est retardé en raison de limitations liées à l’aéroport.<br/><br/>Les limitations liées à l’aéroport peuvent comprendre un problème technique avec la passerelle d’embarquement, le système de bagages ou le poste de stationnement.",
+      "88": "Le vol est retardé en raison de restrictions liées à l’aéroport de destination.<br/><br/>Les restrictions liées à l’aéroport peuvent comprendre les limitations ayant trait au personnel de l’aéroport, un couvre-feu aéroportuaire ou des contraintes visant à réduire le bruit.",
+      "89": "Le vol est retardé en raison de restrictions liées à l’aéroport de départ.<br/><br/>Les restrictions liées à l’aéroport peuvent comprendre les limitations ayant trait au personnel de l’aéroport, un couvre-feu aéroportuaire ou des contraintes visant à réduire le bruit.",
+      "93": "Le vol est retardé en raison de contraintes opérationnelles imprévues à l’aéroport lors d’un vol antérieur ayant causé l’arrivée tardive de l’appareil qui doit assurer votre vol.<br/><br/>Les contraintes opérationnelles à l’aéroport peuvent comprendre la congestion sur l’aire de trafic, la disponibilité des postes de stationnement ou un problème technique lié au poste de stationnement.",
+      "96": "Le vol est retardé en raison de la non-disponibilité de l’appareil.<br/><br/>Les problèmes de disponibilité des appareils peuvent comprendre le réacheminement d’un appareil ou le besoin d’un plus gros appareil, ce qui augmente le temps de préparation.",
+      "97": "Le vol est retardé en raison d’un conflit de travail qui ralentit nos activités.",
+      "98": "Le vol est retardé en raison d’un conflit de travail externe touchant l’un de nos fournisseurs, ce qui ralentit nos activités.",
+      "99": "Le vol est retardé en raison du temps additionnel nécessaire pour tracter l’appareil jusqu’au poste de stationnement.",
+      "FDA": "Nous sommes désolés, ce vol est annulé en raison de contraintes imposées par le contrôle de la circulation aérienne.",
+      "ANH": "Nous sommes désolés, ce vol est annulé en raison de limitations à l’aéroport d’arrivée.",
+      "SKD": "Nous sommes désolés, ce vol est annulé en raison de la disponibilité du matériel.",
+      "SOP": "Nous sommes désolés, ce vol est annulé en raison de la disponibilité du matériel.",
+      "SOM": "Nous sommes désolés, ce vol est annulé en raison de la disponibilité du matériel.",
+      "EQI": "Nous sommes désolés, ce vol est annulé en raison de la disponibilité du matériel.",
+      "ANF": "Nous sommes désolés, ce vol est annulé en raison d’un manque de carburant.",
+      "ACS": "Nous sommes désolés, ce vol est annulé en raison d’un contrôle de sécurité de l’appareil entrant.",
+      "ANA": "Nous sommes désolés, ce vol est annulé en raison de la maintenance de l’appareil.",
+      "MTC": "Nous sommes désolés, ce vol est annulé en raison de la maintenance de l’appareil.",
+      "DMT": "Nous sommes désolés, ce vol est annulé en raison d’un d’un problème technique touchant l’appareil entrant.",
+      "SEC": "Nous sommes désolés, ce vol est annulé en raison de l’instabilité politique.",
+      "SOT": "Nous sommes désolés, ce vol est annulé en raison d’un conflit de travail.",
+      "WXX": "Nous sommes désolés, ce vol est annulé en raison des conditions météorologiques.",
+      "FOC": "Nous sommes désolés, ce vol est annulé en raison de restrictions d’équipage.",
+      "HOLI": "Nous sommes désolés, le vol est annulé en raison d’un jour férié dans le pays de départ ou de destination.",
+      "AIRS": "Nous sommes désolés, le vol est annulé en raison de contraintes liées au contrôle de la circulation aérienne.<br/><br/>Ces contraintes peuvent comprendre un grand nombre d’appareils dans le même espace aérien, les problèmes de dotation en personnel entraînant une réduction de la circulation, ou un problème informatique touchant les systèmes de contrôle de la circulation aérienne.",
+      "ARPT": "Nous sommes vraiment désolés : le vol est annulé en raison de limitations liées à l’aéroport de destination.<br/><br/>Par limitations liées à l’aéroport, on entend notamment les contraintes relatives aux installations comme le poste de stationnement, les voies de circulation ou le bâtiment de l’aéroport lui-même.",
+      "COMM": "Nous sommes désolés, le vol est annulé en raison de contraintes commerciales ou opérationnelles imprévues qui ont eu une incidence sur notre horaire de vols.",
+      "CREW": "Nous sommes désolés, le vol est annulé en raison de contraintes liées à l’équipage.<br/><br/>Par contraintes relatives à l'équipage, on entend notamment les membres du personnel de cabine qui ont atteint le nombre maximal d'heures que la loi permet d'effectuer dans une journée.",
+      "DAMA": "Nous sommes désolés, le vol est annulé en raison de la maintenance imprévue de l’appareil.",
+      "EQUI": "Nous sommes désolés, le vol est annulé en raison de la non-disponibilité du matériel.",
+      "FUEL": "Nous sommes désolés, le vol est annulé en raison d’une pénurie de carburant.<br/><br/>Une pénurie de carburant peut être imputable à l’interruption de la chaîne d’approvisionnement ou à la contamination possible du carburant.",
+      "HDLG": "Nous sommes désolés, le vol est annulé en raison de contraintes liées aux services au sol.<br/><br/>Les contraintes liées aux services au sol peuvent comprendre le manque de matériel de piste pour permettre au vol de partir.",
+      "INDU": "Nous sommes désolés, le vol est annulé en raison de contraintes imprévues liées à un partenaire externe.<br/><br/>Ces contraintes peuvent comprendre un problème informatique ou un conflit de travail externe qui nous empêche de gérer le vol adéquatement.",
+      "OPER": "Nous sommes désolés, le vol est annulé en raison de la non-disponibilité de l’appareil devant assurer le vol.",
+      "PERF": "Nous sommes désolés, le vol est annulé en raison d’un problème imprévu avec la maintenance de l’appareil.<br/><br/>Les problèmes de maintenance imprévus peuvent comprendre une maintenance nécessaire récemment détectée touchant les systèmes principaux de l’appareil comme les commandes de vol, les systèmes de navigation ou les circuits hydrauliques.",
+      "POLI": "Nous sommes désolés, le vol est annulé en raison de restrictions gouvernementales ou réglementaires indépendantes de notre volonté.<br/><br/>Ces restrictions peuvent comprendre des restrictions de voyage, des problèmes de sécurité, de santé ou à la douane ou des développements politiques à l'échelle locale qui ont des répercussions sur notre exploitation.",
+      "POSI": "Nous sommes désolés, le vol est annulé en raison de la non-disponibilité de l’appareil devant assurer le vol.",
+      "REPO": "Nous sommes désolés, le vol est annulé en raison de la non-disponibilité de l’appareil devant assurer le vol.",
+      "ROTA": "Nous sommes désolés, le vol est annulé en raison de la non-disponibilité de l’appareil devant assurer le vol.",
+      "RTNS": "Nous sommes désolés, le vol est annulé en raison de la non-disponibilité de l’appareil devant assurer le vol.",
+      "RUNW": "Nous sommes désolés, le vol est annulé en raison des restrictions liées aux pistes qui limitent le nombre de vols pouvant décoller ou atterrir.<br/><br/>Ces restrictions peuvent comprendre l’entretien, les travaux de resurfaçage ou les débris causés par les conditions météorologiques.",
+      "TECH": "Nous sommes désolés, le vol est annulé en raison de problèmes techniques survenus lors d’un vol antérieur. Par conséquent, l’appareil devant assurer le vol n’est pas disponible.<br/><br/>Les problèmes techniques peuvent comprendre tout ce qui touche les systèmes principaux de l’appareil comme les commandes de vol, les systèmes de navigation ou les circuits hydrauliques.",
+      "WEAT": "Nous sommes désolés, le vol est annulé en raison de mauvaises conditions météorologiques qui ont touché l’aéroport de départ ou de destination ou la trajectoire de vol.<br/><br/>Les mauvaises conditions météorologiques peuvent comprendre les orages, la neige, le brouillard, les nuages à faible altitude ou les rafales.",
+      "TITLE": "Raison(s) officielle(s) de la perturbation d’exploitation :"
+    },
+    "INTRO": "Remplissez le formulaire ci-dessous pour savoir si vous êtes admissible à une indemnité pour perturbation d’exploitation. Une perturbation d’exploitation est un retard important ou une annulation. Vous pouvez en savoir plus sur la réglementation sur notre page sur |les perturbations de vol|.",
+    "POLICY": "Politique sur les perturbations d’exploitation",
+    "POLICY_LINK": "https://www.aircanada.com/ca/fr/aco/home/fly/flight-information/flight-disruptions.html",
+    "INSTRUCTIONS": {
+      "BOOKING_NUMBER": "Saisir le |numéro de réservation| de la réservation initiale (exemple: CBA312)<br>ou saisir le |numéro de billet| de la réservation initiale ou de votre carte d’accès à bord (exemple: 0141234567890)",
+      "NAME": "Saisir le <strong>nom</strong> tel qu'il figure sur la réservation initiale (exemple : Catherine Tremblay, et non Cat Tremblay)",
+      "DEPT_DATE": "Indiquez la <strong>date de départ</strong> initiale du vol qui fait l’objet du retard ou de l’annulation",
+      "ENTER_TICKET_NUMBER": "Please enter the |ticket number| from the original reservation or your boarding pass (example: 0141234567890)."
+    },
+    "FIND_BOOKING": {
+      "TITLE": "Qu’est-ce qu’un numéro de réservation?",
+      "BODY": "Votre numéro de réservation (ou numéro du dossier) est une suite alphanumérique de six caractères qui sert à désigner uniquement votre réservation. Vous le trouverez sur l’itinéraire-reçu que vous avez obtenu après avoir effectué votre réservation.",
+      "CAPTION": "Information sur le numéro de réservation"
+    },
+    "FIND_TICKET": {
+      "TITLE": "Qu’est-ce qu’un numéro de billet?",
+      "BODY": "Votre numéro de billet (ou billet électronique) est une suite de chiffres qui sert à désigner uniquement votre numéro de réservation. Vous le trouverez sur la carte d’accès à bord que vous avez reçue après avoir effectué votre enregistrement.",
+      "CAPTION": "Information sur le numéro de billet"
+    },
+    "ERROR": {
+      "GENERAL": {
+        "TITLE": "Une erreur de serveur interne s’est produite",
+        "TEXT": "Une erreur s’est produite pendant le traitement de votre demande. L’équipe de soutien d’<a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/fr/aco/home.html\" target=\"_blank\">aircanada.com</a> a été avisée du problème.<br>Si vous croyez disposer d’autres renseignements utiles, veuillez communiquer avec le <a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/fr/aco/home/fly/customer-support/contact-us.html\" target=\"_blank\">Soutien au client</a>."
+      },
+      "CONNECTIVITY": {
+        "TITLE": "Une erreur de connexion s’est produite",
+        "TEXT": "Une erreur s’est produite lors de la tentative de connexion au serveur. L’équipe de soutien d’<a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/fr/aco/home.html\" target=\"_blank\">aircanada.com</a> a été avisée du problème.<br>Si vous croyez disposer d’autres renseignements utiles, veuillez communiquer avec le <a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/fr/aco/home/fly/customer-support/contact-us.html\" target=\"_blank\">Soutien au client</a>."
+      },
+      "HOMEPAGE": "Page d'accueil",
+      "RETRY": "Réessayer"
+    }
+  },
+  "SSET_V2": {
+    "ASSESSMENT": {
+      "BACK_TO_CLAIM": "Retourner à la demande",
+      "BACK_TO_EXPENSES": "Retourner aux dépenses",
+      "BACK_TO_EXPENSES_FOR_JOURNEY": "Retourner aux dépenses pour la demande",
+      "BACK_TO_FLIGHT_DETAILS": "Retourner aux renseignements sur le vol",
+      "BACK_TO_HOME": "Reprendre au début du formulaire",
+      "BACK_TO_PASSENGER_DETAILS": "Retourner aux renseignements sur les passagers",
+      "BACK_TO_REVIEW_EXPENSES": "Retourner à l’examen des dépenses",
+      "CANCEL": "Annuler",
+      "CONTINUE_TO_EXPENSES": "Passer aux dépenses",
+      "CONTINUE_TO_FLIGHT_DETAILS": "Aller aux renseignements sur le vol",
+      "CONTINUE_TO_PASSENGER_DETAILS": "Aller aux renseignements sur les passagers",
+      "CONTINUE_TO_JOURNEY": "Continuer à l’étape du voyage",
+      "EXPENSES": "Dépenses",
+      "EXPENSES_ONLY": "DÉPENSES SEULEMENT",
+      "EXPENSE_DETAILS": {
+        "ADD_EXPENSE": "Ajouter une dépense",
+        "ADD_EXPENSE_MODAL": {
+          "ADD_THIS_EXPENSE": "Ajouter cette dépense",
+          "AMOUNT_HELP": "Veuillez inclure toutes les taxes.",
+          "AMOUNT": "Montant",
+          "CHECK_IN_DATE": "Date d’arrivée",
+          "CHECK_OUT_DATE": "Date de départ",
+          "CURRENCY": "Monnaie",
+          "DATE_HELP": "Veuillez entrer la date au format suivant : AAAA-MM-JJ.",
+          "DELETE_EXPENSE": "Supprimer la dépense",
+          "DISCARD": "Supprimer",
+          "DISRUPTION_CITY": "Code de l’aéroport où s’est produite la perturbation d’exploitation",
+          "DISRUPTION_CITY_HELP": "Veuillez noter que l’aéroport sélectionné ne peut correspondre à l’aéroport de destination pour ce voyage.",
+          "ERRORS": {
+            "AMOUNT_MAX_VALIDATION": "La somme que vous avez entrée est trop élevée. Veuillez réessayer.",
+            "AMOUNT_MIN_VALIDATION": "Please enter an amount of at least $0.01.",
+            "AMOUNT_REQUIRED": "Veuillez entrer un montant.",
+            "AMOUNT_VALIDATION": "Your amount needs to be entered in this format: 0.00.",
+            "CURRENCY_REQUIRED": "Veuillez sélectionner la monnaie pour ce montant.",
+            "DISRUPTION_CITY_REQUIRED": "Veuillez indiquer à quel aéroport s’est produite la perturbation d’exploitation.",
+            "DISRUPTION_CITY_VALID": "Veuillez entrer un nom d’aéroport valide ou faire votre sélection dans la liste déroulante.",
+            "EXPENSE_TYPE_REQUIRED": "Veuillez sélectionner un type de dépense.",
+            "MEAL_TYPE_REQUIRED": "Veuillez sélectionner un type de repas.",
+            "RECEIPT_INVALID": "Veuillez vous assurer que votre fichier est dans l’un des formats suivants : .PNG, .JPG, .PDF (taille maximale de 5 Mo).",
+            "RECEIPT_MAXLENGTH": "Veuillez téléverser un seul reçu par dépense.",
+            "RECEIPT_MAXSIZE": "La taille du fichier ne doit pas excéder 5 Mo.",
+            "RECEIPT_NOT_UPLOADED": "Votre dossier n’a pas été téléversé. Veuillez essayer de nouveau.",
+            "RECEIPT_REQUIRED": "Veuillez joindre un reçu pour cette dépense.",
+            "TRANSPORTATION_TYPE_REQUIRED": "Veuillez sélectionner un type de transport."
+          },
+          "REPLACE": "Remplacer",
+          "RECEIPT_HELPER": "Veillez à joindre les reçus pour toutes les dépenses ajoutées afin de nous permettre d’évaluer adéquatement la demande. Formats de fichier acceptés : .PNG, .JPG et .PDF (taille maximale de 5 Mo).",
+          "RECEIPT_DRAG_DROP": "Glissez-déposez ici un reçu ou",
+          "RECEIPT_BROWSE": "parcourez des fichiers.",
+          "SAVE_CHANGES": "Enregistrer les changements",
+          "TITLE": "Veuillez ajouter toutes les dépenses dont vous souhaitez demander le remboursement pour cette perturbation.",
+          "TRANSACTION_DATE_REQUIRED": "Veuillez sélectionner la date de transaction.",
+          "TRANSACTION_DATE": "Date de la transaction",
+          "TYPE_OF_EXPENSE": "Type de dépense",
+          "TYPE_OF_MEAL": "Type de repas",
+          "TYPE_OF_TRANSPORTATION": "Type de transport",
+          "YYYY/MM/DD": "AAAA-MM-JJ"
+        },
+        "CONFIRMATION_DIALOG": {
+          "TITLE": "Continuer sans ajout de vol?",
+          "TEXT": "Vous n’avez pas ajouté de dossier d’indemnité pour perturbation de vol à votre demande. Voulez-vous continuer?"
+        },
+        "DUPLICATE_EXPENSE": {
+          "TEXT": "Il semble que vous ayez déjà soumis une demande pour le remboursement de vos dépenses (numéro de demande : <b class=\"red\">{{ caseNum }}</b>). <br/><br/>Notre système ne peut accepter une nouvelle demande après que vous en avez déjà soumis une pour les mêmes segments de vol et les mêmes passagers. <br/><br/> Si vous souhaitez nous faire part de renseignements supplémentaires, veuillez répondre au courriel que vous avez reçu comme suite à votre réclamation initiale.",
+          "TITLE": "Demande déjà soumise"
+        },
+        "ELIGIBLE": {
+          "TEXT": "Veuillez noter que les dépenses ne seront prises en compte que pour la ville touchée par la perturbation d’exploitation.",
+          "TITLE": "La demande pourrait être admissible au remboursement des dépenses."
+        },
+        "ELIGIBLE_EXPENSE": {
+          "TEXT": "Même si vous n’êtes <b>pas admissible</b> à une indemnité pour le vol, vous pouvez tout de même soumettre des dépenses pour que nous les examinions.",
+          "TITLE": "La demande pourrait être admissible au remboursement des dépenses."
+        },
+        "NOT_ELIGIBLE_EXPENSE": {
+          "TEXT": "Malheureusement, notre outil d’autoévaluation a déterminé que vous n’êtes <b>pas admissible</b> au remboursement des dépenses.",
+          "TITLE": "Non admissible au remboursement des dépenses."
+        },
+        "INFO": "Les demandes suivantes relatives à la perturbation d’exploitation pourraient être admissibles à un remboursement des dépenses engagées pour se procurer de la nourriture et des boissons, des moyens de communication et un hébergement à l’aéroport concerné.",
+        "NIGHT": "nuitée(s)",
+        "NIGHTS": "nuitée(s)",
+        "NO_EXPENSES": "Aucune dépense n’a été ajoutée.",
+        "SUMMARY_OF_EXPENSES": "Sommaire des dépenses",
+        "SUMMARY_OF_EXPENSES_FOR_JOURNEY": "Sommaire des dépenses pour le voyage"
+      },
+      "FLIGHT_ADDED": {
+        "BOOKING_REFERENCE": "Numéro de réservation:",
+        "TICKET_NUMBER": "Numéro de billet:"
+      },
+      "FLIGHT_DETAILS": "Renseignements sur le vol",
+      "FLIGHT_DETAILS_FORM": {
+        "ARRIVAL_AIRPORT": "Aéroport d’arrivée",
+        "ARRIVAL_AIRPORT_HELP": "Sélectionnez un aéroport d’arrivée valide.",
+        "ARRIVAL_AIRPORT_REQUIRED": "L’aéroport d’arrivée est requis.",
+        "BOOKING_REFERENCE": "Numéro de réservation",
+        "BOOKING_REFERENCE_ERROR": "Un numéro de réservation valide se compose uniquement de lettres et de chiffres.",
+        "BOOKING_REFERENCE_HELP": "Exemple : CBA321",
+        "BOOKING_REFERENCE_OPTIONAL": "Numéro de réservation (facultatif)",
+        "BTN_ADD": "Ajouter le vol à la demande",
+        "DEPARTURE_AIRPORT": "Aéroport de départ",
+        "DEPARTURE_AIRPORT_HELP": "Sélectionnez un aéroport de départ valide.",
+        "DEPARTURE_AIRPORT_REQUIRED": "L’aéroport de départ est requis.",
+        "FLIGHT_DEPARTURE_DATE": "Date de départ du vol",
+        "FLIGHT_DEPARTURE_DATE_HELP": "La date doit être valide (AAAA-MM-JJ)",
+        "FLIGHT_DEPARTURE_DATE_REQUIRED": "La date de départ du vol est requise.",
+        "FLIGHT_DISRUPTION": "En savoir plus sur l'éligibilité aux perturbations de vol.",
+        "FLIGHT_NUMBER": "Numéro de vol",
+        "FLIGHT_NUMBER_ERROR": "Le numéro de vol doit être valide (p. ex., 55 ou 0055).",
+        "FLIGHT_NUMBER_HELP": "Exemple: 55 ou 0055",
+        "FLIGHT_NUMBER_REQUIRED": "Le numéro de vol est requis.",
+        "TICKET_NUMBER": "Numéro de billet",
+        "TICKET_NUMBER_INSTRUCTION": "Qu’est-ce qu’un numéro de billet?",
+        "YYYY/MM/DD": "AAAA-MM-JJ"
+      },
+      "FLIGHT_DETAILS_INFO": {
+        "DUPLICATE_CLAIM_1": "It appears you have already submitted claims for the journeys below. Your claims may still be under review.",
+        "DUPLICATE_CLAIM_2": "Reference Numbers:",
+        "DUPLICATE_CLAIM_3": "Note that these reference numbers are for this passenger only. Other passengers that have a claim for this journey will have their own reference numbers.",
+        "NODATA": "Veuillez entrer les renseignements sur le vol perturbé. Soumettez ce formulaire uniquement si vous êtes arrivé à votre destination finale trois heures ou plus après l’heure d’arrivée prévue."
+      },
+      "FLIGHT_DISRUPTION": "PERTURBATION D’EXPLOITATION SEULEMENT",
+      "FLIGHT_DISRUPTION_EXPENSES": "PERTURBATION D’EXPLOITATION ET DÉPENSES",
+      "ITINERARY": {
+        "ADD_TO_CLAIM": "Ajouter à la demande",
+        "ADDED_TO_CLAIM": "Ajouté à la demande",
+        "REMOVE_FROM_CLAIM": "Retirer de la demande"
+      },
+      "ITINERARY_INFO": "Vous trouverez ci-dessous les détails de la réservation <b>initiale</b> et votre admissibilité. Les renseignements sur le vol affichés peuvent différer de l’itinéraire de votre voyage.",
+      "PASSENGER_DETAILS": "Renseignements sur les passagers",
+      "PASSENGER_DETAILS_FORM": {
+        "ACKNOWLEDGEMENT": "Attestation",
+        "ACKNOWLEDGEMENT_CONFIRM": "Je comprends que tous les passagers ajoutés à cette demande seront indemnisés séparément pour les réclamations relatives à la perturbation d’exploitation.",
+        "ADD_PASSENGER": "Ajouter un passager",
+        "ADDITIONAL_PASSENGERS": "Passagers additionnels",
+        "ADDITIONAL_PASSENGERS_DESC": "Nos dossiers indiquent que les passagers additionnels suivants ont suivi cet itinéraire et pourraient avoir droit à une indemnité s’ils sont ajoutés à cette demande.",
+        "ADDITIONAL_PASSENGERS_DESC_ADD": "Les passagers supplémentaires qui ont pris part à ce voyage pourraient avoir droit à une indemnité s’ils sont ajoutés à la réclamation. Vous pouvez ajouter jusqu’à quatre passagers supplémentaires.",
+        "ADDRESS": "Adresse",
+        "AEROPLAN_STATUS": "Statut Aéroplan ou Star Alliance",
+        "ALT_PHONE_NO": "Autre numéro de téléphone (facultatif)",
+        "CITY": "Ville",
+        "CONFIRM_EMAIL_ADDRESS": "Confirmer l'adresse électronique",
+        "CONTACT_INFO": "Coordonnées",
+        "COUNTRY": "Pays/région",
+        "EMAIL_ADDRESS": "Adresse électronique",
+        "ENTER_DETAILS_FOR_PASSENGER": "Entrez les renseignements pour <b>{{firstName}} {{lastName}}</b>",
+        "ERRORS": {
+          "ACKNOWLEDGEMENT_REQUIRED": "Please acknowledge this statement to continue.",
+          "AEROPLANSTATUS_REQUIRED": "Un statut Aéroplan ou Star Alliance est requis lorsqu’un numéro de programme de fidélisation est fourni.",
+          "CITY_MAXLENGTH": "La ville ne peut contenir plus de 50 caractères.",
+          "CITY_REQUIRED": "La ville est requise.",
+          "CONFIRMEMAILADDRESS_REQUIRED": "Veuillez confirmer votre adresse électronique..",
+          "COUNTRY_REQUIRED": "Le pays est requis.",
+          "EMAIL_MATCH": "Assurez-vous que l’adresse électronique est identique.",
+          "EMAILADDRESS_PATTERN": "L’adresse électronique doit être valide.",
+          "EMAILADDRESS_REQUIRED": "Une adresse électronique est requise.",
+          "FIRSTNAME_MAXLENGTH": "Le prénom ne peut contenir plus de 50 caractères.",
+          "FIRSTNAME_PATTERN": "Le prénom ne peut contenir que des caractères valides.",
+          "FIRSTNAME_REQUIRED": "Un prénom est requis.",
+          "LASTNAME_MAXLENGTH": "Le nom de famille ne peut contenir plus de 50 caractères.",
+          "LASTNAME_PATTERN": "Le nom de famille ne peut contenir que des caractères valides.",
+          "LASTNAME_REQUIRED": "Un nom de famille est requis.",
+          "PERMANENT_MAILING_ADDRESS_MAXLENGTH": "L’adresse postale ne peut contenir plus de 100 caractères.",
+          "PERMANENT_MAILING_ADDRESS_REQUIRED": "Une adresse postale permanente est requise.",
+          "POSTALCODE_MAXLENGTH": "Le code postal ne peut contenir plus de 50 caractères.",
+          "POSTALCODE_PATTERN": "Le code postal doit être valide (p. ex. A1B2C3).",
+          "POSTALCODE_REQUIRED": "Le code postal est requis.",
+          "PRIMARY_PHONE_NUMBER": "Le numéro de téléphone doit être valide.",
+          "PRIMARY_PHONE_NUMBER_EXT": "Veuillez entrer un numéro de poste valide.",
+          "PRIMARY_PHONE_NUMBER_PATTERN": "Le numéro de téléphone doit être valide.",
+          "PRIMARY_PHONE_NUMBER_REQUIRED": "Le numéro de téléphone principal est requis.",
+          "PROVINCE_MAXLENGTH": "La province ne peut contenir plus de 50 caractères.",
+          "PROVINCE_REQUIRED": "La province est requise.",
+          "TITLE_REQUIRED": "Le titre est requis.",
+          "ZIPCODE_MAXLENGTH": "Le code ZIP ne peut contenir plus de 50 caractères.",
+          "ZIPCODE_PATTERN": "Le code ZIP doit être valide (p. ex. 12345).",
+          "ZIPCODE_REQUIRED": "Le code ZIP est requis."
+        },
+        "EXT": "Poste (facultatif)",
+        "FIRST_NAME": "Prénom",
+        "FIRST_NAME_REQUIRED": "Un prénom est requis.",
+        "FREQ_FLYER_NO": "Numéro de programme de fidélisation (facultatif)",
+        "INFO": "Veuillez entrer les renseignements sur le passager qui présente cette demande.",
+        "INPUT_HELPER_1": "Tel qu’il figure sur la réservation initiale",
+        "LAST_NAME": "Nom",
+        "MAILING_ADDRESS_HELPER": "Y compris le nom de rue et le numéro d’appartement ou la case postale",
+        "PERMANENT_MAILING_ADDRESS": "Adresse postale permanente",
+        "PERMISSIONS_CONFIRM": "J’ai l’autorisation d’agir au nom de tous les passagers sélectionnés pour cette demande.",
+        "POSTAL_CODE": "Code postal",
+        "PRIMARY_PHONE_NUMBER": "Numéro de téléphone principal",
+        "PROVINCE": "Province/État",
+        "REMOVE_PASSENGER": "Retirer ce passager",
+        "TITLE": "Titre",
+        "USE_THE_SAME_ADDRESS_CONTACT": "On peut utiliser les mêmes coordonnées que celles du passager qui présente cette demande.",
+        "USE_THE_SAME_ADDRESS_CONTACT_TOOLTIP": "Les coordonnées du passager qui présente cette demande seront utilisées pour les communications de suivi et le paiement."
+      },
+      "REVIEW_CLAIM": "Examiner la demande",
+      "REVIEW_CLAIM_PAGE": {
+        "AGREEMENT": "En soumettant ce formulaire, je déclare par la présente que les renseignements fournis sont, à ma connaissance, complets, véridiques et exacts. Je confirme par la présente que je fais cette réclamation en mon nom seulement, ou au nom d’une personne n’ayant pas la capacité ou l’habileté de le faire soi-même. Je comprends que les renseignements fournis peuvent faire l’objet d’un examen et d’une enquête et qu’Air Canada peut rejeter toute réclamation fondée sur des renseignements insuffisants, des données mensongères ou de fausses déclarations. Par la présente, j’autorise Air Canada à demander tout document ou toute déclaration en lien avec cette réclamation auprès de tout tiers concerné, comme une compagnie d’assurance ou un détaillant.",
+        "BOOKING_REF": "Numéro de réservation:",
+        "EXPENSES_FOR_JOURNEY": "Dépenses pour le voyage",
+        "FREQ_FLYER_INFO": "Numéro et statut de programme de fidélisation",
+        "JOURNEY": "Voyage",
+        "PASS_DETAILS": "Renseignements sur les passagers",
+        "REVIEW_TITLE": "Examiner votre demande",
+        "TICKET": "Numéro de billet:"
+      },
+      "REVIEW_EXPENSES": "Examiner",
+      "REVIEW_EXPENSES_PAGE": {
+        "REVIEW_PAGE_TITLE": "Examiner les dépenses",
+        "ACKNOWLEDGEMENT": "Attestation",
+        "ACKNOWLEDGEMENT_UNDERSTANDING": "Je comprends que je demande le remboursement des dépenses au nom de tous les passagers sélectionnés.",
+        "ACKNOWLEDGEMENT_PERMISSION": "J’ai l’autorisation de tous les passagers sélectionnés pour recevoir le remboursement des dépenses soumises en leur nom."
+      },
+      "SKIP_EXPENSES": "Ignorer les dépenses",
+      "SKIP_EXPENSES_FOR_JOURNEY": "Passer l’étape des frais pour le voyage",
+      "SUBMIT_CLAIM": "Soumettre la demande",
+      "TITLE": "Autoévaluation d’indemnité en raison d’une perturbation"
+    },
+    "CONFIRMATION": {
+      "CASE_NUMBER_DESC": "Nous enverrons également les numéros de dossier pour les demandes énumérées ci-dessous à l’adresse électronique du passager qui a présenté la demande.",
+      "CLAIMS": "Renseignements sur la demande",
+      "OTHER_PASSENGER": {
+        "START_BUTTON": "Remplir un nouveau formulaire de demande d’indemnité pour perturbation d’exploitation",
+        "TEXT": "D’autres passagers figuraient-ils sur cette réservation? | Chaque passager doit remplir une demande individuelle."
+      },
+      "THANK_YOU_DESC": "Merci de nous avoir transmis votre demande. Notre équipe évaluera les renseignements fournis, et nous vous communiquerons sa décision dès que possible.",
+      "TITLE": "Demande soumise"
+    },
+    "DISRUPTION_REASONS": {
+      "0": "Le vol est retardé et nous nous efforçons de déterminer la cause de ce retard.",
+      "1": "Le vol est retardé en raison de mauvaises conditions météorologiques survenues lors d’un vol antérieur ayant causé l’arrivée tardive de l’appareil qui doit assurer votre vol.<br/><br/>Les mauvaises conditions météorologiques peuvent comprendre les orages, la neige, le brouillard, les nuages à faible altitude ou les rafales.",
+      "2": "Le vol est retardé en raison d’un problème de sécurité survenu lors d’un vol antérieur ayant causé l’arrivée tardive de l’appareil qui doit assurer votre vol.<br/><br/>Les problèmes de sécurité peuvent comprendre le délai nécessaire pour contrôler un client ou un bagage au contrôle de sécurité ou pour traiter un problème de santé à bord de l’appareil.",
+      "3": "Le vol est retardé en raison d’un problème technique survenu lors d’un vol antérieur ayant causé l’arrivée tardive de l’appareil qui doit assurer votre vol.<br/><br/>Les problèmes techniques peuvent comprendre la maintenance des principaux systèmes de l’appareil comme les commandes de vol, les systèmes de navigation ou les circuits hydrauliques.",
+      "4": "Le vol est retardé en raison de contraintes aéroportuaires lors d’un vol antérieur ayant causé l’arrivée tardive de l’appareil qui doit assurer votre vol.<br/><br/>Les contraintes aéroportuaires peuvent comprendre la disponibilité des postes de stationnement, les restrictions causées par un couvre-feu ou la fermeture non prévue d’une piste.",
+      "5": "Le vol est retardé en raison d’un problème d’exploitation survenu lors d’un vol antérieur ayant causé l’arrivée tardive de l’appareil qui doit assurer votre vol.<br/><br/>Les problèmes d’exploitation peuvent comprendre les conflits d’horaires, les décisions d’exploitation ou le décalage d’une correspondance.",
+      "6": "Le vol est retardé en raison du temps additionnel nécessaire pour procéder à l'entretien de l'appareil.<br/><br/>Ce retard peut être dû à un ou plusieurs facteurs, comme la congestion au contrôle de sécurité, les retards d’approvisionnement, la disponibilité des postes de stationnement, le chargement de l’appareil ou l’embarquement plus long que prévu des clients.",
+      "9": "Le vol est retardé en raison du temps additionnel nécessaire pour préparer l’appareil qui doit assurer votre vol.",
+      "11": "Le vol est retardé en raison du temps additionnel nécessaire pour permettre l’enregistrement tardif de clients.",
+      "13": "Le vol est retardé en raison du temps additionnel nécessaire pour le chargement d’articles très volumineux ou qui exigent une manutention spéciale.",
+      "14": "Le vol est retardé en raison du temps additionnel nécessaire pour accueillir à bord tous les clients et terminer le processus d’enregistrement à la porte d’embarquement.",
+      "15": "Le vol est retardé en raison du temps additionnel nécessaire pour accueillir à bord les clients dont la correspondance ou l’arrivée accuse un retard et terminer le processus d’enregistrement à la porte d’embarquement.",
+      "17": "Le vol est retardé en raison du temps additionnel nécessaire pour résoudre un problème de restauration.<br/><br/>Les problèmes de restauration peuvent comprendre la mauvaise quantité de repas par rapport au nombre de passagers à bord de l’avion.",
+      "18": "Le vol est retardé en raison du temps additionnel nécessaire pour permettre le chargement à bord des bagages de clients arrivés tardivement.",
+      "19": "Le vol est retardé en raison du temps additionnel nécessaire pour l’embarquement de clients qui ont des besoins spéciaux.",
+      "25": "Le vol est retardé en raison d’un retard de planification ou de traitement du fret.",
+      "29": "Ce vol est retardé en raison de l’arrivée tardive de passagers.",
+      "31": "Le vol est retardé en raison du temps additionnel nécessaire pour remplir les documents requis avant le départ.",
+      "32": "Le vol est retardé en raison des services au sol qui prennent plus de temps que prévu.<br/><br/>Les services au sol peuvent comprendre la vidange des toilettes, le ravitaillement en eau potable, le chargement et le déchargement de l’appareil ou les dispositions nécessaires à l’entretien courant de l’appareil.",
+      "35": "Le vol est retardé en raison du temps additionnel nécessaire pour nettoyer l’appareil.",
+      "36": "Le vol est retardé en raison du temps additionnel nécessaire pour faire le plein de carburant.",
+      "37": "Le vol est retardé en raison d’un problème de restauration qui prend plus de temps que prévu à résoudre.<br/><br/>Les problèmes de restauration peuvent comprendre l’arrivée tardive des repas à bord de l’appareil, une commande inexacte ou un article manquant.",
+      "41": "Le vol est retardé en raison d’un problème de maintenance de l’appareil qui doit être résolu.<br/><br/>Les problèmes de maintenance peuvent comprendre la nécessité d’effectuer des réparations mineures sur un avion ou une inspection de dernière minute.",
+      "42": "Le vol est retardé en raison d’un problème de maintenance programmée de l’appareil qui prend plus de temps que prévu à résoudre.",
+      "43": "Le vol est retardé en raison d’un problème de maintenance non programmée de l’appareil qui doit être résolu.<br/><br/>Les problèmes de maintenance non programmée peuvent comprendre la réparation d’un siège inutilisable, d’une console du système de divertissements ou d’un autre élément à bord de l’appareil.",
+      "44": "Le vol est retardé en raison d’un problème technique imprévu avec le matériel de maintenance requis à bord.",
+      "45": "Le vol est retardé en raison de l’arrivée tardive de pièces de maintenance ou du matériel requis à bord.",
+      "46": "Le vol est retardé en raison du temps additionnel nécessaire pour remplacer l’appareil.<br/><br/>En raison d’un problème de maintenance imprévu, il se peut que l’appareil assurant votre vol a dû être substitué et l’arrivée de l’appareil de remplacement a pris plus de temps que prévu.",
+      "47": "Le vol est retardé parce qu'il n'y a pas d’appareil disponible.<br/><br/>En raison d’un problème de maintenance imprévu, l’appareil qui assure votre vol n’a peut-être pas pu se rendre à la destination exacte et l’arrivée de l’appareil de remplacement a pris plus de temps que prévu.",
+      "48": "Ce vol est retardé en raison d’un changement de configuration de la cabine nous obligeant à assigner de nouvelles places à certains clients.",
+      "51": "Le vol est retardé en raison du temps additionnel nécessaire pour effectuer une réparation imprévue à la cabine ou à l’extérieur de l’appareil.",
+      "52": "Le vol est retardé en raison du temps additionnel nécessaire pour effectuer une réparation imprévue à bord de l’appareil.",
+      "56": "Le vol est retardé en raison d’un problème avec les documents du fret requis pour le vol.",
+      "58": "Le vol est retardé en raison d’un problème informatique imprévu de l’un de nos fournisseurs qui a une incidence sur nos activités.<br/><br/>Les problèmes informatiques peuvent comprendre une panne Internet touchant les ordinateurs de l’aérogare.",
+      "61": "Le vol est retardé en raison du temps additionnel dont a besoin le contrôle de la circulation aérienne pour revoir le plan de vol.",
+      "62": "Le vol est retardé en raison du temps additionnel nécessaire pour préparer le plan de vol exploitation, ce qui peut signifier que l’appareil a besoin de carburant ou que du fret doit être retiré.",
+      "63": "Le vol est retardé en raison du temps additionnel nécessaire pour la préparation des pilotes.",
+      "64": "Le vol est retardé en raison du temps additionnel nécessaire pour résoudre des problèmes de disponibilité des pilotes.",
+      "65": "Le vol est retardé en raison du temps additionnel nécessaire pour répondre à une demande des pilotes.<br/><br/>Les demandes de pilotes peuvent comprendre un contrôle de l’appareil par la Maintenance, des articles supplémentaires pour le personnel de cabine ou une réserve de carburant.",
+      "66": "Le vol est retardé en raison du temps additionnel nécessaire au personnel de cabine pour terminer les procédures d’embarquement et préparer l’appareil pour le décollage.",
+      "67": "Le vol est retardé en raison du temps additionnel dont a besoin le personnel de cabine.",
+      "68": "Le vol est retardé en raison du temps additionnel dont a besoin le personnel de cabine pour terminer la procédure d’embarquement et préparer l’appareil pour le décollage.<br/><br/>Les problèmes peuvent comprendre les vérifications additionnelles nécessaires pour s’assurer que tous les éléments de restauration sont à bord de l’appareil ou le temps additionnel dont a besoin le personnel de cabine pour résoudre une anomalie cabine.",
+      "69": "Le vol est retardé en raison du temps additionnel nécessaire pour effectuer un contrôle de sécurité à bord de l’appareil.",
+      "71": "Le vol est retardé en raison de mauvaises conditions météorologiques à l’aéroport de départ.<br/><br/>Les mauvaises conditions météorologiques peuvent comprendre les orages, la neige, le brouillard, les nuages à faible altitude ou les rafales.",
+      "72": "Le vol est retardé en raison de mauvaises conditions météorologiques à l’aéroport de destination.<br/><br/>Les mauvaises conditions météorologiques peuvent comprendre les orages, la neige, le brouillard, les nuages à faible altitude ou les rafales.",
+      "73": "Le vol est retardé en raison de mauvaises conditions météorologiques qui ont une incidence sur la trajectoire de vol.<br/><br/>Les mauvaises conditions météorologiques peuvent comprendre les orages, la neige, le brouillard, les nuages à faible altitude ou les rafales.",
+      "75": "Le vol est retardé en raison des exigences de dégivrage.<br/><br/>Le dégivrage est une procédure normalisée qui consiste à retirer la neige ou le givre à l’extérieur de l’appareil en toute sécurité.",
+      "76": "Le vol est retardé en raison de mauvaises conditions météorologiques qui ralentissent les activités de l’aéroport.<br/><br/>Les mauvaises conditions météorologiques peuvent comprendre la neige, la glace, l’eau ou le sable sur la piste ou ailleurs sur les terrains de l’aéroport.",
+      "77": "Le vol est retardé en raison de mauvaises conditions météorologiques qui ont une incidence sur les services au sol.<br/><br/>Les mauvaises conditions météorologiques peuvent comprendre les orages, la neige, le brouillard, les nuages à faible altitude ou les rafales.",
+      "81": "Le vol est retardé en raison de mauvaises conditions météorologiques en route qui contribuent aux contraintes entravant la circulation aérienne et au ralentissement du traitement.<br/><br/>Les mauvaises conditions météorologiques peuvent comprendre les orages, la neige, le brouillard, les nuages à faible altitude ou les rafales.",
+      "82": "Le vol est retardé en raison de contraintes liées au contrôle de la circulation aérienne qui entraînent un ralentissement de traitement.<br/><br/>Les contraintes liées au contrôle de la circulation aérienne peuvent comprendre les limitations ayant trait au personnel ou les problèmes avec le matériel.",
+      "83": "Le vol est retardé en raison de contraintes liées au contrôle de la circulation aérienne à l’aéroport de destination qui entraînent un ralentissement du traitement.<br/><br/>Les contraintes liées au contrôle de la circulation aérienne peuvent comprendre les limitations ayant trait au personnel ou les problèmes avec le matériel.",
+      "84": "Le vol est retardé en raison de mauvaises conditions météorologiques à l’aéroport de destination.<br/><br/>Les mauvaises conditions météorologiques peuvent comprendre les orages, la neige, le brouillard, les nuages à faible altitude ou les rafales.",
+      "85": "Votre vol est retardé puisque les processus de sécurité prennent plus de temps que prévu.<br/><br/>Cela peut se produire si des passagers arrivent en retard, si des bagages doivent être retirés de la soute en raison de correspondances manquées ou s’il y a de longues files d’attente dans les zones de contrôle de l’aéroport.",
+      "86": "Le vol est retardé en raison du temps additionnel nécessaire pour s’assurer du respect des restrictions gouvernementales ou réglementaires.<br/><br/>Ces restrictions peuvent comprendre la décision d’un pays de restreindre la circulation dans les voies aériennes, ce qui cause des temps de vol prolongés, des exigences d’entrée gouvernementales qui augmentent le délai de traitement à la douane ou des développements politiques à l'échelle locale qui ont des répercussions sur notre exploitation.",
+      "87": "Le vol est retardé en raison de limitations liées à l’aéroport.<br/><br/>Les limitations liées à l’aéroport peuvent comprendre un problème technique avec la passerelle d’embarquement, le système de bagages ou le poste de stationnement.",
+      "88": "Le vol est retardé en raison de restrictions liées à l’aéroport de destination.<br/><br/>Les restrictions liées à l’aéroport peuvent comprendre les limitations ayant trait au personnel de l’aéroport, un couvre-feu aéroportuaire ou des contraintes visant à réduire le bruit.",
+      "89": "Le vol est retardé en raison de restrictions liées à l’aéroport de départ.<br/><br/>Les restrictions liées à l’aéroport peuvent comprendre les limitations ayant trait au personnel de l’aéroport, un couvre-feu aéroportuaire ou des contraintes visant à réduire le bruit.",
+      "93": "Le vol est retardé en raison de contraintes opérationnelles imprévues à l’aéroport lors d’un vol antérieur ayant causé l’arrivée tardive de l’appareil qui doit assurer votre vol.<br/><br/>Les contraintes opérationnelles à l’aéroport peuvent comprendre la congestion sur l’aire de trafic, la disponibilité des postes de stationnement ou un problème technique lié au poste de stationnement.",
+      "96": "Le vol est retardé en raison de la non-disponibilité de l’appareil.<br/><br/>Les problèmes de disponibilité des appareils peuvent comprendre le réacheminement d’un appareil ou le besoin d’un plus gros appareil, ce qui augmente le temps de préparation.",
+      "97": "Ce vol est retardé en raison d’un conflit de travail qui affecte notre exploitation.<br/><br/>Des conflits de travail peuvent avoir une incidence sur l’horaire des vols avant, pendant et après les périodes d’arrêt de travail ou de ralentissement.",
+      "98": "Ce vol est retardé en raison d’un conflit de travail qui affecte notre exploitation.<br/><br/>Des conflits de travail hors de notre contrôle pourraient avoir une incidence sur l’horaire des vols avant, pendant et après les périodes d’arrêt de travail ou de ralentissement.",
+      "99": "Le vol est retardé en raison du temps additionnel nécessaire pour tracter l’appareil jusqu’au poste de stationnement.",
+      "ACS": "Nous sommes désolés, ce vol est annulé en raison d’un contrôle de sécurité de l’appareil entrant.",
+      "AIRS": "Nous sommes désolés, le vol est annulé en raison de contraintes liées au contrôle de la circulation aérienne.<br/><br/>Ces contraintes peuvent comprendre un grand nombre d’appareils dans le même espace aérien, les problèmes de dotation en personnel entraînant une réduction de la circulation, ou un problème informatique touchant les systèmes de contrôle de la circulation aérienne.",
+      "ANA": "Nous sommes désolés, ce vol est annulé en raison de la maintenance de l’appareil.",
+      "ANF": "Nous sommes désolés, ce vol est annulé en raison d’un manque de carburant.",
+      "ANH": "Nous sommes désolés, ce vol est annulé en raison de limitations à l’aéroport d’arrivée.",
+      "ARPT": "Nous sommes vraiment désolés : le vol est annulé en raison de limitations liées à l’aéroport de destination.<br/><br/>Par limitations liées à l’aéroport, on entend notamment les contraintes relatives aux installations comme le poste de stationnement, les voies de circulation ou le bâtiment de l’aéroport lui-même.",
+      "COMM": "Nous sommes désolés, le vol est annulé en raison de contraintes commerciales ou opérationnelles imprévues qui ont eu une incidence sur notre horaire de vols.",
+      "CREW": "Nous sommes désolés, le vol est annulé en raison de contraintes liées à l’équipage.<br/><br/>Par contraintes relatives à l'équipage, on entend notamment les membres du personnel de cabine qui ont atteint le nombre maximal d'heures que la loi permet d'effectuer dans une journée.",
+      "DAMA": "Nous sommes désolés, le vol est annulé en raison de la maintenance imprévue de l’appareil.",
+      "DMT": "Nous sommes désolés, ce vol est annulé en raison d’un d’un problème technique touchant l’appareil entrant.",
+      "EQI": "Nous sommes désolés, ce vol est annulé en raison de la disponibilité du matériel.",
+      "EQUI": "Nous sommes désolés, le vol est annulé en raison de la non-disponibilité du matériel.",
+      "FDA": "Nous sommes désolés, ce vol est annulé en raison de contraintes imposées par le contrôle de la circulation aérienne.",
+      "FOC": "Nous sommes désolés, ce vol est annulé en raison de restrictions d’équipage.",
+      "FUEL": "Nous sommes désolés, le vol est annulé en raison d’une pénurie de carburant.<br/><br/>Une pénurie de carburant peut être imputable à l’interruption de la chaîne d’approvisionnement ou à la contamination possible du carburant.",
+      "HDLG": "Nous sommes désolés, le vol est annulé en raison de contraintes liées aux services au sol.<br/><br/>Les contraintes liées aux services au sol peuvent comprendre le manque de matériel de piste pour permettre au vol de partir.",
+      "HOLI": "Nous sommes désolés, le vol est annulé en raison d’un jour férié dans le pays de départ ou de destination.",
+      "INDU": "Nous sommes désolés, ce vol a été annulé en raison d’un conflit de travail qui affecte notre exploitation.<br/><br/>Des conflits de travail hors de notre contrôle pourraient avoir une incidence sur l’horaire des vols avant, pendant et après les périodes d’arrêt de travail ou de ralentissement.",
+      "MTC": "Nous sommes désolés, ce vol est annulé en raison de la maintenance de l’appareil.",
+      "OPER": "Nous sommes désolés, le vol est annulé en raison de la non-disponibilité de l’appareil devant assurer le vol.",
+      "PERF": "Nous sommes désolés, le vol est annulé en raison d’un problème imprévu avec la maintenance de l’appareil.<br/><br/>Les problèmes de maintenance imprévus peuvent comprendre une maintenance nécessaire récemment détectée touchant les systèmes principaux de l’appareil comme les commandes de vol, les systèmes de navigation ou les circuits hydrauliques.",
+      "POLI": "Nous sommes désolés, le vol est annulé en raison de restrictions gouvernementales ou réglementaires indépendantes de notre volonté.<br/><br/>Ces restrictions peuvent comprendre des restrictions de voyage, des problèmes de sécurité, de santé ou à la douane ou des développements politiques à l'échelle locale qui ont des répercussions sur notre exploitation.",
+      "POSI": "Nous sommes désolés, le vol est annulé en raison de la non-disponibilité de l’appareil devant assurer le vol.",
+      "REPO": "Nous sommes désolés, le vol est annulé en raison de la non-disponibilité de l’appareil devant assurer le vol.",
+      "ROTA": "Nous sommes désolés, le vol est annulé en raison de la non-disponibilité de l’appareil devant assurer le vol.",
+      "RTNS": "Nous sommes désolés, ce vol a été annulé en raison d’un conflit de travail qui affecte notre exploitation.<br/><br/>Des conflits de travail peuvent avoir une incidence sur l’horaire des vols avant, pendant et après les périodes d’arrêt de travail ou de ralentissement.",
+      "RUNW": "Nous sommes désolés, le vol est annulé en raison des restrictions liées aux pistes qui limitent le nombre de vols pouvant décoller ou atterrir.<br/><br/>Ces restrictions peuvent comprendre l’entretien, les travaux de resurfaçage ou les débris causés par les conditions météorologiques.",
+      "SEC": "Nous sommes désolés, ce vol est annulé en raison de l’instabilité politique.",
+      "SKD": "Nous sommes désolés, ce vol est annulé en raison de la disponibilité du matériel.",
+      "SOM": "Nous sommes désolés, ce vol est annulé en raison de la disponibilité du matériel.",
+      "SOP": "Nous sommes désolés, ce vol est annulé en raison de la disponibilité du matériel.",
+      "SOT": "Nous sommes désolés, ce vol est annulé en raison d’un conflit de travail.",
+      "TECH": "Nous sommes désolés, le vol est annulé en raison de problèmes techniques survenus lors d’un vol antérieur. Par conséquent, l’appareil devant assurer le vol n’est pas disponible.<br/><br/>Les problèmes techniques peuvent comprendre tout ce qui touche les systèmes principaux de l’appareil comme les commandes de vol, les systèmes de navigation ou les circuits hydrauliques.",
+      "TITLE": "Raison(s) officielle(s) de la perturbation d’exploitation :",
+      "WEAT": "Nous sommes désolés, le vol est annulé en raison de mauvaises conditions météorologiques qui ont touché l’aéroport de départ ou de destination ou la trajectoire de vol.<br/><br/>Les mauvaises conditions météorologiques peuvent comprendre les orages, la neige, le brouillard, les nuages à faible altitude ou les rafales.",
+      "WXX": "Nous sommes désolés, ce vol est annulé en raison des conditions météorologiques."
+    },
+    "ERROR": {
+      "CONNECTIVITY": {
+        "TITLE": "Une erreur de connexion s’est produite",
+        "TEXT": "Une erreur s’est produite lors de la tentative de connexion au serveur. L’équipe de soutien d’<a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/fr/aco/home.html\" target=\"_blank\">aircanada.com</a> a été avisée du problème.<br>Si vous croyez disposer d’autres renseignements utiles, veuillez communiquer avec le <a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/fr/aco/home/fly/customer-support/contact-us.html\" target=\"_blank\">Soutien au client</a>."
+      },
+      "GENERAL": {
+        "TEXT": "Une erreur s’est produite pendant le traitement de votre demande. L’équipe de soutien d’<a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/fr/aco/home.html\" target=\"_blank\">aircanada.com</a> a été avisée du problème.<br>Si vous croyez disposer d’autres renseignements utiles, veuillez communiquer avec le <a class=\"btn btn-link\" href=\"https://www.aircanada.com/ca/fr/aco/home/fly/customer-support/contact-us.html\" target=\"_blank\">Soutien au client</a>.",
+        "TITLE": "Une erreur de serveur interne s’est produite"
+      },
+      "HOMEPAGE": "Page d’accueil",
+      "RETRY": "Essayer de nouveau"
+    },
+    "FIND_TICKET": {
+      "BODY": "Votre numéro de billet (ou billet électronique) est une suite de chiffres qui sert à désigner uniquement votre numéro de réservation. Vous le trouverez sur la carte d’accès à bord que vous avez reçue après avoir effectué votre enregistrement.",
+      "CAPTION": "Exemple d’image indiquant le numéro de billet",
+      "TITLE": "Qu’est-ce qu’un numéro de billet?"
+    },
+    "INCOMPLETE": {
+      "APOLOGIZE": "Nous nous excusons des désagréments causés par ce problème.",
+      "CLAIMS_CREATED": "Demande créée",
+      "CLAIMS_TO_RESUBMIT": "Demandes à soumettre de nouveau",
+      "NOT_CREATED": "En raison de cette erreur, certaines demandes n’ont pas été créées.",
+      "RESUBMIT_CLAIM": "Soumettre de nouveau les demandes",
+      "SORRY_DESC": "Nous sommes désolés, un problème est survenu.",
+      "SUGGEST": "Si la même erreur se produit, nous vous suggérons de soumettre un nouveau formulaire de demande plus tard.",
+      "TITLE": "Demande incomplète"
+    },
+    "INSTRUCTION": "Veuillez saisir le |numéro de billet| de la réservation initiale ou de votre carte d’accès à bord (exemple : 0141234567890).",
+    "INTRO": "Remplissez le formulaire ci-dessous pour savoir si vous êtes admissible à une indemnité pour perturbation d’exploitation. Une perturbation d’exploitation est un retard important ou une annulation. Vous pouvez en savoir plus sur la réglementation sur notre page sur |les perturbations de vol|.",
+    "INTRO_DISCLAIMER_IMPORTANT": "<b>IMPORTANT<b>",
+    "INTRO_DISCLAIMER": " - En cas d’annulations attribuables à un conflit de travail, les clients ne sont pas admissibles à une indemnisation pour les vols annulés, les repas, l’hébergement et les autres frais accessoires, car le Règlement sur la protection des passagers aériens stipule que ces situations sont indépendantes de la volonté du transporteur aérien. Si vous n’avez pas fait l’objet d’un réacheminement à la suite de l’annulation de votre vol et si vous souhaitez toujours voyager, |veuillez communiquer avec nous| pour discuter des options de voyage possibles.",
+    "INTRO_DISCLAIMER_LINK": "https://www.aircanada.com/ca/fr/aco/home/fly/customer-support.html#/",
+    "ON": "du",
+    "PASSENGER_ELIGIBILITY": {
+      "DUPLICATEDISRUPTION": {
+        "TEXT": "Il semble que vous ayez déjà soumis une demande pour la perturbation d’exploitation de votre vol (numéro de demande : <b class=\"red\">{{ caseNum }}</b>). <br/><br/>Notre système ne peut accepter une nouvelle demande après que vous en avez déjà soumis une pour les mêmes segments de vol et les mêmes passagers. <br/><br/> Si vous souhaitez nous faire part de renseignements supplémentaires, veuillez répondre au courriel que vous avez reçu comme suite à votre réclamation initiale.",
+        "TITLE": "Demande déjà soumise"
+      },
+      "DUPLICATEDISRUPTIONANDEXPENSE": {
+        "TEXT": "Vous semblez avoir déjà soumis une demande de remboursement relative à une perturbation d’exploitation de votre vol (numéro de demande : <b class=\"red\">{{ caseNum }}</b>). <br/><br/>Notre système ne peut accepter une nouvelle demande après que vous en avez déjà soumis une pour les mêmes segments de vol et les mêmes passagers. <br/><br/> Si vous souhaitez nous faire part de renseignements supplémentaires, veuillez répondre au courriel que vous avez reçu comme suite à votre réclamation initiale.",
+        "TITLE": "Demandes déjà soumises"
+      },
+      "DUPLICATEREQUEST": {
+        "TEXT": "Il semble que vous ayez déjà présenté une demande en lien avec la perturbation de votre vol (numéro de la demande : <b class=\"red\">{{ caseNum }}</b>). <br/><br/>Notre système ne peut accepter une deuxième demande pour les mêmes segments de vol et passagers. <br/><br/> Si vous souhaitez nous faire part de renseignements supplémentaires, veuillez répondre au courriel que vous avez reçu comme suite à votre demande initiale.",
+        "TITLE": "Demande en double"
+      },
+      "ELIGIBLE": {
+        "TEXT": "Notre outil d’autoévaluation indique que vous pourriez avoir droit à une indemnité.<br/><br/>Vous pouvez quand même soumettre votre demande aux fins d’examen, si vous le souhaitez, et un représentant d’Air Canada communiquera avec vous.",
+        "TITLE": "Vous pourriez être admissible"
+      },
+      "FIND_OUT_MORE": "Apprenez-en plus sur <a class=\"btn btn-link btn-blue\" href=\"https://www.aircanada.com/ca/fr/aco/home/fly/flight-information/flight-disruptions.html#/\" target=\"_blank\">l’admissibilité à une indemnité en cas de perturbation d’exploitation</a>.",
+      "INCIDENTELIGIBLE": {
+        "TEXT": "Nous vous remercions d’avoir fourni les renseignements concernant votre réservation. Notre outil d’autoévaluation indique que vous avez peut-être droit à une indemnité. Veuillez remplir la demande d’indemnité ci-dessous.<br/><br/> <a class=\"btn btn-link btn-blue\" href=\"https://www.aircanada.com/perturbationsexploitation\" target=\"_blank\">Renseignez-vous sur vos droits en cas de perturbation d’exploitation</a>.",
+        "TITLE": "Pourrait être admissible"
+      },
+      "INCIDENTNOTELIGIBLE": {
+        "TEXT": "Malheureusement, notre outil d’autoévaluation a déterminé que vous n’avez peut-être pas droit à une indemnité.<br/><br/>Veuillez noter que les perturbations d’exploitation peuvent être complexes et avoir plusieurs causes. Les raisons fournies pour la perturbation peuvent changer à mesure que la situation évolue, que de nouveaux problèmes surgissent ou que de nouveaux renseignements sont reçus.<br/><br/>Veuillez noter que la présente ne constitue pas une demande d’indemnité. Si vous souhaitez quand même soumettre une réclamation, cliquez sur Ajouter à la demande pour ce faire.<br/><br/>Si vous avez besoin d’une réponse à des fins d’assurance, veuillez <a class=\"btn btn-link btn-blue\" href=\"https://accc-prod.microsoftcrmportals.com/fr-CA/air-canada-contact-us/?stepid=1f056d12-bbfe-e611-80f3-e0071b66cfa1\" target=\"_blank\">cliquer ici</a>.",
+        "TEXT_EXPENSE": "Malheureusement, notre outil d’autoévaluation a déterminé que vous n’avez peut-être pas droit à une indemnité.<br/><br/>Même si vous ne semblez pas être admissible à une indemnité pour perturbation d’exploitation, vous pouvez tout de même soumettre vos dépenses aux fins d’un examen plus approfondi.<br/><br/>Veuillez noter que les perturbations d’exploitation peuvent être complexes et avoir plusieurs causes. Les raisons fournies pour la perturbation peuvent changer à mesure que la situation évolue, que de nouveaux problèmes surgissent ou que de nouveaux renseignements sont reçus.<br/><br/>Veuillez noter que la présente ne constitue pas une demande d’indemnité. Si vous souhaitez quand même soumettre une réclamation, cliquez sur Ajouter à la demande pour ce faire.",
+        "TITLE": "Vous n’êtes peut-être pas admissible"
+      },
+      "INCIDENTPENDING": {
+        "TEXT": "Malheureusement, notre outil d’autoévaluation ne peut déterminer si vous avez droit à une indemnité. <br/><br/>Veuillez noter que les perturbations d’exploitation peuvent être complexes et avoir plusieurs causes. Les raisons fournies pour la perturbation peuvent changer à mesure que la situation évolue, que de nouveaux problèmes surgissent ou que de nouveaux renseignements sont reçus. <br/><br/>Vous pouvez quand même soumettre votre demande aux fins d’examen, si vous le souhaitez, et un représentant d’Air Canada communiquera avec vous.",
+        "TITLE": "Impossible de prendre une décision"
+      },
+      "NODISRUPTION": {
+        "TEXT": "Malheureusement, notre outil d’autoévaluation a déterminé que vous n’avez pas droit à une indemnité pour ce voyage en particulier.<br/><br/>C’est peut-être qu’aucune perturbation d’exploitation n’a été enregistrée pour ce voyage, ou que la durée du retard ne donne pas droit à une indemnité en vertu du régime réglementaire applicable.",
+        "TITLE": "Vous n’êtes pas admissible à une indemnité"
+      },
+      "NOMATCH": {
+        "TEXT": "Nous ne trouvons pas votre réservation. Veuillez vous assurer que les renseignements ci-dessus ont été saisis correctement.",
+        "TEXT2": "Si nous n’arrivons toujours pas à trouver votre réservation, veuillez remplir le formulaire de demande d’indemnité pour perturbation d’exploitation. Un représentant d’Air Canada le passera en revue et communiquera avec vous dès que possible.",
+        "TITLE": "Aucune correspondance"
+      },
+      "NOTELIGIBLE": {
+        "TEXT": "Malheureusement, notre outil d’autoévaluation a déterminé que vous n’avez peut-être pas droit à une indemnité.<br/><br/>Veuillez noter que les perturbations d’exploitation peuvent être complexes et avoir plusieurs causes. Les raisons fournies pour la perturbation peuvent changer à mesure que la situation évolue, que de nouveaux problèmes surgissent ou que de nouveaux renseignements sont reçus.<br/><br/>Veuillez noter que la présente ne constitue pas une demande d’indemnité. Si vous souhaitez quand même soumettre une réclamation, cliquez sur Ajouter à la demande pour ce faire.<br/><br/>Si vous avez besoin d’une réponse à des fins d’assurance, veuillez <a class=\"btn btn-link btn-blue\" href=\"https://accc-prod.microsoftcrmportals.com/fr-CA/air-canada-contact-us/?stepid=1f056d12-bbfe-e611-80f3-e0071b66cfa1\" target=\"_blank\">cliquer ici</a>.",
+        "TEXT_EXPENSE": "Malheureusement, notre outil d’autoévaluation a déterminé que vous n’avez peut-être pas droit à une indemnité.<br/><br/>Même si vous ne semblez pas être admissible à une indemnité pour perturbation d’exploitation, vous pouvez tout de même soumettre vos dépenses aux fins d’un examen plus approfondi.<br/><br/>Veuillez noter que les perturbations d’exploitation peuvent être complexes et avoir plusieurs causes. Les raisons fournies pour la perturbation peuvent changer à mesure que la situation évolue, que de nouveaux problèmes surgissent ou que de nouveaux renseignements sont reçus.<br/><br/>Veuillez noter que la présente ne constitue pas une demande d’indemnité. Si vous souhaitez quand même soumettre une réclamation, cliquez sur Ajouter à la demande pour ce faire.",
+        "TITLE": "Vous n’êtes peut-être pas admissible"
+      },
+      "OTHERAIRLINES": {
+        "TEXT": "Puisque votre itinéraire inclut d’autres transporteurs ou un vol vers d’autres moyens de transport, nous ne pouvons pas prendre de décision pour l’instant et avons besoin de plus de renseignements.<br/><br/>Veuillez cliquer sur “Ajouter à la demande” pour soumettre votre réclamation et un représentant d’Air Canada communiquera avec vous dès que possible.",
+        "TITLE": "Plus d'informations nécessaires"
+      },
+      "OUTSIDEAPPR": {
+        "TEXT": "Malheureusement, vous n'êtes pas admissible à une indemnisation en vertu de la réglementation canadienne. L'interruption de vol s'est produite en dehors de la réglementation canadienne, mais peut être soumise à d'autres réglementations.",
+        "TITLE": "Pourrait être admissible"
+      },
+      "OUTSIDEPERIOD": {
+        "TEXT": "Malheureusement, vous n’avez pas droit à une indemnité, car nous vous avons informé de la perturbation plus de 14 jours avant votre vol. Nous sommes désolés des désagréments que cette perturbation d’exploitation a pu entraîner dans vos plans de voyage.",
+        "TITLE": "Vous n’êtes pas admissible"
+      },
+      "OVER365": {
+        "TEXT": "Malheureusement, vous n’avez pas droit à une indemnité pour ce voyage.<br/><br/>La demande d’indemnité doit être présentée avant le premier anniversaire du retard ou de l’annulation de vol.",
+        "TITLE": "Vous n’êtes pas admissible à une indemnité"
+      },
+      "PENDING": {
+        "TEXT": "Notre équipe poursuit l’examen de votre itinéraire et de son admissibilité.<br/><br/>Veuillez attendre au moins trois jours après la fin de votre voyage pour vérifier votre admissibilité ou présenter une demande.",
+        "TITLE": "En cours d’examen"
+      },
+      "PENDING_FUTURE": {
+        "TEXT": "Ce voyage n’est pas commencé. Veuillez attendre au moins trois jours après le jour prévu de l’arrivée pour présenter une demande.",
+        "TITLE": "En cours d’examen"
+      },
+      "SUBMIT": "Remplir une demande d’indemnité",
+      "UNABLEDETERMINATION": {
+        "TEXT": "Malheureusement, notre outil d’autoévaluation ne peut déterminer si vous avez droit à une indemnité. <br/><br/>Veuillez noter que les perturbations d’exploitation peuvent être complexes et avoir plusieurs causes. Les raisons fournies pour la perturbation peuvent changer à mesure que la situation évolue, que de nouveaux problèmes surgissent ou que de nouveaux renseignements sont reçus. <br/><br/>Vous pouvez quand même soumettre votre demande aux fins d’examen, si vous le souhaitez, et un représentant d’Air Canada communiquera avec vous.",
+        "TITLE": "Impossible de prendre une décision"
+      }
+    },
+    "POLICY_LINK": "https://www.aircanada.com/ca/fr/aco/home/fly/flight-information/flight-disruptions.html",
+    "SEARCH": {
+      "BTN_SEARCH": "Vérifier mon admissibilité",
+      "ERRORS": {
+        "LASTNAME_MAXLENGTH": "Le nom de famille ne peut contenir plus de 50 caractères.",
+        "LASTNAME_PATTERN": "Le nom de famille ne peut contenir que des caractères valides",
+        "LASTNAME_REQUIRED": "Un nom de famille est requis.",
+        "TICKET_REQUIRED": "Un numéro de billet est requis.",
+        "TICKET_VALIDATION": "Un numéro de billet valide se compose de 13 chiffres."
+      },
+      "LASTNAME_HELP": "Tel qu’il figure sur la réservation initiale",
+      "LASTNAME_LABEL": "Nom de famille du passager",
+      "TICKET_HELP": "Exemple: 0141234567890",
+      "TICKET_LABEL": "Numéro de billet"
+    },
+    "TAB_TITLE": "Outil d’admissibilité libre-service",
+    "TITLE": "Admissibilité à une indemnité pour perturbation d’exploitation"
+  },
+  "SHARED": {
+    "DATEPICKER": {
+      "EXPECTED_FORMAT": "Format de date requis : {{ format }}",
+      "INVALID": "Le format de date n'est pas valide.\nVeuillez utiliser <span class=\"text-nowrap\">{{format}}</span>.",
+      "MAX_DATE": "La date doit être fixée avant le <span class=\"text-nowrap\">{{maxDate}}</span>.",
+      "MIN_DATE": "La date doit être fixée après <span class=\"text-nowrap\">{{minDate}}</span>.",
+      "REQUIRED": "Une date est requise.",
+      "YYYY-MM-DD": "AAAA-MM-JJ"
+    },
+    "LANGUAGE": {
+      "EN": "English",
+      "ES": "Español",
+      "FR": "Français",
+      "ZH": "中文"
+    },
+    "LOADING": "Chargement"
+  },
+  "UNAVAILABLE": {
+    "TEXT": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "TITLE": "Notre site est actuellement en indisponible. Veuillez réessayer dans 24 heures."
+  }
+}

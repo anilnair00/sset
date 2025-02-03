@@ -1,0 +1,94 @@
+@import 'variables';
+
+.footer-top,
+.footer-bottom {
+  a,
+  span {
+    font-size: 0.75rem;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 0.875rem;
+    }
+  }
+  a:hover,
+  a:focus {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
+.footer-top {
+  background-color: $gray-800;
+
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+  a,
+  span {
+    color: $white;
+    font-weight: 300;
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  .icn-social {
+    margin-top: 0;
+    fill: #baa88d;
+    width: 36px;
+    height: 36px;
+    margin-right: 5px;
+    transition: all 200ms ease;
+
+    @include media-breakpoint-up(sm) {
+      width: 42px;
+      height: 42px;
+    }
+
+    @include hover {
+      fill: white;
+    }
+  }
+
+  .ac-icon {
+    position: relative;
+    display: inline-block;
+    font-family: 'AC Icomoon';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.footer-bottom {
+  background-color: $gray-900;
+
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+  a,
+  span {
+    color: $gray-400;
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+
+  .star-alliance-member-icon img {
+    display: inline-block;
+    width: 100%;
+    max-width: 245px;
+    height: auto;
+  }
+}
+
+.footer-nav-title {
+  text-transform: uppercase;
+  color: $white;
+  margin: 0 0 5px;
+  font-size: 1.125rem;
+}

@@ -1,0 +1,93 @@
+@import 'variables';
+
+.c-flight-added {
+  background: $ac-white;
+  border: 1px solid $brand-gray-200;
+  margin-bottom: 24px;
+  padding: 24px;
+
+  .c-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    @media (max-width: $max-tablet) {
+      display: block;
+    }
+
+    .c-flight {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      .c-dep-arr {
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 16px;
+
+        .icon-arrow {
+          vertical-align: middle;
+        }
+      }
+
+      .c-booking-info {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 16px 0;
+
+        .label-booking-info {
+          color: $brand-gray-900;
+          font-size: 16px;
+          font-weight: 400;
+          margin-right: 5px;
+        }
+      }
+
+      .label-flight-info {
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .c-btns {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+
+    .btn-add-claim {
+      align-items: center;
+      display: flex;
+      padding: 0.8rem 1rem !important;
+      width: 280px;
+
+      .label-add-claim {
+        margin: 0 auto;
+      }
+
+      @media (max-width: $min-mobile) {
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+
+    .c-remove-claim {
+      color: $brand-red;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      margin-right: 24px;
+      text-decoration: underline;
+
+      @media (max-width: $min-mobile) {
+        margin-top: 16px;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}

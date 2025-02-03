@@ -1,0 +1,67 @@
+<div class="c-itinerary">
+  <p class="title">
+    {{ 'SSET_V2.ASSESSMENT.REVIEW_CLAIM_PAGE.JOURNEY' | translate }}
+    <span>{{ index + 1 }}</span>
+  </p>
+  <div class="c-itinerary-details-info">
+    <div class="c-itinerary-details">
+      <app-flight-leg
+        *ngFor="let flightLeg of flightLegs; let last = last"
+        [flightLeg]="flightLeg"
+        [lastChild]="last"
+        [showSeperatorAlways]="true"
+      />
+    </div>
+    <div
+      [ngClass]="{
+        'c-itinerary-message': true,
+        'c-itinerary-message--not-eligible': !isEligible
+      }"
+    >
+      <p class="text-bold">{{ eligibilityResponse?.title | translate }}</p>
+      <p
+        [innerHtml]="
+          eligibilityResponse?.message
+            | translate
+              : { caseNum: eligibilityResponse?.originalDynamicCaseNumber }
+        "
+      ></p>
+      <div *ngIf="eligibilityResponse?.reason">
+        <p class="text-bold-small">
+          {{ 'SSET_V2.DISRUPTION_REASONS.TITLE' | translate }}
+        </p>
+        <p
+          [innerHtml]="
+            'SSET_V2.DISRUPTION_REASONS.' + eligibilityResponse?.reason
+              | translate
+          "
+        ></p>
+      </div>
+      <p
+        *ngIf="eligibilityResponse?.findOutMoreLink"
+        [innerHtml]="'SSET_V2.PASSENGER_ELIGIBILITY.FIND_OUT_MORE' | translate"
+      ></p>
+    </div>
+  </div>
+  <ng-template [ngIf]="eligibilityResponse?.addClaimButtonEnabled">
+    <div class="c-itinerary-btns">
+      <button
+        class="btn btn-outline-secondary btn-add-claim"
+        [disabled]="claimAdded"
+        (click)="addToClaim()"
+      >
+        <span class="btn-text">
+          {{
+            claimAdded
+              ? ('SSET_V2.ASSESSMENT.ITINERARY.ADDED_TO_CLAIM' | translate)
+              : ('SSET_V2.ASSESSMENT.ITINERARY.ADD_TO_CLAIM' | translate)
+          }}
+        </span>
+        <span *ngIf="claimAdded" class="material-icons">done</span>
+      </button>
+      <div *ngIf="claimAdded" class="remove-claim" (click)="removeClaim()">
+        {{ 'SSET_V2.ASSESSMENT.ITINERARY.REMOVE_FROM_CLAIM' | translate }}
+      </div>
+    </div>
+  </ng-template>
+</div>

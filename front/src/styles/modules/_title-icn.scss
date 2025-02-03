@@ -1,0 +1,9 @@
+.title-icn-left {
+  align-items: center;
+  display: flex;
+  position: relative;
+  .icn {
+    position: absolute;
+    right: calc(100% + 0.5rem);
+  }
+}

@@ -1,0 +1,17 @@
+<div class="added-claim">
+  <div class="header">
+    <p class="title">
+      {{ 'SSET_V2.ASSESSMENT.REVIEW_CLAIM_PAGE.JOURNEY' | translate }}
+      <span>{{ index + 1 }}</span>
+    </p>
+    <p class="type">
+      {{ claimTypeText }}
+    </p>
+  </div>
+  <app-flight-leg
+    *ngFor="let flightLeg of claim?.flights; let i = index; let last = last"
+    [flightLeg]="flightLeg"
+    [lastChild]="last"
+    [showSeperatorAlways]="false"
+  />
+</div>

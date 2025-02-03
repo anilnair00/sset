@@ -1,0 +1,100 @@
+@import 'variables';
+
+.c-expenses {
+  margin: 32px 0 40px 0;
+
+  .c-expenses-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    .c-details {
+      flex: 1;
+
+      @media (max-width: $max-tablet) {
+        min-width: 343px;
+        width: 100%;
+      }
+
+      .btn-add-expense {
+        width: 100%;
+      }
+
+      .c-eligible {
+        background-color: $ac-blue-100;
+        flex: 1;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        padding: 24px;
+
+        @media (max-width: $max-tablet) {
+          margin-top: 16px;
+        }
+
+        .hr-separator {
+          margin-top: 30px;
+        }
+
+        .text-bold {
+          font-weight: 700;
+        }
+
+        ::ng-deep p.with-link > a {
+          color: $red;
+          &:hover,
+          &:focus {
+            color: darken($secondary, 8.5%);
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .bg-gray {
+        background-color: $brand-gray-150;
+      }
+    }
+  }
+
+  .label-info {
+    color: $brand-gray-900;
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+}
+
+.expense-form {
+  padding: 17px 16px;
+
+  .modal-title {
+    font-size: 16px;
+    margin-bottom: 32px;
+
+    @media (max-width: $min-mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .modal-buttons {
+    button {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 28px;
+      padding: 12px 40px;
+    }
+
+    @media (max-width: $min-mobile) {
+      flex-flow: column-reverse;
+      row-gap: 24px;
+
+      button {
+        margin-top: 16px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+::ng-deep .cdk-overlay-container {
+  z-index: 2000;
+}

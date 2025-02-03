@@ -1,0 +1,37 @@
+@import 'variables';
+
+.modal-body {
+  padding: 40px;
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  margin: -1rem -1rem -1rem auto;
+  padding: 1rem;
+  width: auto;
+  z-index: 2;
+
+  .icn-close {
+    fill: $black;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+
+.icn-question {
+  margin: 0px auto 25px;
+  width: 90px;
+  height: 90px;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.btn {
+  min-width: 256px;
+  display: inline-block;
+  margin: 0 15px;
+}

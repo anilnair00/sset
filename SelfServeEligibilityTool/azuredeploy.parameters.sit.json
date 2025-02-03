@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "azureEnvironmentInfix": { "value": "sit" },
+    "environmentVariableName": { "value": "SIT" },
+    "functionAppName": { "value": "acodesset-sit" },
+    "webSubDomain": { "value": "acodesset-sit" },
+    "keyVaultWriterObjectId": { "value": "9c28583c-9f37-4140-bb4c-77afe1aac5d4" },
+    "devOpsPrincipalObjectId": { "value": "13c000e1-d65b-492b-9c58-a657f1bd3cd3" },
+    "cipBaseAddress": { "value": "https://acode-pcat-sit.azurewebsites.net" },
+    "idpBaseAddress": { "value": "https://fs-int.aircanada.ca" },
+    "claimsProcessingAdminGroup": { "value": "claimsprocessingadmingroup" },
+    "azureAppConfiguration": { "value": "Endpoint=https://ac-ode-odh-dev-canadacentral.azconfig.io;Id=a8qR-ll-s0:v7Sf0gFmHfuk6IVBXaqA;Secret=9NppxWUNKSGfbszZfqAS8DSQ79GFexbLh7DmRZRUbK4=" },
+    "recaptchaThreshold": { "value": "0.1" }
+  }
+}

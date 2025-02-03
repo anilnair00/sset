@@ -1,0 +1,49 @@
+@import 'variables';
+
+.c-expenses-review {
+  background: $ac-white;
+  border: 1px solid $brand-gray-200;
+  color: $brand-gray-900;
+  margin-bottom: 24px;
+  margin-top: -24px;
+  padding: 24px;
+
+  .p-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .c-expense {
+    font-size: 12px;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .c-date-amount {
+      align-items: baseline;
+      display: flex;
+      justify-content: space-between;
+      margin-top: -5px;
+
+      .p-amount {
+        font-size: 16px;
+
+        .label-currency {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .icon-receipt {
+      margin-left: 9px;
+    }
+
+    .p-expense-type {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+  }
+}

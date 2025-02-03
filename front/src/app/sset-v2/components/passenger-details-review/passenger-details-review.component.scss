@@ -1,0 +1,57 @@
+@import 'variables';
+
+.c-pax-details-review {
+  background: $ac-white;
+  border: 1px solid $brand-gray-200;
+  padding: 24px;
+  padding-bottom: 0;
+
+  @media (max-width: $max-tablet) {
+    padding: 16px;
+  }
+
+  .p-detail {
+    color: $brand-gray-900;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: -2px;
+
+    &--name {
+      margin-bottom: 16px;
+      margin-top: 7px;
+    }
+  }
+
+  .p-detail-ff {
+    color: $brand-gray-900;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .p-title {
+    color: $brand-gray-900;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 22px;
+  }
+
+  .custom-checkbox {
+    margin: 24px 0;
+
+    .custom-control-label {
+      font-size: 12px;
+      padding-left: 2rem;
+
+      &:before {
+        background-color: $brand-gray-200;
+        left: 0;
+      }
+
+      &:after {
+        background-color: $brand-gray-200;
+        left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "azureEnvironmentInfix": { "value": "uat" },
+    "environmentVariableName": { "value": "UAT" },
+    "functionAppName": { "value": "acodesset-uat" },
+    "webSubDomain": { "value": "acodesset-uat" },
+    "keyVaultWriterObjectId": { "value": "9c28583c-9f37-4140-bb4c-77afe1aac5d4" },
+    "devOpsPrincipalObjectId": { "value": "9d74b324-5f1b-4677-8685-d4aaa95887a4" },
+    "cipBaseAddress": { "value": "https://acode-pcat-uat.azurewebsites.net" },
+    "idpBaseAddress": { "value": "https://fs-int.aircanada.ca" },
+    "claimsProcessingAdminGroup": { "value": "claimsprocessingadmingroupuat" },
+    "azureAppConfiguration": { "value": "Endpoint=https://ac-ode-odh-dev-canadacentral.azconfig.io;Id=a8qR-ll-s0:v7Sf0gFmHfuk6IVBXaqA;Secret=9NppxWUNKSGfbszZfqAS8DSQ79GFexbLh7DmRZRUbK4=" },
+    "recaptchaThreshold": { "value": "0.1" }
+  }
+}

@@ -1,0 +1,12 @@
+@import 'variables';
+
+.c-flight-details-info {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 32px;
+
+  .c-no-data {
+    background: $brand-gray-160;
+    padding: 24px;
+  }
+}

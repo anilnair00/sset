@@ -1,0 +1,84 @@
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+    pool:
+      vmImage: 'windows-2019'
+    variables:
+      MSBUILDSINGLELOADCONTEXT: 1 # See: https://github.com/SpecFlowOSS/SpecFlow/issues/1912
+      clientAppFolder: 'front'
+    steps:
+    - checkout: self
+      clean: false
+
+    - task: UseDotNet@2
+      displayName: 'Use .NET Core 3.1'
+      inputs:
+        useGlobalJson: true
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Build .NET Projects'
+      inputs:
+        command: 'build'
+        projects: '**/*.csproj'
+        arguments: '--configuration Release'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Run .NET Tests'
+      continueOnError: true
+      inputs:
+        command: 'test'
+        projects: '**/Core.Tests.csproj'
+        arguments: '--configuration Release --no-build'
+
+    - task: PublishTestResults@2
+      displayName: 'Publish .NET Test Results'
+      condition: succeededOrFailed()
+      inputs:
+        testRunner: VSTest
+        testResultsFiles: '$(Agent.TempDirectory)/*.trx'
+        testRunTitle: '.NET Tests'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Publish Functions'
+      inputs:
+        command: 'publish'
+        projects: '**/Functions.csproj'
+        arguments: '--configuration Release --no-build --output $(Build.ArtifactStagingDirectory)/Functions'
+        publishWebProjects: false
+
+    - task: NodeTool@0
+      displayName: 'Use Node 18.11.0'
+      inputs:
+        versionSpec: 18.11.0
+
+    - task: Npm@1
+      displayName: Install Node dependencies
+      inputs:
+        versionSpec: 8.19.2
+        command: 'install'
+        workingDir: $(clientAppFolder)
+
+    - task: Npm@1
+      displayName: 'Test Angular'
+      continueOnError: true
+      inputs:
+        command: custom
+        customCommand: run test-ci
+        workingDir: $(clientAppFolder)
+
+    - task: Npm@1
+      displayName: Build Angular Project
+      inputs:
+        command: 'custom'
+        ${{ if and(ne(variables['Build.SourceBranch'], 'refs/heads/release'), ne(variables['Build.SourceBranch'], 'refs/heads/master')) }}:
+          customCommand: 'run build:sit -- --output-path=$(Build.ArtifactStagingDirectory)/Front'
+        ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/release') }}:
+          customCommand: 'run build:uat -- --output-path=$(Build.ArtifactStagingDirectory)/Front'
+        ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/master') }}:
+          customCommand: 'run build:prod -- --output-path=$(Build.ArtifactStagingDirectory)/Front'
+        workingDir: $(clientAppFolder)
+
+    - publish: $(Build.ArtifactStagingDirectory)
+      displayName: 'Publish Build Artifacts'
+      artifact: SSET

@@ -1,0 +1,5 @@
+# Ignore artifacts:
+.angular
+.vscode
+coverage
+e2e

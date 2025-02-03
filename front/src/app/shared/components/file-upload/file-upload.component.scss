@@ -1,0 +1,142 @@
+@import 'variables';
+
+a {
+  color: red;
+  text-decoration: underline;
+}
+
+body {
+  background: $brand-gray-150;
+  margin: 0;
+  padding: 25px 0 0 0;
+}
+
+p {
+  margin-left: 3px;
+  font-size: 15px;
+}
+
+.btn-replace {
+  margin-right: 15px;
+  @media (max-width: $max-tablet) {
+    margin-right: 0;
+    margin-top: 7px;
+    width: 100%;
+  }
+}
+
+.c-btn {
+  @media (max-width: $max-tablet) {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 100%;
+  }
+}
+
+.drag-drop-info {
+  color: black;
+  display: block;
+  font-size: 15px;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.error {
+  color: #f00;
+  margin-bottom: 12px;
+  margin-left: 15px;
+}
+
+.file-name {
+  padding-right: 30px;
+  padding-top: 15px;
+}
+
+.file-container {
+  background-size: 25px;
+  border-color: grey;
+  border-radius: 6px;
+  border: dashed;
+  cursor: pointer;
+  height: 150px;
+  width: 100%;
+
+  &--loading {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &--upload {
+    background-color: #ffffff;
+    background-image: url('/assets/img/upload-icon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.file-uploaded {
+  background: #f7f6f6;
+  border-color: white;
+  color: black;
+  display: flex;
+  font-size: 15px;
+  line-height: normal;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  padding: 0;
+  top: -2px;
+
+  @media (max-width: $max-tablet) {
+    margin-right: 15px;
+    width: 100%;
+  }
+}
+
+.fileUploadWrapper .card-body {
+  max-height: 330px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.file-upload-helpertext {
+  font-size: 13px;
+  margin-bottom: 3px;
+  margin-left: 14px;
+  margin-right: 10px;
+  margin-top: 5px;
+  padding-left: 2px;
+}
+
+.file-upload-helpertext p {
+  font-size: 12px;
+}
+
+.help-block.error {
+  margin-top: 0px;
+  padding-left: 2px;
+}
+
+.img-attachment {
+  height: 37px;
+  padding-left: 12px;
+  padding-top: 15px;
+}
+
+.img-close {
+  height: 34px;
+  padding-left: 2px;
+  padding-right: 15px;
+  padding-top: 20px;
+}
+
+.img-file {
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  background-color: #d8d8d8 !important;
+  margin-top: 12px;
+  width: 70%;
+}

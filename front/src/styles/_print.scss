@@ -1,0 +1,10 @@
+@media print {
+  .header,
+  .nav-bottom {
+    display: none !important;
+  }
+  section {
+    padding: 0;
+    border: 0;
+  }
+}

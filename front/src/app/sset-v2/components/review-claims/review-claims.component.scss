@@ -1,0 +1,36 @@
+@import 'variables';
+
+.c-review-claims {
+  margin: 32px 0 40px 0;
+
+  .c-claims-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    .btn-link {
+      color: $brand-red;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 16px;
+      text-decoration: underline;
+    }
+
+    .c-details {
+      flex: 1;
+
+      @media (max-width: $max-tablet) {
+        min-width: 343px;
+        width: 100%;
+      }
+    }
+  }
+
+  .p-info {
+    color: $brand-gray-900;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+}

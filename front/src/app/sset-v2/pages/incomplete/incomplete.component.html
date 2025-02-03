@@ -1,0 +1,58 @@
+<ng-container *ngIf="!error">
+  <div class="c-incomplete container">
+    <hr class="spacer-md" />
+    <h1 class="h-title">{{ 'SSET_V2.INCOMPLETE.TITLE' | translate }}</h1>
+    <div class="c-description">
+      {{ 'SSET_V2.INCOMPLETE.SORRY_DESC' | translate }}
+      {{ 'SSET_V2.INCOMPLETE.NOT_CREATED' | translate }}
+    </div>
+    <div class="c-description-mobile">
+      <p>{{ 'SSET_V2.INCOMPLETE.SORRY_DESC' | translate }}</p>
+      <p>{{ 'SSET_V2.INCOMPLETE.NOT_CREATED' | translate }}</p>
+    </div>
+    <div class="c-row">
+      <div class="c-list">
+        <div class="c-title">
+          <span class="material-icons">error_outline</span>
+          {{ 'SSET_V2.INCOMPLETE.CLAIMS_TO_RESUBMIT' | translate }}
+        </div>
+        <div>
+          <app-added-claim
+            *ngFor="let claim of claimsFailed; index as i"
+            [claim]="claim"
+            [index]="i"
+          />
+        </div>
+        <button
+          class="btn btn-secondary btn-resubmit"
+          (click)="onClickResubmitClaim()"
+        >
+          {{ 'SSET_V2.INCOMPLETE.RESUBMIT_CLAIM' | translate }}
+        </button>
+        <p class="mb-16">{{ 'SSET_V2.INCOMPLETE.SUGGEST' | translate }}</p>
+        <p class="mb-16">{{ 'SSET_V2.INCOMPLETE.APOLOGIZE' | translate }}</p>
+      </div>
+      <div class="c-list" *ngIf="!!claimsSuccess?.length">
+        <div class="c-title">
+          <span class="material-icons">check_circle_outline</span>
+          {{ 'SSET_V2.INCOMPLETE.CLAIMS_CREATED' | translate }}
+        </div>
+        <div>
+          <app-added-claim
+            *ngFor="let claim of claimsSuccess; index as i"
+            [claim]="claim"
+            [index]="i"
+          />
+        </div>
+      </div>
+      <div class="c-list" *ngIf="!claimsSuccess?.length"></div>
+    </div>
+  </div>
+</ng-container>
+
+<div #errorScrollTarget *ngIf="error">
+  <div class="container">
+    <hr class="spacer-lg" />
+    <app-error [error]="error" />
+  </div>
+</div>

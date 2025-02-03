@@ -1,0 +1,46 @@
+input,
+select {
+  &.ng-invalid.ng-touched.ng-dirty,
+  &.api-invalid {
+    border-bottom: 1px solid $danger;
+  }
+}
+
+.ng-select {
+  &.ng-invalid.ng-touched.ng-dirty {
+    .ng-select-container {
+      border-bottom: 1px solid $danger;
+    }
+  }
+}
+
+.icn-error {
+  align-items: center;
+  background: $danger;
+  border-radius: 50%;
+  color: $white;
+  content: '!';
+  display: flex;
+  font-size: 0.75rem;
+  font-weight: 700;
+  height: 1rem;
+  justify-content: center;
+  line-height: 1em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.625rem;
+  width: 1rem;
+}
+
+.help-block {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  color: $gray-700;
+  &.error {
+    color: $red;
+  }
+  &.black {
+    color: $black;
+  }
+}

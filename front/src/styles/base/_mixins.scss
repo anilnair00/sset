@@ -1,0 +1,11 @@
+@mixin hover() {
+  &:focus,
+  &:active {
+    @content;
+  }
+  @media (hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
