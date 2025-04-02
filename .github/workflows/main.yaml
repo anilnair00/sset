@@ -58,20 +58,9 @@ jobs:
     #     dotnet-version: ${{ env.DOTNET_VERSION }}
     #     global-json-file: global.json
 
-
-    - name: Find .csproj files
-      id: find-projects
-      run: |
-        echo "PROJECTS=$(find SelfServeEligibilityTool -name '*.csproj' -print | tr '\n' ' ')" >> $GITHUB_ENV
-
-    - name: Build .NET Projects
-      run: |
-        for project in ${{ env.PROJECTS }}; do
-          dotnet build --configuration Release "$project"
-        done
         
-    # - name: Build DotNet Projects
-    #   run: dotnet build 'SelfServeEligibilityTool/**/*.csproj' --configuration Release
+    - name: Build DotNet Projects
+      run: dotnet build './.SelfServeEligibilityTool/**/*.csproj' --configuration Release
 
       
     - name: Run .NET Tests
