@@ -60,9 +60,11 @@ jobs:
 
     - name: Build .NET Projects
       run: |
-        for project in $(find . -name '*.csproj'); do
-          dotnet build "$project" --configuration Release
-        done
+        foreach ($project in Get-ChildItem -Recurse -Filter '*.csproj') {
+        dotnet build "$project" --configuration Release
+        # Your code to handle each $project here
+        }
+
 
       
     - name: Run .NET Tests
