@@ -58,8 +58,8 @@ jobs:
     #     global-json-file: global.json
 
     - name: Build DotNet Projects
-      run: dotnet build --configuration Release './**/*.csproj'
-
+      # run: dotnet build --configuration Release './**/*.csproj'
+      run: dotnet build --configuration Release
     - name: Run .NET Tests
       run: dotnet test --configuration Release --no-build 'SelfServeEligibilityTool/Core.Tests/Core.Tests.csproj'
       continue-on-error: true
