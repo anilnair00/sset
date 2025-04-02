@@ -48,7 +48,7 @@ jobs:
         # Optional SDK version(s) to use. If not provided, will install global.json version when available. Examples: 2.2.104, 3.1, 3.1.x, 3.x, 6.0.2xx
         dotnet-version: ${{ env.DOTNET_VERSION }}
         # Optional global.json location, if your global.json isn't located in the root of the repo.
-        global-json-file: ./global.json
+        global-json-file: SelfServeEligibilityTool/global.json
 
           
     # - name: Setup DotNet ${{ env.DOTNET_VERSION }} Environment
