@@ -59,7 +59,8 @@ jobs:
 
     - name: Build DotNet Projects
       # run: dotnet build --configuration Release './**/*.csproj'
-      run: dotnet build --configuration Release './*.csproj'
+      run: dotnet build --configuration Release 'SelfServeEligibilityTool/Functions/Functions.csproj'
+      
     - name: Run .NET Tests
       run: dotnet test --configuration Release --no-build 'SelfServeEligibilityTool/Core.Tests/Core.Tests.csproj'
       continue-on-error: true
