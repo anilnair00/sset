@@ -57,18 +57,9 @@ jobs:
     #     dotnet-version: ${{ env.DOTNET_VERSION }}
     #     global-json-file: global.json
 
-    - name: Find .csproj files
-      id: find-projects
-      run: |
-        echo "::set-output name=projects::$(find SelfServeEligibilityTool -name '*.csproj' -print | tr '\n' ' ')"
 
-    - name: Build .NET Projects
-      run: |
-        for project in ${{ steps.find-projects.outputs.projects }}; do
-          dotnet build --configuration Release "$project"
-        done
-    # - name: Build DotNet Projects
-    #   # run: dotnet build --configuration Release './**/*.csproj'
+    - name: Build DotNet Projects
+      run: dotnet build SelfServeEligibilityTool/**/*.csproj --configuration Release
 
       
     - name: Run .NET Tests
