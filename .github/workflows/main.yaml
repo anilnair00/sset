@@ -58,9 +58,11 @@ jobs:
     #     dotnet-version: ${{ env.DOTNET_VERSION }}
     #     global-json-file: global.json
 
-        
-    - name: Build DotNet Projects
-      run: dotnet build './.SelfServeEligibilityTool/**/*.csproj' --configuration Release
+    - name: Build .NET Projects
+      run: |
+        for project in $(find . -name '*.csproj'); do
+          dotnet build "$project" --configuration Release
+        done
 
       
     - name: Run .NET Tests
