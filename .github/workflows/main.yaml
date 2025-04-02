@@ -58,10 +58,10 @@ jobs:
     #     global-json-file: global.json
 
     - name: Build DotNet Projects
-      run: dotnet build --configuration Release '**/*.csproj'
+      run: dotnet build --configuration Release 'SelfServeEligibilityTool/**/*.csproj'
 
     - name: Run .NET Tests
-      run: dotnet test --configuration Release --no-build '**/Core.Tests.csproj'
+      run: dotnet test --configuration Release --no-build 'SelfServeEligibilityTool/**/Core.Tests.csproj'
       continue-on-error: true
       
     - name: Publish .NET Test Results
