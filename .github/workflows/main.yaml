@@ -59,7 +59,7 @@ jobs:
 
 
     - name: Build DotNet Projects
-      run: dotnet build SelfServeEligibilityTool/**/*.csproj --configuration Release
+      run: dotnet build 'SelfServeEligibilityTool/**/*.csproj' --configuration Release
 
       
     - name: Run .NET Tests
