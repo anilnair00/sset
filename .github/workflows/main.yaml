@@ -57,13 +57,19 @@ jobs:
     #     dotnet-version: ${{ env.DOTNET_VERSION }}
     #     global-json-file: global.json
 
-    - name: Build DotNet Projects
-      # run: dotnet build --configuration Release './**/*.csproj'
-      run: dotnet build --configuration Release \
-            'SelfServeEligibilityTool/Interfaces/Interfaces.csproj' \
-            'SelfServeEligibilityTool/E2ETests/E2ETests.csproj' \
-            'SelfServeEligibilityTool/Functions/Functions.csproj' \
-            'SelfServeEligibilityTool/Core.Tests/Core.Tests.csproj'
+    - name: Find .csproj files
+      id: find-projects
+      run: |
+        echo "::set-output name=projects::$(find SelfServeEligibilityTool -name '*.csproj' -print | tr '\n' ' ')"
+
+    - name: Build .NET Projects
+      run: |
+        for project in ${{ steps.find-projects.outputs.projects }}; do
+          dotnet build --configuration Release "$project"
+        done
+    # - name: Build DotNet Projects
+    #   # run: dotnet build --configuration Release './**/*.csproj'
+
       
     - name: Run .NET Tests
       run: dotnet test --configuration Release --no-build 'SelfServeEligibilityTool/Core.Tests/Core.Tests.csproj'
