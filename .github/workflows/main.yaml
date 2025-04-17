@@ -65,9 +65,9 @@ jobs:
         # Your code to handle each $project here
         }
     
-    - name: Run .NET Tests
-      run: dotnet test 'SelfServeEligibilityTool/Core.Tests/Core.Tests.csproj' --configuration Release --no-build --logger "trx;LogFileName=test_results.trx" || true --results-directory ./TestResults
-      continue-on-error: true
+    # - name: Run .NET Tests
+    #   run: dotnet test 'SelfServeEligibilityTool/Core.Tests/Core.Tests.csproj' --configuration Release --no-build --logger "trx;LogFileName=test_results.trx" || true --results-directory ./TestResults
+    #   continue-on-error: true
       
     # - name: Publish .NET Test Results
     #   if: always()
@@ -76,15 +76,35 @@ jobs:
     #     name: test-results
     #     path: '**/test_results.trx'
 
+    # - name: Test Report
+    #   uses: dorny/test-reporter@v1.9.1
+    #   if: always()
+    #   with:
+    #     name: DotNet Tests
+    #     path: '.\TestResults\test_results.trx'
+    #     reporter: dotnet-trx
+    #     fail-on-error: true
+
+    - name: Run .NET Tests
+      run: |
+        dotnet test "SelfServeEligibilityTool/Core.Tests/Core.Tests.csproj" `
+          --configuration Release `
+          --no-build `
+          --logger "trx;LogFileName=test_results.trx" `
+          --results-directory "./TestResults" `
+          || true
+      shell: pwsh
+      continue-on-error: true
+
     - name: Test Report
       uses: dorny/test-reporter@v1.9.1
       if: always()
       with:
         name: DotNet Tests
-        path: '.\TestResults\test_results.trx'
+        path: './TestResults/test_results.trx'
         reporter: dotnet-trx
         fail-on-error: true
-        
+
     - name: Publish Functions
       run: dotnet publish --configuration Release --no-build --output ${{ github.workspace }}/Functions 'SelfServeEligibilityTool/Functions/Functions.csproj'
 
