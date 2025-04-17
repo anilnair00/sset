@@ -64,22 +64,29 @@ jobs:
         dotnet build "$project" --configuration Release
         # Your code to handle each $project here
         }
-
-
-      
+    
     - name: Run .NET Tests
       run: dotnet test --configuration Release --no-build 'SelfServeEligibilityTool/Core.Tests/Core.Tests.csproj'
       continue-on-error: true
       
-    - name: Publish .NET Test Results
+    # - name: Publish .NET Test Results
+    #   if: always()
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: test-results
+    #     path: '**/*.trx'
+
+    - name: Test Report
+      uses: dorny/test-reporter@v1.9.1
       if: always()
-      uses: actions/upload-artifact@v4
       with:
-        name: test-results
-        path: '**/*.trx'
+        name: DotNet Tests
+        path: '**/testresults.trx'
+        reporter: dotnet-trx
+        fail-on-error: true
         
     - name: Publish Functions
-      run: dotnet publish --configuration Release --no-build --output ${{ github.workspace }}/Functions '**/Functions.csproj'
+      run: dotnet publish --configuration Release --no-build --output ${{ github.workspace }}/Functions 'SelfServeEligibilityTool/Functions/Functions.csproj'
 
     - name: Set up Node.js
       uses: actions/setup-node@v3
