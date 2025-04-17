@@ -92,11 +92,16 @@ jobs:
     - name: Publish Functions
       run: dotnet publish --configuration Release --no-build --output ${{ github.workspace }}/Functions 'SelfServeEligibilityTool/Functions/Functions.csproj'
       
-    - name: Zip Functions Artifact
-      run: |
-          cd ${{ github.workspace }}/Functions
-          zip -r ../Functions.zip .
-          
+    # - name: Zip Functions Artifact
+    #   run: |
+    #       cd ${{ github.workspace }}/Functions
+    #       zip -r ../Functions.zip .
+
+    - name: Zip Functions folder
+      run: Compress-Archive -Path * -DestinationPath ../Functions.zip
+      working-directory: ${{ github.workspace }}/Functions
+      shell: pwsh
+         
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
