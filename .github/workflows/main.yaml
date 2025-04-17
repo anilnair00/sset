@@ -74,7 +74,7 @@ jobs:
     #   uses: actions/upload-artifact@v4
     #   with:
     #     name: test-results
-    #     path: '**/testresults.trx'
+    #     path: '**/test_results.trx'
 
     - name: Test Report
       uses: dorny/test-reporter@v1.9.1
