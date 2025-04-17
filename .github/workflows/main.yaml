@@ -81,7 +81,7 @@ jobs:
       if: always()
       with:
         name: DotNet Tests
-        path: '**/test_results.trx'
+        path: 'test_results.trx'
         reporter: dotnet-trx
         fail-on-error: true
         
