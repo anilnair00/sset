@@ -68,27 +68,7 @@ jobs:
         dotnet build "$project" --configuration Release
         # Your code to handle each $project here
         }
-    
-    # - name: Run .NET Tests
-    #   run: dotnet test 'SelfServeEligibilityTool/Core.Tests/Core.Tests.csproj' --configuration Release --no-build --logger "trx;LogFileName=test_results.trx" || true --results-directory ./TestResults
-    #   continue-on-error: true
       
-    # - name: Publish .NET Test Results
-    #   if: always()
-    #   uses: actions/upload-artifact@v4
-    #   with:
-    #     name: test-results
-    #     path: '**/test_results.trx'
-
-    # - name: Test Report
-    #   uses: dorny/test-reporter@v1.9.1
-    #   if: always()
-    #   with:
-    #     name: DotNet Tests
-    #     path: '.\TestResults\test_results.trx'
-    #     reporter: dotnet-trx
-    #     fail-on-error: true
-
     - name: Run .NET Tests
       run: |
         dotnet test "SelfServeEligibilityTool/Core.Tests/Core.Tests.csproj" `
@@ -119,23 +99,28 @@ jobs:
 
     - name: Install Node dependencies
       run: npm install
-      working-directory: ${{ github.workspace }}/clientAppFolder
+      working-directory: front
+
+    - name: Test Angular
+      run: npm run test-ci
+      working-directory: front
+      continue-on-error: true
 
     - name: Build Angular Project
       run: |
         if [[ ${{ github.ref }} == 'refs/heads/release' ]]; then
-          npm run build:uat -- --output-path=${{ github.workspace }}/Front
+          npm run build:uat -- --output-path=${{ github.workspace }}/front
         elif [[ ${{ github.ref }} == 'refs/heads/main' ]]; then
-          npm run build:prod -- --output-path=${{ github.workspace }}/Front
+          npm run build:prod -- --output-path=${{ github.workspace }}/front
         else
-          npm run build:sit -- --output-path=${{ github.workspace }}/Front
+          npm run build:sit -- --output-path=${{ github.workspace }}/front
       working-directory: ${{ github.workspace }}/clientAppFolder
 
     - name: Publish Build Artifacts
       uses: actions/upload-artifact@v4
       with:
         name: SSET
-        path: ${{ github.workspace }}/Front
+        path: ${{ github.workspace }}/front
         
     # - name: 'Resolve Project Dependencies Using Dotnet'
     #   shell: pwsh # For Linux, use bash
