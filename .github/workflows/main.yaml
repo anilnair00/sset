@@ -91,7 +91,12 @@ jobs:
 
     - name: Publish Functions
       run: dotnet publish --configuration Release --no-build --output ${{ github.workspace }}/Functions 'SelfServeEligibilityTool/Functions/Functions.csproj'
-
+      
+    - name: Zip Functions Artifact
+      run: |
+          cd ${{ github.workspace }}/Functions
+          zip -r ../Functions.zip .
+          
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
@@ -99,31 +104,37 @@ jobs:
 
     - name: Install Node dependencies
       run: npm install
-      working-directory: ${{ github.workspace }}/front
+      working-directory: front
 
     - name: Test Angular
       run: npm run test-ci
-      working-directory: ${{ github.workspace }}/front
+      working-directory: front
       continue-on-error: true
 
     - name: Build Angular Project
       run: |
         if [[ ${{ github.ref }} == 'refs/heads/release' ]]; then
-          npm run build:uat -- --output-path=${{ github.workspace }}/front
+          npm run build:uat -- --output-path=${{ github.workspace }}/Front
         elif [[ ${{ github.ref }} == 'refs/heads/main' ]]; then
-          npm run build:prod -- --output-path=${{ github.workspace }}/front
+          npm run build:prod -- --output-path=${{ github.workspace }}/Front
         else
-          npm run build:sit -- --output-path=${{ github.workspace }}/front
+          npm run build:sit -- --output-path=${{ github.workspace }}/Front
         fi
-      working-directory: ${{ github.workspace }}/front
+      working-directory: front
       shell: bash
 
     - name: Publish Build Artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: SSET
-        path: ${{ github.workspace }}/front
-        
+        name: APPX
+        path:  ${{ github.workspace }}/Front
+
+    - name: Upload Build Artifacts
+      uses: actions/upload-artifact@v4.0.0
+      with:
+        name: APPX
+        path: ${{ github.workspace }}/Functions.zip
+    
     # - name: 'Resolve Project Dependencies Using Dotnet'
     #   shell: pwsh # For Linux, use bash
     #   run: |
