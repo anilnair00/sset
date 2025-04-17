@@ -99,11 +99,11 @@ jobs:
 
     - name: Install Node dependencies
       run: npm install
-      working-directory: front
+      working-directory: ${{ github.workspace }}/front
 
     - name: Test Angular
       run: npm run test-ci
-      working-directory: front
+      working-directory: ${{ github.workspace }}/front
       continue-on-error: true
 
     - name: Build Angular Project
@@ -114,7 +114,9 @@ jobs:
           npm run build:prod -- --output-path=${{ github.workspace }}/front
         else
           npm run build:sit -- --output-path=${{ github.workspace }}/front
+        fi
       working-directory: ${{ github.workspace }}/front
+      shell: bash
 
     - name: Publish Build Artifacts
       uses: actions/upload-artifact@v4
