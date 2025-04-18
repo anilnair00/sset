@@ -93,7 +93,10 @@ jobs:
         fail-on-error: true
 
     - name: Publish Functions
-      run: dotnet publish --configuration Release --no-build --output ${{ github.workspace }}/Functions 'SelfServeEligibilityTool/Functions/Functions.csproj'
+      # run: dotnet publish --configuration Release --no-build --output ${{ github.workspace }}/Functions 'SelfServeEligibilityTool/Functions/Functions.csproj'
+      run:  dotnet publish ./Functions/Functions.csproj --configuration Release --output publish_output
+             Compress-Archive -Path publish_output\* -DestinationPath APPX\Functions.zip
+
       
     # - name: Zip Functions Artifact
     #   run: |
@@ -150,15 +153,14 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
        name: APPX
-       # path: ./front/Front/
        path: APPX/
   
 
-    - name: Upload Build Artifacts
-      uses: actions/upload-artifact@v4.0.0
-      with:
-        name: SSET
-        path: ${{ github.workspace }}/Functions.zip
+    # - name: Upload Build Artifacts
+    #   uses: actions/upload-artifact@v4.0.0
+    #   with:
+    #     name: SSET
+    #     path: ${{ github.workspace }}/Functions.zip
     
     # - name: 'Resolve Project Dependencies Using Dotnet'
     #   shell: pwsh # For Linux, use bash
