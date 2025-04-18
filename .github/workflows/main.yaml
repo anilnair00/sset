@@ -152,6 +152,7 @@ jobs:
        name: APPX
        # path: ./front/Front/
        path: APPX/
+             ${{ github.workspace }}/Functions.zip
       
     # - name: Publish Build Artifacts
     #   uses: actions/upload-artifact@v4
@@ -159,11 +160,11 @@ jobs:
     #     name: APPX
     #     path:  ${{ github.workspace }}/Front
 
-    - name: Upload Build Artifacts
-      uses: actions/upload-artifact@v4.0.0
-      with:
-        name: SSET
-        path: ${{ github.workspace }}/Functions.zip
+    # - name: Upload Build Artifacts
+    #   uses: actions/upload-artifact@v4.0.0
+    #   with:
+    #     name: SSET
+    #     path: ${{ github.workspace }}/Functions.zip
     
     # - name: 'Resolve Project Dependencies Using Dotnet'
     #   shell: pwsh # For Linux, use bash
