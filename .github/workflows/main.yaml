@@ -74,7 +74,7 @@ jobs:
       run: |
         # dotnet test "SelfServeEligibilityTool/Core.Tests/Core.Tests.csproj" `
           Get-ChildItem -Recurse -Filter Core.Tests.csproj | ForEach-Object {
-            dotnet test $_.FullName
+            dotnet test $_.FullName `
           --configuration Release `
           --no-build `
           --logger "trx;LogFileName=test_results.trx" `
