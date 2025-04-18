@@ -70,17 +70,17 @@ jobs:
           }
           
     - name: Run .NET Tests
+      shell: pwsh
       run: |
         # dotnet test "SelfServeEligibilityTool/Core.Tests/Core.Tests.csproj" `
           Get-ChildItem -Recurse -Filter Core.Tests.csproj | ForEach-Object {
             dotnet test $_.FullName
-          }
           --configuration Release `
           --no-build `
           --logger "trx;LogFileName=test_results.trx" `
           --results-directory "./TestResults" `
           || true
-      shell: pwsh
+          }
       continue-on-error: true
 
     - name: Test Report
