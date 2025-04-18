@@ -112,30 +112,51 @@ jobs:
 
     - name: Install Node dependencies
       run: npm install
-      working-directory: front
+      working-directory: ./front
 
     - name: Test Angular
       run: npm run test-ci
       working-directory: front
       continue-on-error: true
 
-    - name: Build Angular Project
-      run: |
-        if [[ ${{ github.ref }} == 'refs/heads/release' ]]; then
-          npm 'run build:uat -- --output-path=${{ github.workspace }}/Front'
-        elif [[ ${{ github.ref }} == 'refs/heads/main' ]]; then
-          npm 'run build:prod -- --output-path=${{ github.workspace }}/Front'
-        else
-          npm 'run build:sit -- --output-path=${{ github.workspace }}/Front'
-        fi
-      working-directory: front
-      shell: bash
+    # - name: Build Angular Project working
+    #   run: |
+    #     if [[ ${{ github.ref }} == 'refs/heads/release' ]]; then
+    #       npm run build:uat -- --output-path=${{ github.workspace }}/Front
+    #     elif [[ ${{ github.ref }} == 'refs/heads/main' ]]; then
+    #       npm run build:prod -- --output-path=${{ github.workspace }}/Front
+    #     else
+    #       npm run build:sit -- --output-path=${{ github.workspace }}/Front
+    #     fi
+    #   working-directory: front
+    #   shell: bash
 
-    - name: Publish Build Artifacts
+    - name: Build Angular for SIT/UAT/PROD based on branch
+      shell: pwsh
+      run: |
+        $branch = "${{ github.ref }}"
+        $outputPath = "Front"
+    
+        if ($branch -eq 'refs/heads/release') {
+          npm run build:uat -- --output-path=$outputPath
+        } elseif ($branch -eq 'refs/heads/main') {
+          npm run build:prod -- --output-path=$outputPath
+        } else {
+          npm run build:sit -- --output-path=$outputPath
+        }
+      working-directory: ./front
+
+    - name: Upload Front Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: APPX
-        path:  ${{ github.workspace }}/Front
+       name: APPX
+       path: ./front/Front/
+      
+    # - name: Publish Build Artifacts
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: APPX
+    #     path:  ${{ github.workspace }}/Front
 
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4.0.0
