@@ -135,11 +135,11 @@ jobs:
       shell: pwsh
       run: |
         $branch = "${{ github.ref }}"
-        $outputPath = "Front"
-    
+        # $outputPath = "Front"
+        $outputPath = "${{ github.workspace }}\SSET\Front"    
         if ($branch -eq 'refs/heads/release') {
           npm run build:uat -- --output-path=$outputPath
-        } elseif ($branch -eq 'refs/heads/main') {
+        } elseif ($branch -eq 'refs/heads/master') {
           npm run build:prod -- --output-path=$outputPath
         } else {
           npm run build:sit -- --output-path=$outputPath
@@ -150,7 +150,8 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
        name: APPX
-       path: ./front/Front/
+       # path: ./front/Front/
+       path: APPX/
       
     # - name: Publish Build Artifacts
     #   uses: actions/upload-artifact@v4
