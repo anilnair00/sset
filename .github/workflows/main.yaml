@@ -93,9 +93,11 @@ jobs:
         fail-on-error: true
 
     - name: Publish Functions
+      shell: pwsh
       # run: dotnet publish --configuration Release --no-build --output ${{ github.workspace }}/Functions 'SelfServeEligibilityTool/Functions/Functions.csproj'
       run:  dotnet publish --configuration Release --no-build --output publish_output 'SelfServeEligibilityTool/Functions/Functions.csproj'
-             Compress-Archive -Path publish_output\* -DestinationPath APPX\Functions.zip
+            New-Item -ItemType Directory -Path APPX\Functions -Force
+            Compress-Archive -Path publish_output\* -DestinationPath APPX\Functions\functions.zip
 
       
     # - name: Zip Functions Artifact
@@ -103,10 +105,10 @@ jobs:
     #       cd ${{ github.workspace }}/Functions
     #       zip -r ../Functions.zip .
 
-    - name: Zip Functions folder
-      run: Compress-Archive -Path * -DestinationPath ../Functions.zip
-      working-directory: ${{ github.workspace }}/Functions
-      shell: pwsh
+    # - name: Zip Functions folder
+    #   run: Compress-Archive -Path * -DestinationPath ../Functions.zip
+    #   working-directory: ${{ github.workspace }}/Functions
+    #   shell: pwsh
          
     - name: Set up Node.js
       uses: actions/setup-node@v3
