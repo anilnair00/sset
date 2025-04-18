@@ -136,7 +136,7 @@ jobs:
       run: |
         $branch = "${{ github.ref }}"
         # $outputPath = "Front"
-        $outputPath = "${{ github.workspace }}\SSET\Front"    
+        $outputPath = "${{ github.workspace }}\APPX\Front"    
         if ($branch -eq 'refs/heads/release') {
           npm run build:uat -- --output-path=$outputPath
         } elseif ($branch -eq 'refs/heads/master') {
