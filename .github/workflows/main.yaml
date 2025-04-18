@@ -55,29 +55,33 @@ jobs:
         # Optional global.json location, if your global.json isn't located in the root of the repo.
         global-json-file: SelfServeEligibilityTool/global.json
 
-          
-    # - name: Setup DotNet ${{ env.DOTNET_VERSION }} Environment
-    #   uses: actions/setup-dotnet@v4
-    #   with:
-    #     dotnet-version: ${{ env.DOTNET_VERSION }}
-    #     global-json-file: global.json
-
     - name: Build .NET Projects
-      run: |
-        foreach ($project in Get-ChildItem -Recurse -Filter '*.csproj') {
-        dotnet build "$project" --configuration Release
-        # Your code to handle each $project here
-        }
-      
+      run: dotnet build **/*.csproj --configuration Release
+
     - name: Run .NET Tests
-      run: |
-        dotnet test "SelfServeEligibilityTool/Core.Tests/Core.Tests.csproj" `
-          --configuration Release `
-          --no-build `
+      continue-on-error: true
+      run: dotnet test **/Core.Tests.csproj --configuration Release --no-build
           --logger "trx;LogFileName=test_results.trx" `
           --results-directory "./TestResults" `
           || true
       shell: pwsh
+      
+    # - name: Build .NET Projects
+    #   run: |
+    #     foreach ($project in Get-ChildItem -Recurse -Filter '*.csproj') {
+    #     dotnet build "$project" --configuration Release
+    #     # Your code to handle each $project here
+    #     }
+      
+    # - name: Run .NET Tests
+    #   run: |
+    #     dotnet test "SelfServeEligibilityTool/Core.Tests/Core.Tests.csproj" `
+    #       --configuration Release `
+    #       --no-build `
+    #       --logger "trx;LogFileName=test_results.trx" `
+    #       --results-directory "./TestResults" `
+    #       || true
+    #   shell: pwsh
       continue-on-error: true
 
     - name: Test Report
