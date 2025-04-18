@@ -94,7 +94,7 @@ jobs:
 
     - name: Publish Functions
       # run: dotnet publish --configuration Release --no-build --output ${{ github.workspace }}/Functions 'SelfServeEligibilityTool/Functions/Functions.csproj'
-      run:  dotnet publish ./Functions/Functions.csproj --configuration Release --output publish_output
+      run:  dotnet publish SelfServeEligibilityTool/Functions/Functions.csproj --configuration Release --output publish_output
              Compress-Archive -Path publish_output\* -DestinationPath APPX\Functions.zip
 
       
