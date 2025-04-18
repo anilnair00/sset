@@ -158,24 +158,55 @@ jobs:
        name: APPX
        path: APPX/
   
+  deployOnDev:
+    runs-on: windows-2019
+    needs: build
+    if: success() && github.ref == 'refs/heads/develop'
 
-    # - name: Upload Build Artifacts
-    #   uses: actions/upload-artifact@v4.0.0
-    #   with:
-    #     name: SSET
-    #     path: ${{ github.workspace }}/Functions.zip
-    
-    # - name: 'Resolve Project Dependencies Using Dotnet'
-    #   shell: pwsh # For Linux, use bash
-    #   run: |
-    #     pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
-    #     dotnet build --configuration Release --output ./output
-    #     popd
+    steps:
+    - name: Download Build Artifacts
+      uses: actions/download-artifact@v4.0.0
+      with:
+        name: APPX
+        path: .APPX
 
-    # - name: 'Run Azure Functions Action'
-    #   uses: Azure/functions-action@v1
-    #   id: fa
-    #   with:
-    #     app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-    #     package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/output'
-    #     publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }} # Remove publish-profile to use Azure RBAC
+     # Log in to Azure
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}  # Must be set in your GitHub secrets
+
+    # Deploy Azure Function App
+    - name: Deploy Functions
+      uses: azure/functions-action@v1
+      with:
+          app-name: myfncapp001
+          package: ./APPX/Functions/Functions.zip
+          # publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}  # Optional alternative to login
+          # deployment-method: 'runFromPackage'  # This is default behavior for zip deployment
+
+      # Install AzCopy (optional if it's already on the runner)
+    - name: Install AzCopy
+      run: |
+          choco install azcopy10 -y
+      shell: pwsh
+
+      # Deploy Frontend via AzCopy
+    - name: Deploy Frontend
+      shell: pwsh
+      env:
+          URL: ${{ secrets.AZCOPY_TARGET_URL }}  # Should be the blob or static website URL with SAS token
+      run: |
+          azcopy copy "APPX\Front\*.js" "$env:URL" --content-type="application/javascript; charset=utf8"
+          azcopy sync "APPX\Front" "$env:URL" --delete-destination=true
+
+      # Check Frontend
+    - name: Check Frontend
+      shell: pwsh
+      continue-on-error: true
+      run: |
+          $response = Invoke-WebRequest -Uri https://tfrgbfde.z20.web.core.windows.net/index.html -Method Head
+          if ($response.StatusCode -ne 200) {
+            throw "Frontend check failed with status code $($response.StatusCode)"
+          }
+
