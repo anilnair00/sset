@@ -57,14 +57,6 @@ jobs:
 
     - name: Build .NET Projects
       run: dotnet build **/*.csproj --configuration Release
-
-    - name: Run .NET Tests
-      continue-on-error: true
-      run: dotnet test **/Core.Tests.csproj --configuration Release --no-build
-          --logger "trx;LogFileName=test_results.trx" `
-          --results-directory "./TestResults" `
-          || true
-      shell: pwsh
       
     # - name: Build .NET Projects
     #   run: |
@@ -73,15 +65,16 @@ jobs:
     #     # Your code to handle each $project here
     #     }
       
-    # - name: Run .NET Tests
-    #   run: |
-    #     dotnet test "SelfServeEligibilityTool/Core.Tests/Core.Tests.csproj" `
-    #       --configuration Release `
-    #       --no-build `
-    #       --logger "trx;LogFileName=test_results.trx" `
-    #       --results-directory "./TestResults" `
-    #       || true
-    #   shell: pwsh
+    - name: Run .NET Tests
+      run: |
+        # dotnet test "SelfServeEligibilityTool/Core.Tests/Core.Tests.csproj" `
+        dotnet test **/Core.Tests.csproj
+          --configuration Release `
+          --no-build `
+          --logger "trx;LogFileName=test_results.trx" `
+          --results-directory "./TestResults" `
+          || true
+      shell: pwsh
       continue-on-error: true
 
     - name: Test Report
