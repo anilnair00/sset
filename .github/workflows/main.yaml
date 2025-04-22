@@ -202,7 +202,7 @@ jobs:
 
       # Check Frontend
     - name: Check Frontend
-      shell: pwsh
+      shell: powershell
       continue-on-error: true
       run: |
           $response = Invoke-WebRequest -Uri https://kuberrgaf7e.z20.web.core.windows.net/index.html -Method Head
