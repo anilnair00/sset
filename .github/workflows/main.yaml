@@ -186,10 +186,10 @@ jobs:
           # deployment-method: 'runFromPackage'  # This is default behavior for zip deployment
 
       # Install AzCopy (optional if it's already on the runner)
-    - name: Install AzCopy
-      run: |
-          choco install azcopy10 -y
-      shell: pwsh
+    # - name: Install AzCopy
+    #   run: |
+    #       choco install azcopy10 -y
+    #   shell: pwsh
 
       # Deploy Frontend via AzCopy
     - name: Deploy Frontend
