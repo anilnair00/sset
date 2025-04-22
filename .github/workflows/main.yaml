@@ -205,7 +205,7 @@ jobs:
       shell: pwsh
       continue-on-error: true
       run: |
-          $response = Invoke-WebRequest -Uri https://teststoracc00009.z13.web.core.windows.net/index.html -Method Head
+          $response = Invoke-WebRequest -Uri https://kuberrgaf7e.z20.web.core.windows.net/index.html -Method Head
           if ($response.StatusCode -ne 200) {
             throw "Frontend check failed with status code $($response.StatusCode)"
           }
