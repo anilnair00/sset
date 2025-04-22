@@ -161,7 +161,7 @@ jobs:
   deployOnDev:
     runs-on: windows-2019
     needs: build
-    if: success() && github.ref == 'refs/heads/develop'
+    if: success() && github.ref == 'refs/heads/main'
 
     steps:
     - name: Download Build Artifacts
