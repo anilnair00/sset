@@ -189,7 +189,7 @@ jobs:
     - name: Install AzCopy
       run: |
           choco install azcopy10 -y
-      shell: powershell
+      shell: pwsh
 
       # Deploy Frontend via AzCopy
     - name: Deploy Frontend
