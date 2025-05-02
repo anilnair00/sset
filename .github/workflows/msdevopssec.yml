@@ -31,7 +31,28 @@ jobs:
         policy: GitHub
         categories: containers
         tools: bandit, binskim, checkov, eslint, templateanalyzer, terrascan, 'trivy
-      
+
+    # - name: security-devops-action
+    #   uses: microsoft/security-devops-action@v1.12.0
+    #   with:
+    #       # Deprecated, do not use.
+    #       command: # optional
+    #       # A file path to a .gdnconfig file.
+    #       config: # optional
+    #       # The name of the well known policy to use. Defaults to GitHub.
+    #       policy: # optional, default is GitHub
+    #       # A comma separated list of analyzer categories to run. Values secrets, code, artifacts, IaC, containers. Example IaC,secrets. Defaults to all.
+    #       categories: # optional
+    #       # A comma separated list of languages to analyze. Example javascript, typescript. Defaults to all.
+    #       languages: # optional
+    #       # A comma separated list of analyzer to run. Example bandit, binskim, container-mapping, eslint, templateanalyzer, terrascan, trivy.
+    #       tools: # optional
+    #       # Deprecated
+    #       includeTools: # optional
+    #       # A SARIF filename that already exists. If it does, then the normal run will not take place and the file will instead be uploaded to MSDO backend.
+    #       existingFilename: # optional
+
+          
     # with:
       # config: string. Optional. A file path to an MSDO configuration file ('*.gdnconfig').
       # policy: 'GitHub' | 'microsoft' | 'none'. Optional. The name of a well-known Microsoft policy. If no configuration file or list of tools is provided, the policy may instruct MSDO which tools to run. Default: GitHub.
@@ -46,8 +67,8 @@ jobs:
        sarif_file: ${{ steps.msdo.outputs.sarifFile }}
 
       # Upload alerts file as a workflow artifact - required for MSDO results to appear in the codeQL security alerts tab on GitHub (Requires GHAS)
-    - name: Upload alerts file as a workflow artifact
-      uses: actions/upload-artifact@v3
-      with:  
-       name: alerts
-       path: ${{ steps.msdo.outputs.sarifFile }}
+    # - name: Upload alerts file as a workflow artifact
+    #   uses: actions/upload-artifact@v3
+    #   with:  
+    #    name: alerts
+    #    path: ${{ steps.msdo.outputs.sarifFile }}
