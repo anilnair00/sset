@@ -29,8 +29,8 @@ jobs:
       id: msdo
       with:
         policy: GitHub
-        categories: containers
-        tools: bandit, binskim, checkov, eslint, templateanalyzer, terrascan
+        # categories: containers
+        # tools: bandit, binskim, checkov, eslint, templateanalyzer, terrascan
 
     # - name: security-devops-action
     #   uses: microsoft/security-devops-action@v1.12.0
