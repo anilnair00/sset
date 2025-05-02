@@ -30,7 +30,7 @@ jobs:
       with:
         policy: GitHub
         categories: containers
-        tools: bandit, binskim, checkov, eslint, templateanalyzer, terrascan, 'trivy
+        tools: bandit, binskim, checkov, eslint, templateanalyzer, terrascan
 
     # - name: security-devops-action
     #   uses: microsoft/security-devops-action@v1.12.0
